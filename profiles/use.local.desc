@@ -2,3 +2,153 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
+dev-db/mysql:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
+dev-db/mysql:cluster - Add support for NDB clustering (deprecated)
+dev-db/mysql:community - Enables the community features from upstream.
+dev-db/mysql:embedded - Build embedded server (libmysqld)
+dev-db/mysql:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
+dev-db/mysql:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
+dev-db/mysql:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
+dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
+dev-db/mysql:minimal - Install client programs only, no server
+dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
+dev-db/mysql:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
+dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
+dev-db/mysql:server - Build the server program
+dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
+dev-db/mysql:test - Install upstream testsuites for end use.
+dev-db/mysql:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
+dev-db/mysql-cluster:cluster - Add support for NDB clustering
+dev-db/mysql-cluster:community - Enables the community features from upstream.
+dev-db/mysql-cluster:embedded - Build embedded server (libmysqld)
+dev-db/mysql-cluster:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
+dev-db/mysql-cluster:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/mysql-cluster:latin1 - Use LATIN1 encoding instead of UTF8
+dev-db/mysql-cluster:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
+dev-db/mysql-cluster:max-idx-128 - Raise the max index per table limit from 64 to 128
+dev-db/mysql-cluster:minimal - Install client programs only, no server
+dev-db/mysql-cluster:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
+dev-db/mysql-cluster:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
+dev-db/mysql-cluster:profiling - Add support for statement profiling (requires USE=community).
+dev-db/mysql-cluster:server - Build the server program
+dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using dev-util/systemtap
+dev-db/mysql-cluster:test - Install upstream testsuites for end use.
+dev-db/mysql-cluster:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
+dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
+dev-db/postgresql:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage.
+dev-db/postgresql:server - Disable to build and install the clients and libraries only.
+dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
+dev-db/sqlite:secure-delete - Enable overwriting of deleted content with zeros by default (http://sqlite.org/pragma.html#pragma_secure_delete), causing some performance penalty
+dev-db/sqlite:tools - Install additional tools
+dev-lang/php:argon2 - Enable password hashing algorithm from app-crypt/argon2
+dev-lang/php:cli - Enable CLI SAPI
+dev-lang/php:coverage - Include gcov symbols for test coverage and lcov reports. Only useful for extension developers, and requires GCC.
+dev-lang/php:embed - Enable embed SAPI
+dev-lang/php:enchant - Add supports Enchant spelling library.
+dev-lang/php:fileinfo - Add fileinfo extension support
+dev-lang/php:filter - Add filter extension support
+dev-lang/php:fpm - Enable the FastCGI Process Manager SAPI
+dev-lang/php:gd - Adds support for gd (bundled with PHP)
+dev-lang/php:hash - Enable the hash extension
+dev-lang/php:intl - Enables the intl extension for extended internalization support
+dev-lang/php:json - Enable JSON support
+dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension
+dev-lang/php:libmysqlclient - Use libmyslclient driver for mysql, mysqli, PDO_Mysql (not recommended)
+dev-lang/php:lmdb - Enable support for dev-db/lmdb db backend
+dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et al.
+dev-lang/php:pdo - Enable the bundled PDO extensions
+dev-lang/php:phar - Enables the phar extension to provide phar archive support
+dev-lang/php:phpdbg - Enable the PHP Debug Command Line SAPI (like gdb for php)
+dev-lang/php:session-mm - Include dev-libs/mm support for session storage
+dev-lang/php:sodium - Enable support for crypto through dev-libs/libsodium
+dev-lang/php:tokyocabinet - Enable support for dev-db/tokyocabinet db backend
+dev-lang/php:vpx - Enable webp support for GD in php-5.x
+dev-lang/php:webp - Enable webp support for GD in php-7.x
+dev-lang/php:xmlreader - Enable XMLReader support
+dev-lang/php:xmlwriter - Enable XMLWriter support
+dev-lang/php:xslt - Enable the XSL extension
+dev-lang/php:zip - Enable ZIP file support
+dev-lang/php:zip-encryption - Enable ZIP file encryption from dev-libs/libzip
+dev-php/PEAR-HTTP_Request2:curl - Force dev-lang/php to be compiled with curl extension
+dev-php/PEAR-HTTP_Request2:fileinfo - Force dev-lang/php to be compiled with fileinfo extension
+dev-php/PEAR-HTTP_Request2:ssl - Force dev-lang/php to be compiled with ssl extension
+dev-php/PEAR-HTTP_Request2:zlib - Force dev-lang/php to be compiled with zlib extension
+dev-php/PEAR-PHP_Beautifier:cli - Require dev-lang/php to be built with the "cli" SAPI and install the php_beautifier script.
+dev-php/agavi:executable - Install the "agavi" executable used to manage projects. This requires dev-php/phing, and may be omitted if you are (for example) deploying an existing site to a production server.
+dev-php/maxmind-db-reader:extension - Build the C extension that uses dev-libs/libmaxminddb
+dev-php/pecl-apcu:lock_pthreadmutex - Enable pthread mutex locking
+dev-php/pecl-apcu:lock_pthreadrw - Enable pthread read/write locking
+dev-php/pecl-apcu:lock_semaphore - Enable semaphore locks instead of fcntl
+dev-php/pecl-apcu:lock_spinlock - Enable spin locks (EXPERIMENTAL)
+dev-php/pecl-event:extra - Add support of the Libevent extra API
+dev-php/pecl-memcached:igbinary - Enable support for the igbinary serializer
+dev-php/pecl-memcached:json - Enable support for json serialization
+dev-php/pecl-mysqlnd_qc:memcached - Use dev-libs/libmemcached as a storage handler
+dev-php/pecl-mysqlnd_qc:sqlite - Use dev-db/sqlite as a storage handler
+dev-php/pecl-redis:igbinary - Enables igbinary serialisation support
+dev-php/pecl-zmq:czmq - Use the czmq high level bindings
+dev-php/phing:zip - Support zip archives by requiring said support in dev-lang/php.
+dev-php/swoole:http2 - Add support for HTTP/2 protocol via net-libs/nghttp2
+dev-php/swoole:redis - Add support for redis via dev-libs/hiredis
+dev-php/twig:extension - Build the C extension (only for php-5.6.x).
+dev-php/xcache:coverage - Enable the coverager module (not recommended for production servers).
+net-fs/samba:addc - Enable Active Directory Domain Controller support
+net-fs/samba:addns - Enable AD DNS integration
+net-fs/samba:ads - Enable Active Directory support
+net-fs/samba:ceph - Enable support for Ceph distributed filesystem via sys-cluster/ceph
+net-fs/samba:client - Enables the client part
+net-fs/samba:cluster - Enable support for clustering
+net-fs/samba:dmapi - Enable support for DMAPI. This currently works only in combination with XFS.
+net-fs/samba:gpg - Use app-crypt/gpgme for AD DC
+net-fs/samba:iprint - Enabling iPrint technology by Novell
+net-fs/samba:json - Enable json audit support through dev-libs/jansson
+net-fs/samba:quota - Enables support for user quotas
+net-fs/samba:system-heimdal - Use app-crypt/heimdal instead of bundled heimdal.
+net-fs/samba:system-mitkrb5 - Use app-crypt/mit-krb5 instead of app-crypt/heimdal.
+net-fs/samba:winbind - Enables support for the winbind auth daemon
+virtual/mysql:embedded - Build embedded server (libmysqld)
+virtual/mysql:server - Build server (mysqld)
+www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
+www-apache/mod_extract_forwarded:mod_proxy - Enable support for Apache's internal proxy
+www-apache/mod_musicindex:archive - Add archive support
+www-apache/mod_musicindex:cache - Add File cache support
+www-apache/mod_musicindex:mysql - Add MySQL cache support
+www-apache/mod_nss:ecc - enable Elliptical Curve Cyptography
+www-apache/mod_perl:ithreads - Build for use with thread-capable perl, needs same setting as in dev-lang/perl
+www-apache/mod_security:fuzzyhash - Support fuzzy hash computations (to detect malware, for example) using the app-crypt/ssdeep package.
+www-apache/mod_security:geoip - Pull in dev-libs/geoip for use by the SecGeoLookupDb directive.
+www-apache/mod_security:jit - Add support for the PCRE Just-in-Time optimisation, as enabled by dev-libs/libpcre with jit USE flag enabled. Might not be available on hardened systems.
+www-apache/mod_security:json - Suppose JSON in the request body parser through dev-libs/yajl.
+www-apache/mod_security:mlogc - Build and install the ModSecurity Audit Log Collector (mlogc).
+www-apache/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
+www-apache/pwauth:faillog - Log failed login attempts
+www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
+www-servers/apache:apache2_modules_access_compat - Group authorizations based on host (name or IP address). Available as a compatibility module with previous versions.
+www-servers/apache:apache2_modules_authn_core - Provides core authentication capabilities common to all authentication providers (functionality provided by authn_alias in previous versions).
+www-servers/apache:apache2_modules_authz_core - Provides core authorization capabilities to various authorization/authorization modules, such as authn_file and authz_user.
+www-servers/apache:apache2_modules_authz_dbd - Provides authorization capabilities via SQL database so that authenticated users can be allowed or denied access to portions of the web site by group membership.
+www-servers/apache:apache2_modules_brotli - Enable brotli compression support
+www-servers/apache:apache2_modules_cache_disk - Disk based storage module for the HTTP caching filter (similar to mem_cache in previous versions).
+www-servers/apache:apache2_modules_cache_socache - Shared object cache (socache) based storage module for the HTTP caching filter.
+www-servers/apache:apache2_modules_http2 - Enable http2/alpn module
+www-servers/apache:apache2_modules_lbmethod_bybusyness - Pending request counting load balancer scheduler algorithm for proxy_balancer.
+www-servers/apache:apache2_modules_lbmethod_byrequests - Request counting load balancer scheduler algorithm for proxy_balancer.
+www-servers/apache:apache2_modules_lbmethod_bytraffic - Weighted traffic counting load balancer scheduler algorithm for proxy_balancer.
+www-servers/apache:apache2_modules_lbmethod_heartbeat - Heartbeat traffic counting load balancer scheduler algorithm for proxy_balancer.
+www-servers/apache:apache2_modules_macro - Macros for the Apache config file.
+www-servers/apache:apache2_modules_md - Managing domains across virtual hosts, certificate provisioning via the ACME protocol.
+www-servers/apache:apache2_modules_proxy_fcgi - FCGI support module for mod_proxy.
+www-servers/apache:apache2_modules_proxy_html - Module to rewrite links in html pages behind a reverse proxy
+www-servers/apache:apache2_modules_proxy_wstunnel - Provides support for the tunnelling of web socket connections to a backend websockets server.
+www-servers/apache:apache2_modules_ratelimit - Ratelimit module for transfer rate management
+www-servers/apache:apache2_modules_remoteip - Remotip module for logging
+www-servers/apache:apache2_modules_slotmem_shm - Slot-based shared memory provider.
+www-servers/apache:apache2_modules_socache_shmcb - A shared object cache provider using a high-performance cyclic buffer inside a shared memory segment.
+www-servers/apache:apache2_modules_unixd - Basic (required) security for Unix-family platforms.
+www-servers/apache:apache2_modules_watchdog - Provides infrastructure for other modules to periodically run tasks
+www-servers/apache:apache2_modules_xml2enc - Enable xml2 encoding module
+www-servers/apache:static - Link in apache2 modules statically rather then plugins
+www-servers/apache:suexec - Install suexec with apache
+www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUID
+www-servers/apache:suexec-syslog - Log suexec to syslog instead of to a separate file
