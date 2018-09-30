@@ -59,6 +59,7 @@ PATCHES=(
 #	"${MY_PATCH_DIR}"/20008_all_mysql-tzinfo-symlink-5.7.6.patch
 	"${MY_PATCH_DIR}"/20009_all_mysql_myodbc_symbol_fix-5.7.10.patch
 	"${MY_PATCH_DIR}"/20018_all_mysql-5.7.21-without-clientlibs-tools.patch
+	"${FILESDIR}"/compile_flags.patch
 )
 
 # Be warned, *DEPEND are version-dependant
