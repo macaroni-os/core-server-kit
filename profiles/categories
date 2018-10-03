@@ -4,6 +4,7 @@ dev-lang
 dev-php
 dev-python
 net-fs
+sys-libs
 virtual
 www-apache
 www-servers

@@ -101,6 +101,11 @@ net-fs/samba:quota - Enables support for user quotas
 net-fs/samba:system-heimdal - Use app-crypt/heimdal instead of bundled heimdal.
 net-fs/samba:system-mitkrb5 - Use app-crypt/mit-krb5 instead of app-crypt/heimdal.
 net-fs/samba:winbind - Enables support for the winbind auth daemon
+sys-libs/ldb:doc - Builds documentation
+sys-libs/ldb:ldap - Enable LDAP support
+sys-libs/ldb:lmdb - Enable LMDB backend
+sys-libs/ldb:python - Enable Python support
+sys-libs/talloc:compat - Enable extra compatibility stuff
 virtual/mysql:embedded - Build embedded server (libmysqld)
 virtual/mysql:server - Build server (mysqld)
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
