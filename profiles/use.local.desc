@@ -17,7 +17,6 @@ dev-db/mysql-cluster:cluster - Add support for NDB clustering
 dev-db/mysql-cluster:community - Enables the community features from upstream.
 dev-db/mysql-cluster:embedded - Build embedded server (libmysqld)
 dev-db/mysql-cluster:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
-dev-db/mysql-cluster:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mysql-cluster:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql-cluster:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 dev-db/mysql-cluster:max-idx-128 - Raise the max index per table limit from 64 to 128
@@ -62,7 +61,6 @@ dev-lang/php:webp - Enable webp support for GD in php-7.x
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:xslt - Enable the XSL extension
-dev-lang/php:zip - Enable ZIP file support
 dev-lang/php:zip-encryption - Enable ZIP file encryption from dev-libs/libzip
 dev-php/PEAR-HTTP_Request2:curl - Force dev-lang/php to be compiled with curl extension
 dev-php/PEAR-HTTP_Request2:fileinfo - Force dev-lang/php to be compiled with fileinfo extension
