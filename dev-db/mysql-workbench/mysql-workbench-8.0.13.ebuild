@@ -13,7 +13,7 @@ MY_P="${PN}-community-${PV}-src"
 
 DESCRIPTION="MySQL Workbench"
 HOMEPAGE="https://www.mysql.com/products/workbench/"
-SRC_URI="mirror://mysql/Downloads/MySQLGUITools/${MY_P}.tar.gz https://github.com/antlr/website-antlr3/blob/gh-pages/download/antlr-3.4-complete.jar?raw=true -> antlr-3.4-complete.jar"
+SRC_URI="mirror://mysql/Downloads/MySQLGUITools/${MY_P}.tar.gz http://www.antlr.org/download/antlr-4.7.1-complete.jar"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,12 +23,15 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # glibc: deprecated mutex functions, removed in 2.36.0
 CDEPEND="${PYTHON_DEPS}
+		app-crypt/libsecret
 		dev-libs/glib:2
+		dev-cpp/antlr-cpp:4
 		dev-cpp/atkmm
 		dev-cpp/pangomm
 		>=dev-cpp/glibmm-2.14:2
 		dev-cpp/gtkmm:3.0
 		dev-libs/atk
+		>=net-libs/libssh-0.7.3[server]
 		x11-libs/pango
 		x11-libs/gtk+:3
 		gnome-base/libglade:2.0
@@ -47,9 +50,9 @@ CDEPEND="${PYTHON_DEPS}
 		dev-db/vsqlite++
 		|| ( dev-db/libiodbc dev-db/unixODBC )
 		gnome-keyring? ( gnome-base/libgnome-keyring )
-			dev-python/pexpect
-			>=dev-python/paramiko-1.7.4
-	"
+		dev-python/pexpect
+		>=dev-python/paramiko-1.7.4
+"
 
 RDEPEND="${CDEPEND}
 		app-admin/sudo
@@ -64,8 +67,6 @@ S="${WORKDIR}"/"${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-6.2.5-wbcopytables.patch"
-	"${FILESDIR}/${PN}-6.3.9-mariadb-json.patch"
-	"${FILESDIR}/${PN}-6.3.10-i386-json.patch"
 )
 
 src_unpack() {
@@ -89,17 +90,18 @@ src_prepare() {
 
 src_configure() {
 	append-cxxflags -std=c++11
+	ANTLR_JAR_PATH="${DISTDIR}/antlr-4.7.1-complete.jar"
 	local mycmakeargs=(
+		-DWITH_ANTLR_JAR=${ANTLR_JAR_PATH}
 		-DUSE_GNOME_KEYRING="$(usex gnome-keyring)"
 		-DLIB_INSTALL_DIR="/usr/$(get_libdir)"
 		-DPYTHON_INCLUDE_DIR="$(python_get_includedir)"
 		-DPYTHON_LIBRARY="$(python_get_library_path)"
 		-DMySQL_CONFIG_PATH="/usr/bin/mysql_config"
 	)
-	ANTLR_JAR_PATH="${DISTDIR}/antlr-3.4-complete.jar" cmake-utils_src_configure
+	cmake-utils_src_configure
 }
 
-src_compile() {
-	# Work around parallel build issues, bug 507838
-	cmake-utils_src_compile -j1
-}
+#src_compile() {
+#	cmake-utils_src_compile -j1
+#}
