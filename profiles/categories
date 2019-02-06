@@ -1,4 +1,5 @@
 app-admin
+app-misc
 dev-db
 dev-lang
 dev-php
@@ -7,4 +8,5 @@ net-fs
 sys-libs
 virtual
 www-apache
+www-apps
 www-servers
