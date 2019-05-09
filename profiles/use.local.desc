@@ -4,9 +4,35 @@
 
 app-admin/logstash-bin:x-pack - Enable additional features (may need a license)
 app-misc/elasticsearch:x-pack - Enable additional features (may need a license)
+dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
+dev-db/mariadb:client-libs - Build the client libraries from the server package instead of the C Connector packages
+dev-db/mariadb:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
+dev-db/mariadb:galera - Enables galera replication
+dev-db/mariadb:innodb-lz4 - Enables lz4 compression methods for InnoDB/XtraDB
+dev-db/mariadb:innodb-lzo - Enables lzo compression methods for InnoDB/XtraDB
+dev-db/mariadb:innodb-snappy - Enables snappy compression methods for InnoDB/XtraDB using app-arch/snappy
+dev-db/mariadb:jdbc - Enable the CONNECT engine to access foreign databases via JDBC
+dev-db/mariadb:latin1 - Use LATIN1 encoding instead of UTF8
+dev-db/mariadb:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
+dev-db/mariadb:mroonga - Add support for the Mroonga engine for interfacing with the Groonga text search
+dev-db/mariadb:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
+dev-db/mariadb:oqgraph - Add support for the Open Query GRAPH engine
+dev-db/mariadb:pam - Enable the optional PAM authentication plugin for the server
+dev-db/mariadb:profiling - Add support for statement profiling (requires USE=community).
+dev-db/mariadb:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
+dev-db/mariadb:server - Build the server program
+dev-db/mariadb:sphinx - Add suport for the sphinx full-text search engine
+dev-db/mariadb:sst-mariabackup - Add tools needed to support the mariabackup SST method
+dev-db/mariadb:sst-rsync - Add tools needed to support the rsync SST method
+dev-db/mariadb:sst-xtrabackup - Add tools needed to support the xtrabackup and xtrabackup-v2 SST methods
+dev-db/mariadb:systemtap - Build support for profiling and tracing using dev-util/systemtap
+dev-db/mariadb:test - Install upstream testsuites for end use.
+dev-db/mariadb:tokudb - Add support for TokuDB storage engine
+dev-db/mariadb:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
+dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
 dev-db/mysql:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
+dev-db/mysql:experimental - Build experimental features aka "rapid" plugins
 dev-db/mysql:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
-dev-db/mysql:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
@@ -15,22 +41,18 @@ dev-db/mysql:server - Build the server program
 dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql:test - Install upstream testsuites for end use.
 dev-db/mysql:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
-dev-db/mysql-cluster:cluster - Add support for NDB clustering
-dev-db/mysql-cluster:community - Enables the community features from upstream.
-dev-db/mysql-cluster:embedded - Build embedded server (libmysqld)
+dev-db/mysql-cluster:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
 dev-db/mysql-cluster:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mysql-cluster:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql-cluster:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
-dev-db/mysql-cluster:max-idx-128 - Raise the max index per table limit from 64 to 128
-dev-db/mysql-cluster:minimal - Install client programs only, no server
 dev-db/mysql-cluster:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/mysql-cluster:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
 dev-db/mysql-cluster:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql-cluster:server - Build the server program
 dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-cluster:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
+dev-db/postgresql:llvm - Add support for llvm JIT engine
 dev-db/postgresql:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage.
 dev-db/postgresql:server - Disable to build and install the clients and libraries only.
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
@@ -164,3 +186,12 @@ www-servers/apache:static - Link in apache2 modules statically rather then plugi
 www-servers/apache:suexec - Install suexec with apache
 www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUID
 www-servers/apache:suexec-syslog - Log suexec to syslog instead of to a separate file
+www-servers/nginx:aio - Enables file AIO support
+www-servers/nginx:http - Enable HTTP core support
+www-servers/nginx:http-cache - Enable HTTP cache support
+www-servers/nginx:http2 - Enable HTTP2 module support
+www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
+www-servers/nginx:luajit - Use dev-lang/luajit instead of dev-lang/lua for lua support when building the lua http module.
+www-servers/nginx:pcre-jit - Enable JIT for pcre
+www-servers/nginx:rtmp - NGINX-based Media Streaming Server
+www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
