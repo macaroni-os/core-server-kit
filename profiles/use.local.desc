@@ -186,12 +186,3 @@ www-servers/apache:static - Link in apache2 modules statically rather then plugi
 www-servers/apache:suexec - Install suexec with apache
 www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUID
 www-servers/apache:suexec-syslog - Log suexec to syslog instead of to a separate file
-www-servers/nginx:aio - Enables file AIO support
-www-servers/nginx:http - Enable HTTP core support
-www-servers/nginx:http-cache - Enable HTTP cache support
-www-servers/nginx:http2 - Enable HTTP2 module support
-www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
-www-servers/nginx:luajit - Use dev-lang/luajit instead of dev-lang/lua for lua support when building the lua http module.
-www-servers/nginx:pcre-jit - Enable JIT for pcre
-www-servers/nginx:rtmp - NGINX-based Media Streaming Server
-www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.

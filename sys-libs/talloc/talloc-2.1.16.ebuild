@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python3_{4,5,6,7} )
+PYTHON_COMPAT=( python3_{5,6,7} )
 PYTHON_REQ_USE="threads(+)"
 
 inherit waf-utils python-single-r1 multilib multilib-minimal
@@ -19,7 +19,8 @@ IUSE="compat +python"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="python? ( ${PYTHON_DEPS} )
+RDEPEND="!elibc_FreeBSD? ( dev-libs/libbsd[${MULTILIB_USEDEP}] )
+	python? ( ${PYTHON_DEPS} )
 	!!<sys-libs/talloc-2.0.5"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
