@@ -1,10 +1,13 @@
 =net-fs/samba-4.10.2 python_single_target_python3_5 python_targets_python3_5
+=net-fs/samba-4.10.4 python_single_target_python3_5 python_targets_python3_5
 =net-fs/samba-4.5.16 python_single_target_python2_7
 =net-fs/samba-4.7.12-r1 python_single_target_python2_7
+=net-fs/samba-4.8.12 python_single_target_python2_7
 =net-fs/samba-4.8.6-r2 python_single_target_python2_7
 =net-fs/samba-4.8.6-r3 python_single_target_python2_7
 =net-fs/samba-4.8.9 python_single_target_python2_7
 =net-fs/samba-4.9.6 python_single_target_python2_7
+=net-fs/samba-4.9.8 python_single_target_python2_7
 =sys-libs/ldb-1.1.26 python_single_target_python2_7
 =sys-libs/ldb-1.1.29-r1 python_single_target_python2_7
 =sys-libs/ldb-1.1.31 python_single_target_python2_7
