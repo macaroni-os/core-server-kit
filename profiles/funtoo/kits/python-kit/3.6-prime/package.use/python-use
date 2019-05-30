@@ -24,3 +24,4 @@
 =sys-libs/tevent-0.9.31-r1 python_single_target_python2_7
 =sys-libs/tevent-0.9.37 python_single_target_python2_7
 dev-db/mysql-workbench python_single_target_python2_7
+net-libs/nodejs python_single_target_python2_7

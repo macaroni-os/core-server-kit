@@ -5,6 +5,7 @@ dev-lang
 dev-php
 dev-python
 net-fs
+net-libs
 sys-libs
 virtual
 www-apache
