@@ -38,7 +38,7 @@ mod_wd["encrypted_session"]="${WORKDIR}/${mod_p["encrypted_session"]}"
 # Fancy Index (https://github.com/aperezdc/ngx-fancyindex)
 mod_a["fancyindex"]="aperezdc"
 mod_pn["fancyindex"]="ngx-fancyindex"
-mod_pv["fancyindex"]="0.4.2"
+mod_pv["fancyindex"]="0.4.3"
 mod_lic["fancyindex"]="BSD-2"
 mod_p["fancyindex"]="${mod_pn["fancyindex"]}-${mod_pv["fancyindex"]}"
 mod_uri["fancyindex"]="https://github.com/${mod_a["fancyindex"]}/${mod_pn["fancyindex"]}/archive/v${mod_pv["fancyindex"]}.tar.gz"
@@ -80,7 +80,7 @@ mod_doc["upload_progress"]="README CHANGES"
 # Headers More (http://github.com/agentzh/headers-more-nginx-module)
 mod_a["headers_more"]="agentzh"
 mod_pn["headers_more"]="headers-more-nginx-module"
-mod_pv["headers_more"]="0.31"
+mod_pv["headers_more"]="0.33"
 mod_lic["headers_more"]="BSD"
 mod_p["headers_more"]="${mod_pn["headers_more"]}-${mod_pv["headers_more"]}"
 mod_uri["headers_more"]="https://github.com/${mod_a["headers_more"]}/${mod_pn["headers_more"]}/archive/v${mod_pv["headers_more"]}.tar.gz"
@@ -122,7 +122,7 @@ mod_doc["slowfs_cache"]="README.md CHANGES"
 # Lua (https://github.com/openresty/lua-nginx-module)
 mod_a["lua"]="openresty"
 mod_pn["lua"]="lua-nginx-module"
-mod_pv["lua"]="v0.10.11"
+mod_pv["lua"]="v0.10.13"
 #mod_sha["lua"]="1779464462dec8bcfbc39cb678e48e0f1f901632"
 mod_lic["lua"]="BSD-2"
 #mod_p["lua"]="${mod_pn["lua"]}-${mod_sha["lua"]}"
@@ -145,7 +145,7 @@ mod_doc["auth_pam"]="README.md ChangeLog"
 mod_a["upstream_check"]="yaoweibin"
 mod_pn["upstream_check"]="nginx_upstream_check_module"
 mod_pv["upstream_check"]="0.3.0"
-mod_sha["upstream_check"]="31b1b42873fa56620d8a873ac13f5f26b52d0cd6"
+mod_sha["upstream_check"]="9aecf15ec379fe98f62355c57b60c0bc83296f04"
 mod_lic["upstream_check"]="BSD-2"
 mod_p["upstream_check"]="${mod_pn["upstream_check"]}-${mod_sha["upstream_check"]}"
 mod_uri["upstream_check"]="https://github.com/${mod_a["upstream_check"]}/${mod_pn["upstream_check"]}/archive/${mod_sha["upstream_check"]}.tar.gz"
@@ -165,7 +165,7 @@ mod_doc["metrics"]="README.md"
 # NAXSI (https://github.com/nbs-system/naxsi)
 mod_a["naxsi"]="nbs-system"
 mod_pn["naxsi"]="naxsi"
-mod_pv["naxsi"]="0.54"
+mod_pv["naxsi"]="0.56"
 mod_lic["naxsi"]="GPL-2+"
 mod_p["naxsi"]="${mod_pn["naxsi"]}-${mod_pv["naxsi"]}"
 mod_uri["naxsi"]="https://github.com/${mod_a["naxsi"]}/${mod_pn["naxsi"]}/archive/${mod_pv["naxsi"]}.tar.gz"
@@ -175,7 +175,7 @@ mod_doc["naxsi"]="README.md"
 # RTMP (http://github.com/arut/nginx-rtmp-module)
 mod_a["rtmp"]="arut"
 mod_pn["rtmp"]="nginx-rtmp-module"
-mod_pv["rtmp"]="1.2.0"
+mod_pv["rtmp"]="1.2.1"
 mod_lic["rtmp"]="BSD-2"
 mod_p["rtmp"]="${mod_pn["rtmp"]}-${mod_pv["rtmp"]}"
 mod_uri["rtmp"]="https://github.com/${mod_a["rtmp"]}/${mod_pn["rtmp"]}/archive/v${mod_pv["rtmp"]}.tar.gz"
@@ -237,7 +237,7 @@ mod_doc["modsecurity"]="README.TXT CHANGES"
 # Push Stream (https://github.com/wandenberg/nginx-push-stream-module)
 mod_a["push_stream"]="wandenberg"
 mod_pn["push_stream"]="nginx-push-stream-module"
-mod_pv["push_stream"]="0.5.2"
+mod_pv["push_stream"]="0.5.4"
 mod_lic["push_stream"]="GPL-3"
 mod_p["push_stream"]="${mod_pn["push_stream"]}-${mod_pv["push_stream"]}"
 mod_uri["push_stream"]="https://github.com/${mod_a["push_stream"]}/${mod_pn["push_stream"]}/archive/${mod_pv["push_stream"]}.tar.gz"
@@ -326,7 +326,7 @@ for m in ${!mod_a[@]} ; do
 	IUSE+=" nginx_modules_external_${m}" ; done
 
 RDEPEND="
-	!www-servers/nginx:mainline
+	!www-server/nginx:0
 	google_perftools? ( dev-util/google-perftools )
 	http-cache? (
 		!libressl? ( dev-libs/openssl:0= )
@@ -428,6 +428,11 @@ src_prepare() {
 
 	# FL-3234
 	#epatch "${FILESDIR}"/${PN}-1.9-CVE-2016-4450.patch
+
+	# FL-5802
+	epatch "${FILESDIR}"/CVE-2018-16843.patch
+	epatch "${FILESDIR}"/CVE-2018-16844.patch
+	epatch "${FILESDIR}"/CVE-2018-16845.patch
 
 	if use nginx_modules_external_upstream_check; then
 		epatch "${FILESDIR}/check-1.11.5.patch"
@@ -624,7 +629,7 @@ src_install() {
 	insinto "${EROOT}etc/${PN}"
 	doins "${FILESDIR}/${PN}.conf"
 
-	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
+	newinitd "${FILESDIR}/1.13.7/${PN}.initd" "${PN}"
 
 	keepdir "${EROOT}etc/${PN}"/sites-{available,enabled}
 	insinto "${EROOT}etc/${PN}/sites-available"
