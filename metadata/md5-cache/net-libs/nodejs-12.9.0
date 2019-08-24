@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare pretend setup test
+DEPEND=>=dev-libs/libuv-1.31.0:= >=net-dns/c-ares-1.15.0 >=net-libs/http-parser-2.8.0:= >=net-libs/nghttp2-1.39.2 sys-libs/zlib icu? ( >=dev-libs/icu-64.2:= ) ssl? ( >=dev-libs/openssl-1.1.1:0= ) || ( >=dev-lang/python-2.7.5-r2:2.7[threads] ) systemtap? ( dev-util/systemtap ) test? ( net-misc/curl )
+DESCRIPTION=A JavaScript runtime built on Chrome's V8 JavaScript engine
+EAPI=7
+HOMEPAGE=https://nodejs.org/
+IUSE=cpu_flags_x86_sse2 debug doc icu inspector +npm +snapshot +ssl systemtap test
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x64-macos
+LICENSE=Apache-1.1 Apache-2.0 BSD BSD-2 MIT
+RDEPEND=>=dev-libs/libuv-1.31.0:= >=net-dns/c-ares-1.15.0 >=net-libs/http-parser-2.8.0:= >=net-libs/nghttp2-1.39.2 sys-libs/zlib icu? ( >=dev-libs/icu-64.2:= ) ssl? ( >=dev-libs/openssl-1.1.1:0= )
+REQUIRED_USE=inspector? ( icu ssl ) npm? ( ssl )
+SLOT=0
+SRC_URI=https://nodejs.org/dist/v12.9.0/node-v12.9.0.tar.xz
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	55aaa148741116aa54ad0d80e361818e	multilib	b2f01ad412baf81650c23fcf0975fa33	pax-utils	e85f015e815dd463b0c206d781ef45a5	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	12114a2a9aab35b93efc037a196b3234	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
+_md5_=dabc6e7e75f57a2681092b0bd1f9d948

@@ -2,7 +2,6 @@
 =dev-db/pgadmin4-2.1 python_single_target_python3_4 python_targets_python3_4
 dev-db/mysql-workbench python_single_target_python2_7
 net-fs/samba python_single_target_python2_7
-net-libs/nodejs python_single_target_python2_7
 sys-libs/ldb python_single_target_python2_7
 sys-libs/talloc python_single_target_python2_7
 sys-libs/tdb python_single_target_python2_7
