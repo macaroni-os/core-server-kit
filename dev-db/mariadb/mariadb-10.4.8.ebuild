@@ -1,8 +1,7 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-MY_EXTRAS_VER="20190305-2052Z"
+MY_EXTRAS_VER="20190731-2258Z"
 SUBSLOT="18"
 
 JAVA_PKG_OPT_USE="jdbc"
@@ -10,7 +9,7 @@ JAVA_PKG_OPT_USE="jdbc"
 # Keeping eutils in EAPI=6 for emktemp in pkg_config
 
 inherit eutils systemd flag-o-matic prefix toolchain-funcs \
-	java-pkg-opt-2 user cmake-utils
+	java-pkg-opt-2 user cmake-utils multilib-build
 
 SRC_URI="https://downloads.mariadb.org/interstitial/${P}/source/${P}.tar.gz "
 
@@ -24,14 +23,14 @@ if [[ "${MY_EXTRAS_VER}" != "live" && "${MY_EXTRAS_VER}" != "none" ]]; then
 		https://dev.gentoo.org/~jmbsvicetto/distfiles/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
 fi
 
-HOMEPAGE="https://mariadb.org/"
+HOMEPAGE="http://mariadb.org/"
 DESCRIPTION="An enhanced, drop-in replacement for MySQL"
 LICENSE="GPL-2 LGPL-2.1+"
 SLOT="0/${SUBSLOT:-0}"
 IUSE="+backup bindist client-libs cracklib debug extraengine galera innodb-lz4
 	innodb-lzo innodb-snappy jdbc jemalloc kerberos latin1 libressl mroonga
 	numa odbc oqgraph pam +perl profiling rocksdb selinux +server sphinx
-	sst-rsync sst-mariabackup sst-xtrabackup static systemd systemtap tcmalloc
+	sst-rsync sst-mariabackup sst-xtrabackup static static-libs systemd systemtap tcmalloc
 	test tokudb xml yassl"
 
 # Tests always fail when libressl is enabled due to hard-coded ciphers in the tests
@@ -42,7 +41,7 @@ REQUIRED_USE="jdbc? ( extraengine server !static )
 	?? ( tcmalloc jemalloc )
 	static? ( yassl !pam )"
 
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="*"
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase
@@ -58,16 +57,18 @@ else
 	MY_PATCH_DIR="${WORKDIR%/}/mysql-extras-${MY_EXTRAS_VER}"
 fi
 
+
 PATCHES=(
 	"${MY_PATCH_DIR}"/20015_all_mariadb-pkgconfig-location.patch
-	"${MY_PATCH_DIR}"/20018_all_mariadb-10.2.16-without-clientlibs-tools.patch
+	"${MY_PATCH_DIR}"/20018_all_mariadb-10.4.5-without-clientlibs-tools.patch
 	"${MY_PATCH_DIR}"/20024_all_mariadb-10.2.6-mysql_st-regression.patch
 	"${MY_PATCH_DIR}"/20025_all_mariadb-10.2.6-gssapi-detect.patch
-	"${MY_PATCH_DIR}"/20035_all_mariadb-10.2-atomic-detection.patch
+	"${MY_PATCH_DIR}"/20035_all_mariadb-10.3-atomic-detection.patch
 )
 
 # Be warned, *DEPEND are version-dependant
 # These are used for both runtime and compiletime
+# MULTILIB_USEDEP only set for libraries used by the client library
 COMMON_DEPEND="
 	kernel_linux? (
 		sys-process/procps:0=
@@ -108,6 +109,7 @@ COMMON_DEPEND="
 		tokudb? ( app-arch/snappy )
 	)
 	>=dev-libs/libpcre-8.41-r1:3=
+	dev-db/mariadb-connector-c[${MULTILIB_USEDEP},static-libs?]
 "
 DEPEND="virtual/yacc
 	static? ( sys-libs/ncurses[static-libs] )
@@ -117,8 +119,8 @@ DEPEND="virtual/yacc
 RDEPEND="selinux? ( sec-policy/selinux-mysql )
 	!dev-db/mysql !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster
 	server? ( !prefix? ( dev-db/mysql-init-scripts ) )
-	!<virtual/mysql-5.6-r11
 	${COMMON_DEPEND}
+	>virtual/mysql-5.6-r11[server=,static=]
 	server? ( galera? (
 		sys-apps/iproute2
 		=sys-cluster/galera-25*
@@ -137,7 +139,7 @@ RDEPEND="selinux? ( sec-policy/selinux-mysql )
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 # percona-xtrabackup-bin causes a circular dependency if DBD-mysql is not already installed
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )
-	 server? ( ~virtual/mysql-5.6[static=]
+	 server? (
 		 galera? ( sst-xtrabackup? ( || ( >=dev-db/percona-xtrabackup-bin-2.2.4 dev-db/percona-xtrabackup ) ) ) )"
 
 pkg_setup() {
@@ -225,12 +227,6 @@ pkg_postinst() {
 			elog "--wsrep-new-cluster to the options in /etc/conf.d/mysql for one node."
 			elog "This option should then be removed for subsequent starts."
 			einfo
-			if use sst-xtrabackup ; then
-				ewarn "As per https://mariadb.com/kb/en/meta/xtrabackup_warning/, XtraBackup"
-				ewarn "as an SST is broken by default beginning with 10.2.19 with the setting"
-				ewarn "innodb_safe_truncate=ON.  Please migrate to sst-mariabackup instead."
-				ewarn "sst-xtrabackup is being removed in 10.3 and higher."
-			fi
 		fi
 	fi
 
@@ -241,16 +237,20 @@ pkg_postinst() {
 	elog "Please backup any changes you made to /etc/mysql/my.cnf"
 	elog "and add them as a new file under /etc/mysql/${PN}.d with a .cnf extension."
 	elog "You may have as many files as needed and they are read alphabetically."
-	elog "Be sure the options have the appropriate section headers, i.e. [mysqld]."
+	elog "Be sure the options have the appropitate section headers, i.e. [mysqld]."
 	einfo
 }
 
 src_unpack() {
+
+	# Initialize the proper variables first
+	mysql_init_vars
+
 	unpack ${A}
 	# Grab the patches
-	[[ "${MY_EXTRAS_VER}" == "live" ]] && S="${WORKDIR%/}/mysql-extras" git-r3_src_unpack
+	[[ "${MY_EXTRAS_VER}" == "live" ]] && S="${WORKDIR}/mysql-extras" git-r3_src_unpack
 
-	mv -f "${WORKDIR%/}/${P}" "${S}" || die
+	mv -f "${WORKDIR}/${P/_rc/}" "${S}" || die
 }
 
 src_prepare() {
@@ -261,12 +261,10 @@ src_prepare() {
 		echo > "${S%/}/storage/${1}/CMakeLists.txt" || die
 	}
 
-	local malloc
-	for malloc in jemalloc tcmalloc ; do
-		if use ${malloc}; then
-			echo "TARGET_LINK_LIBRARIES(mysqld ${malloc})" >> "${S}/sql/CMakeLists.txt"
-		fi
-	done
+	java-pkg-opt-2_src_prepare
+	if use tcmalloc; then
+		echo "TARGET_LINK_LIBRARIES(mysqld tcmalloc)" >> "${S}/sql/CMakeLists.txt"
+	fi
 
 	# Don't build bundled xz-utils for tokudb
 	echo > "${S}/storage/tokudb/PerconaFT/cmake_modules/TokuThirdParty.cmake" || die
@@ -277,7 +275,7 @@ src_prepare() {
 	local server_plugins=( handler_socket auth_socket feedback metadata_lock_info
 				locale_info qc_info server_audit sql_errlog )
 	local test_plugins=( audit_null auth_examples daemon_example fulltext
-				debug_key_management example_key_management )
+				debug_key_management example_key_management versioning )
 	if ! use server; then # These plugins are for the server
 		for plugin in "${server_plugins[@]}" ; do
 			_disable_plugin "${plugin}"
@@ -306,7 +304,6 @@ src_prepare() {
 	fi
 
 	cmake-utils_src_prepare
-	java-pkg-opt-2_src_prepare
 }
 
 src_configure(){
@@ -342,7 +339,7 @@ src_configure(){
 		-DINSTALL_MYSQLDATADIR="${EPREFIX}/var/lib/mysql"
 		-DINSTALL_SBINDIR=sbin
 		-DINSTALL_SUPPORTFILESDIR="${EPREFIX}/usr/share/mariadb"
-		-DWITH_COMMENT="Gentoo Linux ${PF}"
+		-DWITH_COMMENT="Funtoo Linux ${PF}"
 		-DWITH_UNIT_TESTS=$(usex test ON OFF)
 		-DWITH_LIBEDIT=0
 		-DWITH_ZLIB=system
@@ -366,6 +363,7 @@ src_configure(){
 		-DWITHOUT_CLIENTLIBS=YES
 		-DCLIENT_PLUGIN_DIALOG=OFF
 		-DCLIENT_PLUGIN_AUTH_GSSAPI_CLIENT=OFF
+		-DCLIENT_PLUGIN_CLIENT_ED25519=OFF
 		-DCLIENT_PLUGIN_MYSQL_CLEAR_PASSWORD=STATIC
 		-DCLIENT_PLUGIN_CACHING_SHA2_PASSWORD=OFF
 	)
@@ -423,7 +421,7 @@ src_configure(){
 			-DPLUGIN_AUTH_GSSAPI=$(usex kerberos DYNAMIC NO)
 			-DWITH_MARIABACKUP=$(usex backup ON OFF)
 			-DWITH_LIBARCHIVE=$(usex backup ON OFF)
-			-DINSTALL_SQLBENCHDIR=share/mariadb
+			-DINSTALL_SQLBENCHDIR=""
 			-DPLUGIN_ROCKSDB=$(usex rocksdb DYNAMIC NO)
 			# systemd is only linked to for server notification
 			-DWITH_SYSTEMD=$(usex systemd yes no)
@@ -576,14 +574,17 @@ src_install() {
 		for script in "${S}"/scripts/mysql* ; do
 			[[ ( -f "$script" ) && ( "${script%.sh}" == "${script}" ) ]] && dodoc "${script}"
 		done
-		# Manually install supporting files that conflict with other packages
-		# but are needed for galera and initial installation
-		exeinto /usr/libexec/mariadb
-		doexe "${BUILD_DIR}/extra/my_print_defaults" "${BUILD_DIR}/extra/perror"
 	fi
 
 	#Remove mytop if perl is not selected
 	[[ -e "${ED}/usr/bin/mytop" ]] && ! use perl && rm -f "${ED}/usr/bin/mytop"
+
+
+    if use client-libs; then
+        einfo "Installing my_print_defaults"
+	    exeinto /usr/bin
+	    doexe ${WORKDIR}/${P}_build/extra/my_print_defaults
+    fi
 }
 
 # Official test instructions:
@@ -657,11 +658,6 @@ src_test() {
 	done
 
 	_disable_test main.plugin_auth "Needs client libraries built"
-	_disable_test main.mysqldump "Test fails past 2018-12-31 due to event expiration"
-
-	# Likely environment issues as only number of clients connected fails
-	_disable_test rpl.rpl_semi_sync_uninstall_plugin \
-		"Fails intermittently on parallel testing"
 
 	# run mysql-test tests
 	perl mysql-test-run.pl --force --vardir="${T}/var-tests" --reorder --skip-test=tokudb --skip-test-list="${T}/disabled.def"
@@ -739,7 +735,7 @@ mysql_init_vars() {
 
 pkg_config() {
 	_getoptval() {
-		local mypd="${EROOT}"usr/libexec/mariadb/my_print_defaults
+		local mypd="${EROOT}"/usr/bin/my_print_defaults
 		local section="$1"
 		local flag="--${2}="
 		local extra_options="${3}"
@@ -813,11 +809,11 @@ pkg_config() {
 
 		unset tmp_mysqld_password_source
 	fi
-	MYSQL_TMPDIR="$(_getoptval mysqld tmpdir | tail -n1)"
+	MYSQL_TMPDIR="$(_getoptval mysqld tmpdir)"
 	# These are dir+prefix
-	MYSQL_RELAY_LOG="$(_getoptval mysqld relay-log | tail -n1)"
+	MYSQL_RELAY_LOG="$(_getoptval mysqld relay-log)"
 	MYSQL_RELAY_LOG=${MYSQL_RELAY_LOG%/*}
-	MYSQL_LOG_BIN="$(_getoptval mysqld log-bin | tail -n1)"
+	MYSQL_LOG_BIN="$(_getoptval mysqld log-bin)"
 	MYSQL_LOG_BIN=${MYSQL_LOG_BIN%/*}
 
 	if [[ ! -d "${ROOT}/$MYSQL_TMPDIR" ]]; then
@@ -865,7 +861,7 @@ pkg_config() {
 	local sqltmp="$(emktemp)"
 
 	# Fix bug 446200. Don't reference host my.cnf, needs to come first,
-	# see https://bugs.mysql.com/bug.php?id=31312
+	# see http://bugs.mysql.com/bug.php?id=31312
 	use prefix && options="${options} '--defaults-file=${MY_SYSCONFDIR}/my.cnf'"
 
 	# Figure out which options we need to disable to do the setup
@@ -884,7 +880,7 @@ pkg_config() {
 	# Now that /var/run is a tmpfs mount point, we need to ensure it exists before using it
 	PID_DIR="${EROOT}/var/run/mysqld"
 	if [[ ! -d "${PID_DIR}" ]]; then
-		install -d -m 755 -o mysql -g mysql "${PID_DIR}" || die "Could not create pid directory"
+		install -d -m 755 -o mysql -g root "${PID_DIR}" || die "Could not create pid directory"
 	fi
 
 	if [[ ! -d "${MY_DATADIR}" ]]; then
@@ -894,7 +890,7 @@ pkg_config() {
 	pushd "${TMPDIR}" &>/dev/null || die
 
 	# Filling timezones, see
-	# https://dev.mysql.com/doc/mysql/en/time-zone-support.html
+	# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
 	"${EROOT}/usr/bin/mysql_tzinfo_to_sql" "${EROOT}/usr/share/zoneinfo" > "${sqltmp}" 2>/dev/null
 
 	local cmd=( "${EROOT}usr/share/mariadb/scripts/mysql_install_db" )
@@ -923,7 +919,7 @@ pkg_config() {
 		--max_allowed_packet=8M \
 		--net_buffer_length=16K \
 		--socket=${socket} \
-		--pid-file=${pidfile} \
+		--pid-file=${pidfile}
 		--tmpdir=${ROOT}/${MYSQL_TMPDIR}"
 	#einfo "About to start mysqld: ${mysqld}"
 	ebegin "Starting mysqld"
@@ -970,3 +966,4 @@ pkg_config() {
 	wait %1
 	einfo "Done"
 }
+

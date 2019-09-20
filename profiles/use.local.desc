@@ -4,31 +4,6 @@
 
 app-admin/logstash-bin:x-pack - Enable additional features (may need a license)
 app-misc/elasticsearch:x-pack - Enable additional features (may need a license)
-dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
-dev-db/mariadb:client-libs - Build the client libraries from the server package instead of the C Connector packages
-dev-db/mariadb:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
-dev-db/mariadb:galera - Enables galera replication
-dev-db/mariadb:innodb-lz4 - Enables lz4 compression methods for InnoDB/XtraDB
-dev-db/mariadb:innodb-lzo - Enables lzo compression methods for InnoDB/XtraDB
-dev-db/mariadb:innodb-snappy - Enables snappy compression methods for InnoDB/XtraDB using app-arch/snappy
-dev-db/mariadb:jdbc - Enable the CONNECT engine to access foreign databases via JDBC
-dev-db/mariadb:latin1 - Use LATIN1 encoding instead of UTF8
-dev-db/mariadb:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
-dev-db/mariadb:mroonga - Add support for the Mroonga engine for interfacing with the Groonga text search
-dev-db/mariadb:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/mariadb:oqgraph - Add support for the Open Query GRAPH engine
-dev-db/mariadb:pam - Enable the optional PAM authentication plugin for the server
-dev-db/mariadb:profiling - Add support for statement profiling (requires USE=community).
-dev-db/mariadb:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
-dev-db/mariadb:server - Build the server program
-dev-db/mariadb:sphinx - Add suport for the sphinx full-text search engine
-dev-db/mariadb:sst-mariabackup - Add tools needed to support the mariabackup SST method
-dev-db/mariadb:sst-rsync - Add tools needed to support the rsync SST method
-dev-db/mariadb:sst-xtrabackup - Add tools needed to support the xtrabackup and xtrabackup-v2 SST methods
-dev-db/mariadb:systemtap - Build support for profiling and tracing using dev-util/systemtap
-dev-db/mariadb:test - Install upstream testsuites for end use.
-dev-db/mariadb:tokudb - Add support for TokuDB storage engine
-dev-db/mariadb:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
 dev-db/mysql:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
 dev-db/mysql:experimental - Build experimental features aka "rapid" plugins
@@ -65,7 +40,6 @@ dev-lang/php:coverage - Include gcov symbols for test coverage and lcov reports.
 dev-lang/php:ctype - Enable ctype functions
 dev-lang/php:embed - Enable embed SAPI
 dev-lang/php:enchant - Add supports Enchant spelling library.
-dev-lang/php:ffi - Add foreign function interface (ffi extension) support
 dev-lang/php:fileinfo - Add fileinfo extension support
 dev-lang/php:filter - Add filter extension support
 dev-lang/php:flatfile - Add dbm support for flat files
