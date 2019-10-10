@@ -64,6 +64,7 @@ PATCHES=(
 	"${MY_PATCH_DIR}"/20024_all_mariadb-10.2.6-mysql_st-regression.patch
 	"${MY_PATCH_DIR}"/20025_all_mariadb-10.2.6-gssapi-detect.patch
 	"${MY_PATCH_DIR}"/20035_all_mariadb-10.3-atomic-detection.patch
+	"${FILESDIR}/remove-client-man-pages.patch"
 )
 
 # Be warned, *DEPEND are version-dependant
