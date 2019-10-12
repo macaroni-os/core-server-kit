@@ -6,6 +6,7 @@ dev-php
 dev-python
 net-fs
 net-libs
+net-proxy
 sys-libs
 virtual
 www-apache
