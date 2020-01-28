@@ -3,6 +3,21 @@
 # * generated automatically using egencache *
 
 app-admin/logstash-bin:x-pack - Enable additional features (may need a license)
+app-admin/salt:cherrypy - Enable support for using cherrypy.
+app-admin/salt:gnupg - Enable support for gnupg via python-gnupg.
+app-admin/salt:keyring - Enable support for keyrings via python-keyring.
+app-admin/salt:libcloud - Enable salt-cloud support via libcloud.
+app-admin/salt:libvirt - Support managing virtual machines with app-emulation/libvirt.
+app-admin/salt:mako - Add support for using the mako template engine for parsing salt states.
+app-admin/salt:mongodb - Support returning data to a mongodb server.
+app-admin/salt:neutron - Support the OpenStack neutron network service.
+app-admin/salt:nova - Enable support for the OpenStack Nova API
+app-admin/salt:openssl - Add support for using TLS via OpenSSL.
+app-admin/salt:portage - Add support for package state enforcement using sys-apps/portage
+app-admin/salt:raet - Add support for the new RAET transport.
+app-admin/salt:redis - Support returning data to a redis database.
+app-admin/salt:timelib - Use timelib to parse english textual date descriptions.
+app-admin/salt:zeromq - Add support for the zeromq transport.
 app-misc/elasticsearch:x-pack - Enable additional features (may need a license)
 dev-db/mysql:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
 dev-db/mysql:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
