@@ -7,15 +7,14 @@ PYTHON_COMPAT=( python3_{5,6,7} )
 inherit eutils systemd distutils-r1
 
 DESCRIPTION="Salt is a remote execution and configuration manager"
-HOMEPAGE="https://www.saltstack.com/resources/community/
-	https://github.com/saltstack"
+HOMEPAGE="https://www.saltstack.com/resources/community/ https://github.com/saltstack"
 
 # Keyword masking for now.
 KEYWORDS=""
 
 GITHUB_REPO="$PN"
 GITHUB_USER="saltstack"
-GITHUB_TAG="v3000.0rc2"
+GITHUB_TAG="81eb15264380d82267ffc3c1930410baf1f3fbf1"
 SRC_URI="https://www.github.com/${GITHUB_USER}/${GITHUB_REPO}/tarball/${GITHUB_TAG} -> ${PN}-${GITHUB_TAG}.tar.gz"
 
 src_unpack() {
@@ -23,11 +22,10 @@ src_unpack() {
 	mv "${WORKDIR}/${GITHUB_USER}-${GITHUB_REPO}"-??????? "${S}" || die
 }
 
-
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="cherrypy ldap libcloud libvirt gnupg keyring mako mongodb mysql neutron nova"
-IUSE+=" openssl portage profile redis selinux test timelib raet +zeromq vim-syntax"
+IUSE+=" openssl +portage profile redis selinux test timelib vim-syntax"
 
 RDEPEND="sys-apps/pciutils
 	dev-python/jinja[${PYTHON_USEDEP}]
@@ -37,22 +35,15 @@ RDEPEND="sys-apps/pciutils
 	dev-python/markupsafe[${PYTHON_USEDEP}]
 	>=dev-python/requests-1.0.0[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	virtual/python-futures[${PYTHON_USEDEP}]
 	libcloud? ( >=dev-python/libcloud-0.14.0[${PYTHON_USEDEP}] )
 	mako? ( dev-python/mako[${PYTHON_USEDEP}] )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	libvirt? ( dev-python/libvirt-python[${PYTHON_USEDEP}] )
-	openssl? (
-		dev-libs/openssl:0=[-bindist]
-		dev-python/pyopenssl[${PYTHON_USEDEP}]
-	)
-	raet? (
-		>=dev-python/libnacl-1.0.0[${PYTHON_USEDEP}]
-		>=dev-python/ioflo-1.1.7[${PYTHON_USEDEP}]
-		>=dev-python/raet-0.6.0[${PYTHON_USEDEP}]
-	)
-	zeromq? (
-		>=dev-python/pyzmq-2.2.0[${PYTHON_USEDEP}]
+	dev-libs/openssl:0=[-bindist]
+	>=dev-python/libnacl-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/pyzmq-2.2.0[${PYTHON_USEDEP}]
+	|| (
+		dev-python/m2crypto[${PYTHON_USEDEP}]
 		dev-python/pycryptodome[${PYTHON_USEDEP}]
 	)
 	cherrypy? ( >=dev-python/cherrypy-3.2.2[${PYTHON_USEDEP}] )
@@ -68,12 +59,11 @@ RDEPEND="sys-apps/pciutils
 	vim-syntax? ( app-vim/salt-vim )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-		>=dev-python/pytest-salt-2018.12.8[${PYTHON_USEDEP}]
+		>=dev-python/pytest-salt-2019.12.27[${PYTHON_USEDEP}]
 		>=dev-python/jsonschema-3.0[${PYTHON_USEDEP}]
 		dev-python/pytest-helpers-namespace[${PYTHON_USEDEP}]
 		dev-python/psutil[${PYTHON_USEDEP}]
 		dev-python/pytest[${PYTHON_USEDEP}]
-		dev-python/pytest-catchlog[${PYTHON_USEDEP}]
 		dev-python/pip[${PYTHON_USEDEP}]
 		dev-python/virtualenv[${PYTHON_USEDEP}]
 		>=dev-python/mock-2.0.0[${PYTHON_USEDEP}]
@@ -87,20 +77,17 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 DOCS=( README.rst AUTHORS )
 
-REQUIRED_USE="|| ( raet zeromq )"
 RESTRICT="x86? ( test )"
 
 PATCHES=(
 	"${FILESDIR}/salt-2017.7.0-dont-realpath-tmpdir.patch"
-	"${FILESDIR}/salt-2019.2.0-tests.patch"
-	"${FILESDIR}/salt-2019.2.0-skip-tests-that-oom-machine.patch"
 )
 
 python_prepare() {
-	# remove tests with external dependencies that may not be available
-	rm tests/unit/{test_zypp_plugins.py,utils/test_extend.py} || die
-	rm tests/unit/modules/test_{file,boto_{vpc,secgroup,elb}}.py || die
-	rm tests/unit/states/test_boto_vpc.py || die
+#	# remove tests with external dependencies that may not be available
+#	rm tests/unit/{test_zypp_plugins.py,utils/test_extend.py} || die
+#	rm tests/unit/modules/test_{file,boto_{vpc,secgroup,elb}}.py || die
+#	rm tests/unit/states/test_boto_vpc.py || die
 
 	# allow the use of the renamed msgpack
 	sed -i '/^msgpack/d' requirements/base.txt || die
@@ -109,6 +96,12 @@ python_prepare() {
 python_install_all() {
 	local svc
 	USE_SETUPTOOLS=1 distutils-r1_python_install_all
+
+	# See FL-6970: remove invalid dependency on pycrypto:
+	for x in $D/usr/lib/python*/site-packages/salt-3000-py*.egg-info/requires.txt; do
+		einfo 'Removing pycrypto from requires.txt'
+		sed -i -e '/^pycrypto/d' $x || die "sed fail"
+	done
 
 	for svc in minion master syndic api; do
 		newinitd "${FILESDIR}"/${svc}-initd-4 salt-${svc}
@@ -128,12 +121,12 @@ python_test() {
 	# ${T} is too long a path for the tests to work
 	tempdir="$(mktemp -du --tmpdir=/tmp salt-XXX)"
 	mkdir "${T}/$(basename "${tempdir}")"
-	mkdir "${BUILD_DIR}"/../{templates,conf/cloud.{providers,profiles,maps}.d} || die
+#	mkdir "${BUILD_DIR}"/../{templates,conf/cloud.{providers,profiles,maps}.d} || die
 
 	(
 		cleanup() {
 			rm -f "${tempdir}"
-			rmdir "${BUILD_DIR}"/../{templates,conf/cloud.{providers,profiles,maps}.d} || die
+#			rmdir "${BUILD_DIR}"/../{templates,conf/cloud.{providers,profiles,maps}.d} || die
 		}
 
 		trap cleanup EXIT
