@@ -1,6 +1,14 @@
+=app-admin/salt-2019.2.2 python_single_target_python2_7
+=app-admin/salt-2019.2.3 python_single_target_python2_7
+=dev-python/SaltTesting-2017.6.1 python_single_target_python2_7
+=dev-python/apsw-3.23.1_p1 python_single_target_python2_7
+=dev-python/mysql-connector-python-2.1.7 python_single_target_python2_7
+=dev-python/mysql-connector-python-2.1.7-r1 python_single_target_python2_7
+=dev-python/pytest-salt-2019.2.1_p1 python_single_target_python2_7
 =sys-libs/talloc-2.1.14 python_single_target_python2_7
 =sys-libs/talloc-2.1.5 python_single_target_python2_7
 =sys-libs/talloc-2.1.9 python_single_target_python2_7
 dev-db/mysql-workbench python_single_target_python2_7
 dev-db/pgadmin4 python_single_target_python3_5 python_targets_python3_5
+net-libs/nodejs python_single_target_python2_7
 www-apache/mod_wsgi python_single_target_python2_7
