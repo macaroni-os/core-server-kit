@@ -10,7 +10,7 @@ inherit flag-o-matic autotools
 MY_PV=${PV/_rc/RC}
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="{{artifacts[0].src_uri}}"
+SRC_URI="https://www.php.net/distributions/php-7.2.29.tar.bz2 -> php-7.2.29.tar.bz2"
 
 LICENSE="PHP-3.01
 	BSD
@@ -20,7 +20,7 @@ LICENSE="PHP-3.01
 	gd? ( gd )
 	unicode? ( BSD-2 LGPL-2.1 )"
 
-SLOT="{{slot}}"
+SLOT="7.2"
 KEYWORDS="*"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -150,7 +150,10 @@ BDEPEND="virtual/pkgconfig"
 
 PHP_MV="$(ver_cut 1)"
 
-PATCHES={{patches}}
+PATCHES=(
+	"${FILESDIR}/php-freetype-2.9.1.patch"
+	"${FILESDIR}/php-7.2.13-intl-use-icu-namespace.patch"
+)
 
 php_install_ini() {
 	local phpsapi="${1}"

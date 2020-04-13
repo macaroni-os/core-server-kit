@@ -150,7 +150,9 @@ BDEPEND="virtual/pkgconfig"
 
 PHP_MV="$(ver_cut 1)"
 
-PATCHES=( "${FILESDIR}/php-iodbc-header-location.patch" )
+PATCHES=(
+	"${FILESDIR}/php-iodbc-header-location.patch"
+)
 
 php_install_ini() {
 	local phpsapi="${1}"
@@ -221,8 +223,8 @@ src_prepare() {
 		|| die 'failed to move the include directory in php-fpm.conf'
 
 	# Emulate buildconf to support cross-compilation
-	rm -fr aclocal.m4 autom4te.cache config.cache \
-		configure main/php_config.h.in || die
+	# rm -fr aclocal.m4 autom4te.cache config.cache \
+	# 	configure main/php_config.h.in || die
 	eautoconf --force
 	eautoheader
 }
