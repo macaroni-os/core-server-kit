@@ -17,7 +17,6 @@ LICENSE="PHP-3.01
 	Zend-2.0
 	bcmath? ( LGPL-2.1+ )
 	fpm? ( BSD-2 )
-	gd? ( gd )
 	unicode? ( BSD-2 LGPL-2.1 )"
 
 SLOT="7.3"
@@ -35,27 +34,23 @@ IUSE="${IUSE}
 
 IUSE="${IUSE} acl argon2 bcmath berkdb bzip2 calendar cdb cjk
 	coverage +ctype curl debug
-	enchant exif ffi +fileinfo +filter firebird
-	+flatfile ftp gd gdbm gmp +iconv imap inifile
+	enchant exif +fileinfo +filter firebird
+	+flatfile ftp gdbm gmp +iconv imap inifile
 	intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit libressl lmdb
 	mhash mssql mysql mysqli nls
 	oci8-instant-client odbc +opcache pcntl pdo +phar +posix postgres qdbm
 	readline selinux +session session-mm sharedmem
 	+simplexml snmp soap sockets sodium spell sqlite ssl
-	sysvipc test tidy +tokenizer tokyocabinet truetype unicode webp
-	+xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib -maintainer-zts"
+	sysvipc test tidy +tokenizer tokyocabinet unicode
+	+xml xmlreader xmlwriter xmlrpc xslt zip zlib -maintainer-zts"
 
 # Without USE=readline or libedit, the interactive "php -a" CLI will hang.
 REQUIRED_USE="
 	|| ( cli cgi fpm apache2 embed phpdbg )
 	cli? ( ^^ ( readline libedit ) )
 	!cli? ( ?? ( readline libedit ) )
-	truetype? ( gd zlib )
-	webp? ( gd zlib )
-	cjk? ( gd zlib )
-	exif? ( gd zlib )
-	xpm? ( gd zlib )
-	gd? ( zlib )
+	cjk? ( zlib )
+	exif? ( zlib )
 	simplexml? ( xml )
 	soap? ( xml )
 	xmlrpc? ( xml iconv )
@@ -92,9 +87,7 @@ COMMON_DEPEND="
 	coverage? ( dev-util/lcov )
 	curl? ( >=net-misc/curl-7.10.5 )
 	enchant? ( <app-text/enchant-2.0:0 )
-	ffi? ( >=dev-libs/libffi-3.0.11 )
 	firebird? ( dev-db/firebird )
-	gd? ( >=virtual/jpeg-0-r3:0 media-libs/libpng:0= )
 	gdbm? ( >=sys-libs/gdbm-1.8.0:0= )
 	gmp? ( dev-libs/gmp:0= )
 	iconv? ( virtual/libiconv )
@@ -123,11 +116,8 @@ COMMON_DEPEND="
 	)
 	tidy? ( || ( app-text/tidy-html5 app-text/htmltidy ) )
 	tokyocabinet? ( dev-db/tokyocabinet )
-	truetype? ( =media-libs/freetype-2* )
 	unicode? ( dev-libs/oniguruma:= )
-	webp? ( media-libs/libwebp:0= )
 	xml? ( >=dev-libs/libxml2-2.7.6 )
-	xpm? ( x11-libs/libXpm )
 	xslt? ( dev-libs/libxslt )
 	zip? ( >=dev-libs/libzip-1.2.0:= )
 	zlib? ( >=sys-libs/zlib-1.2.0.4:0= )
@@ -246,7 +236,6 @@ src_configure() {
 		--localstatedir="${EPREFIX}/var"
 		--without-pear
 		--enable-re2c-cgoto
-		--enable-rtld-now
 	)
 
 	our_conf+=(
@@ -260,7 +249,6 @@ src_configure() {
 		$(use_enable xml dom)
 		$(use_with enchant)
 		$(use_enable exif)
-		$(use_with ffi)
 		$(use_enable fileinfo)
 		$(use_enable filter)
 		$(use_enable ftp)
@@ -273,7 +261,6 @@ src_configure() {
 		$(use_enable ipv6)
 		$(use_enable json)
 		$(use_with kerberos)
-		$(use_with xml libxml)
 		$(use_enable unicode mbstring)
 		$(use_with ssl openssl)
 		$(use_enable pcntl)
@@ -300,7 +287,7 @@ src_configure() {
 		$(use_enable xmlwriter)
 		$(use_with xmlrpc)
 		$(use_with xslt xsl)
-		$(use_with zip)
+		$(use_enable zip)
 		$(use_with zlib zlib "${EPREFIX}/usr")
 		$(use_enable debug)
 	)
@@ -325,14 +312,8 @@ src_configure() {
 
 	# Support for the GD graphics library
 	our_conf+=(
-		$(use_with truetype freetype)
 		$(use_enable cjk gd-jis-conv)
-		$(use_with gd jpeg)
-		$(use_with xpm)
-		$(use_with webp)
 	)
-	# enable gd last, so configure can pick up the previous settings
-	our_conf+=( $(use_enable gd) )
 
 	# IMAP support
 	if use imap ; then
@@ -423,7 +404,6 @@ src_configure() {
 	# --with-external-pcre affects ext/pcre
 	# Many arches don't support pcre-jit
 	our_conf+=(
-		--with-external-pcre
 		--without-pcre-jit
 	)
 

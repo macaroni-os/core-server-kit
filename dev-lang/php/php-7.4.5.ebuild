@@ -152,6 +152,7 @@ PHP_MV="$(ver_cut 1)"
 
 PATCHES=(
 	"${FILESDIR}/php-iodbc-header-location.patch"
+	"${FILESDIR}/apache.patch"
 )
 
 php_install_ini() {
