@@ -6,7 +6,7 @@ inherit flag-o-matic autotools
 
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="https://www.php.net/distributions/php-7.2.30.tar.bz2 -> php-7.2.30.tar.bz2"
+SRC_URI="{{artifacts[0].src_uri}}"
 
 LICENSE="PHP-3.01
 	BSD
@@ -16,7 +16,7 @@ LICENSE="PHP-3.01
 	gd? ( gd )
 	unicode? ( BSD-2 LGPL-2.1 )"
 
-SLOT="7.2"
+SLOT="{{slot}}"
 KEYWORDS="*"
 
 # We can build the following SAPIs in the given order
@@ -153,10 +153,7 @@ REQUIRED_USE="
 
 RESTRICT="!test? ( test )"
 
-PATCHES=(
-	"${FILESDIR}/php-freetype-2.9.1.patch"
-	"${FILESDIR}/php-7.2.13-intl-use-icu-namespace.patch"
-)
+PATCHES={{patches}}
 
 PHP_MV="$(ver_cut 1)"
 
