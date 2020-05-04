@@ -1,3 +1,4 @@
+=app-admin/salt-2019.2.4 python_single_target_python2_7
 =dev-python/SaltTesting-2017.6.1 python_single_target_python2_7
 =sys-libs/talloc-2.1.14 python_single_target_python2_7
 =sys-libs/talloc-2.1.5 python_single_target_python2_7
