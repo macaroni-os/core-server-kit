@@ -7,10 +7,10 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS=( README.md )
 
-USE_PHP="php5-6 php7-0 php7-1 php7-2 php7-3"
+USE_PHP="php7-2 php7-3 php7-4"
 inherit php-ext-pecl-r3
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 LICENSE="PHP-3.01"
 
 DESCRIPTION="PHP wrapper for libeio library"

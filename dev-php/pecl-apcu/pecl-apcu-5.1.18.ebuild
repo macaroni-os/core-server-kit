@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,14 +10,13 @@ DOCS=( NOTICE README.md TECHNOTES.txt )
 
 # Define 5.6 here so we get the USE and REQUIRED_USE from the eclass
 # This allows us to depend on the other slot
-USE_PHP="php5-6 php7-0 php7-1 php7-2 php7-3"
+USE_PHP="php7-2 php7-3 php7-4"
 
 inherit php-ext-pecl-r3
 
 # However, we only really build for 7.x; so redefine it here
-USE_PHP="php7-0 php7-1 php7-2 php7-3"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 
 DESCRIPTION="Stripped down version of APC supporting only user cache"
 LICENSE="PHP-3.01"
@@ -25,7 +24,7 @@ SLOT="7"
 IUSE="+mmap"
 
 DEPEND=""
-RDEPEND="${DEPEND} php_targets_php5-6? ( dev-php/pecl-apcu:0[php_targets_php5-6] )"
+RDEPEND="${DEPEND}"
 
 LOCKS="pthreadmutex pthreadrw spinlock semaphore"
 
@@ -39,7 +38,7 @@ IUSE+=" ${LUSE/lock_pthreadrw/+lock_pthreadrw}"
 REQUIRED_USE="^^ ( $LUSE )"
 
 src_prepare() {
-	if use php_targets_php7-0 || use php_targets_php7-1 || use php_targets_php7-2 || use php_targets_php7-3 ; then
+	if use php_targets_php7-2 || use php_targets_php7-3 || use php_targets_php7-4 ; then
 		php-ext-source-r3_src_prepare
 	else
 		eapply_user
@@ -47,7 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	if use php_targets_php7-0 || use php_targets_php7-1 || use php_targets_php7-2 || use php_targets_php7-3 ; then
+	if use php_targets_php7-2 || use php_targets_php7-3 || use php_targets_php7-4 ; then
 		local PHP_EXT_ECONF_ARGS=(
 			--enable-apcu
 			$(use_enable mmap apcu-mmap)
@@ -60,7 +59,7 @@ src_configure() {
 }
 
 src_install() {
-	if use php_targets_php7-0 || use php_targets_php7-1 || use php_targets_php7-2 || use php_targets_php7-3 ; then
+	if use php_targets_php7-2 || use php_targets_php7-3 || use php_targets_php7-4 ; then
 		php-ext-pecl-r3_src_install
 
 		insinto /usr/share/php7/apcu
@@ -69,7 +68,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use php_targets_php7-0 || use php_targets_php7-1 || use php_targets_php7-2 || use php_targets_php7-3 ; then
+	if use php_targets_php7-2 || use php_targets_php7-3 || use php_targets_php7-4 ; then
 		elog "The apc.php file shipped with this release of pecl-apcu was"
 		elog "installed into ${EPREFIX}/usr/share/php7/apcu/."
 		elog

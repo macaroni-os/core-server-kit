@@ -10,13 +10,13 @@ PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_FILENAME="${MY_P}.tgz"
 PHP_EXT_S="${WORKDIR}/${MY_P}"
 
-USE_PHP="php5-6 php7-1 php7-2 php7-3"
+USE_PHP="php7-4 php7-2 php7-3"
 
 inherit php-ext-pecl-r3
 
 S="${PHP_EXT_S}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 DESCRIPTION="PHP wrapper around the gpgme library"
 LICENSE="BSD-2"
 SLOT="0"

@@ -8,7 +8,7 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS=( README.md )
 
-USE_PHP="php5-6 php7-1 php7-2 php7-3"
+USE_PHP="php7-4 php7-2 php7-3"
 
 inherit php-ext-pecl-r3
 
@@ -22,8 +22,7 @@ SLOT="0"
 DEPEND="
 	>=dev-libs/libevent-2.0.2
 	ssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) )
-	php_targets_php5-6? ( dev-lang/php:5.6[sockets?] )
-	php_targets_php7-1? ( dev-lang/php:7.1[sockets?] )
+	php_targets_php7-4? ( dev-lang/php:7.1[sockets?] )
 	php_targets_php7-2? ( dev-lang/php:7.2[sockets?] )
 	php_targets_php7-3? ( dev-lang/php:7.3[sockets?] )"
 

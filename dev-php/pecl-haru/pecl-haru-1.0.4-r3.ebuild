@@ -3,7 +3,7 @@
 
 EAPI=6
 
-USE_PHP="php5-6"
+USE_PHP="php7-4 php7-2 php7-3"
 
 inherit php-ext-pecl-r3
 
@@ -11,7 +11,7 @@ DESCRIPTION="An interface to libharu, a PDF generator"
 
 LICENSE="PHP-3.01"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 IUSE=""
 
 DEPEND="media-libs/libharu[png(+),zlib(+)]"
