@@ -7,11 +7,12 @@ PHP_EXT_NAME="lzf"
 PHP_EXT_PECL_PKG="LZF"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
-USE_PHP="php5-6 php7-1 php7-2 php7-3"
+
+USE_PHP="php7-4 php7-2 php7-3"
 
 inherit php-ext-pecl-r3
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 
 DESCRIPTION="This package handles LZF de/compression"
 LICENSE="PHP-3"

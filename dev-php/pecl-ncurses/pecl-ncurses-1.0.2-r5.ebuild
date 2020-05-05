@@ -3,9 +3,11 @@
 
 EAPI=7
 
-USE_PHP="php5-6 php7-1 php7-2 php7-3"
+USE_PHP="php7-4 php7-2 php7-3"
 
 inherit php-ext-pecl-r3
+
+KEYWORDS="*"
 
 SRC_URI+=" https://dev.gentoo.org/~grknight/distfiles/${P}-php7.patch.xz"
 
@@ -13,7 +15,6 @@ DESCRIPTION="Terminal screen handling and optimization package"
 
 LICENSE="PHP-3.01"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="sys-libs/ncurses:0="

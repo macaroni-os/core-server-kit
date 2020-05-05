@@ -10,15 +10,16 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS=( CREDITS README )
 
-USE_PHP="php7-0 php7-1 php7-2 php7-3 php5-6"
+
+USE_PHP="php7-4 php7-2 php7-3"
 
 inherit php-ext-pecl-r3
 
+KEYWORDS="*"
+
 S="${WORKDIR}/yaml-${MY_PV}"
 PHP_EXT_S="${S}"
-USE_PHP="php7-0 php7-1 php7-2 php7-3"
 
-KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="YAML 1.1 (YAML Ain't Markup Language) serialization for PHP"
 LICENSE="MIT"
@@ -26,11 +27,11 @@ SLOT="7"
 IUSE=""
 
 DEPEND=">=dev-libs/libyaml-0.1.0"
-RDEPEND="${DEPEND} php_targets_php5-6? ( dev-php/pecl-yaml:0[php_targets_php5-6] )"
+RDEPEND="${DEPEND}"
 PHP_EXT_ECONF_ARGS=""
 
 src_prepare() {
-	if use php_targets_php7-0 || use php_targets_php7-1 || use php_targets_php7-2 || use php_targets_php7-3 ; then
+	if use php_targets_php7-4 || use php_targets_php7-2 || use php_targets_php7-3 ; then
 		php-ext-source-r3_src_prepare
 	else
 		default_src_prepare
@@ -38,7 +39,7 @@ src_prepare() {
 }
 
 src_install() {
-	if use php_targets_php7-0 || use php_targets_php7-1 || use php_targets_php7-2 || use php_targets_php7-3 ; then
+	if use php_targets_php7-4 || use php_targets_php7-2 || use php_targets_php7-3 ; then
 		php-ext-pecl-r3_src_install
 	fi
 }

@@ -5,16 +5,18 @@
 EAPI=6
 
 PHP_EXT_NAME="mongodb"
-USE_PHP="php7-0 php7-1 php7-2 php7-3"
 DOCS="README.md"
 
+USE_PHP="php7-4 php7-2 php7-3"
+
 inherit php-ext-pecl-r3
+
+KEYWORDS="*"
 
 DESCRIPTION="MongoDB driver for PHP"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-lang/php"

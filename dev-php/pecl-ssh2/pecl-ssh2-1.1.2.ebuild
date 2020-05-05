@@ -5,11 +5,11 @@ EAPI="7"
 
 PHP_EXT_NAME="ssh2"
 
-USE_PHP="php5-6 php7-1 php7-2 php7-3"
+USE_PHP="php7-4 php7-2 php7-3"
 
 inherit php-ext-pecl-r3
 
-USE_PHP="php7-1 php7-2 php7-3"
+KEYWORDS="*"
 
 DESCRIPTION="PHP bindings for the libssh2 library"
 LICENSE="PHP-3.01"
@@ -18,8 +18,7 @@ IUSE=""
 KEYWORDS="amd64 x86"
 # Upstream notes say there are errors with gcrypt backend
 DEPEND=">=net-libs/libssh2-1.2[-gcrypt]"
-RDEPEND="${DEPEND}
-	php_targets_php5-6? ( dev-php/pecl-ssh2:0[php_targets_php5-6] )"
+RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-fix-php_url-fields-usage-for-php7-3.patch
@@ -27,7 +26,7 @@ PATCHES=(
 )
 
 src_prepare() {
-	if use php_targets_php7-1 || use php_targets_php7-2 || use php_targets_php7-3; then
+	if use php_targets_php7-2 || use php_targets_php7-3 || use php_targets_php7-4 ; then
 		php-ext-source-r3_src_prepare
 	else
 		default_src_prepare
