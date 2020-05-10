@@ -8,6 +8,7 @@ dev-python
 net-fs
 net-libs
 net-proxy
+sys-auth
 sys-libs
 virtual
 www-apache
