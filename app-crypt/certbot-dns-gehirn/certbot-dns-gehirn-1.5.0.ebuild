@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/e1/99/4e7e2e011486a8160da03a09952bc776d6f6f1f392bb573044936a4c9d60/certbot-dns-gehirn-1.5.0.tar.gz -> certbot-dns-gehirn-1.5.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/e1/99/4e7e2e011486a8160da03a09952bc776d6f6f1f392bb573044936a4c9d60/certbot-dns-gehirn-1.5.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1

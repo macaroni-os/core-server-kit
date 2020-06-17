@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/e0/36/e087cfad57c6d27386ce8f1494788de4a2e82782a67b31946b0d95429495/certbot-dns-cloudxns-1.5.0.tar.gz -> certbot-dns-cloudxns-1.5.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/e0/36/e087cfad57c6d27386ce8f1494788de4a2e82782a67b31946b0d95429495/certbot-dns-cloudxns-1.5.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1

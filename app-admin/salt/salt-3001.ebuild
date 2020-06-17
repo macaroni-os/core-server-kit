@@ -11,7 +11,7 @@ HOMEPAGE="https://www.saltstack.com/resources/community/ https://github.com/salt
 # Keyword masking for now.
 KEYWORDS=""
 
-SRC_URI="https://files.pythonhosted.org/packages/dd/af/a655b055173603f6b8dfb87202604076887d67f186f2f5aedd5a49a7dbe5/salt-3000.3.tar.gz -> salt-3000.3.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/cc/03/a66a65209aa867c6f8414e5f99a52428400ecc93ab1657102284914a5d52/salt-3001.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

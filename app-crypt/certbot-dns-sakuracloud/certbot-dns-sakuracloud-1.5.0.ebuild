@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/ac/20/39d3de376441c74e1650745a1e755cebb0c355ed522f92197290ff6e52cc/certbot-dns-sakuracloud-1.5.0.tar.gz -> certbot-dns-sakuracloud-1.5.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/ac/20/39d3de376441c74e1650745a1e755cebb0c355ed522f92197290ff6e52cc/certbot-dns-sakuracloud-1.5.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1

@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/07/a7/e4c245c91bc806c4a4d5115aed2eae3530a25ff2f77c09b3268c3c6f002a/certbot-dns-linode-1.5.0.tar.gz -> certbot-dns-linode-1.5.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/07/a7/e4c245c91bc806c4a4d5115aed2eae3530a25ff2f77c09b3268c3c6f002a/certbot-dns-linode-1.5.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1

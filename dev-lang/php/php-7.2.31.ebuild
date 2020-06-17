@@ -6,7 +6,7 @@ inherit flag-o-matic autotools
 
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="https://www.php.net/distributions/php-7.2.31.tar.bz2 -> php-7.2.31.tar.bz2"
+SRC_URI="https://www.php.net/distributions/php-7.2.31.tar.bz2"
 
 LICENSE="PHP-3.01
 	BSD
