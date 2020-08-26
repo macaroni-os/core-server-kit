@@ -4,12 +4,12 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/4b/56/d367f0cd8e8e6e5d1fbc1dd4d876f9875984b6399c314a940fdb56cae5f4/certbot-1.7.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/71/bf/994762725d9eb68ffa8117e41a5bcc084177b48dbf4cc0a2e44813609640/acme-1.6.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1
 
-DESCRIPTION="Let's encrypt client to automate deployment of X.509 certificates"
+DESCRIPTION="ACME protocol implementation in Python"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
@@ -20,18 +20,15 @@ RESTRICT="!test? ( test )"
 CDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
 	${CDEPEND}
-	>=app-crypt/acme-0.40.0[${PYTHON_USEDEP}]
-	>=dev-python/configargparse-0.9.3[${PYTHON_USEDEP}]
-	dev-python/configobj[${PYTHON_USEDEP}]
-	>=dev-python/cryptography-2.8[${PYTHON_USEDEP}]
-	>=dev-python/distro-1.0.1[${PYTHON_USEDEP}]
+	>=dev-python/pyopenssl-0.13.1[${PYTHON_USEDEP}]
+	>=dev-python/cryptography-1.2.3[${PYTHON_USEDEP}]
 	>=dev-python/josepy-1.1.0[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
-	>=dev-python/parsedatetime-1.3[${PYTHON_USEDEP}]
+	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
 	dev-python/pyrfc3339[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
-	dev-python/zope-component[${PYTHON_USEDEP}]
-	dev-python/zope-interface[${PYTHON_USEDEP}]"
+	dev-python/requests-toolbelt[${PYTHON_USEDEP}]
+	>=dev-python/requests-2.6.0[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}"
 
 distutils_enable_tests pytest

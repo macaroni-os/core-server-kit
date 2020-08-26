@@ -4,12 +4,12 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/ea/1f/1a3cfcd2b7b45c26e2aa5368560474d0c939d5a4bc810a172c66112b76c4/certbot-dns-dnsmadeeasy-1.7.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/a7/e1/f0638cf0d51eb8ffcd1dfcd2c3a29cf1f01a4760529d3ed2dd7e3c6598ce/certbot-dns-linode-1.6.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1
 
-DESCRIPTION="DNS Made Easy DNS Authenticator plugin for Certbot"
+DESCRIPTION="Linode DNS Authenticator plugin for Certbot"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
@@ -21,6 +21,6 @@ RDEPEND="${CDEPEND}
 	>=app-crypt/certbot-1.1.0[${PYTHON_USEDEP}]
 	>=app-crypt/acme-0.31.0[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
-	dev-python/zope-interface[${PYTHON_USEDEP}
-	>=dev-python/dns-lexicon-2.2.1[${PYTHON_USEDEP}]"
+	dev-python/zope-interface[${PYTHON_USEDEP}]
+	>=dev-python/dns-lexicon-2.2.3[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}"

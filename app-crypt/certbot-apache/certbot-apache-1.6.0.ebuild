@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/d4/68/09584072131b3941306993bb6e98f14412db76915fa4e418db0169c5c8ba/certbot-apache-1.7.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/c0/61/7c9606c01ff00c2620edf20401c88e45b9f42874e94479fa41f18b801121/certbot-apache-1.6.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1

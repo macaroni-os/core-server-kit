@@ -10,6 +10,6 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-python/setuptools-1.0[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] >=app-crypt/certbot-1.1.0[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] >=app-crypt/acme-0.29.0[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] dev-python/mock[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] dev-python/zope-interface[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] dev-python/dnspython[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] python_targets_python3_7? ( dev-lang/python:3.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,-python_single_target_python3_7(-)]
 REQUIRED_USE=|| ( python_targets_python3_7 )
 SLOT=0
-SRC_URI=https://files.pythonhosted.org/packages/3a/03/23b5c23289228ee5c2fcf340658bdd63043829bef4f2f1244010f393a60f/certbot-dns-rfc2136-1.7.0.tar.gz
+SRC_URI=https://files.pythonhosted.org/packages/81/9c/b980b40964b15b7b81d18f69ed9e40c9e6a94bc8d8751ff6f19e1cd2a6f1/certbot-dns-rfc2136-1.6.0.tar.gz
 _eclasses_=distutils-r1	1a001b95d3bfb24277ebc93f461847da	multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	6ae4f9eb4881e5c5489344ee122e05d0	python-utils-r1	8914c9c220fed51dbc06d700c5ce75bc	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
-_md5_=7d5d9d6b30a8e4821a0c36c97d22f007
+_md5_=533ded766334dbf6a96d0c96a5704008
