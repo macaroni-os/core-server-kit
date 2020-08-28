@@ -7,6 +7,7 @@ dev-php
 dev-python
 net-fs
 net-libs
+net-misc
 net-proxy
 sys-apps
 sys-auth
