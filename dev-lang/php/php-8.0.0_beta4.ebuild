@@ -10,7 +10,7 @@ inherit flag-o-matic autotools
 MY_PV=${PV/_beta/beta}
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="https://downloads.php.net/~carusogabriel/php-8.0.0beta1.tar.gz"
+SRC_URI="https://downloads.php.net/~pollita/php-8.0.0beta4.tar.gz"
 
 LICENSE="PHP-3.01
 	BSD
@@ -33,7 +33,7 @@ IUSE="${IUSE}
 	${SAPIS/cli/+cli}
 	threads"
 
-IUSE="${IUSE} acl argon2 bcmath berkdb bzip2 calendar cdb cjk
+IUSE="${IUSE} acl apparmor argon2 bcmath berkdb bzip2 calendar cdb cjk
 	coverage +ctype curl debug
 	enchant exif ffi +fileinfo +filter firebird
 	+flatfile ftp gd gdbm gmp +iconv imap inifile
@@ -80,6 +80,7 @@ COMMON_DEPEND="
 	fpm? ( acl? ( sys-apps/acl ) )
 	apache2? ( www-servers/apache[apache2_modules_unixd(+),threads=] )
 	argon2? ( app-crypt/argon2:= )
+	apparmor? ( sys-libs/libapparmor )
 	berkdb? ( || (	sys-libs/db:5.3
 					sys-libs/db:5.1
 					sys-libs/db:4.8
@@ -474,6 +475,11 @@ src_configure() {
 						fi
 					else
 						sapi_conf+=( "--disable-${sapi}" )
+					fi
+					;;
+				fpm)
+					if use apparmor ; then
+						sapi_conf+=( --with-fpm-apparmor )
 					fi
 					;;
 
