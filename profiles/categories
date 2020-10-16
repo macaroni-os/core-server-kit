@@ -1,6 +1,5 @@
 app-admin
 app-crypt
-app-misc
 dev-db
 dev-lang
 dev-php
@@ -13,6 +12,4 @@ sys-apps
 sys-auth
 sys-libs
 virtual
-www-apache
-www-apps
 www-servers
