@@ -5,8 +5,10 @@ dev-db
 dev-lang
 dev-php
 dev-python
+net-analyzer
 net-fs
 net-libs
+net-mail
 net-misc
 net-proxy
 sys-apps
