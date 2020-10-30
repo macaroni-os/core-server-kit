@@ -3,5 +3,8 @@
 =app-admin/webapp-config-1.52-r1 python_single_target_python2_7
 =app-admin/webapp-config-1.53-r2 python_single_target_python2_7
 =dev-python/SaltTesting-2017.6.1 python_single_target_python2_7
+=net-libs/nodejs-10.16.3 python_single_target_python2_7
+=net-libs/nodejs-10.23.0 python_single_target_python2_7
+=net-libs/nodejs-12.19.0 python_single_target_python2_7
+=net-libs/nodejs-12.9.0 python_single_target_python2_7
 dev-db/mysql-workbench python_single_target_python2_7
-net-libs/nodejs python_single_target_python2_7
