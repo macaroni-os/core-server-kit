@@ -9,7 +9,7 @@ DESCRIPTION="Salt is a remote execution and configuration manager"
 HOMEPAGE="https://www.saltstack.com/resources/community/
 	https://github.com/saltstack"
 
-SRC_URI="https://files.pythonhosted.org/packages/b5/45/a20ff8a3cad48b50a924ee9c65f2df0e214de4fa282c4feef2e1d6a0b886/salt-3002.2.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/b4/e4/2a5e35c1613dd7aeec2c338344640af4b31c6f05f39eac8fa0ad7cb63211/salt-3002.5.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
