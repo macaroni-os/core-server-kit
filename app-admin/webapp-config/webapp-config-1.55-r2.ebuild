@@ -1,31 +1,29 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI=5
 
-RESTRICT="test"
+PYTHON_COMPAT=( python3+ )
 
-PYTHON_COMPAT=( python2_7 pypy )
+inherit distutils-r1 prefix
 
-inherit distutils-r1
-
-SRC_URI="https://dev.gentoo.org/~twitch153/${PN}/${P}.tar.bz2"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="https://sourceforge.net/projects/webapp-config/"
+SRC_URI="https://dev.gentoo.org/~twitch153/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="*"
 IUSE="+portage"
 
 DEPEND="app-text/xmlto
-	!dev-python/configparser
 	sys-apps/gentoo-functions"
-RDEPEND="portage? ( sys-apps/portage[${PYTHON_USEDEP}] )"
+RDEPEND="
+	portage? ( sys-apps/portage[${PYTHON_USEDEP}] )"
 
-python_prepare() {
-	epatch "${FILESDIR}/${P}-sources-function.sh-from-lib-gentoo.patch"
+python_prepare_all() {
+	distutils-r1_python_prepare_all
+	eprefixify WebappConfig/eprefix.py config/webapp-config
 }
 
 python_compile_all() {
@@ -56,7 +54,7 @@ python_install_all() {
 }
 
 python_test() {
-	PYTHONPATH="." "${PYTHON}" WebappConfig/tests/dtest.py \
+	PYTHONPATH="." "${PYTHON}" WebappConfig/tests/external.py \
 		|| die "Testing failed with ${EPYTHON}"
 }
 
