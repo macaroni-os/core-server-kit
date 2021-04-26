@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit go-module
+inherit fcaps go-module
 
 EGO_SUM=(
 	"cloud.google.com/go v0.26.0/go.mod"
@@ -1145,4 +1145,8 @@ src_compile() {
 src_install() {
 	dobin ${PN}
 	dodoc README.md
+}
+
+pkg_postinst() {
+	fcaps cap_net_bind_service=eip /usr/bin/caddy
 }
