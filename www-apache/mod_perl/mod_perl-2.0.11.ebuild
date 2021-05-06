@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -11,8 +10,9 @@ SRC_URI="mirror://apache/perl/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm ppc ppc64 x86"
+KEYWORDS="*"
 IUSE="debug ithreads test"
+RESTRICT="!test? ( test )"
 
 SRC_TEST=do
 
@@ -26,7 +26,7 @@ SRC_TEST=do
 
 RDEPEND="
 	dev-lang/perl[ithreads=]
-	>=dev-perl/Apache-Test-1.400.0
+	>=dev-perl/Apache-Test-1.420.0
 	>=www-servers/apache-2.0.47
 	>=dev-libs/apr-util-1.4
 	!ithreads? ( www-servers/apache[-apache2_mpms_event,-apache2_mpms_worker,apache2_mpms_prefork] )
@@ -60,8 +60,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}"-2.0.4-inline.patch        # 550244
 	"${FILESDIR}/${PN}"-2.0.10_rc1-bundled-Apache-Test.patch # 352724
 	"${FILESDIR}/${PN}"-2.0.10_rc1-Gentoo-not-Unix.patch
-	"${FILESDIR}/${PN}"-2.0.10-apache24-tests-1.patch # 614684
-	"${FILESDIR}/${PN}"-2.0.10-apache24-tests-2.patch # 614684
 )
 
 src_prepare() {
@@ -69,6 +67,9 @@ src_prepare() {
 
 	# chainsaw unbundling
 	rm -rf Apache-{Test,Reload,SizeLimit}/ lib/Bundle/ || die
+
+	# FL-8030: Remove broken conditional
+	sed -i -e "/DARWIN or OPENBSD/d" lib/Apache2/Build.pm
 }
 
 src_configure() {
@@ -98,7 +99,7 @@ src_test() {
 
 	# We force verbose tests for now to get meaningful bug reports.
 	MAKEOPTS+=" -j1"
-	TMPDIR="${T}" HOME="${T}/" TEST_VERBOSE=1 perl-module_src_test
+	TMPDIR="${T}" HOME="${T}/" TEST_VERBOSE=1 LC_TIME=C perl-module_src_test
 }
 
 src_install() {
