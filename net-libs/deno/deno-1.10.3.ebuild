@@ -320,7 +320,7 @@ thunderdome-0.4.1
 time-0.1.44
 tinyvec-1.2.0
 tinyvec_macros-0.1.0
-tokio-1.6.0
+tokio-1.6.1
 tokio-macros-1.2.0
 tokio-rustls-0.22.0
 tokio-stream-0.1.6
@@ -391,7 +391,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.10.2 -> deno-1.10.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.10.3 -> deno-1.10.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
