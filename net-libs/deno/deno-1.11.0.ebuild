@@ -61,18 +61,18 @@ darling_macro-0.10.2
 dashmap-4.0.2
 data-encoding-2.3.2
 data-url-0.1.0
-deno_doc-0.4.0
-deno_lint-0.5.0
+deno_doc-0.5.0
+deno_lint-0.6.1
 derive_more-0.99.14
 digest-0.9.0
 dissimilar-1.0.2
 dlopen-0.1.8
 dlopen_derive-0.1.4
-dprint-core-0.38.0
-dprint-plugin-json-0.10.2
-dprint-plugin-markdown-0.7.1
-dprint-plugin-typescript-0.45.0
-dprint-swc-ecma-ast-view-0.19.0
+dprint-core-0.42.0
+dprint-plugin-json-0.12.0
+dprint-plugin-markdown-0.8.0
+dprint-plugin-typescript-0.46.0
+dprint-swc-ecma-ast-view-0.20.0
 either-1.6.1
 encoding_rs-0.8.28
 endian-type-0.1.2
@@ -249,7 +249,7 @@ ron-0.6.4
 rusqlite-0.25.3
 rustc_version-0.2.3
 rustls-0.19.1
-rusty_v8-0.22.2
+rusty_v8-0.22.3
 rustyline-8.0.0
 rustyline-derive-0.4.0
 ryu-1.0.5
@@ -286,22 +286,23 @@ string_enum-0.3.1
 strsim-0.8.0
 strsim-0.9.3
 swc_atoms-0.2.6
-swc_bundler-0.34.0
-swc_common-0.10.19
-swc_ecma_ast-0.43.1
-swc_ecma_codegen-0.52.5
+swc_bundler-0.37.4
+swc_common-0.10.20
+swc_ecma_ast-0.45.0
+swc_ecma_codegen-0.55.4
 swc_ecma_codegen_macros-0.5.2
-swc_ecma_dep_graph-0.22.2
-swc_ecma_parser-0.54.4
-swc_ecma_transforms-0.47.0
-swc_ecma_transforms_base-0.12.14
-swc_ecma_transforms_optimization-0.17.0
-swc_ecma_transforms_proposal-0.14.0
-swc_ecma_transforms_react-0.15.1
-swc_ecma_transforms_typescript-0.16.0
-swc_ecma_utils-0.34.2
-swc_ecma_visit-0.29.1
-swc_ecmascript-0.33.0
+swc_ecma_dep_graph-0.25.0
+swc_ecma_parser-0.57.3
+swc_ecma_transforms-0.50.2
+swc_ecma_transforms_base-0.15.7
+swc_ecma_transforms_classes-0.1.1
+swc_ecma_transforms_optimization-0.20.3
+swc_ecma_transforms_proposal-0.17.1
+swc_ecma_transforms_react-0.18.2
+swc_ecma_transforms_typescript-0.19.4
+swc_ecma_utils-0.36.0
+swc_ecma_visit-0.31.0
+swc_ecmascript-0.36.2
 swc_eq_ignore_macros-0.1.0
 swc_macros_common-0.3.3
 swc_visit-0.2.4
@@ -391,7 +392,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.10.3 -> deno-1.10.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.11.0 -> deno-1.11.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
