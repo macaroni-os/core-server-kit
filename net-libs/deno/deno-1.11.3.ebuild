@@ -61,8 +61,8 @@ darling_macro-0.10.2
 dashmap-4.0.2
 data-encoding-2.3.2
 data-url-0.1.0
-deno_doc-0.5.0
-deno_lint-0.6.1
+deno_doc-0.6.0
+deno_lint-0.7.0
 derive_more-0.99.14
 digest-0.9.0
 dissimilar-1.0.2
@@ -71,8 +71,8 @@ dlopen_derive-0.1.4
 dprint-core-0.42.0
 dprint-plugin-json-0.12.0
 dprint-plugin-markdown-0.8.0
-dprint-plugin-typescript-0.46.0
-dprint-swc-ecma-ast-view-0.20.0
+dprint-plugin-typescript-0.46.1
+dprint-swc-ecma-ast-view-0.21.0
 either-1.6.1
 encoding_rs-0.8.28
 endian-type-0.1.2
@@ -290,23 +290,23 @@ string_enum-0.3.1
 strsim-0.8.0
 strsim-0.9.3
 swc_atoms-0.2.6
-swc_bundler-0.37.4
+swc_bundler-0.40.0
 swc_common-0.10.20
-swc_ecma_ast-0.45.0
-swc_ecma_codegen-0.55.4
+swc_ecma_ast-0.46.0
+swc_ecma_codegen-0.58.0
 swc_ecma_codegen_macros-0.5.2
-swc_ecma_dep_graph-0.25.0
-swc_ecma_parser-0.57.4
-swc_ecma_transforms-0.50.2
-swc_ecma_transforms_base-0.15.7
-swc_ecma_transforms_classes-0.1.1
-swc_ecma_transforms_optimization-0.20.3
-swc_ecma_transforms_proposal-0.17.1
-swc_ecma_transforms_react-0.18.2
-swc_ecma_transforms_typescript-0.19.4
-swc_ecma_utils-0.36.0
-swc_ecma_visit-0.31.0
-swc_ecmascript-0.36.3
+swc_ecma_dep_graph-0.28.0
+swc_ecma_parser-0.60.0
+swc_ecma_transforms-0.53.0
+swc_ecma_transforms_base-0.18.0
+swc_ecma_transforms_classes-0.4.0
+swc_ecma_transforms_optimization-0.23.0
+swc_ecma_transforms_proposal-0.20.0
+swc_ecma_transforms_react-0.21.0
+swc_ecma_transforms_typescript-0.22.0
+swc_ecma_utils-0.37.0
+swc_ecma_visit-0.32.0
+swc_ecmascript-0.39.0
 swc_eq_ignore_macros-0.1.0
 swc_macros_common-0.3.3
 swc_visit-0.2.4
@@ -396,7 +396,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.11.2 -> deno-1.11.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.11.3 -> deno-1.11.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
