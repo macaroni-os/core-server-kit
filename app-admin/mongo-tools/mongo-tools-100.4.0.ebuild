@@ -25,7 +25,7 @@ S="${WORKDIR}/src/${EGO_PN}"
 src_unpack() {
 	mkdir -p "${S%/*}" || die
 	default
-	mv ${P} "${S}" || die
+	mv "mongo-tools-f76f9f8f205cbd2c279258c15510bc55e2f02955" "${S}" || die
 }
 
 src_compile() {
