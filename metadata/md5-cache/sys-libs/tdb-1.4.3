@@ -1,0 +1,16 @@
+BDEPEND=python_single_target_python3_7? ( dev-lang/python:3.7[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_8] ) app-text/docbook-xml-dtd:4.2
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=!elibc_FreeBSD? ( dev-libs/libbsd ) python? ( python_single_target_python3_7? ( dev-lang/python:3.7[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_8] ) )
+DESCRIPTION=Simple database API
+EAPI=7
+HOMEPAGE=https://tdb.samba.org/
+IUSE=python python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 python_targets_python3_7 python_targets_python3_9 python_targets_python3_8
+KEYWORDS=*
+LICENSE=GPL-3
+RDEPEND=!elibc_FreeBSD? ( dev-libs/libbsd ) python? ( python_single_target_python3_7? ( dev-lang/python:3.7[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:=[python_targets_python3_8] ) )
+REQUIRED_USE=^^ ( python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://samba.org/ftp/tdb/tdb-1.4.3.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	waf-utils	0a6e492cdcbd52b1304cfcd9eba5abc6
+_md5_=7abdea8eb306e422d589bb38ee92be5d
