@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="https://www.mongodb.com"
-SRC_URI="https://github.com/mongodb/mongo-tools/archive/ec72de087e8332b882dfac2aeffde2943078425d.tar.gz -> mongo-tools-100.4.1-ec72de08.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-tools/archive/4d42d0df59fe025ac1ff204f9372801bcb6b6b7a.tar.gz -> mongo-tools-100.5.0-4d42d0df.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -25,7 +25,7 @@ S="${WORKDIR}/src/${EGO_PN}"
 src_unpack() {
 	mkdir -p "${S%/*}" || die
 	default
-	mv "mongo-tools-ec72de087e8332b882dfac2aeffde2943078425d" "${S}" || die
+	mv "mongo-tools-4d42d0df59fe025ac1ff204f9372801bcb6b6b7a" "${S}" || die
 }
 
 src_compile() {
