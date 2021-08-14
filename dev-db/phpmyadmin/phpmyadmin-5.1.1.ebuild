@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit eutils webapp
+inherit webapp
 
 MY_PV=${PV/_/-}
 MY_PN="phpMyAdmin"
@@ -11,14 +10,14 @@ MY_P="${MY_PN}-${MY_PV}-all-languages"
 
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="https://www.phpmyadmin.net/"
-SRC_URI="https://files.phpmyadmin.net/${MY_PN}/${MY_PV}/${MY_P}.tar.xz"
+SRC_URI="https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.tar.xz -> phpMyAdmin-5.1.1-all-languages.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="*"
 IUSE="setup"
 
 RDEPEND="
-	dev-lang/php[ctype,filter,json,session,unicode]
+	>=dev-lang/php-7.1[ctype,filter,json(+),session,unicode]
 	|| (
 		dev-lang/php[mysqli]
 		dev-lang/php[mysql]
@@ -37,7 +36,7 @@ pkg_setup() {
 src_install() {
 	webapp_src_preinst
 
-	dodoc README RELEASE-DATE-${MY_PV} ChangeLog || die
+	dodoc README RELEASE-DATE-${MY_PV} ChangeLog
 	rm -f LICENSE README* RELEASE-DATE-${MY_PV}
 
 	if ! use setup; then
