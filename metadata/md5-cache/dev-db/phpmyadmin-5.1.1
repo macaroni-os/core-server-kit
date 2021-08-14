@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prerm setup
+DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+DESCRIPTION=Web-based administration for MySQL database in PHP
+EAPI=7
+HOMEPAGE=https://www.phpmyadmin.net/
+IUSE=setup vhosts
+KEYWORDS=*
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/php-7.1[ctype,filter,json(+),session,unicode] || ( dev-lang/php[mysqli] dev-lang/php[mysql] ) virtual/httpd-php:* >=app-admin/webapp-config-1.50.15
+SLOT=5.1.1
+SRC_URI=https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.tar.xz -> phpMyAdmin-5.1.1-all-languages.tar.xz
+_eclasses_=webapp	16783e418aca3ffa461d68310bf7ab12
+_md5_=6da154cfd13bfd577e72cb3ac518b06b
