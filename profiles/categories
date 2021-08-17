@@ -1,6 +1,7 @@
 app-admin
 app-crypt
 app-misc
+app-shells
 dev-db
 dev-lang
 dev-php
