@@ -180,8 +180,8 @@ EGO_SUM=(
 	"github.com/bradfitz/go-smtpd v0.0.0-20170404230938-deb6d6237625/go.mod"
 	"github.com/buger/jsonparser v0.0.0-20181115193947-bf1c66bbce23/go.mod"
 	"github.com/caarlos0/ctrlc v1.0.0/go.mod"
-	"github.com/caddyserver/certmagic v0.14.4"
-	"github.com/caddyserver/certmagic v0.14.4/go.mod"
+	"github.com/caddyserver/certmagic v0.14.5"
+	"github.com/caddyserver/certmagic v0.14.5/go.mod"
 	"github.com/campoy/unique v0.0.0-20180121183637-88950e537e7e/go.mod"
 	"github.com/casbin/casbin/v2 v2.1.2/go.mod"
 	"github.com/cavaliercoder/go-cpio v0.0.0-20180626203310-925f9528c45e/go.mod"
@@ -1573,7 +1573,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/caddyserver/caddy/archive/v2.4.4.tar.gz -> caddy-v2.4.4.tar.gz
+SRC_URI="https://github.com/caddyserver/caddy/archive/v2.4.5.tar.gz -> caddy-v2.4.5.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="Fast, cross-platform HTTP/2 web server with automatic HTTPS"
