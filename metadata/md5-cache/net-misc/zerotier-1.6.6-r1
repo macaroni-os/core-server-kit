@@ -11,4 +11,4 @@ RDEPEND=dev-libs/json-glib net-libs/libnatpmp net-libs/miniupnpc:= clang? ( >=sy
 SLOT=0
 SRC_URI=https://api.github.com/repos/zerotier/ZeroTierOne/tarball/1.6.6 -> zerotier-1.6.6.tar.gz
 _eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	llvm	21d8c0949a2693d7109cc6a25fabfcaf	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=d5fbcdc2ed62a7948dc9da2cb7f37dd7
+_md5_=f519d4c47010d8a01f6091c051376cbd
