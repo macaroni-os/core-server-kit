@@ -6,7 +6,7 @@ inherit flag-o-matic llvm systemd toolchain-funcs
 
 HOMEPAGE="https://www.zerotier.com/"
 DESCRIPTION="A software-based managed Ethernet switch for planet Earth"
-SRC_URI="https://api.github.com/repos/zerotier/ZeroTierOne/tarball/1.6.6-fixed-windows-inf -> zerotier-1.6.6-fixed-windows-inf.tar.gz"
+SRC_URI="https://api.github.com/repos/zerotier/ZeroTierOne/tarball/refs/tags/1.6.6-fixed-windows-inf -> zerotier-1.6.6-fixed-windows-inf.tar.gz"
 
 LICENSE="BSL-1.1"
 SLOT="0"
