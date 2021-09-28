@@ -272,7 +272,7 @@ rustc_version-0.2.3
 rustc_version-0.3.3
 rustls-0.19.1
 rustls-native-certs-0.5.0
-rusty_v8-0.28.0
+rusty_v8-0.30.0
 rustyline-9.0.0
 rustyline-derive-0.5.0
 ryu-1.0.5
@@ -292,7 +292,7 @@ serde_derive-1.0.130
 serde_json-1.0.67
 serde_repr-0.1.7
 serde_urlencoded-0.7.0
-serde_v8-0.11.0
+serde_v8-0.13.0
 sha-1-0.9.7
 sha2-0.9.5
 shell-escape-0.1.5
@@ -429,7 +429,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.14.1 -> deno-1.14.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.14.2 -> deno-1.14.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
