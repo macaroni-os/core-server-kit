@@ -360,7 +360,33 @@ src_install() {
 	else
 		multilib_src_install
 		multilib_src_install_all
+		# This stuff is in mysql-connector-c:
+		client_libs=(
+			/usr/bin/my_print_defaults
+			/usr/bin/mysql_config
+			/usr/bin/perror
+			/usr/include/mysql/errmsg.h
+			/usr/include/mysql/field_types.h
+			/usr/include/mysql/my_command.h
+			/usr/include/mysql/my_list.h
+			/usr/include/mysql/mysql.h
+			/usr/include/mysql/mysql/client_plugin.h
+			/usr/include/mysql/mysql/plugin_auth_common.h
+			/usr/include/mysql/mysql/udf_registration_types.h
+			/usr/include/mysql/mysql_com.h
+			/usr/include/mysql/mysql_time.h
+			/usr/include/mysql/mysql_version.h
+			/usr/include/mysql/mysqld_error.h
+			/usr/$(get_libdir)/pkgconfig/mysqlclient.pc
+			/usr/$(get_libdir)/libmysqlclient.a
+		)
+		# We don't want to install any of it to avoid conflicts:
+		for f in "${client_libs[@]}"; do
+			[ -e "$D$f" ] && ( rm "$D$f" || die )
+		done
+		rm -f $D/usr/$(get_libdir)/libmysqlclient.so*
 	fi
+	return 0
 }
 
 # Intentionally override eclass function
@@ -444,8 +470,8 @@ multilib_src_install_all() {
 
 	keepdir /var/lib/mysql
 	keepdir /var/log/mysql
-    fowners -R mysql:mysql /var/lib/mysql
-    fowners -R mysql:mysql /var/log/mysql
+	fowners -R mysql:mysql /var/lib/mysql
+	fowners -R mysql:mysql /var/log/mysql
 }
 
 # Official test instructions:
