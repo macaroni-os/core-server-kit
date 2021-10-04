@@ -157,7 +157,7 @@ src_configure() {
 		-DINSTALL_MYSQLDATADIR="${EPREFIX}/var/lib/mysql"
 		-DINSTALL_SBINDIR=sbin
 		-DINSTALL_SUPPORTFILESDIR="${EPREFIX}/usr/share/mysql"
-		-DCOMPILATION_COMMENT="Gentoo Linux ${PF}"
+		-DCOMPILATION_COMMENT="Funtoo Linux ${PF}"
 		-DWITH_UNIT_TESTS=OFF
 		# Using bundled editline to get CTRL+C working
 		-DWITH_EDITLINE=bundled
@@ -353,14 +353,12 @@ pkg_postinst() {
 	elog "You may have as many files as needed and they are read alphabetically."
 	elog "Be sure the options have the appropriate section headers, i.e. [mysqld]."
 	einfo
-
 	elog "Please follow these steps for initial setup. Run these commands as root:"
-	elog
-	elog
+	einfo
 	elog "# mysqld --initialize-insecure --default_authentication_plugin=mysql_native_password --datadir=${EPREFIX}/var/lib/mysql"
 	elog "# /etc/init.d/mysql start"
 	elog "# mysql_secure_installation"
-	elopg
+	einfo
 	elog "See https://www.funtoo.org/Package:Mysql-community for more information."
 
 }
