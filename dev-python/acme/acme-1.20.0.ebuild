@@ -10,17 +10,7 @@ HOMEPAGE="https://github.com/letsencrypt/letsencrypt https://pypi.org/project/ac
 SRC_URI="https://files.pythonhosted.org/packages/63/9d/47667b4bfff8beb1838351f14c26b73377f60e1dbc5b3cb95c7f738f1da6/acme-1.20.0.tar.gz
 "
 
-DEPEND="
-	dev-python/s[${PYTHON_USEDEP}]
-	dev-python/e[${PYTHON_USEDEP}]
-	dev-python/t[${PYTHON_USEDEP}]
-	dev-python/u[${PYTHON_USEDEP}]
-	dev-python/p[${PYTHON_USEDEP}]
-	dev-python/t[${PYTHON_USEDEP}]
-	dev-python/o[${PYTHON_USEDEP}]
-	dev-python/o[${PYTHON_USEDEP}]
-	dev-python/l[${PYTHON_USEDEP}]
-	dev-python/s[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-2.1.4[${PYTHON_USEDEP}]
