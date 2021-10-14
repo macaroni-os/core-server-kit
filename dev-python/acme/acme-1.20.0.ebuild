@@ -12,7 +12,7 @@ SRC_URI="https://files.pythonhosted.org/packages/63/9d/47667b4bfff8beb1838351f14
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
-	!not! app-crypt/acme[${PYTHON_USEDEP}]
+	!app-crypt/acme[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-2.1.4[${PYTHON_USEDEP}]
 	>=dev-python/josepy-1.9.0[${PYTHON_USEDEP}]
