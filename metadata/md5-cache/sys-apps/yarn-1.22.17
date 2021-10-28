@@ -7,5 +7,5 @@ KEYWORDS=*
 LICENSE=BSD-2
 RDEPEND=!dev-util/cmdtest net-libs/nodejs
 SLOT=0
-SRC_URI=https://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz
-_md5_=d87ae0a52e5a99abc8565d15ea905165
+SRC_URI=https://github.com/yarnpkg/yarn/releases/download/v1.22.17/yarn-v1.22.17.tar.gz
+_md5_=a7755c948fdebd954562c9866cc7ed1c

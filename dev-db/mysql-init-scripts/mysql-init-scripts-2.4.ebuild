@@ -1,17 +1,16 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
 inherit systemd s6 tmpfiles
 
-DESCRIPTION="Gentoo MySQL init scripts."
-HOMEPAGE="https://www.gentoo.org/"
+DESCRIPTION="Funtoo MySQL init scripts."
+HOMEPAGE="https://www.funtoo.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="*"
 IUSE=""
 
 DEPEND=""
@@ -33,13 +32,13 @@ src_install() {
 	# s6 init scripts
 	if use amd64 || use x86 ; then
 		newconfd "${FILESDIR}/conf.d-2.0" "mysql-s6"
-		newinitd "${FILESDIR}/init.d-s6-2.2" "mysql-s6"
+		newinitd "${FILESDIR}/init.d-s6-2.3" "mysql-s6"
 		s6_install_service mysql "${FILESDIR}/run-s6"
 		s6_install_service mysql/log "${FILESDIR}/log-s6"
 	fi
 
-	newinitd "${FILESDIR}/init.d-2.2" "mysql"
-	newinitd "${FILESDIR}/init.d-supervise" "mysql-supervise"
+	newinitd "${FILESDIR}/init.d-2.3" "mysql"
+	newinitd "${FILESDIR}/init.d-supervise-2.3" "mysql-supervise"
 
 	# systemd unit installation
 	exeinto /usr/libexec
@@ -49,7 +48,7 @@ src_install() {
 	dotmpfiles "${FILESDIR}/mysql.conf"
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/logrotate.mysql" "mysql"
+	newins "${FILESDIR}/logrotate.mysql-2.3" "mysql"
 }
 
 pkg_postinst() {
