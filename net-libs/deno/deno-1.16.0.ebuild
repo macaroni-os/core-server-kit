@@ -74,12 +74,10 @@ darling_macro-0.10.2
 dashmap-4.0.2
 data-encoding-2.3.2
 data-url-0.1.0
-deno-libffi-0.0.7
-deno-libffi-sys-0.0.7
-deno_ast-0.4.1
-deno_doc-0.17.1
-deno_graph-0.8.2
-deno_lint-0.18.1
+deno_ast-0.5.0
+deno_doc-0.20.0
+deno_graph-0.11.1
+deno_lint-0.19.0
 der-0.4.4
 derive_more-0.99.16
 diff-0.1.12
@@ -87,15 +85,15 @@ digest-0.9.0
 dissimilar-1.0.3
 dlopen-0.1.8
 dlopen_derive-0.1.4
-dprint-core-0.46.4
-dprint-plugin-json-0.13.0
-dprint-plugin-markdown-0.10.0
-dprint-plugin-typescript-0.58.1
+dprint-core-0.47.1
+dprint-plugin-json-0.13.2
+dprint-plugin-markdown-0.11.2
+dprint-plugin-typescript-0.59.1
 dprint-swc-ecma-ast-view-0.42.0
 ecdsa-0.12.4
 either-1.6.1
 elliptic-curve-0.10.6
-encoding_rs-0.8.28
+encoding_rs-0.8.29
 endian-type-0.1.2
 enum-as-inner-0.3.3
 enum_kind-0.2.1
@@ -178,7 +176,9 @@ kqueue-sys-1.0.3
 lazy_static-1.4.0
 lexical-5.2.2
 lexical-core-0.7.6
-libc-0.2.103
+libc-0.2.106
+libffi-2.0.0
+libffi-sys-1.3.0
 libloading-0.7.1
 libm-0.2.1
 libsqlite3-sys-0.22.2
@@ -189,7 +189,6 @@ lru-cache-0.1.2
 lsp-types-0.89.2
 lspower-1.1.0
 lspower-macros-0.2.1
-make-cmd-0.1.0
 malloc_buf-0.0.6
 match_cfg-0.1.0
 matches-0.1.9
@@ -287,7 +286,6 @@ rustc_version-0.2.3
 rustc_version-0.3.3
 rustls-0.19.1
 rustls-native-certs-0.5.0
-rusty_v8-0.32.0
 rustyline-9.0.0
 rustyline-derive-0.5.0
 ryu-1.0.5
@@ -409,6 +407,7 @@ urlpattern-0.1.2
 utf-8-0.7.6
 utf8parse-0.2.0
 uuid-0.8.2
+v8-0.34.0
 vcpkg-0.2.15
 vec_map-0.8.2
 version_check-0.9.3
@@ -447,7 +446,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.15.3 -> deno-1.15.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.16.0 -> deno-1.16.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
