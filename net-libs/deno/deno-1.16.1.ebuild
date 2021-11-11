@@ -301,6 +301,7 @@ semver-0.11.0
 semver-parser-0.7.0
 semver-parser-0.10.2
 serde-1.0.130
+serde_bytes-0.11.5
 serde_derive-1.0.130
 serde_json-1.0.68
 serde_repr-0.1.7
@@ -446,7 +447,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.16.0 -> deno-1.16.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.16.1 -> deno-1.16.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
