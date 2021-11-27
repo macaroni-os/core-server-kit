@@ -6,7 +6,7 @@ inherit autotools flag-o-matic systemd toolchain-funcs tmpfiles user
 
 DESCRIPTION="A persistent caching system, key-value and data structures database"
 HOMEPAGE="https://redis.io"
-SRC_URI="https://github.com/redis/redis/archive/6.2.6/4930d19e70c391750479951022e207e19111eb55.tar.gz -> redis-6.2.6-4930d19.tar.gz"
+SRC_URI="https://github.com/redis/redis/tarball/4930d19e70c391750479951022e207e19111eb55 -> redis-6.2.6-4930d19.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
