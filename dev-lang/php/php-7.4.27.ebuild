@@ -10,7 +10,7 @@ inherit flag-o-matic autotools
 MY_PV=${PV/_rc/RC}
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="https://www.php.net/distributions/php-7.4.26.tar.bz2"
+SRC_URI="https://www.php.net/distributions/php-7.4.27.tar.bz2"
 
 LICENSE="PHP-3.01
 	BSD
