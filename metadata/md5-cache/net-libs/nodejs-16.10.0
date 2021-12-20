@@ -12,5 +12,5 @@ REQUIRED_USE=inspector? ( icu ssl ) npm? ( ssl ) system-icu? ( icu ) system-ssl?
 RESTRICT=!test? ( test )
 SLOT=0/16
 SRC_URI=https://nodejs.org/dist/v16.10.0/node-v16.10.0.tar.xz
-_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	pax-utils	db85a3c508cf82c45f24b2723791cc93	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	efd97a92138dbafd1f176308612d28c9	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	pax-utils	db85a3c508cf82c45f24b2723791cc93	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	8b6048ab112e99353b21b318b9074eb6	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=1770370b35d3cb9074814cd955f41376
