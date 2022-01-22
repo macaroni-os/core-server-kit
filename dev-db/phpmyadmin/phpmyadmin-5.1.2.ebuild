@@ -10,7 +10,7 @@ MY_P="${MY_PN}-${MY_PV}-all-languages"
 
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="https://www.phpmyadmin.net/"
-SRC_URI="https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.tar.xz -> phpMyAdmin-5.1.1-all-languages.tar.xz"
+SRC_URI="https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.tar.xz -> phpMyAdmin-5.1.2-all-languages.tar.xz"
 
 LICENSE="GPL-2"
 KEYWORDS="*"
