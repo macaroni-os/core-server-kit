@@ -18,7 +18,7 @@ ansi_term-0.12.1
 anyhow-1.0.52
 arrayvec-0.5.2
 arrayvec-0.7.2
-ash-0.33.3+1.2.191
+ash-0.34.0+1.2.203
 ast_node-0.7.6
 async-compression-0.3.8
 async-stream-0.3.2
@@ -35,6 +35,7 @@ bencher-0.1.5
 bit-set-0.5.2
 bit-vec-0.6.3
 bitflags-1.2.1
+bitflags_serde_shim-0.2.2
 block-0.1.6
 block-buffer-0.9.0
 block-modes-0.8.1
@@ -116,7 +117,6 @@ fd-lock-3.0.2
 ff-0.10.1
 filetime-0.2.15
 fixedbitset-0.2.0
-fixedbitset-0.4.1
 flaky_test-0.1.0
 flate2-1.0.22
 fnv-1.0.7
@@ -153,6 +153,7 @@ hashbrown-0.11.2
 hashlink-0.7.0
 heck-0.3.3
 hermit-abi-0.1.19
+hexf-parse-0.2.1
 hmac-0.11.0
 hostname-0.3.1
 http-0.2.4
@@ -210,7 +211,7 @@ mime-0.3.16
 miniz_oxide-0.4.4
 mio-0.7.14
 miow-0.3.7
-naga-0.6.3
+naga-0.8.3
 netif-0.1.1
 new_debug_unreachable-1.0.4
 nibble_vec-0.1.0
@@ -240,7 +241,6 @@ pem-rfc7468-0.2.4
 percent-encoding-2.1.0
 pest-2.1.3
 petgraph-0.5.1
-petgraph-0.6.0
 phf-0.8.0
 phf_generator-0.8.0
 phf_macros-0.8.0
@@ -280,7 +280,6 @@ rand_hc-0.2.0
 rand_hc-0.3.1
 rand_pcg-0.2.1
 range-alloc-0.1.2
-raw-window-handle-0.3.4
 raw-window-handle-0.4.2
 redox_syscall-0.1.57
 redox_syscall-0.2.10
@@ -293,7 +292,7 @@ reqwest-0.11.9
 resolv-conf-0.7.0
 retain_mut-0.1.5
 ring-0.16.20
-ron-0.6.6
+ron-0.7.0
 rsa-0.5.0
 rusqlite-0.25.4
 rustc-hash-1.1.0
@@ -445,9 +444,9 @@ wasm-bindgen-shared-0.2.78
 web-sys-0.3.55
 webpki-0.22.0
 webpki-roots-0.22.2
-wgpu-core-0.10.4
-wgpu-hal-0.10.7
-wgpu-types-0.10.0
+wgpu-core-0.12.2
+wgpu-hal-0.12.3
+wgpu-types-0.12.0
 which-4.2.2
 widestring-0.4.3
 winapi-0.2.8
@@ -476,7 +475,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.18.0 -> deno-1.18.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.18.1 -> deno-1.18.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
