@@ -1,5 +1,0 @@
-DEFINED_PHASES=-
-DEPEND=sys-apps/foo sys-foo/bar
-EAPI=0
-RDEPEND=sys-apps/foo sys-foo/bar
-_md5_=c44652b1dff54573bd3e08ef33fef81b
