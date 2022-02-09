@@ -1,0 +1,2 @@
+DEPEND="app-shell/bash
+"
