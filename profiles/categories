@@ -1,11 +1,13 @@
 app-admin
 app-crypt
+app-metrics
 app-misc
 app-shells
 dev-db
 dev-lang
 dev-php
 dev-python
+dev-util
 net-analyzer
 net-fs
 net-ftp
