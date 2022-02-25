@@ -32,9 +32,10 @@ base64-0.11.0
 base64-0.13.0
 base64ct-1.1.1
 bencher-0.1.5
+better_scoped_tls-0.1.0
 bit-set-0.5.2
 bit-vec-0.6.3
-bitflags-1.2.1
+bitflags-1.3.2
 bitflags_serde_shim-0.2.2
 block-0.1.6
 block-buffer-0.9.0
@@ -84,10 +85,10 @@ dashmap-4.0.2
 data-encoding-2.3.2
 data-url-0.1.1
 debug_unreachable-0.1.1
-deno_ast-0.11.0
-deno_doc-0.31.0
-deno_graph-0.23.0
-deno_lint-0.25.0
+deno_ast-0.12.0
+deno_doc-0.32.0
+deno_graph-0.24.0
+deno_lint-0.26.0
 der-0.4.5
 derive_more-0.99.17
 diff-0.1.12
@@ -99,8 +100,8 @@ dlopen_derive-0.1.4
 dprint-core-0.50.0
 dprint-plugin-json-0.14.1
 dprint-plugin-markdown-0.12.2
-dprint-plugin-typescript-0.64.1
-dprint-swc-ecma-ast-view-0.49.0
+dprint-plugin-typescript-0.64.3
+dprint-swc-ecma-ast-view-0.50.0
 dyn-clone-1.0.4
 ecdsa-0.12.4
 either-1.6.1
@@ -112,7 +113,7 @@ enum_kind-0.2.1
 env_logger-0.8.4
 errno-0.1.8
 error-code-2.3.0
-eszip-0.16.0
+eszip-0.17.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.7.1
@@ -218,7 +219,7 @@ naga-0.8.3
 netif-0.1.1
 new_debug_unreachable-1.0.4
 nibble_vec-0.1.0
-nix-0.22.1
+nix-0.23.0
 notify-5.0.0-pre.12
 ntapi-0.3.6
 num-bigint-0.2.6
@@ -303,8 +304,8 @@ rustc_version-0.4.0
 rustls-0.20.2
 rustls-native-certs-0.6.1
 rustls-pemfile-0.2.1
-rustyline-9.0.0
-rustyline-derive-0.5.0
+rustyline-9.1.2
+rustyline-derive-0.6.0
 ryu-1.0.9
 same-file-1.0.6
 schannel-0.1.19
@@ -349,25 +350,25 @@ strsim-0.9.3
 strsim-0.10.0
 subtle-2.4.1
 swc_atoms-0.2.9
-swc_bundler-0.104.0
-swc_common-0.17.2
+swc_bundler-0.107.0
+swc_common-0.17.5
 swc_ecma_ast-0.65.3
-swc_ecma_codegen-0.89.1
+swc_ecma_codegen-0.90.0
 swc_ecma_codegen_macros-0.6.0
-swc_ecma_dep_graph-0.58.0
+swc_ecma_dep_graph-0.59.0
 swc_ecma_loader-0.28.0
-swc_ecma_parser-0.87.1
-swc_ecma_transforms-0.114.4
-swc_ecma_transforms_base-0.57.1
-swc_ecma_transforms_classes-0.44.0
+swc_ecma_parser-0.88.3
+swc_ecma_transforms-0.117.0
+swc_ecma_transforms_base-0.58.3
+swc_ecma_transforms_classes-0.46.0
 swc_ecma_transforms_macros-0.3.0
-swc_ecma_transforms_optimization-0.84.0
-swc_ecma_transforms_proposal-0.75.1
-swc_ecma_transforms_react-0.77.0
-swc_ecma_transforms_typescript-0.79.0
-swc_ecma_utils-0.64.0
+swc_ecma_transforms_optimization-0.87.0
+swc_ecma_transforms_proposal-0.77.0
+swc_ecma_transforms_react-0.80.0
+swc_ecma_transforms_typescript-0.82.0
+swc_ecma_utils-0.65.3
 swc_ecma_visit-0.51.1
-swc_ecmascript-0.111.10
+swc_ecmascript-0.114.3
 swc_eq_ignore_macros-0.1.0
 swc_fast_graph-0.4.0
 swc_graph_analyzer-0.4.0
@@ -478,7 +479,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.19.0 -> deno-1.19.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.19.1 -> deno-1.19.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
