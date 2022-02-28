@@ -6,7 +6,7 @@ inherit user
 MY_PN=${PN/-bin/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Alertmanager for alerts sent by client applications such as Prometheus"
+DESCRIPTION="Prometheus Alertmanager"
 HOMEPAGE="https://github.com/prometheus/alertmanager"
 SRC_URI="https://github.com/prometheus/alertmanager/releases/download/v0.23.0/alertmanager-0.23.0.linux-amd64.tar.gz -> alertmanager-0.23.0.linux-amd64.tar.gz"
 

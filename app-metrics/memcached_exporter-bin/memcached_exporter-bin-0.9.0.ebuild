@@ -6,7 +6,7 @@ inherit user
 MY_PN=${PN/-bin/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Prometheus exporter for memcached metrics"
+DESCRIPTION="Exports metrics from memcached servers for consumption by Prometheus."
 HOMEPAGE="https://github.com/prometheus/memcached_exporter"
 SRC_URI="https://github.com/prometheus/memcached_exporter/releases/download/v0.9.0/memcached_exporter-0.9.0.linux-amd64.tar.gz -> memcached_exporter-0.9.0.linux-amd64.tar.gz"
 

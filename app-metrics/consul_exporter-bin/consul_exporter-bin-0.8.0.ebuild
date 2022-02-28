@@ -6,7 +6,7 @@ inherit user
 MY_PN=${PN/-bin/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Prometheus exporter for consul metrics"
+DESCRIPTION="Exporter for Consul metrics"
 HOMEPAGE="https://github.com/prometheus/consul_exporter"
 SRC_URI="https://github.com/prometheus/consul_exporter/releases/download/v0.8.0/consul_exporter-0.8.0.linux-amd64.tar.gz -> consul_exporter-0.8.0.linux-amd64.tar.gz"
 

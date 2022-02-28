@@ -6,7 +6,7 @@ inherit user
 MY_PN=${PN/-bin/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Prometheus exporter for MySQL/MariaDB metrics"
+DESCRIPTION="Exporter for MySQL server metrics"
 HOMEPAGE="https://github.com/prometheus/mysqld_exporter"
 SRC_URI="https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0/mysqld_exporter-0.13.0.linux-amd64.tar.gz -> mysqld_exporter-0.13.0.linux-amd64.tar.gz"
 
