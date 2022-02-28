@@ -6,7 +6,7 @@ inherit user
 MY_PN=${PN/-bin/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Prometheus exporter for machine metrics"
+DESCRIPTION="Exporter for machine metrics"
 HOMEPAGE="https://github.com/prometheus/node_exporter"
 SRC_URI="https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz -> node_exporter-1.3.1.linux-amd64.tar.gz"
 

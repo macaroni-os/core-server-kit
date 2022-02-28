@@ -6,7 +6,7 @@ inherit user
 MY_PN=${PN/-bin/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Prometheus exporter for Redis metrics"
+DESCRIPTION="Prometheus Exporter for Redis Metrics. Supports Redis 2.x, 3.x, 4.x, 5.x and 6.x"
 HOMEPAGE="https://github.com/oliver006/redis_exporter"
 SRC_URI="https://github.com/oliver006/redis_exporter/releases/download/v1.35.1/redis_exporter-v1.35.1.linux-amd64.tar.gz -> redis_exporter-v1.35.1.linux-amd64.tar.gz"
 

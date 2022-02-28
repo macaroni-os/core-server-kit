@@ -7,7 +7,7 @@ MY_PN=${PN/-bin/}
 MY_PN_BASE=${MY_PN/_exporter/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Prometheus exporter for probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP"
+DESCRIPTION="Blackbox prober exporter"
 HOMEPAGE="https://github.com/prometheus/blackbox_exporter"
 SRC_URI="https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz -> blackbox_exporter-0.19.0.linux-amd64.tar.gz"
 
