@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="v2 of the Universal Command Line Interface for Amazon Web Services"
 HOMEPAGE="https://github.com/aws/aws-cli/tree/v2"
-SRC_URI="https://github.com/aws/aws-cli/tarball/ad4046eebf3522887bef884df28234bfca5727f3 -> aws-cli-2.4.22-ad4046e.tar.gz"
+SRC_URI="https://github.com/aws/aws-cli/tarball/b62932c2b0b7d1cdf3c5e3738fe8d2b4408cae6d -> aws-cli-2.4.23-b62932c.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
