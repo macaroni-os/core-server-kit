@@ -479,7 +479,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.19.1 -> deno-1.19.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.19.2 -> deno-1.19.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
