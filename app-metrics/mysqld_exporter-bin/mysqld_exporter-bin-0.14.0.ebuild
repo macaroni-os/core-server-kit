@@ -8,7 +8,7 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Exporter for MySQL server metrics"
 HOMEPAGE="https://github.com/prometheus/mysqld_exporter"
-SRC_URI="https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0/mysqld_exporter-0.13.0.linux-amd64.tar.gz -> mysqld_exporter-0.13.0.linux-amd64.tar.gz"
+SRC_URI="https://github.com/prometheus/mysqld_exporter/releases/download/v0.14.0/mysqld_exporter-0.14.0.linux-amd64.tar.gz -> mysqld_exporter-0.14.0.linux-amd64.tar.gz"
 
 
 KEYWORDS="-* amd64"
