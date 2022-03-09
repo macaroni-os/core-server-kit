@@ -7,4 +7,4 @@ LICENSE=Apache-2.0
 SLOT=0
 SRC_URI=https://github.com/prometheus/alertmanager/releases/download/v0.23.0/alertmanager-0.23.0.linux-amd64.tar.gz -> alertmanager-0.23.0.linux-amd64.tar.gz
 _eclasses_=user	e68863263b1e8611dacf381bec5c8b2b
-_md5_=db1efe9ee791b30dffed44105ca5a77f
+_md5_=f2380aef03c2519a012e4654aa2110b8

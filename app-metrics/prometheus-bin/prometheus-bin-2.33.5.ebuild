@@ -10,7 +10,7 @@ DESCRIPTION="The Prometheus monitoring system and time series database."
 HOMEPAGE="https://github.com/prometheus/prometheus"
 SRC_URI="https://github.com/prometheus/prometheus/releases/download/v2.33.5/prometheus-2.33.5.linux-amd64.tar.gz -> prometheus-2.33.5.linux-amd64.tar.gz"
 
-KEYWORDS="~amd64"
+KEYWORDS="-* amd64"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
@@ -36,8 +36,8 @@ src_install() {
 	dobin ${MY_PN} promtool
 	insinto /etc/"${MY_PN}"
 	doins ${MY_PN}.yml
-	newconfd "${FILESDIR}"/"${MY_PN}".confd ${MY_PN}
-	newinitd "${FILESDIR}"/"${MY_PN}".initd ${MY_PN}
+	newconfd ${REPODIR}/app-metrics/files/${MY_PN}/${MY_PN}.confd ${MY_PN}
+	newinitd ${REPODIR}/app-metrics/files/${MY_PN}/${MY_PN}.initd ${MY_PN}
 	keepdir /var/{lib,log}/"${MY_PN}"
 	fowners ${PROMETHEUS_USER}:${PROMETHEUS_USER} /var/{lib,log}/"${MY_PN}"
 	fperms 0750 /var/{lib,log}/"${MY_PN}"

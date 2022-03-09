@@ -35,10 +35,12 @@ post_src_unpack() {
 
 src_install() {
 	dobin ${MY_PN}
-	insinto /etc/"${MY_PN}"
-	doins ${MY_PN_BASE}.yml
-	newconfd "${FILESDIR}"/"${MY_PN}".confd ${MY_PN}
-	newinitd "${FILESDIR}"/"${MY_PN}".initd ${MY_PN}
+	if [ "${MY_PN}" == "blackbox_exporter" ] ; then
+		insinto /etc/"${MY_PN}"
+		doins ${MY_PN_BASE}.yml
+	fi
+	newconfd ${REPODIR}/app-metrics/files/${MY_PN}/${MY_PN}.confd ${MY_PN}
+	newinitd ${REPODIR}/app-metrics/files/exporter.initd ${MY_PN}
 	keepdir /var/{lib,log}/"${MY_PN}"
 	fowners ${EXPORTER_USER}:${EXPORTER_USER} /var/{lib,log}/"${MY_PN}"
 	fperms 0750 /var/{lib,log}/"${MY_PN}"
