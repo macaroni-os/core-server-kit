@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="JOSE protocol implementation in Python"
 HOMEPAGE="https://github.com/certbot/josepy https://pypi.org/project/josepy/"
-SRC_URI="https://files.pythonhosted.org/packages/e1/e1/e531cc19a0b74b1d09877a67b5935e0be22e2cbbf15cecb36ec97378b644/josepy-1.12.0.tar.gz
+SRC_URI="https://files.pythonhosted.org/packages/f4/be/5c1d9decbd5e9cf97dccd40d13c5657bef936d87da03c9d7aeb67c1b5126/josepy-1.13.0.tar.gz
 "
 
 DEPEND=""
@@ -18,4 +18,4 @@ SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
 
-S="${WORKDIR}/josepy-1.12.0"
+S="${WORKDIR}/josepy-1.13.0"
