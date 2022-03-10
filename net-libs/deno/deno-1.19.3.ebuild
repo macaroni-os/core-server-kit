@@ -15,7 +15,7 @@ aho-corasick-0.7.18
 alloc-no-stdlib-2.0.3
 alloc-stdlib-0.2.1
 ansi_term-0.12.1
-anyhow-1.0.53
+anyhow-1.0.55
 arrayvec-0.5.2
 arrayvec-0.7.2
 ash-0.34.0+1.2.203
@@ -131,15 +131,15 @@ from_variant-0.1.3
 fs3-0.5.0
 fsevent-sys-4.1.0
 fslock-0.1.8
-futures-0.3.19
-futures-channel-0.3.19
-futures-core-0.3.19
-futures-executor-0.3.19
-futures-io-0.3.19
-futures-macro-0.3.19
-futures-sink-0.3.19
-futures-task-0.3.19
-futures-util-0.3.19
+futures-0.3.21
+futures-channel-0.3.21
+futures-core-0.3.21
+futures-executor-0.3.21
+futures-io-0.3.21
+futures-macro-0.3.21
+futures-sink-0.3.21
+futures-task-0.3.21
+futures-util-0.3.21
 fwdansi-1.1.0
 fxhash-0.2.1
 generic-array-0.14.5
@@ -216,7 +216,7 @@ miniz_oxide-0.4.4
 mio-0.7.14
 miow-0.3.7
 naga-0.8.3
-netif-0.1.1
+netif-0.1.3
 new_debug_unreachable-1.0.4
 nibble_vec-0.1.0
 nix-0.23.0
@@ -286,7 +286,7 @@ rand_pcg-0.2.1
 range-alloc-0.1.2
 raw-window-handle-0.4.2
 redox_syscall-0.2.10
-regex-1.5.4
+regex-1.5.5
 regex-syntax-0.6.25
 relative-path-1.6.0
 remove_dir_all-0.5.3
@@ -427,11 +427,11 @@ universal-hash-0.4.1
 unreachable-0.1.1
 untrusted-0.7.1
 url-2.2.2
-urlpattern-0.1.5
+urlpattern-0.1.6
 utf-8-0.7.6
 utf8parse-0.2.0
 uuid-0.8.2
-v8-0.40.0
+v8-0.40.2
 vcpkg-0.2.15
 version_check-0.9.4
 void-1.0.2
@@ -479,7 +479,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.19.2 -> deno-1.19.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.19.3 -> deno-1.19.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
