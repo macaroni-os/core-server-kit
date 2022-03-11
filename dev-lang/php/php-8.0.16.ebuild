@@ -21,7 +21,7 @@ LICENSE="PHP-3.01
 	unicode? ( BSD-2 LGPL-2.1 )"
 
 SLOT="8.0"
-KEYWORDS=""
+KEYWORDS="*"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -152,6 +152,7 @@ PHP_MV="$(ver_cut 1)"
 
 PATCHES=(
 	"${FILESDIR}/php-iodbc-header-location.patch"
+	"${FILESDIR}/php80-firebird-warnings.patch"
 )
 
 php_install_ini() {
@@ -737,6 +738,14 @@ pkg_postinst() {
 	elog
 	elog "  https://wiki.gentoo.org/wiki/PHP"
 	elog
+
+        einfo 
+        einfo "Funtoo guarantees the delivery of PHP packages following their publishing cycle."
+        einfo "Details on current versions can be obtained at"
+        einfo 
+        einfo "https://www.php.net/supported-versions.php"
+        einfo 
+
 }
 
 pkg_postrm() {

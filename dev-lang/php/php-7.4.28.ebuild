@@ -1,4 +1,3 @@
-# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -153,6 +152,7 @@ PHP_MV="$(ver_cut 1)"
 PATCHES=(
 	"${FILESDIR}/php-iodbc-header-location.patch"
 	"${FILESDIR}/apache.patch"
+	"${FILESDIR}/bug81656-gcc-11.patch"
 )
 
 php_install_ini() {
@@ -741,6 +741,14 @@ pkg_postinst() {
 	elog
 	elog "  https://wiki.gentoo.org/wiki/PHP"
 	elog
+
+        einfo 
+        einfo "Funtoo guarantees the delivery of PHP packages following their publishing cycle."
+        einfo "Details on current versions can be obtained at"
+        einfo 
+        einfo "https://www.php.net/supported-versions.php"
+        einfo 
+
 }
 
 pkg_postrm() {
