@@ -16,12 +16,13 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	dev-python/python-dateutil
+	dev-python/aws-crt-python
+	dev-python/colorama
+	dev-python/distro
 	dev-python/jmespath
 	dev-python/prompt_toolkit
-	dev-python/colorama
+	dev-python/python-dateutil
 	dev-python/ruamel-yaml
-	dev-python/aws-crt-python
 	!dev-python/awscli
 	!app-admin/awscli-bin
 "
