@@ -203,7 +203,7 @@ libffi-2.0.0
 libffi-sys-1.3.0
 libloading-0.7.3
 libm-0.2.1
-libsqlite3-sys-0.22.2
+libsqlite3-sys-0.24.1
 linked-hash-map-0.5.4
 lock_api-0.4.6
 log-0.4.14
@@ -313,7 +313,7 @@ retain_mut-0.1.5
 ring-0.16.20
 ron-0.7.0
 rsa-0.5.0
-rusqlite-0.25.4
+rusqlite-0.27.0
 rustc-hash-1.1.0
 rustc_version-0.2.3
 rustc_version-0.4.0
@@ -503,7 +503,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.20.2 -> deno-1.20.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.20.3 -> deno-1.20.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
