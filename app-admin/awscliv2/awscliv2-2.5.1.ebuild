@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="v2 of the Universal Command Line Interface for Amazon Web Services"
 HOMEPAGE="https://github.com/aws/aws-cli/tree/v2"
-SRC_URI="https://github.com/aws/aws-cli/tarball/43679b47195d2269fdc6d631c14c6082bc054d8e -> aws-cli-2.5.0-43679b4.tar.gz"
+SRC_URI="https://github.com/aws/aws-cli/tarball/59672916d138b5df2149be571c3b840bdc7df8a9 -> aws-cli-2.5.1-5967291.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-python/prompt_toolkit
 	dev-python/python-dateutil
 	dev-python/ruamel-yaml
-	!dev-python/awscli
+	!app-admin/awscli
 	!app-admin/awscli-bin
 "
 BDEPEND=""
