@@ -15,7 +15,7 @@ aho-corasick-0.7.18
 alloc-no-stdlib-2.0.3
 alloc-stdlib-0.2.1
 ansi_term-0.12.1
-anyhow-1.0.55
+anyhow-1.0.56
 arrayvec-0.4.12
 arrayvec-0.7.2
 ash-0.34.0+1.2.203
@@ -53,9 +53,9 @@ cfg-if-1.0.0
 cfg_aliases-0.1.1
 chrono-0.4.19
 cipher-0.3.0
-clap-3.0.7
-clap_complete-3.0.5
-clap_complete_fig-3.0.2
+clap-3.1.6
+clap_complete-3.1.1
+clap_complete_fig-3.1.4
 clipboard-win-4.3.0
 codespan-reporting-0.11.1
 const-oid-0.6.2
@@ -89,7 +89,7 @@ deno_ast-0.13.0
 deno_doc-0.33.0
 deno_graph-0.25.0
 deno_lint-0.28.0
-deno_task_shell-0.2.0
+deno_task_shell-0.2.1
 der-0.4.5
 derive_more-0.99.17
 diff-0.1.12
@@ -98,10 +98,10 @@ digest-0.10.1
 dissimilar-1.0.2
 dlopen-0.1.8
 dlopen_derive-0.1.4
-dprint-core-0.50.0
-dprint-plugin-json-0.14.1
-dprint-plugin-markdown-0.12.2
-dprint-plugin-typescript-0.65.1
+dprint-core-0.54.1
+dprint-plugin-json-0.15.0
+dprint-plugin-markdown-0.13.0
+dprint-plugin-typescript-0.66.0
 dprint-swc-ecma-ast-view-0.54.0
 dyn-clone-1.0.4
 ecdsa-0.12.4
@@ -335,9 +335,9 @@ semver-0.9.0
 semver-1.0.4
 semver-parser-0.7.0
 semver-parser-0.10.2
-serde-1.0.133
+serde-1.0.136
 serde_bytes-0.11.5
-serde_derive-1.0.133
+serde_derive-1.0.136
 serde_json-1.0.75
 serde_repr-0.1.7
 serde_urlencoded-0.7.1
@@ -400,7 +400,7 @@ tempfile-3.2.0
 termcolor-1.1.2
 text-size-1.1.0
 text_lines-0.4.1
-textwrap-0.14.2
+textwrap-0.15.0
 thiserror-1.0.30
 thiserror-impl-1.0.30
 time-0.1.44
@@ -503,7 +503,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.20.3 -> deno-1.20.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.20.4 -> deno-1.20.4.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
