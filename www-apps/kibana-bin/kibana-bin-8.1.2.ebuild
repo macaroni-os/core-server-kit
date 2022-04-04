@@ -95,7 +95,7 @@ src_install() {
 pkg_postinst() {
 
 	elog "This version of Kibana is compatible with Elasticsearch $(ver_cut 1-2) and"
-	elog "Node.js 16. Some plugins may fail with other versions of Node.js
+	elog "Node.js 16. Some plugins may fail with other versions of Node.js"
 	elog
 	elog "To set a customized Elasticsearch instance:"
 	elog "  OpenRC: set ES_INSTANCE in /etc/conf.d/${MY_PN}"
