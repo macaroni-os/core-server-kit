@@ -59,11 +59,11 @@ src_install() {
 	rm -r config || die
 
 	insinto /etc/logrotate.d
-	newins "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.logrotate ${MY_PN}
+	newins "${FILESDIR}"/${MY_PN}.logrotate ${MY_PN}
 
-	newconfd "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.confd ${MY_PN}
-	newinitd "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.initd ${MY_PN}
-	systemd_dounit "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.service
+	newconfd "${FILESDIR}"/${MY_PN}.confd ${MY_PN}
+	newinitd "${FILESDIR}"/${MY_PN}.initd ${MY_PN}
+	systemd_dounit "${FILESDIR}"/${MY_PN}.service
 
 	insinto /opt/${MY_PN}
 	doins -r .
@@ -87,7 +87,7 @@ pkg_postinst() {
 	ewarn "rm -r /var/lib/kibana/optimize/*"
 
 	elog "This version of Kibana is compatible with Elasticsearch $(ver_cut 1-2) and"
-	elog "Node.js 12. Some plugins may fail with other versions of Node.js"
+	elog "Node.js 12. Some plugins may fail with other versions of Node.js
 	elog
 	elog "To set a customized Elasticsearch instance:"
 	elog "  OpenRC: set ES_INSTANCE in /etc/conf.d/${MY_PN}"

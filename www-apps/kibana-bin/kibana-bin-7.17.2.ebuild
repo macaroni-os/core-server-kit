@@ -11,7 +11,6 @@ DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
 SRC_URI="
 	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.2-linux-x86_64.tar.gz )
-
 	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.2-linux-aarch64.tar.gz )
 "
 
@@ -73,11 +72,11 @@ src_install() {
 	rm -r config || die
 
 	insinto /etc/logrotate.d
-	newins "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.logrotate ${MY_PN}
+	newins "${FILESDIR}"/${MY_PN}.logrotate ${MY_PN}
 
-	newconfd "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.confd ${MY_PN}
-	newinitd "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.initd-r1 ${MY_PN}
-	systemd_dounit "${REPODIR}/www-apps/elastic/files/${PN}"/${MY_PN}.service
+	newconfd "${FILESDIR}"/${MY_PN}.confd ${MY_PN}
+	newinitd "${FILESDIR}"/${MY_PN}.initd-r1 ${MY_PN}
+	systemd_dounit "${FILESDIR}"/${MY_PN}.service
 
 	insinto /opt/${MY_PN}
 	doins -r .
@@ -89,13 +88,14 @@ src_install() {
 	keepdir /var/lib/${MY_PN}/plugins
 	keepdir /var/log/${MY_PN}
 
+	
 	dosym ../../var/lib/kibana/plugins /opt/kibana/plugins
 }
 
 pkg_postinst() {
 
 	elog "This version of Kibana is compatible with Elasticsearch $(ver_cut 1-2) and"
-	elog "Node.js 16. Some plugins may fail with other versions of Node.js"
+	elog "Node.js 16. Some plugins may fail with other versions of Node.js
 	elog
 	elog "To set a customized Elasticsearch instance:"
 	elog "  OpenRC: set ES_INSTANCE in /etc/conf.d/${MY_PN}"

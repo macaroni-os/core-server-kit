@@ -6,7 +6,7 @@
 #ES_HOME=/usr/share/elasticsearch
 
 # Elasticsearch Java path
-#ES_JAVA_HOME=
+#JAVA_HOME=
 
 # Elasticsearch configuration directory
 #CONF_DIR=/etc/elasticsearch
@@ -56,7 +56,4 @@ MAX_LOCKED_MEMORY=unlimited
 # property is set at boot time in /usr/lib/sysctl.d/elasticsearch.conf
 #MAX_MAP_COUNT=262144
 
-# https://www.elastic.co/guide/en/elasticsearch/reference/master/max-number-of-threads.html
-MAX_THREADS=4096
-
-rc_ulimit="-l $MAX_LOCKED_MEMORY -n $MAX_OPEN_FILES -u $MAX_THREADS"
+rc_ulimit="-l $MAX_LOCKED_MEMORY -n $MAX_OPEN_FILES"

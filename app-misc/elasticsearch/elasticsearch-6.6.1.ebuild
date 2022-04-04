@@ -1,36 +1,38 @@
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit systemd tmpfiles user
+inherit systemd user
 
-DESCRIPTION="Free and Open, Distributed, RESTful Search Engine"
-HOMEPAGE="https://www.elastic.co/elasticsearch/"
-SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.1.2-linux-x86_64.tar.gz )
-
-	arm64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.1.2-linux-aarch64.tar.gz )
-"
-
-LICENSE="Apache-2.0 BSD-2 Elastic-2.0 LGPL-3 MIT public-domain"
+DESCRIPTION="Open Source, Distributed, RESTful, Search Engine"
+HOMEPAGE="https://www.elastic.co/products/elasticsearch"
+SRC_URI="x-pack? ( https://artifacts.elastic.co/downloads/${PN}/${P}.tar.gz )
+	!x-pack? ( https://artifacts.elastic.co/downloads/${PN}/${PN}-oss-${PV}.tar.gz )"
+LICENSE="Apache-2.0 BSD-2 LGPL-3 MIT public-domain x-pack? ( Elastic )"
 SLOT="0"
-KEYWORDS="-* amd64 arm64"
+KEYWORDS="~amd64"
+IUSE="x-pack"
 
-RDEPEND="virtual/jre"
-
+RDEPEND="virtual/jre:1.8"
 
 QA_PRESTRIPPED="usr/share/elasticsearch/modules/x-pack-ml/platform/linux-x86_64/\(bin\|lib\)/.*"
 
 pkg_setup() {
-	enewuser ${PN}
 	enewgroup ${PN}
+	enewuser ${PN} -1 /bin/bash /usr/share/${PN} ${PN}
 }
 
 src_prepare() {
 	default
 
-	rm LICENSE.txt NOTICE.txt  || die
+	rm bin/*.{bat,exe} LICENSE.txt NOTICE.txt || die
 	rmdir logs || die
+
+	if use x-pack; then
+		rm bin/x-pack/*.bat || die
+		rm -r modules/x-pack-ml/platform/{darwin,windows}-x86_64 || die
+	fi
 }
 
 src_install() {
@@ -48,10 +50,13 @@ src_install() {
 	doins -r .
 
 	exeinto /usr/share/${PN}/bin
-	doexe "${REPODIR}/www-apps/elastic/files/${PN}/elasticsearch-systemd-pre-exec"
+	doexe "${FILESDIR}/elasticsearch-systemd-pre-exec"
 
-	fperms -R +x /usr/share/${PN}/bin
-	fperms -R +x /usr/share/${PN}/modules/x-pack-ml/platform/linux-x86_64/bin
+	chmod +x "${ED}"/usr/share/${PN}/bin/* || die
+
+	if use x-pack; then
+		chmod +x "${ED}"/usr/share/${PN}/modules/x-pack-ml/platform/linux-x86_64/bin/* || die
+	fi
 
 	keepdir /var/{lib,log}/${PN}
 	fowners ${PN}:${PN} /var/{lib,log}/${PN}
@@ -59,19 +64,17 @@ src_install() {
 	dodir /usr/share/${PN}/plugins
 
 	insinto /etc/sysctl.d
-	newins "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.sysctl.d" ${PN}.conf
+	newins "${FILESDIR}/${PN}.sysctl.d" ${PN}.conf
 
-	newconfd "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.conf.4" ${PN}
-	newinitd "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.init.8" ${PN}
+	newconfd "${FILESDIR}/${PN}.conf.3" ${PN}
+	newinitd "${FILESDIR}/${PN}.init.5" ${PN}
 
-	systemd_install_serviced "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.service.conf"
-	newtmpfiles "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.tmpfiles.d" ${PN}.conf
-	systemd_newunit "${REPODIR}/www-apps/elastic/files/${PN}"/${PN}.service.3 ${PN}.service
+	systemd_install_serviced "${FILESDIR}/${PN}.service.conf"
+	systemd_newtmpfilesd "${FILESDIR}/${PN}.tmpfiles.d" ${PN}.conf
+	systemd_newunit "${FILESDIR}"/${PN}.service.3 ${PN}.service
 }
 
 pkg_postinst() {
-	tmpfiles_process /usr/lib/tmpfiles.d/${PN}.conf
-
 	elog
 	elog "You may create multiple instances of ${PN} by"
 	elog "symlinking the init script:"
