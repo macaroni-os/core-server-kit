@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/c6/15/667a3dd93ee62517f2b65c0291c3a33cc1f54a4a77a06178b47c8b13cfa0/certbot-dns-cloudflare-1.25.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/d8/de/85c4303d213612d648ef6596f1b3c04344ebc5dfd219efb75d45fd74f25a/certbot-dns-cloudflare-1.26.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1
