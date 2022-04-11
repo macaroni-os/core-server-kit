@@ -16,6 +16,8 @@ LICENSE="Apache-2.0 Artistic-2 BSD BSD-2 CC-BY-3.0 CC-BY-4.0 Elastic-2.0 icu ISC
 SLOT="0"
 KEYWORDS="-* amd64"
 
+IUSE="systemd"
+
 RDEPEND="
 	>=net-libs/nodejs-10.24.1
 	=net-libs/nodejs-12*
@@ -24,6 +26,8 @@ RDEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
+
+MY_FILESDIR="${REPODIR}/www-apps/elastic/files/${PN}"
 
 pkg_setup() {
 	enewuser kibana
@@ -59,11 +63,12 @@ src_install() {
 	rm -r config || die
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${MY_PN}.logrotate ${MY_PN}
+	newins "${MY_FILESDIR}"/${MY_PN}.logrotate ${MY_PN}
 
-	newconfd "${FILESDIR}"/${MY_PN}.confd ${MY_PN}
-	newinitd "${FILESDIR}"/${MY_PN}.initd ${MY_PN}
-	systemd_dounit "${FILESDIR}"/${MY_PN}.service
+	newconfd "${MY_FILESDIR}"/${MY_PN}.confd ${MY_PN}
+	newinitd "${MY_FILESDIR}"/${MY_PN}.initd ${MY_PN}
+
+	use systemd && systemd_dounit "${MY_FILESDIR}"/${MY_PN}.service
 
 	insinto /opt/${MY_PN}
 	doins -r .
@@ -90,8 +95,8 @@ pkg_postinst() {
 	elog "Node.js 12. Some plugins may fail with other versions of Node.js"
 	elog
 	elog "To set a customized Elasticsearch instance:"
-	elog "  OpenRC: set ES_INSTANCE in /etc/conf.d/${MY_PN}"
-	elog "  systemd: set elasticsearch.url in /etc/${MY_PN}/kibana.yml"
+	use systemd || elog "  OpenRC: set ES_INSTANCE in /etc/conf.d/${MY_PN}"
+	use systemd && elog "  systemd: set elasticsearch.url in /etc/${MY_PN}/kibana.yml"
 	elog
 	elog "Elasticsearch can run local or remote."
 }
