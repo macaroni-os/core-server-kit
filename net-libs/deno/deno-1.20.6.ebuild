@@ -84,10 +84,10 @@ dashmap-5.2.0
 data-encoding-2.3.2
 data-url-0.1.1
 debug_unreachable-0.1.1
-deno_ast-0.13.0
-deno_doc-0.33.0
-deno_graph-0.25.0
-deno_lint-0.28.0
+deno_ast-0.14.0
+deno_doc-0.34.0
+deno_graph-0.26.0
+deno_lint-0.29.0
 deno_task_shell-0.2.1
 der-0.4.5
 derive_more-0.99.17
@@ -97,11 +97,11 @@ digest-0.10.1
 dissimilar-1.0.2
 dlopen-0.1.8
 dlopen_derive-0.1.4
-dprint-core-0.54.1
-dprint-plugin-json-0.15.0
-dprint-plugin-markdown-0.13.0
-dprint-plugin-typescript-0.66.0
-dprint-swc-ecma-ast-view-0.54.0
+dprint-core-0.55.2
+dprint-plugin-json-0.15.1
+dprint-plugin-markdown-0.13.1
+dprint-plugin-typescript-0.67.0
+dprint-swc-ecma-ast-view-0.55.0
 dyn-clone-1.0.4
 ecdsa-0.12.4
 either-1.6.1
@@ -113,7 +113,7 @@ enum_kind-0.2.1
 env_logger-0.8.4
 errno-0.1.8
 error-code-2.3.0
-eszip-0.18.0
+eszip-0.19.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.7.1
@@ -144,7 +144,6 @@ futures-util-0.3.21
 fwdansi-1.1.0
 fxhash-0.2.1
 generic-array-0.14.5
-getrandom-0.1.16
 getrandom-0.2.4
 ghash-0.4.4
 glow-0.11.2
@@ -256,10 +255,8 @@ percent-encoding-2.1.0
 pest-2.1.3
 petgraph-0.6.0
 phf-0.10.1
-phf_generator-0.8.0
 phf_generator-0.10.0
 phf_macros-0.10.0
-phf_shared-0.8.0
 phf_shared-0.10.0
 pin-project-1.0.8
 pin-project-internal-1.0.8
@@ -287,15 +284,10 @@ quote-0.6.13
 quote-1.0.14
 radix_fmt-1.0.0
 radix_trie-0.2.1
-rand-0.7.3
 rand-0.8.4
-rand_chacha-0.2.2
 rand_chacha-0.3.1
-rand_core-0.5.1
 rand_core-0.6.3
-rand_hc-0.2.0
 rand_hc-0.3.1
-rand_pcg-0.2.1
 range-alloc-0.1.2
 raw-window-handle-0.4.2
 redox_syscall-0.2.10
@@ -335,7 +327,7 @@ semver-parser-0.10.2
 serde-1.0.136
 serde_bytes-0.11.5
 serde_derive-1.0.136
-serde_json-1.0.75
+serde_json-1.0.79
 serde_repr-0.1.7
 serde_urlencoded-0.7.1
 sha-1-0.9.8
@@ -357,32 +349,32 @@ spirv-0.2.0+1.5.4
 spki-0.4.1
 static_assertions-1.1.0
 str-buf-1.0.5
-string_cache-0.8.3
-string_cache_codegen-0.5.1
+string_cache-0.8.4
+string_cache_codegen-0.5.2
 string_enum-0.3.1
 strsim-0.9.3
 strsim-0.10.0
 subtle-2.4.1
-swc_atoms-0.2.9
-swc_bundler-0.127.0
-swc_common-0.17.18
-swc_ecma_ast-0.71.0
-swc_ecma_codegen-0.98.1
+swc_atoms-0.2.11
+swc_bundler-0.133.0
+swc_common-0.17.19
+swc_ecma_ast-0.75.0
+swc_ecma_codegen-0.103.0
 swc_ecma_codegen_macros-0.7.0
-swc_ecma_dep_graph-0.67.0
+swc_ecma_dep_graph-0.72.0
 swc_ecma_loader-0.29.0
-swc_ecma_parser-0.95.1
-swc_ecma_transforms-0.136.0
-swc_ecma_transforms_base-0.70.1
-swc_ecma_transforms_classes-0.58.0
+swc_ecma_parser-0.100.0
+swc_ecma_transforms-0.142.0
+swc_ecma_transforms_base-0.75.0
+swc_ecma_transforms_classes-0.63.0
 swc_ecma_transforms_macros-0.3.0
-swc_ecma_transforms_optimization-0.106.0
-swc_ecma_transforms_proposal-0.91.0
-swc_ecma_transforms_react-0.98.0
-swc_ecma_transforms_typescript-0.101.0
-swc_ecma_utils-0.74.0
-swc_ecma_visit-0.57.0
-swc_ecmascript-0.137.0
+swc_ecma_transforms_optimization-0.112.0
+swc_ecma_transforms_proposal-0.97.0
+swc_ecma_transforms_react-0.104.0
+swc_ecma_transforms_typescript-0.107.0
+swc_ecma_utils-0.79.0
+swc_ecma_visit-0.61.0
+swc_ecmascript-0.143.0
 swc_eq_ignore_macros-0.1.0
 swc_fast_graph-0.5.0
 swc_graph_analyzer-0.6.0
@@ -455,7 +447,6 @@ version_check-0.9.4
 void-1.0.2
 walkdir-2.3.2
 want-0.3.0
-wasi-0.9.0+wasi-snapshot-preview1
 wasi-0.10.0+wasi-snapshot-preview1
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.78
@@ -504,7 +495,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.20.5 -> deno-1.20.5.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.20.6 -> deno-1.20.6.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
