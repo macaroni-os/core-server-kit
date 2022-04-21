@@ -10,9 +10,9 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Tool for managing events and logs"
 HOMEPAGE="https://www.elastic.co/products/logstash"
 SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/logstash/logstash-7.17.2-linux-x86_64.tar.gz )
+	amd64? ( https://artifacts.elastic.co/downloads/logstash/logstash-8.1.3-linux-x86_64.tar.gz )
 
-	arm64? ( https://artifacts.elastic.co/downloads/logstash/logstash-7.17.2-linux-aarch64.tar.gz )
+	arm64? ( https://artifacts.elastic.co/downloads/logstash/logstash-8.1.3-linux-aarch64.tar.gz )
 "
 
 # source: LICENSE.txt and NOTICE.txt
