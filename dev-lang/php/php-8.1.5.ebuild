@@ -555,7 +555,7 @@ src_install() {
 				# We're specifically not using emake install-sapi as libtool
 				# may cause unnecessary relink failures (see bug #351266)
 				insinto "${PHP_DESTDIR#${EPREFIX}}/apache2/"
-				newins ".libs/libphp${PHP_MV}$(get_libname)" \
+				newins ".libs/libphp$(get_libname)" \
 					   "libphp${PHP_MV}$(get_libname)"
 				keepdir "/usr/$(get_libdir)/apache2/modules"
 			else
@@ -578,7 +578,7 @@ src_install() {
 						source="sapi/fpm/php-fpm"
 						;;
 					embed)
-						source="libs/libphp${PHP_MV}$(get_libname)"
+						source="libs/libphp$(get_libname)"
 						;;
 					phpdbg)
 						source="sapi/phpdbg/phpdbg"
