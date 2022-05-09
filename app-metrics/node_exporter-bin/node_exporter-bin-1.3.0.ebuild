@@ -7,9 +7,9 @@ MY_PN=${PN/-bin/}
 MY_PN_BASE=${MY_PN/_exporter/}
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Prometheus Exporter for Redis Metrics. Supports Redis 2.x, 3.x, 4.x, 5.x and 6.x"
-HOMEPAGE="https://github.com/oliver006/redis_exporter"
-SRC_URI="https://github.com/oliver006/redis_exporter/releases/download/v1.37.0/redis_exporter-v1.37.0.linux-amd64.tar.gz -> redis_exporter-v1.37.0.linux-amd64.tar.gz"
+DESCRIPTION="Exporter for machine metrics"
+HOMEPAGE="https://github.com/prometheus/node_exporter"
+SRC_URI="https://github.com/prometheus/node_exporter/releases/download/v1.3.0/node_exporter-1.3.0.linux-amd64.tar.gz -> node_exporter-1.3.0.linux-amd64.tar.gz"
 
 KEYWORDS="-* amd64"
 LICENSE="Apache-2.0"
