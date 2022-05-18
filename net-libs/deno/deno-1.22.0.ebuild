@@ -19,7 +19,7 @@ anyhow-1.0.57
 arrayvec-0.7.2
 ash-0.34.0+1.2.203
 ast_node-0.7.7
-async-compression-0.3.12
+async-compression-0.3.13
 async-stream-0.3.3
 async-stream-impl-0.3.3
 async-trait-0.1.53
@@ -80,15 +80,15 @@ d3d12-0.4.1
 darling-0.10.2
 darling_core-0.10.2
 darling_macro-0.10.2
-dashmap-5.2.0
+dashmap-5.3.3
 data-encoding-2.3.2
 data-url-0.1.1
 debug_unreachable-0.1.1
-deno_ast-0.14.0
+deno_ast-0.14.1
 deno_doc-0.34.0
 deno_graph-0.26.0
 deno_lint-0.29.0
-deno_task_shell-0.2.1
+deno_task_shell-0.3.0
 der-0.4.5
 derive_more-0.99.17
 diff-0.1.12
@@ -108,7 +108,6 @@ either-1.6.1
 elliptic-curve-0.10.6
 encoding_rs-0.8.31
 endian-type-0.1.2
-enum-as-inner-0.3.3
 enum-as-inner-0.4.0
 enum_kind-0.2.1
 env_logger-0.9.0
@@ -127,7 +126,7 @@ filetime-0.2.16
 fixedbitset-0.4.1
 flaky_test-0.1.0
 flate2-1.0.23
-fly-accept-encoding-0.2.0-alpha.5
+fly-accept-encoding-0.2.0
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
@@ -156,10 +155,10 @@ gpu-alloc-types-0.2.0
 gpu-descriptor-0.2.2
 gpu-descriptor-types-0.1.1
 group-0.10.0
-h2-0.3.12
+h2-0.3.13
 hashbrown-0.11.2
+hashbrown-0.12.1
 hashlink-0.7.0
-heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 hexf-parse-0.2.1
@@ -182,16 +181,17 @@ inotify-sys-0.1.5
 inplace_it-0.3.3
 instant-0.1.12
 io-lifetimes-0.6.1
-ipconfig-0.2.2
+ipconfig-0.3.0
 ipnet-2.5.0
 is-macro-0.2.0
+itertools-0.10.3
 itoa-1.0.1
 jobserver-0.1.24
 js-sys-0.3.57
 jsonc-parser-0.19.0
 kernel32-sys-0.2.2
 khronos-egl-4.1.0
-kqueue-1.0.5
+kqueue-1.0.6
 kqueue-sys-1.0.3
 lazy_static-1.4.0
 lexical-6.1.0
@@ -208,7 +208,7 @@ libloading-0.7.3
 libm-0.2.2
 libsqlite3-sys-0.24.2
 linked-hash-map-0.5.4
-linux-raw-sys-0.0.42
+linux-raw-sys-0.0.46
 lock_api-0.4.7
 log-0.4.16
 lru-cache-0.1.2
@@ -217,13 +217,12 @@ lzzzz-0.8.0
 malloc_buf-0.0.6
 match_cfg-0.1.0
 matches-0.1.9
-memchr-2.4.1
+memchr-2.5.0
 memoffset-0.6.5
 metal-0.23.1
 mime-0.3.16
 miniz_oxide-0.5.1
-mio-0.8.2
-miow-0.3.7
+mio-0.8.3
 mitata-0.0.6
 naga-0.8.5
 netif-0.1.3
@@ -232,12 +231,11 @@ nibble_vec-0.1.0
 nix-0.23.0
 node_resolver-0.1.1
 notify-5.0.0-pre.14
-ntapi-0.3.7
 num-bigint-0.4.3
 num-bigint-dig-0.7.0
-num-integer-0.1.44
+num-integer-0.1.45
 num-iter-0.1.43
-num-traits-0.2.14
+num-traits-0.2.15
 num_cpus-1.13.1
 num_threads-0.1.6
 objc-0.2.7
@@ -253,7 +251,7 @@ p384-0.8.0
 parking_lot-0.11.2
 parking_lot-0.12.0
 parking_lot_core-0.8.5
-parking_lot_core-0.9.2
+parking_lot_core-0.9.3
 path-clean-0.1.0
 path-dedot-3.0.17
 pathdiff-0.2.1
@@ -282,7 +280,7 @@ proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro-hack-0.5.19
 proc-macro2-0.4.30
-proc-macro2-1.0.37
+proc-macro2-1.0.38
 profiling-1.0.5
 pty-0.2.2
 pulldown-cmark-0.9.1
@@ -312,8 +310,8 @@ rusqlite-0.27.0
 rustc-hash-1.1.0
 rustc_version-0.2.3
 rustc_version-0.4.0
-rustix-0.34.4
-rustls-0.20.4
+rustix-0.34.6
+rustls-0.20.5
 rustls-native-certs-0.6.2
 rustls-pemfile-0.3.0
 rustls-pemfile-1.0.0
@@ -328,14 +326,14 @@ sct-0.7.0
 security-framework-2.6.1
 security-framework-sys-2.6.1
 semver-0.9.0
-semver-1.0.7
+semver-1.0.9
 semver-parser-0.7.0
 semver-parser-0.10.2
 serde-1.0.136
-serde_bytes-0.11.5
+serde_bytes-0.11.6
 serde_derive-1.0.136
-serde_json-1.0.79
-serde_repr-0.1.7
+serde_json-1.0.81
+serde_repr-0.1.8
 serde_urlencoded-0.7.1
 sha-1-0.9.8
 sha-1-0.10.0
@@ -348,7 +346,6 @@ siphasher-0.3.10
 slab-0.4.6
 slotmap-1.0.6
 smallvec-1.8.0
-socket2-0.3.19
 socket2-0.4.4
 sourcemap-6.0.1
 spin-0.5.2
@@ -385,11 +382,11 @@ swc_ecmascript-0.143.0
 swc_eq_ignore_macros-0.1.0
 swc_fast_graph-0.5.0
 swc_graph_analyzer-0.6.0
-swc_macros_common-0.3.4
+swc_macros_common-0.3.5
 swc_visit-0.3.0
 swc_visit_macros-0.3.1
 syn-0.15.44
-syn-1.0.91
+syn-1.0.93
 synstructure-0.12.6
 sys-info-0.9.1
 tempfile-3.3.0
@@ -397,15 +394,15 @@ termcolor-1.1.3
 text-size-1.1.0
 text_lines-0.4.1
 textwrap-0.15.0
-thiserror-1.0.30
-thiserror-impl-1.0.30
+thiserror-1.0.31
+thiserror-impl-1.0.31
 time-0.1.44
 time-0.3.9
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
 tokio-1.17.0
 tokio-macros-1.7.0
-tokio-rustls-0.23.3
+tokio-rustls-0.23.4
 tokio-stream-0.1.8
 tokio-tungstenite-0.16.1
 tokio-util-0.6.9
@@ -420,9 +417,8 @@ tracing-0.1.34
 tracing-attributes-0.1.21
 tracing-core-0.1.26
 trust-dns-client-0.21.2
-trust-dns-proto-0.20.3
 trust-dns-proto-0.21.2
-trust-dns-resolver-0.20.3
+trust-dns-resolver-0.21.2
 trust-dns-server-0.21.2
 try-lock-0.2.3
 tungstenite-0.16.0
@@ -442,7 +438,7 @@ unicode-normalization-0.1.19
 unicode-segmentation-1.9.0
 unicode-width-0.1.9
 unicode-xid-0.1.0
-unicode-xid-0.2.2
+unicode-xid-0.2.3
 universal-hash-0.4.1
 unreachable-0.1.1
 untrusted-0.7.1
@@ -451,7 +447,7 @@ urlpattern-0.1.6
 utf-8-0.7.6
 utf8parse-0.2.0
 uuid-1.0.0
-v8-0.42.0
+v8-0.42.1
 vcpkg-0.2.15
 version_check-0.9.4
 void-1.0.2
@@ -472,7 +468,7 @@ wgpu-core-0.12.2
 wgpu-hal-0.12.5
 wgpu-types-0.12.0
 which-4.2.5
-widestring-0.4.3
+widestring-0.5.1
 winapi-0.2.8
 winapi-0.3.9
 winapi-build-0.1.1
@@ -480,18 +476,18 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.30.0
-windows-sys-0.34.0
+windows-sys-0.36.1
 windows_aarch64_msvc-0.30.0
-windows_aarch64_msvc-0.34.0
+windows_aarch64_msvc-0.36.1
 windows_i686_gnu-0.30.0
-windows_i686_gnu-0.34.0
+windows_i686_gnu-0.36.1
 windows_i686_msvc-0.30.0
-windows_i686_msvc-0.34.0
+windows_i686_msvc-0.36.1
 windows_x86_64_gnu-0.30.0
-windows_x86_64_gnu-0.34.0
+windows_x86_64_gnu-0.36.1
 windows_x86_64_msvc-0.30.0
-windows_x86_64_msvc-0.34.0
-winreg-0.6.2
+windows_x86_64_msvc-0.36.1
+winreg-0.7.0
 winreg-0.10.1
 winres-0.1.12
 zeroize-1.4.3
@@ -505,7 +501,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.21.3 -> deno-1.21.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.22.0 -> deno-1.22.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
