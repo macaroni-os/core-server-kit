@@ -10,8 +10,8 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
 SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.2.0-linux-x86_64.tar.gz )
-	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.2.0-linux-aarch64.tar.gz )
+	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.4-linux-x86_64.tar.gz )
+	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.4-linux-aarch64.tar.gz )
 "
 
 # source: LICENSE.txt and NOTICE.txt
