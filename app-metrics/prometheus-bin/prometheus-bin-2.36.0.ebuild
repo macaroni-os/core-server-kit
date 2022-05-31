@@ -8,7 +8,7 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="The Prometheus monitoring system and time series database."
 HOMEPAGE="https://github.com/prometheus/prometheus"
-SRC_URI="https://github.com/prometheus/prometheus/releases/download/v2.35.0/prometheus-2.35.0.linux-amd64.tar.gz -> prometheus-2.35.0.linux-amd64.tar.gz"
+SRC_URI="https://github.com/prometheus/prometheus/releases/download/v2.36.0/prometheus-2.36.0.linux-amd64.tar.gz -> prometheus-2.36.0.linux-amd64.tar.gz"
 
 KEYWORDS="-* amd64"
 LICENSE="Apache-2.0"
