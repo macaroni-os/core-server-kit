@@ -86,6 +86,7 @@ data-url-0.1.1
 debug_unreachable-0.1.1
 deno_ast-0.15.0
 deno_doc-0.35.0
+deno_emit-0.2.0
 deno_graph-0.27.0
 deno_lint-0.30.0
 deno_task_shell-0.3.1
@@ -100,7 +101,7 @@ dlopen_derive-0.1.4
 dprint-core-0.58.1
 dprint-plugin-json-0.15.3
 dprint-plugin-markdown-0.13.3
-dprint-plugin-typescript-0.68.4
+dprint-plugin-typescript-0.68.5
 dprint-swc-ext-0.1.1
 dyn-clone-1.0.5
 ecdsa-0.12.4
@@ -503,7 +504,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.22.1 -> deno-1.22.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.22.2 -> deno-1.22.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
