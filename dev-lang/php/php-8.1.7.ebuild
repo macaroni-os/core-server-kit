@@ -6,10 +6,11 @@ WANT_AUTOMAKE="none"
 
 inherit flag-o-matic autotools
 
-MY_PV=${PV/_rc/RC}
+# MY_PV=${PV/_rc/RC}
+MY_PV=${PV/_beta/beta}
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="https://www.php.net/distributions/php-7.4.29.tar.bz2"
+SRC_URI="https://www.php.net/distributions/php-8.1.7.tar.bz2"
 
 LICENSE="PHP-3.01
 	BSD
@@ -19,7 +20,7 @@ LICENSE="PHP-3.01
 	gd? ( gd )
 	unicode? ( BSD-2 LGPL-2.1 )"
 
-SLOT="7.4"
+SLOT="8.1"
 KEYWORDS="*"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -32,17 +33,17 @@ IUSE="${IUSE}
 	${SAPIS/cli/+cli}
 	threads"
 
-IUSE="${IUSE} acl argon2 bcmath berkdb bzip2 calendar cdb cjk
+IUSE="${IUSE} acl apparmor argon2 bcmath berkdb bzip2 calendar cdb cjk
 	coverage +ctype curl debug
 	enchant exif ffi +fileinfo +filter firebird
 	+flatfile ftp gd gdbm gmp +iconv imap inifile
-	intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit libressl lmdb
+	intl iodbc ipv6 kerberos ldap ldap-sasl libedit libressl lmdb
 	mhash mssql mysql mysqli nls
 	oci8-instant-client odbc +opcache pcntl pdo +phar +posix postgres qdbm
 	readline selinux +session session-mm sharedmem
 	+simplexml snmp soap sockets sodium spell sqlite ssl
 	sysvipc test tidy +tokenizer tokyocabinet truetype unicode webp
-	+xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib -maintainer-zts"
+	+xml xmlreader xmlwriter xpm xslt zip zlib -zts"
 
 # Without USE=readline or libedit, the interactive "php -a" CLI will hang.
 REQUIRED_USE="
@@ -57,7 +58,6 @@ REQUIRED_USE="
 	gd? ( zlib )
 	simplexml? ( xml )
 	soap? ( xml )
-	xmlrpc? ( xml iconv )
 	xmlreader? ( xml )
 	xmlwriter? ( xml )
 	xslt? ( xml )
@@ -80,6 +80,7 @@ COMMON_DEPEND="
 	fpm? ( acl? ( sys-apps/acl ) )
 	apache2? ( www-servers/apache[apache2_modules_unixd(+),threads=] )
 	argon2? ( app-crypt/argon2:= )
+	apparmor? ( sys-libs/libapparmor )
 	berkdb? ( || (	sys-libs/db:5.3
 					sys-libs/db:5.1
 					sys-libs/db:4.8
@@ -151,8 +152,6 @@ PHP_MV="$(ver_cut 1)"
 
 PATCHES=(
 	"${FILESDIR}/php-iodbc-header-location.patch"
-	"${FILESDIR}/apache.patch"
-	"${FILESDIR}/bug81656-gcc-11.patch"
 )
 
 php_install_ini() {
@@ -211,8 +210,8 @@ php_set_ini_dir() {
 }
 
 src_prepare() {
-
-    if use apache2; then
+	
+	if use apache2; then
     
     eapply "${FILESDIR}/php-iodbc-header-location.patch" || die
 	
@@ -234,7 +233,6 @@ src_prepare() {
 		sapi/fpm/php-fpm.conf.in \
 		|| die 'failed to move the include directory in php-fpm.conf'
 
-		
 	# Emulate buildconf to support cross-compilation
 	# rm -fr aclocal.m4 autom4te.cache config.cache \
 	# 	configure main/php_config.h.in || die
@@ -284,7 +282,6 @@ src_configure() {
 			$(use elibc_glibc || use elibc_musl || use elibc_FreeBSD || echo "${EPREFIX}/usr"))
 		$(use_enable intl)
 		$(use_enable ipv6)
-		$(use_enable json)
 		$(use_with kerberos)
 		$(use_with xml libxml)
 		$(use_enable unicode mbstring)
@@ -311,11 +308,11 @@ src_configure() {
 		$(use_enable xml)
 		$(use_enable xmlreader)
 		$(use_enable xmlwriter)
-		$(use_with xmlrpc)
 		$(use_with xslt xsl)
 		$(use_with zip)
 		$(use_with zlib zlib "${EPREFIX}/usr")
 		$(use_enable debug)
+		$(use_enable zts)
 	)
 
 	# DBA support
@@ -422,12 +419,6 @@ src_configure() {
 	else
 		our_conf+=( $(use_enable session) )
 	fi
-	
-	if use maintainer-zts ; then
-        our_conf+=( $(use_enable maintainer-zts ) )
-    else
-        our_conf+=( --disable-zend-signals )
-    fi
 
 	# Use pic for shared modules such as apache2's mod_php
 	our_conf+=( --with-pic )
@@ -483,6 +474,11 @@ src_configure() {
 						fi
 					else
 						sapi_conf+=( "--disable-${sapi}" )
+					fi
+					;;
+				fpm)
+					if use apparmor ; then
+						sapi_conf+=( --with-fpm-apparmor )
 					fi
 					;;
 
@@ -559,7 +555,7 @@ src_install() {
 				# We're specifically not using emake install-sapi as libtool
 				# may cause unnecessary relink failures (see bug #351266)
 				insinto "${PHP_DESTDIR#${EPREFIX}}/apache2/"
-				newins ".libs/libphp${PHP_MV}$(get_libname)" \
+				newins ".libs/libphp$(get_libname)" \
 					   "libphp${PHP_MV}$(get_libname)"
 				keepdir "/usr/$(get_libdir)/apache2/modules"
 			else
@@ -582,7 +578,7 @@ src_install() {
 						source="sapi/fpm/php-fpm"
 						;;
 					embed)
-						source="libs/libphp${PHP_MV}$(get_libname)"
+						source="libs/libphp$(get_libname)"
 						;;
 					phpdbg)
 						source="sapi/phpdbg/phpdbg"
