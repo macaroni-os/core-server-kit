@@ -8,8 +8,8 @@ inherit autotools linux-info python-any-r1 systemd
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more"
 HOMEPAGE="https://www.rsyslog.com/"
 SRC_URI="
-	https://github.com/rsyslog/rsyslog/tarball/75a8aafbb0a8ef2c8f292dc3611288546bda0d5b -> rsyslog-8.2204.1-75a8aaf.tar.gz
-	src? ( https://github.com/rsyslog/rsyslog/tarball/75a8aafbb0a8ef2c8f292dc3611288546bda0d5b -> rsyslog-8.2204.1-75a8aaf.tar.gz )
+	https://github.com/rsyslog/rsyslog/tarball/05587611937b84cc2504a0821250a130c8ec4220 -> rsyslog-8.2206.0-0558761.tar.gz
+	src? ( https://github.com/rsyslog/rsyslog/tarball/05587611937b84cc2504a0821250a130c8ec4220 -> rsyslog-8.2206.0-0558761.tar.gz )
 
 	
 	doc? ( https://github.com/rsyslog/rsyslog-doc/tarball/1cc314741cca55d6dbb6783d168aadd094a85a08 -> rsyslog-doc-8.2206.0-1cc3147.tar.gz )
@@ -100,7 +100,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack rsyslog-8.2204.1-75a8aaf.tar.gz || die "Failed to unpack source tarball"
+	unpack rsyslog-8.2206.0-0558761.tar.gz || die "Failed to unpack source tarball"
 	mv rsyslog-rsyslog* "${S}" || die "Failed to rename unpacked source to '${S}'"
 
 	if use doc; then
