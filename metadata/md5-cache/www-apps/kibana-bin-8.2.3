@@ -1,5 +1,6 @@
 BDEPEND=virtual/pkgconfig
 DEFINED_PHASES=install postinst prepare setup
+DEPEND=sys-apps/shadow
 DESCRIPTION=Analytics and search dashboard for Elasticsearch
 EAPI=7
 HOMEPAGE=https://www.elastic.co/products/kibana
@@ -9,5 +10,5 @@ LICENSE=Apache-2.0 Artistic-2 BSD BSD-2 CC-BY-3.0 CC-BY-4.0 Elastic-2.0 icu ISC 
 RDEPEND=>=net-libs/nodejs-16.14.2 =net-libs/nodejs-16* dev-libs/nss
 SLOT=0
 SRC_URI=amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.2.3-linux-x86_64.tar.gz ) arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.2.3-linux-aarch64.tar.gz )
-_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	e68863263b1e8611dacf381bec5c8b2b
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
 _md5_=73bd5d22c71c6e1dfb55bf98b69a54c6
