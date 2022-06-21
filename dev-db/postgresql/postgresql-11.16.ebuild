@@ -4,23 +4,19 @@ EAPI=7
 
 PYTHON_COMPAT=( python3+ )
 
-inherit flag-o-matic linux-info multilib pam prefix python-single-r1 systemd tmpfiles user
+inherit flag-o-matic linux-info multilib pam prefix python-single-r1 user
 
-KEYWORDS="next"
+KEYWORDS="*"
 
-SLOT=$(ver_cut 1)
-
-MY_PV=${PV/_/}
-S="${WORKDIR}/${PN}-${MY_PV}"
-
-SRC_URI="https://ftp.postgresql.org/pub/source/v${MY_PV}/postgresql-${MY_PV}.tar.bz2"
+SLOT=11
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
+SRC_URI="https://ftp.postgresql.org/pub/source/v11.16/postgresql-11.16.tar.bz2"
 
-IUSE="debug doc icu kerberos kernel_linux ldap llvm lz4 nls pam
-	perl python +readline selinux +server systemd ssl static-libs tcl
+IUSE="debug doc icu kerberos ldap llvm nls pam
+	perl python +readline selinux +server ssl static-libs tcl
 	threads uuid xml zlib"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -31,17 +27,15 @@ sys-apps/less
 virtual/libintl
 icu? ( dev-libs/icu:= )
 kerberos? ( virtual/krb5 )
-ldap? ( net-nds/openldap )
+ldap? ( net-nds/openldap:= )
 llvm? (
 	sys-devel/llvm:=
 	sys-devel/clang:=
 )
-lz4? ( app-arch/lz4 )
 pam? ( sys-libs/pam )
 perl? ( >=dev-lang/perl-5.8:= )
 python? ( ${PYTHON_DEPS} )
 readline? ( sys-libs/readline:0= )
-server? ( systemd? ( sys-apps/systemd ) )
 ssl? ( >=dev-libs/openssl-0.9.6-r1:0= )
 tcl? ( >=dev-lang/tcl-8:0= )
 xml? ( dev-libs/libxml2 dev-libs/libxslt )
@@ -51,8 +45,7 @@ zlib? ( sys-libs/zlib )
 # uuid flags -- depend on sys-apps/util-linux for Linux libcs, or if no
 # supported libc in use depend on dev-libs/ossp-uuid. For BSD systems,
 # the libc includes UUID functions.
-UTIL_LINUX_LIBC=( elibc_{glibc,uclibc,musl} )
-BSD_LIBC=( elibc_{Free,Net,Open}BSD )
+UTIL_LINUX_LIBC=( elibc_{glibc,musl} )
 
 nest_usedep() {
 	local front back
@@ -64,11 +57,10 @@ nest_usedep() {
 	echo "${front}${1}${back}"
 }
 
-IUSE+=" ${UTIL_LINUX_LIBC[@]} ${BSD_LIBC[@]}"
 CDEPEND+="
 uuid? (
 	${UTIL_LINUX_LIBC[@]/%/? ( sys-apps/util-linux )}
-	$(nest_usedep ${UTIL_LINUX_LIBC[@]/#/!} ${BSD_LIBC[@]/#/!} dev-libs/ossp-uuid)
+	$(nest_usedep ${UTIL_LINUX_LIBC[@]/#/!} dev-libs/ossp-uuid)
 )"
 
 DEPEND="${CDEPEND}
@@ -81,27 +73,24 @@ xml? ( virtual/pkgconfig )
 RDEPEND="${CDEPEND}
 selinux? ( sec-policy/selinux-postgresql )
 "
-
 pkg_setup() {
-	use server && CONFIG_CHECK="~SYSVIPC" linux-info_pkg_setup
-
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/sh /var/lib/postgresql postgres
-
+	use server && CONFIG_CHECK="~SYSVIPC" linux-info_pkg_setup
 	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
 	# Set proper run directory
-	sed "s|\(PGSOCKET_DIR\s\+\)\"/tmp\"|\1\"${EPREFIX}/run/postgresql\"|" \
+	sed -e "s|\(PGSOCKET_DIR\s\+\)\"/tmp\"|\1\"${EPREFIX}/run/postgresql\"|" \
 		-i src/include/pg_config_manual.h || die
 
 	# Rely on $PATH being in the proper order so that the correct
 	# install program is used for modules utilizing PGXS in both
 	# hardened and non-hardened environments. (Bug #528786)
-	sed 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
+	sed -e 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
 
-	use server || eapply "${FILESDIR}/${PN}-14_rc1-no-server.patch"
+	use server || eapply "${FILESDIR}/${PN}-11-no-server.patch"
 
 	if use pam ; then
 		sed "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -109,7 +98,7 @@ src_prepare() {
 			die 'PGSQL_PAM_SERVICE rename failed.'
 	fi
 
-	eapply_user
+	default
 }
 
 src_configure() {
@@ -129,39 +118,38 @@ src_configure() {
 		for i in ${UTIL_LINUX_LIBC[@]}; do
 			use ${i} && uuid_config="--with-uuid=e2fs"
 		done
-		for i in ${BSD_LIBC[@]}; do
-			use ${i} && uuid_config="--with-uuid=bsd"
-		done
 		[[ -z $uuid_config ]] && uuid_config="--with-uuid=ossp"
 	fi
 
-	econf \
-		--prefix="${PO}/usr/$(get_libdir)/postgresql-${SLOT}" \
-		--datadir="${PO}/usr/share/postgresql-${SLOT}" \
-		--includedir="${PO}/usr/include/postgresql-${SLOT}" \
-		--mandir="${PO}/usr/share/postgresql-${SLOT}/man" \
-		--sysconfdir="${PO}/etc/postgresql-${SLOT}" \
-		--with-system-tzdata="${PO}/usr/share/zoneinfo" \
-		$(use_enable !alpha spinlocks) \
-		$(use_enable debug) \
-		$(use_enable threads thread-safety) \
-		$(use_with icu) \
-		$(use_with kerberos gssapi) \
-		$(use_with ldap) \
-		$(use_with llvm) \
-		$(use_with lz4) \
-		$(use_with pam) \
-		$(use_with perl) \
-		$(use_with python) \
-		$(use_with readline) \
-		$(use_with ssl openssl) \
-		$(usex server "$(use_with systemd)" '--without-systemd') \
-		$(use_with tcl) \
-		${uuid_config} \
-		$(use_with xml libxml) \
-		$(use_with xml libxslt) \
-		$(use_with zlib) \
+	local myconf=(
+		--prefix="${PO}/usr/$(get_libdir)/postgresql-${SLOT}"
+		--datadir="${PO}/usr/share/postgresql-${SLOT}"
+		--includedir="${PO}/usr/include/postgresql-${SLOT}"
+		--mandir="${PO}/usr/share/postgresql-${SLOT}/man"
+		--sysconfdir="${PO}/etc/postgresql-${SLOT}"
+		--with-system-tzdata="${PO}/usr/share/zoneinfo"
+		$(use_enable !alpha spinlocks)
+		$(use_enable debug)
+		$(use_enable threads thread-safety)
+		$(use_with icu)
+		$(use_with kerberos gssapi)
+		$(use_with ldap)
+		$(use_with llvm)
+		
+		$(use_with pam)
+		$(use_with perl)
+		$(use_with python)
+		$(use_with readline)
+		$(use_with ssl openssl)
+		--without-systemd
+		$(use_with tcl)
+		${uuid_config}
+		$(use_with xml libxml)
+		$(use_with xml libxslt)
+		$(use_with zlib)
 		$(use_enable nls)
+	)
+	econf "${myconf[@]}"
 }
 
 src_compile() {
@@ -250,14 +238,6 @@ src_install() {
 		sed -e "s|@SLOT@|${SLOT}|g" -e "s|@LIBDIR@|$(get_libdir)|g" \
 			"${FILESDIR}/${PN}.init-9.3-r1" | newinitd - ${PN}-${SLOT}
 
-		if use systemd; then
-			sed -e "s|@SLOT@|${SLOT}|g" -e "s|@LIBDIR@|$(get_libdir)|g" \
-				"${FILESDIR}/${PN}.service-9.6-r1" | \
-				systemd_newunit - ${PN}-${SLOT}.service
-			newbin "${FILESDIR}"/${PN}-check-db-dir ${PN}-${SLOT}-check-db-dir
-			newtmpfiles "${FILESDIR}"/${PN}.tmpfiles ${PN}-${SLOT}.conf
-		fi
-
 		use pam && pamd_mimic system-auth ${PN}-${SLOT} auth account session
 
 		if use prefix ; then
@@ -268,7 +248,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	use server && use systemd && tmpfiles_process ${PN}-${SLOT}.conf
 	postgresql-config update
 
 	elog "If you need a global psqlrc-file, you can place it in:"
@@ -390,7 +369,7 @@ pkg_config() {
 	einfo "Initializing the database ..."
 
 	if [[ ${EUID} == 0 ]] ; then
-		su postgres -c "${EROOT}/usr/$(get_libdir)/postgresql-${SLOT}/bin/initdb -D \"${DATA_DIR}\" ${PG_INITDB_OPTS}"
+		su - postgres -c "${EROOT}/usr/$(get_libdir)/postgresql-${SLOT}/bin/initdb -D \"${DATA_DIR}\" ${PG_INITDB_OPTS}"
 	else
 		"${EROOT}"/usr/$(get_libdir)/postgresql-${SLOT}/bin/initdb -U postgres -D "${DATA_DIR}" ${PG_INITDB_OPTS}
 	fi
@@ -416,11 +395,9 @@ pkg_config() {
 	einfo "by default. You can disable it in the cluster's:"
 	einfo "    ${PGDATA%/}/postgresql.conf"
 	einfo
-	if ! use systemd; then
-		einfo "The PostgreSQL server, by default, will log events to:"
-		einfo "    ${DATA_DIR%/}/postmaster.log"
-		einfo
-	fi
+	einfo "The PostgreSQL server, by default, will log events to:"
+	einfo "    ${DATA_DIR%/}/postmaster.log"
+	einfo
 	if use prefix ; then
 		einfo "The location of the configuration files have moved to:"
 		einfo "    ${PGDATA}"
@@ -431,9 +408,6 @@ pkg_config() {
 		einfo
 		einfo "Or move the configuration files back:"
 		einfo "mv ${PGDATA}*.conf ${DATA_DIR}"
-	elif use systemd; then
-		einfo "You should use the 'postgresql-${SLOT}.service' unit to run PostgreSQL"
-		einfo "instead of 'pg_ctl'."
 	else
 		einfo "You should use the '${EROOT}/etc/init.d/postgresql-${SLOT}' script to run PostgreSQL"
 		einfo "instead of 'pg_ctl'."
