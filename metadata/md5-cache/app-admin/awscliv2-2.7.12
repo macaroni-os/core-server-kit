@@ -9,6 +9,6 @@ LICENSE=Apache-2.0
 RDEPEND=dev-python/aws-crt-python dev-python/colorama dev-python/distro dev-python/jmespath dev-python/prompt_toolkit dev-python/python-dateutil dev-python/ruamel-yaml !app-admin/awscli !app-admin/awscli-bin python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_10? ( dev-lang/python:3.10 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_9(-)?,python_targets_python3_8(-)?,python_targets_python3_10(-)?,-python_single_target_python3_7(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)]
 REQUIRED_USE=|| ( python_targets_python3_7 python_targets_python3_9 python_targets_python3_8 python_targets_python3_10 )
 SLOT=0
-SRC_URI=https://github.com/aws/aws-cli/tarball/d32c6b4e1c1564e0d00cc8b975e75e4556363f0d -> aws-cli-2.7.11-d32c6b4.tar.gz
+SRC_URI=https://github.com/aws/aws-cli/tarball/6048ff3fa3e55727ca93852d6098ed646d9badc5 -> aws-cli-2.7.12-6048ff3.tar.gz
 _eclasses_=distutils-r1	99f25357716a44b67680afc3b47219f2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	c6ddaeb7a3e68d2564fa886420d0ae41	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=0c5e3d5c96154acd98c7864a3991556e
+_md5_=3570f5402718c77c3d065236b526615b
