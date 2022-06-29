@@ -24,7 +24,6 @@ IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-
 S="${WORKDIR}/awscli-1.25.19"
 
 python_install_all() {
