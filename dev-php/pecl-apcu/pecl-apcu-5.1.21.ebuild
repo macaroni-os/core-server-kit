@@ -12,6 +12,7 @@ USE_PHP="php7-4 php8-0 php8-1"
 inherit php-ext-pecl-r3
 
 KEYWORDS="*"
+SRC_URI="https://github.com/krakjoe/apcu/tarball/1da8718bc37f40559a26679143853e4cc4a5b1e5 -> apcu-5.1.21-1da8718.tar.gz"
 
 DESCRIPTION="Stripped down version of APC supporting only user cache"
 LICENSE="PHP-3.01"
@@ -27,6 +28,12 @@ done
 IUSE="+mmap ${LUSE/lock-pthreadrw/+lock-pthreadrw}"
 
 REQUIRED_USE="^^ ( $LUSE )"
+
+post_src_unpack() {
+    if [ ! -d "${S}" ] ; then
+        mv ${WORKDIR}/krakjoe-* ${S} || die
+    fi
+}
 
 src_prepare() {
 	php-ext-source-r3_src_prepare
