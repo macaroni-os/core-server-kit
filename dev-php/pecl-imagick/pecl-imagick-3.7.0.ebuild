@@ -7,6 +7,7 @@ USE_PHP="php7-4 php8-0 php8-1"
 
 inherit php-ext-pecl-r3
 
+SRC_URI="https://github.com/Imagick/Imagick/tarball/52ec37ff633de0e5cca159a6437b8c340afe7831 -> Imagick-3.7.0-52ec37f.tar.gz"
 KEYWORDS="*"
 
 DESCRIPTION="PHP wrapper for the ImageMagick library"
@@ -23,6 +24,12 @@ DEPEND="${RDEPEND}
 	test? ( >=media-gfx/imagemagick-6.2.4:=[hdri,jpeg,png,svg,truetype,xml] )"
 
 PHP_EXT_ECONF_ARGS="--with-imagick=${EPREFIX}/usr"
+
+post_src_unpack() {
+	if [ ! -d "${S}" ] ; then
+		mv ${WORKDIR}/Imagick-* ${S} || die
+	fi
+}
 
 src_install() {
 	php-ext-pecl-r3_src_install
