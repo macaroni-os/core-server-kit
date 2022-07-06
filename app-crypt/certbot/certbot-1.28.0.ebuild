@@ -13,7 +13,7 @@ SRC_URI="https://files.pythonhosted.org/packages/74/32/a0ef0c1ea68c72cc579862cfa
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	>=dev-python/acme-1.20.0[${PYTHON_USEDEP}]
+	>=dev-python/acme-1.28.0[${PYTHON_USEDEP}]
 	dev-python/configargparse[${PYTHON_USEDEP}]
 	dev-python/configobj[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-2.1.4[${PYTHON_USEDEP}]
