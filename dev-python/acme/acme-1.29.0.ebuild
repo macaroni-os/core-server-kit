@@ -5,7 +5,7 @@ EAPI=7
 PYTHON_COMPAT=( python3+ )
 inherit distutils-r1
 
-DESCRIPTION="ACME protocol implementation in Python"
+DESCRIPTION=""
 HOMEPAGE="https://github.com/letsencrypt/letsencrypt https://pypi.org/project/acme/"
 SRC_URI="https://files.pythonhosted.org/packages/da/17/3ee4578e992cf68d57114bdb50b310f6f91c2db9a1cf006ce959f6715b4a/acme-1.29.0.tar.gz
 "
