@@ -5,7 +5,7 @@ EAPI=7
 PYTHON_COMPAT=( python3+ )
 inherit distutils-r1
 
-DESCRIPTION="The AWS SDK for Python"
+DESCRIPTION=""
 HOMEPAGE="https://github.com/boto/boto3 https://pypi.org/project/boto3/"
 SRC_URI="https://files.pythonhosted.org/packages/d4/fe/47f0c6e8d1efab228acf54592dfffd903708d9d343932e4ee75ceac43d6a/boto3-1.24.24.tar.gz
 "

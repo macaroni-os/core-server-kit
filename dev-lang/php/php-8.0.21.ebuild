@@ -10,7 +10,7 @@ inherit flag-o-matic autotools
 MY_PV=${PV/_beta/beta}
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="https://www.php.net/distributions/php-8.1.7.tar.bz2"
+SRC_URI="https://www.php.net/distributions/php-8.0.21.tar.bz2"
 
 LICENSE="PHP-3.01
 	BSD
@@ -20,7 +20,7 @@ LICENSE="PHP-3.01
 	gd? ( gd )
 	unicode? ( BSD-2 LGPL-2.1 )"
 
-SLOT="8.1"
+SLOT="8.0"
 KEYWORDS="*"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -152,6 +152,7 @@ PHP_MV="$(ver_cut 1)"
 
 PATCHES=(
 	"${FILESDIR}/php-iodbc-header-location.patch"
+	"${FILESDIR}/php80-firebird-warnings.patch"
 )
 
 php_install_ini() {
