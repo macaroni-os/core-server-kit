@@ -52,7 +52,6 @@ RDEPEND="
 	imhttp? (
 		dev-libs/apr-util
 		www-servers/civetweb
-		virtual/libcrypt:=
 	)
 	impcap? ( net-libs/libpcap )
 	jemalloc? ( >=dev-libs/jemalloc-3.3.1:= )
