@@ -15,10 +15,10 @@ aho-corasick-0.7.18
 alloc-no-stdlib-2.0.3
 alloc-stdlib-0.2.1
 ansi_term-0.12.1
-anyhow-1.0.57
+anyhow-1.0.58
 arrayvec-0.7.2
 ash-0.34.0+1.2.203
-ast_node-0.7.7
+ast_node-0.8.1
 async-compression-0.3.14
 async-stream-0.3.3
 async-stream-impl-0.3.3
@@ -81,18 +81,18 @@ ctor-0.1.22
 ctr-0.9.1
 cty-0.2.2
 d3d12-0.4.1
-darling-0.10.2
-darling_core-0.10.2
-darling_macro-0.10.2
+darling-0.13.4
+darling_core-0.13.4
+darling_macro-0.13.4
 dashmap-5.3.4
 data-encoding-2.3.2
 data-url-0.1.1
 debug_unreachable-0.1.1
-deno_ast-0.16.0
-deno_doc-0.36.0
-deno_emit-0.3.0
-deno_graph-0.28.0
-deno_lint-0.31.0
+deno_ast-0.17.0
+deno_doc-0.38.0
+deno_emit-0.4.0
+deno_graph-0.29.0
+deno_lint-0.32.0
 deno_task_shell-0.4.0
 der-0.6.0
 derive_more-0.99.17
@@ -103,11 +103,11 @@ dissimilar-1.0.3
 dlopen-0.1.8
 dlopen_derive-0.1.4
 dotenv-0.15.0
-dprint-core-0.58.2
+dprint-core-0.58.3
 dprint-plugin-json-0.15.3
 dprint-plugin-markdown-0.13.3
-dprint-plugin-typescript-0.69.5
-dprint-swc-ext-0.2.0
+dprint-plugin-typescript-0.69.6
+dprint-swc-ext-0.3.0
 dyn-clone-1.0.5
 ecdsa-0.14.1
 either-1.6.1
@@ -121,7 +121,7 @@ errno-0.1.8
 errno-0.2.8
 errno-dragonfly-0.1.2
 error-code-2.3.1
-eszip-0.21.0
+eszip-0.22.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.9.0
@@ -184,7 +184,7 @@ idna-0.1.5
 idna-0.2.3
 if_chain-1.0.2
 import_map-0.11.0
-indexmap-1.8.2
+indexmap-1.9.1
 inotify-0.9.6
 inotify-sys-0.1.5
 inout-0.1.3
@@ -347,9 +347,9 @@ semver-0.9.0
 semver-1.0.10
 semver-parser-0.7.0
 semver-parser-0.10.2
-serde-1.0.136
+serde-1.0.139
 serde_bytes-0.11.6
-serde_derive-1.0.136
+serde_derive-1.0.139
 serde_json-1.0.81
 serde_repr-0.1.8
 serde_urlencoded-0.7.1
@@ -374,35 +374,34 @@ str-buf-1.0.6
 string_cache-0.8.4
 string_cache_codegen-0.5.2
 string_enum-0.3.1
-strsim-0.9.3
 strsim-0.10.0
 subtle-2.4.1
-swc_atoms-0.2.12
-swc_bundler-0.155.0
-swc_common-0.18.9
+swc_atoms-0.2.13
+swc_bundler-0.169.0
+swc_common-0.23.0
 swc_config-0.1.1
 swc_config_macro-0.1.0
-swc_ecma_ast-0.79.0
-swc_ecma_codegen-0.109.1
+swc_ecma_ast-0.84.0
+swc_ecma_codegen-0.115.0
 swc_ecma_codegen_macros-0.7.1
-swc_ecma_dep_graph-0.77.0
-swc_ecma_loader-0.30.2
-swc_ecma_parser-0.105.6
-swc_ecma_transforms_base-0.89.6
-swc_ecma_transforms_classes-0.77.0
+swc_ecma_dep_graph-0.83.0
+swc_ecma_loader-0.35.0
+swc_ecma_parser-0.111.0
+swc_ecma_transforms_base-0.97.0
+swc_ecma_transforms_classes-0.85.0
 swc_ecma_transforms_macros-0.5.0
-swc_ecma_transforms_optimization-0.131.0
-swc_ecma_transforms_proposal-0.112.0
-swc_ecma_transforms_react-0.120.0
-swc_ecma_transforms_typescript-0.124.0
-swc_ecma_utils-0.86.2
-swc_ecma_visit-0.65.0
+swc_ecma_transforms_optimization-0.144.0
+swc_ecma_transforms_proposal-0.122.0
+swc_ecma_transforms_react-0.133.0
+swc_ecma_transforms_typescript-0.137.0
+swc_ecma_utils-0.93.0
+swc_ecma_visit-0.70.0
 swc_eq_ignore_macros-0.1.0
-swc_fast_graph-0.6.0
-swc_graph_analyzer-0.7.0
+swc_fast_graph-0.11.0
+swc_graph_analyzer-0.12.0
 swc_macros_common-0.3.5
-swc_visit-0.3.0
-swc_visit_macros-0.3.1
+swc_visit-0.4.0
+swc_visit_macros-0.4.0
 syn-0.15.44
 syn-1.0.96
 sys-info-0.9.1
@@ -410,6 +409,7 @@ tempfile-3.3.0
 termcolor-1.1.3
 text-size-1.1.0
 text_lines-0.4.1
+text_lines-0.6.0
 textwrap-0.15.0
 thiserror-1.0.31
 thiserror-impl-1.0.31
@@ -464,7 +464,7 @@ urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.0
 uuid-1.0.0
-v8-0.44.3
+v8-0.45.0
 vcpkg-0.2.15
 version_check-0.9.4
 void-1.0.2
@@ -518,7 +518,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.23.3 -> deno-1.23.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.23.4 -> deno-1.23.4.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
