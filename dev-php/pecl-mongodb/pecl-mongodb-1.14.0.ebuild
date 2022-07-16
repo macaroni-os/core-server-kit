@@ -9,7 +9,7 @@ USE_PHP="php7-4 php8-0 php8-1"
 inherit php-ext-pecl-r3
 
 DESCRIPTION="MongoDB database driver for PHP"
-SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/ac609b16bda589b09b158fa7075e8094248ab834 -> mongo-php-driver-1.13.0-ac609b1.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/1a3e32951ec1c0c29a693ff3c8fc7806828bfc36 -> mongo-php-driver-1.14.0-1a3e329.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
