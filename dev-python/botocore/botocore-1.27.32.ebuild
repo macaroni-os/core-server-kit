@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION=""
 HOMEPAGE="https://github.com/boto/botocore https://pypi.org/project/botocore/"
-SRC_URI="https://files.pythonhosted.org/packages/2a/0b/510886b331aad78d62cadcee155eaed0176e4e238cd9b454ab428e2bd424/botocore-1.27.31.tar.gz
+SRC_URI="https://files.pythonhosted.org/packages/c7/12/6173d76603ea6a1d4413ee2588e36d8aa97a59dc734311243dc9782157a9/botocore-1.27.32.tar.gz
 "
 
 DEPEND="dev-python/tomli[${PYTHON_USEDEP}]"
@@ -20,4 +20,4 @@ IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-S="${WORKDIR}/botocore-1.27.31"
+S="${WORKDIR}/botocore-1.27.32"
