@@ -9,7 +9,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Tool for managing events and logs"
 HOMEPAGE="https://www.elastic.co/products/logstash"
-SRC_URI="https://artifacts.elastic.co/downloads/logstash/logstash-6.8.23.tar.gz"
+SRC_URI="https://artifacts.elastic.co/downloads/logstash/logstash-6.8.23.tar.gz -> logstash-6.8.23.tar.gz"
 
 # source: LICENSE.txt and NOTICE.txt
 LICENSE="Apache-2.0 MIT Elastic-2.0"

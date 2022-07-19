@@ -9,7 +9,7 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
-SRC_URI="https://artifacts.elastic.co/downloads/kibana/kibana-6.8.23-linux-x86_64.tar.gz"
+SRC_URI="https://artifacts.elastic.co/downloads/kibana/kibana-6.8.23-linux-x86_64.tar.gz -> kibana-6.8.23-linux-x86_64.tar.gz"
 
 # source: LICENSE.txt and NOTICE.txt
 LICENSE="Apache-2.0 Artistic-2 BSD BSD-2 CC-BY-3.0 CC-BY-4.0 Elastic-2.0 icu ISC MIT MPL-2.0 OFL-1.1 openssl public-domain Unlicense WTFPL-2 ZLIB"

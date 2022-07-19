@@ -6,19 +6,17 @@ inherit systemd tmpfiles user
 
 DESCRIPTION="Free and Open, Distributed, RESTful Search Engine"
 HOMEPAGE="https://www.elastic.co/elasticsearch/"
-SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.5-linux-x86_64.tar.gz )
-
-	arm64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.5-linux-aarch64.tar.gz )
+SRC_URI="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.23.tar.gz -> elasticsearch-6.8.23.tar.gz
 "
 
 LICENSE="Apache-2.0 BSD-2 Elastic-2.0 LGPL-3 MIT public-domain"
 SLOT="0"
-KEYWORDS="-* amd64 arm64"
+KEYWORDS="-* amd64"
 
-RDEPEND="virtual/jre"
+RDEPEND="virtual/jre
+	sys-libs/zlib"
 
-
+QA_PREBUILT="usr/share/elasticsearch/modules/x-pack-ml/platform/linux-x86_64/\(bin\|lib\)/.*"
 QA_PRESTRIPPED="usr/share/elasticsearch/modules/x-pack-ml/platform/linux-x86_64/\(bin\|lib\)/.*"
 
 pkg_setup() {
@@ -29,7 +27,7 @@ pkg_setup() {
 src_prepare() {
 	default
 
-	rm LICENSE.txt NOTICE.txt  || die
+	rm LICENSE.txt NOTICE.txt bin/*.{bat,exe} || die
 	rmdir logs || die
 }
 
@@ -61,8 +59,8 @@ src_install() {
 	insinto /etc/sysctl.d
 	newins "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.sysctl.d" ${PN}.conf
 
-	newconfd "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.conf.4" ${PN}
-	newinitd "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.init.8" ${PN}
+	newconfd "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.conf.3" ${PN}
+	newinitd "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.init.6" ${PN}
 
 	systemd_install_serviced "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.service.conf"
 	newtmpfiles "${REPODIR}/www-apps/elastic/files/${PN}/${PN}.tmpfiles.d" ${PN}.conf
