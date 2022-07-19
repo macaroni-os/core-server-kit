@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/97/1f/88246f2551fe47f94ca9bef07f9ea8361fe78620da0d2104887738ac6b37/certbot-dns-dnsimple-1.29.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/97/1f/88246f2551fe47f94ca9bef07f9ea8361fe78620da0d2104887738ac6b37/certbot-dns-dnsimple-1.29.0.tar.gz -> certbot-dns-dnsimple-1.29.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1

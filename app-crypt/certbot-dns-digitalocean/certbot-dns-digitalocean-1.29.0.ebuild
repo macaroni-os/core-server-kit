@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/03/af/ab244d74bdb6d4886a0c2906263e7ccda51917d763e624ce5c5a596e1e11/certbot-dns-digitalocean-1.29.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/03/af/ab244d74bdb6d4886a0c2906263e7ccda51917d763e624ce5c5a596e1e11/certbot-dns-digitalocean-1.29.0.tar.gz -> certbot-dns-digitalocean-1.29.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1

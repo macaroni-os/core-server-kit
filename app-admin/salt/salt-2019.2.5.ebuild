@@ -1,7 +1,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python3+ )
 
 inherit eutils systemd distutils-r1
 
@@ -9,7 +9,7 @@ DESCRIPTION="Salt is a remote execution and configuration manager"
 HOMEPAGE="https://www.saltstack.com/resources/community/
 	https://github.com/saltstack"
 
-SRC_URI="https://files.pythonhosted.org/packages/56/16/7e0894484a9c42bd4da9f0507c315c00e4e68735566ff6f8f40b841d4eee/salt-2019.2.5.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/56/16/7e0894484a9c42bd4da9f0507c315c00e4e68735566ff6f8f40b841d4eee/salt-2019.2.5.tar.gz -> salt-2019.2.5.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

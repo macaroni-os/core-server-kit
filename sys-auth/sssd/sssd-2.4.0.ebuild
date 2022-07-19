@@ -8,7 +8,7 @@ inherit autotools flag-o-matic linux-info multilib-minimal pam python-r1 toolcha
 
 DESCRIPTION="System Security Services Daemon provides access to identity and authentication"
 HOMEPAGE="https://pagure.io/SSSD/sssd"
-SRC_URI="https://github.com/SSSD/sssd/releases/download/sssd-2_4_0/sssd-2.4.0.tar.gz"
+SRC_URI="https://github.com/SSSD/sssd/releases/download/sssd-2_4_0/sssd-2.4.0.tar.gz -> sssd-2.4.0.tar.gz"
 KEYWORDS="*"
 
 LICENSE="GPL-3"

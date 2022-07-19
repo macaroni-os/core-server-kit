@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/ec/4d/e3650366603ac05dbfd3ce545b8975481ce46ae18bdbb1fdb37d07b32235/certbot-dns-luadns-1.29.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/ec/4d/e3650366603ac05dbfd3ce545b8975481ce46ae18bdbb1fdb37d07b32235/certbot-dns-luadns-1.29.0.tar.gz -> certbot-dns-luadns-1.29.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1
