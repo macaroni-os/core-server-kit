@@ -14,10 +14,11 @@ ahash-0.7.6
 aho-corasick-0.7.18
 alloc-no-stdlib-2.0.3
 alloc-stdlib-0.2.1
+android_system_properties-0.1.2
 ansi_term-0.12.1
 anyhow-1.0.58
 arrayvec-0.7.2
-ash-0.34.0+1.2.203
+ash-0.37.0+1.3.209
 ast_node-0.8.1
 async-compression-0.3.14
 async-stream-0.3.3
@@ -80,7 +81,7 @@ csv-core-0.1.10
 ctor-0.1.22
 ctr-0.9.1
 cty-0.2.2
-d3d12-0.4.1
+d3d12-0.5.0
 darling-0.13.4
 darling_core-0.13.4
 darling_macro-0.13.4
@@ -93,7 +94,7 @@ deno_doc-0.38.0
 deno_emit-0.4.0
 deno_graph-0.29.0
 deno_lint-0.32.0
-deno_task_shell-0.4.0
+deno_task_shell-0.5.0
 der-0.6.0
 derive_more-0.99.17
 diff-0.1.12
@@ -106,7 +107,7 @@ dotenv-0.15.0
 dprint-core-0.58.3
 dprint-plugin-json-0.15.3
 dprint-plugin-markdown-0.13.3
-dprint-plugin-typescript-0.69.6
+dprint-plugin-typescript-0.71.1
 dprint-swc-ext-0.3.0
 dyn-clone-1.0.5
 ecdsa-0.14.1
@@ -184,6 +185,7 @@ idna-0.1.5
 idna-0.2.3
 if_chain-1.0.2
 import_map-0.11.0
+import_map-0.12.1
 indexmap-1.9.1
 inotify-0.9.6
 inotify-sys-0.1.5
@@ -231,17 +233,17 @@ match_cfg-0.1.0
 matches-0.1.9
 memchr-2.5.0
 memoffset-0.6.5
-metal-0.23.1
+metal-0.24.0
 mime-0.2.6
 mime-0.3.16
 miniz_oxide-0.5.3
 mio-0.8.3
 mitata-0.0.7
-naga-0.8.5
+naga-0.9.0
 netif-0.1.3
 new_debug_unreachable-1.0.4
 nibble_vec-0.1.0
-nix-0.23.0
+nix-0.24.2
 node_resolver-0.1.1
 notify-5.0.0-pre.15
 num-bigint-0.4.3
@@ -331,8 +333,8 @@ rustls-0.20.6
 rustls-native-certs-0.6.2
 rustls-pemfile-0.3.0
 rustls-pemfile-1.0.0
-rustyline-9.1.2
-rustyline-derive-0.6.0
+rustyline-10.0.0
+rustyline-derive-0.7.0
 ryu-1.0.10
 same-file-1.0.6
 schannel-0.1.20
@@ -455,6 +457,7 @@ unicode-normalization-0.1.19
 unicode-segmentation-1.9.0
 unicode-width-0.1.9
 unicode-xid-0.1.0
+unicode-xid-0.2.3
 universal-hash-0.4.1
 unreachable-0.1.1
 untrusted-0.7.1
@@ -464,7 +467,7 @@ urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.0
 uuid-1.0.0
-v8-0.45.0
+v8-0.47.0
 vcpkg-0.2.15
 version_check-0.9.4
 void-1.0.2
@@ -481,9 +484,9 @@ wasm-bindgen-shared-0.2.81
 web-sys-0.3.58
 webpki-0.22.0
 webpki-roots-0.22.3
-wgpu-core-0.12.2
-wgpu-hal-0.12.5
-wgpu-types-0.12.0
+wgpu-core-0.13.1
+wgpu-hal-0.13.1
+wgpu-types-0.13.0
 which-4.2.5
 widestring-0.5.1
 winapi-0.2.8
@@ -518,7 +521,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.23.4 -> deno-1.23.4.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.24.0 -> deno-1.24.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
