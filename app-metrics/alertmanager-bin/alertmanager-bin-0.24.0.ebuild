@@ -8,12 +8,14 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Prometheus Alertmanager"
 HOMEPAGE="https://github.com/prometheus/alertmanager"
-SRC_URI="https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.linux-amd64.tar.gz -> alertmanager-0.24.0.linux-amd64.tar.gz"
+SRC_URI="
+	amd64? ( https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.linux-amd64.tar.gz -> alertmanager-0.24.0.linux-amd64.tar.gz )
+	arm64? ( https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.linux-arm64.tar.gz -> alertmanager-0.24.0.linux-arm64.tar.gz )"
 
-KEYWORDS="-* amd64"
+KEYWORDS="-* amd64 arm64"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE=""
+IUSE="amd64 arm64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"

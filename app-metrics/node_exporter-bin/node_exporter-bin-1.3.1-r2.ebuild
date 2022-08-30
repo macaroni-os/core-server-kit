@@ -9,12 +9,14 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Exporter for machine metrics"
 HOMEPAGE="https://github.com/prometheus/node_exporter"
-SRC_URI="https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz -> node_exporter-1.3.1.linux-amd64.tar.gz"
+SRC_URI="
+	amd64? ( https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz -> node_exporter-1.3.1.linux-amd64.tar.gz )
+	arm64? ( https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-arm64.tar.gz -> node_exporter-1.3.1.linux-arm64.tar.gz )"
 
-KEYWORDS="-* amd64"
+KEYWORDS="-* amd64 arm64"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE=""
+IUSE="amd64 arm64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
