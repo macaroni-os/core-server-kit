@@ -9,12 +9,14 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Blackbox prober exporter"
 HOMEPAGE="https://github.com/prometheus/blackbox_exporter"
-SRC_URI="https://github.com/prometheus/blackbox_exporter/releases/download/v0.22.0/blackbox_exporter-0.22.0.linux-amd64.tar.gz -> blackbox_exporter-0.22.0.linux-amd64.tar.gz"
+SRC_URI="
+	amd64? ( https://github.com/prometheus/blackbox_exporter/releases/download/v0.22.0/blackbox_exporter-0.22.0.linux-amd64.tar.gz -> blackbox_exporter-0.22.0.linux-amd64.tar.gz )
+	arm64? ( https://github.com/prometheus/blackbox_exporter/releases/download/v0.22.0/blackbox_exporter-0.22.0.linux-arm64.tar.gz -> blackbox_exporter-0.22.0.linux-arm64.tar.gz )"
 
-KEYWORDS="-* amd64"
+KEYWORDS="-* amd64 arm64"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE=""
+IUSE="amd64 arm64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
