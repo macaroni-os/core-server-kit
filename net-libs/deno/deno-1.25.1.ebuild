@@ -48,7 +48,7 @@ brotli-decompressor-2.3.2
 bstr-0.2.17
 bumpalo-3.10.0
 byteorder-1.4.3
-bytes-1.1.0
+bytes-1.2.1
 cache_control-0.2.0
 cbc-0.1.2
 cc-1.0.73
@@ -90,11 +90,11 @@ data-encoding-2.3.2
 data-url-0.1.1
 debug_unreachable-0.1.1
 deno_ast-0.17.0
-deno_doc-0.43.0
-deno_emit-0.7.0
-deno_graph-0.32.0
+deno_doc-0.44.0
+deno_emit-0.8.0
+deno_graph-0.33.0
 deno_lint-0.32.0
-deno_task_shell-0.5.0
+deno_task_shell-0.5.2
 der-0.6.0
 derive_more-0.99.17
 diff-0.1.12
@@ -122,7 +122,7 @@ errno-0.1.8
 errno-0.2.8
 errno-dragonfly-0.1.2
 error-code-2.3.1
-eszip-0.25.0
+eszip-0.26.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
@@ -167,7 +167,7 @@ group-0.12.0
 h2-0.3.13
 hashbrown-0.11.2
 hashbrown-0.12.1
-hashlink-0.7.0
+hashlink-0.8.0
 heck-0.4.0
 hermit-abi-0.1.19
 hexf-parse-0.2.1
@@ -176,7 +176,7 @@ hmac-0.12.1
 hostname-0.3.1
 http-0.2.6
 http-body-0.4.5
-httparse-1.7.1
+httparse-1.8.0
 httpdate-1.0.2
 humantime-2.1.0
 hyper-0.14.19
@@ -219,7 +219,7 @@ libffi-3.0.0
 libffi-sys-2.0.0
 libloading-0.7.3
 libm-0.2.2
-libsqlite3-sys-0.24.2
+libsqlite3-sys-0.25.1
 linked-hash-map-0.5.4
 linux-raw-sys-0.0.46
 lock_api-0.4.7
@@ -239,6 +239,7 @@ mime-0.3.16
 miniz_oxide-0.5.3
 mio-0.8.3
 mitata-0.0.7
+monch-0.2.0
 naga-0.9.0
 netif-0.1.3
 new_debug_unreachable-1.0.4
@@ -323,7 +324,7 @@ rfc6979-0.2.0
 ring-0.16.20
 ron-0.7.1
 rsa-0.7.0-pre
-rusqlite-0.27.0
+rusqlite-0.28.0
 rustc-hash-1.1.0
 rustc_version-0.2.3
 rustc_version-0.4.0
@@ -523,7 +524,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.25.0 -> deno-1.25.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.25.1 -> deno-1.25.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
