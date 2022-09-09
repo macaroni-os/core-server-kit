@@ -16,7 +16,7 @@ alloc-no-stdlib-2.0.3
 alloc-stdlib-0.2.1
 android_system_properties-0.1.2
 ansi_term-0.12.1
-anyhow-1.0.58
+anyhow-1.0.64
 arrayvec-0.7.2
 ash-0.37.0+1.3.209
 ast_node-0.8.1
@@ -89,11 +89,11 @@ dashmap-5.3.4
 data-encoding-2.3.2
 data-url-0.1.1
 debug_unreachable-0.1.1
-deno_ast-0.17.0
-deno_doc-0.44.0
-deno_emit-0.8.0
-deno_graph-0.33.0
-deno_lint-0.32.0
+deno_ast-0.19.0
+deno_doc-0.45.0
+deno_emit-0.9.0
+deno_graph-0.34.0
+deno_lint-0.33.0
 deno_task_shell-0.5.2
 der-0.6.0
 derive_more-0.99.17
@@ -104,12 +104,14 @@ dissimilar-1.0.3
 dlopen-0.1.8
 dlopen_derive-0.1.4
 dotenv-0.15.0
-dprint-core-0.58.3
-dprint-plugin-json-0.15.5
-dprint-plugin-markdown-0.14.0
-dprint-plugin-typescript-0.71.2
-dprint-swc-ext-0.3.0
+dprint-core-0.59.0
+dprint-plugin-json-0.15.6
+dprint-plugin-markdown-0.14.1
+dprint-plugin-typescript-0.73.1
+dprint-swc-ext-0.4.0
 dyn-clone-1.0.5
+dynasm-1.2.3
+dynasmrt-1.2.3
 ecdsa-0.14.1
 either-1.6.1
 elliptic-curve-0.12.1
@@ -122,7 +124,7 @@ errno-0.1.8
 errno-0.2.8
 errno-dragonfly-0.1.2
 error-code-2.3.1
-eszip-0.26.0
+eszip-0.27.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
@@ -137,7 +139,7 @@ fly-accept-encoding-0.2.0
 fnv-1.0.7
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
-form_urlencoded-1.0.1
+form_urlencoded-1.1.0
 from_variant-0.1.3
 fs3-0.5.0
 fsevent-sys-4.1.0
@@ -184,6 +186,7 @@ hyper-rustls-0.23.0
 ident_case-1.0.1
 idna-0.1.5
 idna-0.2.3
+idna-0.3.0
 if_chain-1.0.2
 import_map-0.12.1
 indexmap-1.9.1
@@ -232,6 +235,7 @@ malloc_buf-0.0.6
 match_cfg-0.1.0
 matches-0.1.9
 memchr-2.5.0
+memmap2-0.5.5
 memoffset-0.6.5
 metal-0.24.0
 mime-0.2.6
@@ -245,7 +249,6 @@ netif-0.1.3
 new_debug_unreachable-1.0.4
 nibble_vec-0.1.0
 nix-0.24.2
-node_resolver-0.1.1
 notify-5.0.0-pre.15
 num-bigint-0.4.3
 num-bigint-dig-0.8.1
@@ -273,7 +276,7 @@ path-dedot-3.0.17
 pathdiff-0.2.1
 pem-rfc7468-0.6.0
 percent-encoding-1.0.1
-percent-encoding-2.1.0
+percent-encoding-2.2.0
 petgraph-0.6.2
 phf-0.10.1
 phf_generator-0.10.0
@@ -349,9 +352,9 @@ security-framework-sys-2.6.1
 semver-0.9.0
 semver-1.0.13
 semver-parser-0.7.0
-serde-1.0.141
+serde-1.0.144
 serde_bytes-0.11.6
-serde_derive-1.0.141
+serde_derive-1.0.144
 serde_json-1.0.82
 serde_repr-0.1.8
 serde_urlencoded-0.7.1
@@ -378,32 +381,32 @@ string_cache_codegen-0.5.2
 string_enum-0.3.1
 strsim-0.10.0
 subtle-2.4.1
-swc_atoms-0.2.13
-swc_bundler-0.169.0
-swc_common-0.23.0
+swc_atoms-0.4.10
+swc_bundler-0.185.5
+swc_common-0.27.13
 swc_config-0.1.1
 swc_config_macro-0.1.0
-swc_ecma_ast-0.84.0
-swc_ecma_codegen-0.115.0
+swc_ecma_ast-0.90.17
+swc_ecma_codegen-0.123.2
 swc_ecma_codegen_macros-0.7.1
-swc_ecma_dep_graph-0.83.0
-swc_ecma_loader-0.35.0
-swc_ecma_parser-0.111.0
-swc_ecma_transforms_base-0.97.0
-swc_ecma_transforms_classes-0.85.0
+swc_ecma_dep_graph-0.90.1
+swc_ecma_loader-0.39.4
+swc_ecma_parser-0.118.7
+swc_ecma_transforms_base-0.106.4
+swc_ecma_transforms_classes-0.95.1
 swc_ecma_transforms_macros-0.5.0
-swc_ecma_transforms_optimization-0.144.0
-swc_ecma_transforms_proposal-0.122.0
-swc_ecma_transforms_react-0.133.0
-swc_ecma_transforms_typescript-0.137.0
-swc_ecma_utils-0.93.0
-swc_ecma_visit-0.70.0
-swc_eq_ignore_macros-0.1.0
-swc_fast_graph-0.11.0
-swc_graph_analyzer-0.12.0
-swc_macros_common-0.3.5
-swc_visit-0.4.0
-swc_visit_macros-0.4.0
+swc_ecma_transforms_optimization-0.160.9
+swc_ecma_transforms_proposal-0.137.1
+swc_ecma_transforms_react-0.148.1
+swc_ecma_transforms_typescript-0.152.1
+swc_ecma_utils-0.101.3
+swc_ecma_visit-0.76.7
+swc_eq_ignore_macros-0.1.1
+swc_fast_graph-0.15.6
+swc_graph_analyzer-0.16.4
+swc_macros_common-0.3.6
+swc_visit-0.5.2
+swc_visit_macros-0.5.3
 syn-0.15.44
 syn-1.0.96
 sys-info-0.9.1
@@ -411,7 +414,6 @@ tar-0.4.38
 tempfile-3.3.0
 termcolor-1.1.3
 text-size-1.1.0
-text_lines-0.4.1
 text_lines-0.6.0
 textwrap-0.15.0
 thiserror-1.0.31
@@ -464,7 +466,7 @@ universal-hash-0.4.1
 unreachable-0.1.1
 untrusted-0.7.1
 url-1.7.2
-url-2.2.2
+url-2.3.1
 urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.0
@@ -524,7 +526,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.25.1 -> deno-1.25.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.25.2 -> deno-1.25.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
