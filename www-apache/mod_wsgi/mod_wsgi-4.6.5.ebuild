@@ -1,10 +1,9 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
-PYTHON_COMPAT=( python2_7 python3_{5,6} )
-PYTHON_REQ_USE="threads"
+PYTHON_COMPAT=( python2_7 python3+ )
+PYTHON_REQ_USE="threads(+)"
 
 inherit apache-module eutils python-single-r1
 
@@ -14,7 +13,7 @@ SRC_URI="https://github.com/GrahamDumpleton/${PN}/archive/${PV}.tar.gz -> ${P}.t
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~x86"
+KEYWORDS="*"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
