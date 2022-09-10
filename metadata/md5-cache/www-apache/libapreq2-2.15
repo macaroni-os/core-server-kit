@@ -10,5 +10,5 @@ RDEPEND=|| ( dev-libs/apr-util[openssl] dev-libs/apr-util[libressl] dev-libs/apr
 RESTRICT=!test? ( test )
 SLOT=2
 SRC_URI=mirror://apache/httpd/libapreq/libapreq2-2.15.tar.gz
-_eclasses_=apache-module	bd30ba4d834196e81cf2b76c52d26b93	depend.apache	05ca915dc22ea60059f85d8d9a34d3de	multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	d0d18687b96ee3d2307b88eefdd1735b	perl-module	768f1dfc0a27ff40f1ece5cb8c22714a
+_eclasses_=apache-module	bd30ba4d834196e81cf2b76c52d26b93	depend.apache	216f1f6065f14a9981803d11fb742c19	multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	d0d18687b96ee3d2307b88eefdd1735b	perl-module	768f1dfc0a27ff40f1ece5cb8c22714a
 _md5_=75e76202803edd274a370ac4f6531d5d
