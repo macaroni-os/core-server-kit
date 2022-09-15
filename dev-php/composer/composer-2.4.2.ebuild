@@ -4,7 +4,7 @@ EAPI="7"
 
 DESCRIPTION="Dependency Manager for PHP"
 HOMEPAGE="https://github.com/composer/composer"
-SRC_URI="https://api.github.com/repos/composer/composer/tarball/2.4.1 -> composer-2.4.1.tar.gz"
+SRC_URI="https://api.github.com/repos/composer/composer/tarball/2.4.2 -> composer-2.4.2.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
