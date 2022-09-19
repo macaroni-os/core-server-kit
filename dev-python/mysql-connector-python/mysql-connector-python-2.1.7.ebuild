@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,14 +9,14 @@ DESCRIPTION="Python client library for MariaDB/MySQL"
 HOMEPAGE="https://dev.mysql.com/downloads/connector/python/"
 SRC_URI="https://dev.mysql.com/get/Downloads/Connector-Python/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="*"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="examples test"
 
 # tests/mysqld.py does not like MariaDB version strings.
 # See the regex MySQLServerBase._get_version.
-DEPEND="test? ( dev-db/mysql[server(+)] )"
+DEPEND="test? ( dev-db/mysql-community )"
 
 # Tests currently fail.
 # mysql.connector.errors.DatabaseError: 1300 (HY000): Invalid utf8 character string: ''

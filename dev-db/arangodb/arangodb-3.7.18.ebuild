@@ -8,7 +8,7 @@ inherit eutils user systemd python-any-r1 cmake-utils
 
 DESCRIPTION="The multi-purpose multi-model NoSQL DB"
 HOMEPAGE="http://www.arangodb.org/"
-SRC_URI="https://github.com/arangodb/arangodb/archive/v3.7.18.tar.gz -> v3.7.18.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/arangodb/arangodb/archive/v3.7.18.tar.gz -> arangodb-v3.7.18.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="3"
