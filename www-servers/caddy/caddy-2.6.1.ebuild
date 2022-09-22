@@ -1480,7 +1480,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/caddyserver/caddy/archive/v2.6.0.tar.gz -> caddy-v2.6.0.tar.gz
+SRC_URI="https://github.com/caddyserver/caddy/archive/v2.6.1.tar.gz -> caddy-v2.6.1.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 DESCRIPTION="Fast, cross-platform HTTP/2 web server with automatic HTTPS"
