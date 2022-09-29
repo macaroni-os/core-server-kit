@@ -79,6 +79,8 @@ csv-core-0.1.10
 ctor-0.1.23
 ctr-0.9.1
 cty-0.2.2
+curve25519-dalek-2.1.3
+curve25519-dalek-3.2.0
 d3d12-0.5.0
 darling-0.13.4
 darling_core-0.13.4
@@ -96,6 +98,7 @@ deno_task_shell-0.5.2
 der-0.6.0
 derive_more-0.99.17
 diff-0.1.13
+digest-0.8.1
 digest-0.9.0
 digest-0.10.5
 dissimilar-1.0.4
@@ -105,7 +108,7 @@ dotenv-0.15.0
 dprint-core-0.59.0
 dprint-plugin-json-0.15.6
 dprint-plugin-markdown-0.14.1
-dprint-plugin-typescript-0.73.1
+dprint-plugin-typescript-0.74.0
 dprint-swc-ext-0.4.0
 dyn-clone-1.0.9
 dynasm-1.2.3
@@ -154,7 +157,9 @@ futures-task-0.3.24
 futures-util-0.3.24
 fwdansi-1.1.0
 fxhash-0.2.1
+generic-array-0.12.4
 generic-array-0.14.6
+getrandom-0.1.16
 getrandom-0.2.7
 ghash-0.5.0
 glob-0.3.0
@@ -205,6 +210,7 @@ itoa-1.0.3
 jobserver-0.1.24
 js-sys-0.3.60
 jsonc-parser-0.21.0
+junction-0.2.0
 kernel32-sys-0.2.2
 khronos-egl-4.1.0
 kqueue-1.0.6
@@ -312,6 +318,7 @@ radix_fmt-1.0.0
 radix_trie-0.2.1
 rand-0.8.5
 rand_chacha-0.3.1
+rand_core-0.5.1
 rand_core-0.6.4
 range-alloc-0.1.2
 raw-window-handle-0.4.3
@@ -410,6 +417,7 @@ swc_visit-0.5.2
 swc_visit_macros-0.5.3
 syn-0.15.44
 syn-1.0.99
+synstructure-0.12.6
 sys-info-0.9.1
 tar-0.4.38
 tempfile-3.3.0
@@ -478,6 +486,7 @@ version_check-0.9.4
 void-1.0.2
 walkdir-2.3.2
 want-0.3.0
+wasi-0.9.0+wasi-snapshot-preview1
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.83
 wasm-bindgen-backend-0.2.83
@@ -508,10 +517,12 @@ windows_x86_64_msvc-0.36.1
 winreg-0.7.0
 winreg-0.10.1
 winres-0.1.12
+x25519-dalek-2.0.0-pre.1
 xattr-0.2.3
 yansi-0.5.1
 yup-oauth2-6.7.1
 zeroize-1.5.7
+zeroize_derive-1.3.2
 zstd-0.11.2+zstd.1.5.2
 zstd-safe-5.0.2+zstd.1.5.2
 zstd-sys-2.0.1+zstd.1.5.2
@@ -521,7 +532,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.25.4 -> deno-1.25.4.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.26.0 -> deno-1.26.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"

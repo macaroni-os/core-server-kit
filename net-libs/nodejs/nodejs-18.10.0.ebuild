@@ -8,7 +8,7 @@ inherit python-any-r1
 
 DESCRIPTION="Node.js JavaScript runtime"
 HOMEPAGE="https://nodejs.org"
-SRC_URI="https://api.github.com/repos/nodejs/node/tarball/v18.9.1 -> nodejs-18.9.1.tar.gz"
+SRC_URI="https://api.github.com/repos/nodejs/node/tarball/v18.10.0 -> nodejs-18.10.0.tar.gz"
 
 LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
