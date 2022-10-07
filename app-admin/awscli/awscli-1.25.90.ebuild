@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION=""
 HOMEPAGE="http://aws.amazon.com/cli/ https://pypi.org/project/awscli/"
-SRC_URI="https://files.pythonhosted.org/packages/d9/fe/057ddb3194a7cdc69d04e41fb2c20834f69302ebd11ef2e05db0919fd3c2/awscli-1.25.89.tar.gz -> awscli-1.25.89.tar.gz
+SRC_URI="https://files.pythonhosted.org/packages/a1/47/62bc1b8ca03cad2de9c053f644c8e4f0f1bcc1633cbf695b790fe09c75bd/awscli-1.25.90.tar.gz -> awscli-1.25.90.tar.gz
 "
 
 DEPEND=""
@@ -24,7 +24,7 @@ IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-S="${WORKDIR}/awscli-1.25.89"
+S="${WORKDIR}/awscli-1.25.90"
 
 python_install_all() {
 		newbashcomp bin/aws_bash_completer aws
