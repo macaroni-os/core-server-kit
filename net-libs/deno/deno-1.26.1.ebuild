@@ -251,6 +251,8 @@ mio-0.8.4
 mitata-0.0.7
 monch-0.2.0
 naga-0.9.0
+napi-build-1.2.1
+napi-sys-2.2.2
 netif-0.1.6
 new_debug_unreachable-1.0.4
 nibble_vec-0.1.0
@@ -532,7 +534,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.26.0 -> deno-1.26.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.26.1 -> deno-1.26.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
