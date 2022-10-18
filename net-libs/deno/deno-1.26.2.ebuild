@@ -42,7 +42,6 @@ block-modes-0.9.1
 block-padding-0.3.2
 brotli-3.3.4
 brotli-decompressor-2.3.2
-bstr-0.2.17
 bumpalo-3.11.0
 byteorder-1.4.3
 bytes-1.2.1
@@ -74,8 +73,6 @@ crossbeam-channel-0.5.6
 crossbeam-utils-0.8.11
 crypto-bigint-0.4.8
 crypto-common-0.1.6
-csv-1.1.6
-csv-core-0.1.10
 ctor-0.1.23
 ctr-0.9.1
 cty-0.2.2
@@ -162,9 +159,9 @@ generic-array-0.14.6
 getrandom-0.1.16
 getrandom-0.2.7
 ghash-0.5.0
+glibc_version-0.1.2
 glob-0.3.0
 glow-0.11.2
-google-storage1-3.1.0+20220228
 gpu-alloc-0.5.3
 gpu-alloc-types-0.2.0
 gpu-descriptor-0.2.3
@@ -188,7 +185,6 @@ hyper-0.14.20
 hyper-rustls-0.23.0
 iana-time-zone-0.1.48
 ident_case-1.0.1
-idna-0.1.5
 idna-0.2.3
 idna-0.3.0
 if_chain-1.0.2
@@ -205,7 +201,6 @@ ipconfig-0.3.0
 ipnet-2.5.0
 is-macro-0.2.1
 itertools-0.10.4
-itoa-0.4.8
 itoa-1.0.3
 jobserver-0.1.24
 js-sys-0.3.60
@@ -232,7 +227,6 @@ libsqlite3-sys-0.25.1
 linked-hash-map-0.5.6
 linux-raw-sys-0.0.46
 lock_api-0.4.8
-log-0.3.9
 log-0.4.17
 lru-cache-0.1.2
 lsp-types-0.93.1
@@ -244,12 +238,11 @@ memchr-2.5.0
 memmap2-0.5.7
 memoffset-0.6.5
 metal-0.24.0
-mime-0.2.6
 mime-0.3.16
 miniz_oxide-0.5.4
 mio-0.8.4
 mitata-0.0.7
-monch-0.2.0
+monch-0.2.1
 naga-0.9.0
 napi-build-1.2.1
 napi-sys-2.2.2
@@ -285,7 +278,6 @@ path-clean-0.1.0
 path-dedot-3.0.17
 pathdiff-0.2.1
 pem-rfc7468-0.6.0
-percent-encoding-1.0.1
 percent-encoding-2.2.0
 petgraph-0.6.2
 phf-0.10.1
@@ -326,7 +318,6 @@ range-alloc-0.1.2
 raw-window-handle-0.4.3
 redox_syscall-0.2.16
 regex-1.6.0
-regex-automata-0.1.10
 regex-syntax-0.6.27
 relative-path-1.7.2
 remove_dir_all-0.5.3
@@ -345,7 +336,6 @@ rustc_version-0.4.0
 rustix-0.35.9
 rustls-0.20.6
 rustls-native-certs-0.6.2
-rustls-pemfile-0.3.0
 rustls-pemfile-1.0.1
 rustyline-10.0.0
 rustyline-derive-0.7.0
@@ -355,7 +345,6 @@ schannel-0.1.20
 scoped-tls-1.0.0
 scopeguard-1.1.0
 sct-0.7.0
-seahash-4.1.0
 sec1-0.3.0
 security-framework-2.7.0
 security-framework-sys-2.6.1
@@ -476,13 +465,12 @@ unicode-xid-0.2.4
 universal-hash-0.5.0
 unreachable-0.1.1
 untrusted-0.7.1
-url-1.7.2
 url-2.3.1
 urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.0
 uuid-1.1.2
-v8-0.51.0
+v8-0.53.1
 vcpkg-0.2.15
 version_check-0.9.4
 void-1.0.2
@@ -522,7 +510,6 @@ winres-0.1.12
 x25519-dalek-2.0.0-pre.1
 xattr-0.2.3
 yansi-0.5.1
-yup-oauth2-6.7.1
 zeroize-1.5.7
 zeroize_derive-1.3.2
 zstd-0.11.2+zstd.1.5.2
@@ -534,7 +521,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.26.1 -> deno-1.26.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.26.2 -> deno-1.26.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
