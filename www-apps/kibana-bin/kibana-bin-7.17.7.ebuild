@@ -10,8 +10,8 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
 SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.6-linux-x86_64.tar.gz -> kibana-7.17.6-linux-x86_64.tar.gz )
-	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.6-linux-aarch64.tar.gz -> kibana-7.17.6-linux-aarch64.tar.gz )
+	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.7-linux-x86_64.tar.gz -> kibana-7.17.7-linux-x86_64.tar.gz )
+	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.7-linux-aarch64.tar.gz -> kibana-7.17.7-linux-aarch64.tar.gz )
 "
 
 # source: LICENSE.txt and NOTICE.txt
@@ -22,7 +22,7 @@ KEYWORDS="-* amd64 arm64"
 IUSE="systemd"
 
 RDEPEND="
-	>=net-libs/nodejs-16.16.0
+	>=net-libs/nodejs-16.17.1
 	=net-libs/nodejs-16*
 	dev-libs/nss
 	
