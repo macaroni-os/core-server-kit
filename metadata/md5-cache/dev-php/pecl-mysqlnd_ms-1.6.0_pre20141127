@@ -10,5 +10,5 @@ RDEPEND=dev-libs/libxml2 php_targets_php5-6? ( || ( dev-lang/php:5.6[-libmysqlcl
 REQUIRED_USE=|| ( php_targets_php5-6 )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~grknight/distfiles/pecl-mysqlnd_ms-1.6.0_pre20141127.tar.xz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=40d577fa72e86e8b4297270ae2bc5e9e
