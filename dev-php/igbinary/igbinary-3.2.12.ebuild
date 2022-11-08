@@ -15,7 +15,7 @@ KEYWORDS="*"
 
 DESCRIPTION="A fast drop-in replacement for the standard PHP serialize"
 HOMEPAGE="https://github.com/igbinary/igbinary"
-SRC_URI="https://github.com/igbinary/igbinary/tarball/623d9edddd142d0f8c47a564d708e400b2ff8ee3 -> igbinary-3.2.11-623d9ed.tar.gz"
+SRC_URI="https://github.com/igbinary/igbinary/tarball/7eb431052055228cdc703b8ab79c38ef1141344b -> igbinary-3.2.12-7eb4310.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
