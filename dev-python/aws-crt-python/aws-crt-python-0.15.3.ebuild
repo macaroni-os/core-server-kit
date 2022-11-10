@@ -9,13 +9,13 @@ DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
 	https://github.com/awslabs/aws-crt-python/tarball/191b52d307793ac105d7389b0bce646917857ed1 -> aws-crt-python-0.15.3-191b52d.tar.gz
-	https://github.com/awslabs/aws-c-auth/tarball/30df6c407e2df43bd244e2c34c9b4a4b87372bfb -> aws-c-auth-0.6.19-30df6c4.tar.gz
+	https://github.com/awslabs/aws-c-auth/tarball/92038d9bdd7b2448230dc3954d8dba28f67fc7e1 -> aws-c-auth-0.6.20-92038d9.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/ac4216b78d5323b5b8ce95a3dd4a8fc0f95e2d33 -> aws-c-cal-0.5.20-ac4216b.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/d6a6a6057afd8024cf2790a50de4a9818014cec6 -> aws-c-common-0.8.5-d6a6a60.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/b517b7decd0dac30be2162f5186c250221c53aff -> aws-c-compression-0.2.16-b517b7d.tar.gz
 	https://github.com/awslabs/aws-c-event-stream/tarball/39bfa94a14b7126bf0c1330286ef8db452d87e66 -> aws-c-event-stream-0.2.15-39bfa94.tar.gz
-	https://github.com/awslabs/aws-c-http/tarball/2c5a2a7d5556600b9782ffa6c9d7e09964df1abc -> aws-c-http-0.6.25-2c5a2a7.tar.gz
-	https://github.com/awslabs/aws-c-io/tarball/8c15cd781d5ff96d8e30d89da5f077a6431a6b0d -> aws-c-io-0.13.8-8c15cd7.tar.gz
+	https://github.com/awslabs/aws-c-http/tarball/0c7b8b5f30b521584b8d432fd88e0bce9fe619c7 -> aws-c-http-0.6.27-0c7b8b5.tar.gz
+	https://github.com/awslabs/aws-c-io/tarball/b51cb538a272f5bf4509b91d7324ee3ff1741934 -> aws-c-io-0.13.9-b51cb53.tar.gz
 	https://github.com/awslabs/aws-c-mqtt/tarball/882c689561a3db1466330ccfe3b63637e0a575d3 -> aws-c-mqtt-0.7.13-882c689.tar.gz
 	https://github.com/awslabs/aws-c-s3/tarball/a41255ece72a7c887bba7f9d998ca3e14f4c8a1b -> aws-c-s3-0.1.51-a41255e.tar.gz
 	https://github.com/awslabs/aws-c-sdkutils/tarball/25bf5cf225f977c3accc6a05a0a7a181ef2a4a30 -> aws-c-sdkutils-0.1.6-25bf5cf.tar.gz
