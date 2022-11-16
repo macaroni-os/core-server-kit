@@ -9,20 +9,32 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
-SRC_URI="https://artifacts.elastic.co/downloads/kibana/kibana-6.8.23-linux-x86_64.tar.gz -> kibana-6.8.23-linux-x86_64.tar.gz"
+SRC_URI="
+	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.5.1-linux-x86_64.tar.gz -> kibana-8.5.1-linux-x86_64.tar.gz )
+	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.5.1-linux-aarch64.tar.gz -> kibana-8.5.1-linux-aarch64.tar.gz )
+"
 
 # source: LICENSE.txt and NOTICE.txt
 LICENSE="Apache-2.0 Artistic-2 BSD BSD-2 CC-BY-3.0 CC-BY-4.0 Elastic-2.0 icu ISC MIT MPL-2.0 OFL-1.1 openssl public-domain Unlicense WTFPL-2 ZLIB"
 SLOT="0"
-KEYWORDS="-* amd64"
+KEYWORDS="-* amd64 arm64"
 
 IUSE="systemd"
 
 RDEPEND="
-	>=net-libs/nodejs-10.24.1
-	=net-libs/nodejs-12*
+	>=net-libs/nodejs-16.18.1
+	=net-libs/nodejs-16*
 	dev-libs/nss
-	dev-libs/expat
+	
+"
+
+# Do not complain about CFLAGS etc since we don't use them
+QA_FLAGS_IGNORED='.*'
+QA_PRESTRIPPED="
+	opt/kibana/x-pack/plugins/reporting/chromium/headless_shell-linux_x64/headless_shell
+	opt/kibana/x-pack/plugins/reporting/chromium/headless_shell-linux_x64/swiftshader/libEGL.so
+	opt/kibana/x-pack/plugins/reporting/chromium/headless_shell-linux_x64/swiftshader/libGLESv2.so
+	opt/kibana/node_modules/re2/build/Release/re2.node
 "
 
 S="${WORKDIR}/${MY_P}"
@@ -48,13 +60,14 @@ src_prepare() {
 
 	# remove bundled nodejs
 	rm -r node || die
-	
-	# move optimize, plugins to /var/lib/kibana
-	rm -r optimize plugins || die
+	sed -i 's@\(^NODE="\).*@\1/usr/bin/node"@g' \
+		bin/kibana || die
+	# move plugins to /var/lib/kibana
+	rm -r plugins || die
 	
 	# handle node.js version with RDEPEND
 	sed -i /node_version_validator/d \
-		src/setup_node_env/index.js || die
+		src/setup_node_env/no_transpilation_dist.js || die
 }
 
 src_install() {
@@ -66,7 +79,7 @@ src_install() {
 	newins "${MY_FILESDIR}"/${MY_PN}.logrotate ${MY_PN}
 
 	newconfd "${MY_FILESDIR}"/${MY_PN}.confd ${MY_PN}
-	newinitd "${MY_FILESDIR}"/${MY_PN}.initd ${MY_PN}
+	newinitd "${MY_FILESDIR}"/${MY_PN}.initd-r1 ${MY_PN}
 
 	use systemd && systemd_dounit "${MY_FILESDIR}"/${MY_PN}.service
 
@@ -76,23 +89,18 @@ src_install() {
 	fperms -R +x /opt/${MY_PN}/bin
 
 	diropts -m 0750 -o ${MY_PN} -g ${MY_PN}
-	keepdir /var/lib/${MY_PN}/optimize
+	
 	keepdir /var/lib/${MY_PN}/plugins
 	keepdir /var/log/${MY_PN}
 
-	dosym ../../var/lib/kibana/optimize /opt/kibana/optimize
+	
 	dosym ../../var/lib/kibana/plugins /opt/kibana/plugins
 }
 
 pkg_postinst() {
 
-	ewarn "Kibana optimize/plugins directories were moved to /var/lib/kibana."
-	ewarn "In case of startup failures (FATAL Error: Cannot find module...),"
-	ewarn "please remove the optimize directory content:"
-	ewarn "rm -r /var/lib/kibana/optimize/*"
-
 	elog "This version of Kibana is compatible with Elasticsearch $(ver_cut 1-2) and"
-	elog "Node.js 12. Some plugins may fail with other versions of Node.js"
+	elog "Node.js 16. Some plugins may fail with other versions of Node.js"
 	elog
 	elog "To set a customized Elasticsearch instance:"
 	use systemd || elog "  OpenRC: set ES_INSTANCE in /etc/conf.d/${MY_PN}"
