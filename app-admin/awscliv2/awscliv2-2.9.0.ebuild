@@ -2,35 +2,35 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3+ )
-DISTUTILS_USE_PEP517=standalone # custom backend code to build with flit from pyproject.toml
+PYTHON_COMPAT=( python3_8+ )
 inherit distutils-r1
 
-DESCRIPTION="v2 of the Universal Command Line Interface for Amazon Web Services"
-HOMEPAGE="https://github.com/aws/aws-cli/tree/v2"
-SRC_URI="https://github.com/aws/aws-cli/tarball/eee35b27d32b37241bbd2fbc78be0a29f04bc2ce -> aws-cli-2.9.0-eee35b2.tar.gz"
-
-LICENSE="Apache-2.0"
-SLOT="0"
-KEYWORDS="*"
-IUSE=""
+DESCRIPTION=""
+HOMEPAGE="https://github.com/aws/aws-cli"
+SRC_URI="https://github.com/aws/aws-cli/tarball/eee35b27d32b37241bbd2fbc78be0a29f04bc2ce -> aws-cli-2.9.0-eee35b2.tar.gz
+"
 
 DEPEND=""
 RDEPEND="
-	dev-python/aws-crt-python
-	dev-python/colorama
-	dev-python/distro
-	dev-python/jmespath
-	dev-python/prompt_toolkit
-	dev-python/python-dateutil
-	dev-python/ruamel-yaml
 	!app-admin/awscli
 	!app-admin/awscli-bin
-"
-BDEPEND=""
+	dev-python/aws-crt-python[${PYTHON_USEDEP}]
+	dev-python/colorama[${PYTHON_USEDEP}]
+	dev-python/distro[${PYTHON_USEDEP}]
+	dev-python/jmespath[${PYTHON_USEDEP}]
+	dev-python/prompt_toolkit[${PYTHON_USEDEP}]
+	dev-python/python-dateutil[${PYTHON_USEDEP}]
+	dev-python/ruamel-yaml[${PYTHON_USEDEP}]"
+
+IUSE=""
+SLOT="0"
+LICENSE="Apache-2.0"
+KEYWORDS="*"
 
 post_src_unpack() {
-	if [ ! -d "${S}" ] ; then
-		mv "${WORKDIR}"/aws-aws-cli-* "${S}" || die
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}"/aws-aws-cli* "$S" || die
 	fi
 }
+
+DISTUTILS_USE_PEP517=standalone
