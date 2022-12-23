@@ -8,15 +8,15 @@ inherit distutils-r1
 DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
-	https://github.com/awslabs/aws-crt-python/tarball/c1c25ca3e6f028d83c1fb29ca0ce5dbcf7665023 -> aws-crt-python-0.16.2-c1c25ca.tar.gz
+	https://github.com/awslabs/aws-crt-python/tarball/337b17a059ec1026c9f108e51cf2d2a793f77e64 -> aws-crt-python-0.16.3-337b17a.tar.gz
 	https://github.com/awslabs/aws-c-auth/tarball/57b7f0db21258750af138e80823123212f0925de -> aws-c-auth-0.6.21-57b7f0d.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/ac4216b78d5323b5b8ce95a3dd4a8fc0f95e2d33 -> aws-c-cal-0.5.20-ac4216b.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/d6a6a6057afd8024cf2790a50de4a9818014cec6 -> aws-c-common-0.8.5-d6a6a60.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/b517b7decd0dac30be2162f5186c250221c53aff -> aws-c-compression-0.2.16-b517b7d.tar.gz
 	https://github.com/awslabs/aws-c-event-stream/tarball/e812dd4df0fcc350ad7b5b7babe82cfe5664f4a4 -> aws-c-event-stream-0.2.17-e812dd4.tar.gz
-	https://github.com/awslabs/aws-c-http/tarball/4e82c1e5022d3dd4d6eda4b8fa9cdba6e6def050 -> aws-c-http-0.6.29-4e82c1e.tar.gz
+	https://github.com/awslabs/aws-c-http/tarball/69b952ef08cc1d2766374cb7702f098c01e30250 -> aws-c-http-0.7.0-69b952e.tar.gz
 	https://github.com/awslabs/aws-c-io/tarball/6c19e25f55fa060d4e42010756967b979361dc66 -> aws-c-io-0.13.12-6c19e25.tar.gz
-	https://github.com/awslabs/aws-c-mqtt/tarball/c2bc31060984dc3eb89b016c9ea0a525d259fc7d -> aws-c-mqtt-0.8.2-c2bc310.tar.gz
+	https://github.com/awslabs/aws-c-mqtt/tarball/ac51334df4afde48338671d17f387a152ef406b5 -> aws-c-mqtt-0.8.3-ac51334.tar.gz
 	https://github.com/awslabs/aws-c-s3/tarball/374191a730faf7e040a776c7244b5b79c5eeed76 -> aws-c-s3-0.2.1-374191a.tar.gz
 	https://github.com/awslabs/aws-c-sdkutils/tarball/208a701fa01e99c7c8cc3dcebc8317da71362972 -> aws-c-sdkutils-0.1.7-208a701.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/ad53be196a25bbefa3700a01187fdce573a7d2d0 -> aws-checksums-0.1.14-ad53be1.tar.gz
