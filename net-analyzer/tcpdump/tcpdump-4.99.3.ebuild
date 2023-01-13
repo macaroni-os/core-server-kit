@@ -10,7 +10,7 @@ HOMEPAGE="
         https://github.com/the-tcpdump-group/tcpdump
 "
 
-SRC_URI="https://github.com/the-tcpdump-group/tcpdump/tarball/296ff0fe19f260abbc4b95c8e47fc15ad77e9cb3 -> tcpdump-4.99.2-296ff0f.tar.gz"
+SRC_URI="https://github.com/the-tcpdump-group/tcpdump/tarball/032e4923e5202ea4d5a6d1cead83ed1927135874 -> tcpdump-4.99.3-032e492.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
