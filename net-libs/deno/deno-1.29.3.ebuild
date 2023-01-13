@@ -104,7 +104,7 @@ dlopen_derive-0.1.4
 dotenv-0.15.0
 dprint-core-0.60.0
 dprint-plugin-json-0.17.0
-dprint-plugin-markdown-0.15.1
+dprint-plugin-markdown-0.15.2
 dprint-plugin-typescript-0.80.2
 dprint-swc-ext-0.6.0
 dyn-clone-1.0.9
@@ -216,8 +216,8 @@ lexical-util-0.8.5
 lexical-write-float-0.8.5
 lexical-write-integer-0.8.5
 libc-0.2.126
-libffi-3.0.1
-libffi-sys-2.0.0
+libffi-3.1.0
+libffi-sys-2.1.0
 libloading-0.7.3
 libm-0.2.5
 libsqlite3-sys-0.25.1
@@ -421,7 +421,7 @@ thiserror-impl-1.0.35
 time-0.3.14
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
-tokio-1.21.1
+tokio-1.24.0
 tokio-macros-1.8.0
 tokio-rustls-0.23.4
 tokio-socks-0.5.1
@@ -497,11 +497,19 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.36.1
+windows-sys-0.42.0
+windows_aarch64_gnullvm-0.42.0
 windows_aarch64_msvc-0.36.1
+windows_aarch64_msvc-0.42.0
 windows_i686_gnu-0.36.1
+windows_i686_gnu-0.42.0
 windows_i686_msvc-0.36.1
+windows_i686_msvc-0.42.0
 windows_x86_64_gnu-0.36.1
+windows_x86_64_gnu-0.42.0
+windows_x86_64_gnullvm-0.42.0
 windows_x86_64_msvc-0.36.1
+windows_x86_64_msvc-0.42.0
 winreg-0.7.0
 winreg-0.10.1
 winres-0.1.12
@@ -519,7 +527,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.29.2 -> deno-1.29.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.29.3 -> deno-1.29.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
