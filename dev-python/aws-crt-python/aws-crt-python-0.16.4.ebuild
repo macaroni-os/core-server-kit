@@ -17,7 +17,7 @@ SRC_URI="
 	https://github.com/awslabs/aws-c-http/tarball/dd34461987947672444d0bc872c5a733dfdb9711 -> aws-c-http-0.7.3-dd34461.tar.gz
 	https://github.com/awslabs/aws-c-io/tarball/b52181af655c090713fe01f14d7ccb95aab8dec5 -> aws-c-io-0.13.14-b52181a.tar.gz
 	https://github.com/awslabs/aws-c-mqtt/tarball/5cbde90916a1f9945e2a1ef36f3db58e1c976167 -> aws-c-mqtt-0.8.4-5cbde90.tar.gz
-	https://github.com/awslabs/aws-c-s3/tarball/71de4107368580f23e7bb30ac33fd80d062c08d7 -> aws-c-s3-0.2.2-71de410.tar.gz
+	https://github.com/awslabs/aws-c-s3/tarball/d7bfe602d6925948f1fff95784e3613cca6a3900 -> aws-c-s3-0.2.3-d7bfe60.tar.gz
 	https://github.com/awslabs/aws-c-sdkutils/tarball/208a701fa01e99c7c8cc3dcebc8317da71362972 -> aws-c-sdkutils-0.1.7-208a701.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/ad53be196a25bbefa3700a01187fdce573a7d2d0 -> aws-checksums-0.1.14-ad53be1.tar.gz
 	https://github.com/awslabs/aws-lc/tarball/75a73bfabf1be384b49c7f92da6fdfd9d867069e -> aws-lc-1.3.0-75a73bf.tar.gz
