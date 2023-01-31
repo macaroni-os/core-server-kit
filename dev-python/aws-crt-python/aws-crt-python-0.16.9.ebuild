@@ -8,7 +8,7 @@ inherit distutils-r1
 DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
-	https://github.com/awslabs/aws-crt-python/tarball/172cbbecc30c1b2fed08b69ca031a12bce8edf7a -> aws-crt-python-0.16.8-172cbbe.tar.gz
+	https://github.com/awslabs/aws-crt-python/tarball/cb40e0f901bc90696f5f5751f051d611c5f4a8a9 -> aws-crt-python-0.16.9-cb40e0f.tar.gz
 	https://github.com/awslabs/aws-c-auth/tarball/bad1066f0a93f3a7df86c94cc03076fa6b901bd2 -> aws-c-auth-0.6.22-bad1066.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/ac4216b78d5323b5b8ce95a3dd4a8fc0f95e2d33 -> aws-c-cal-0.5.20-ac4216b.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/5e64b039356c72d17fcf1fb0bfc7637f8c2270f7 -> aws-c-common-0.8.9-5e64b03.tar.gz
@@ -21,7 +21,7 @@ SRC_URI="
 	https://github.com/awslabs/aws-c-sdkutils/tarball/208a701fa01e99c7c8cc3dcebc8317da71362972 -> aws-c-sdkutils-0.1.7-208a701.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/ad53be196a25bbefa3700a01187fdce573a7d2d0 -> aws-checksums-0.1.14-ad53be1.tar.gz
 	https://github.com/awslabs/aws-lc/tarball/75a73bfabf1be384b49c7f92da6fdfd9d867069e -> aws-lc-1.3.0-75a73bf.tar.gz
-	https://github.com/aws/s2n-tls/tarball/4aec93c6a74aacf60cec6229b35094f56cb0f87b -> s2n-tls-1.3.34-4aec93c.tar.gz
+	https://github.com/aws/s2n-tls/tarball/a58b308637e736f7024ad45aed8c63a51a267e6c -> s2n-tls-1.3.35-a58b308.tar.gz
 "
 
 LICENSE="Apache-2.0"
