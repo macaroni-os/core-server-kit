@@ -16,7 +16,7 @@ alloc-stdlib-0.2.2
 android_system_properties-0.1.5
 anyhow-1.0.66
 arrayvec-0.7.2
-ash-0.37.0+1.3.209
+ash-0.37.2+1.3.238
 ast_node-0.8.6
 async-compression-0.3.14
 async-stream-0.3.3
@@ -35,7 +35,6 @@ better_scoped_tls-0.1.0
 bit-set-0.5.3
 bit-vec-0.6.3
 bitflags-1.3.2
-bitflags_serde_shim-0.2.2
 block-0.1.6
 block-buffer-0.9.0
 block-buffer-0.10.3
@@ -50,7 +49,6 @@ cache_control-0.2.0
 cbc-0.1.2
 cc-1.0.73
 cfg-if-1.0.0
-cfg_aliases-0.1.1
 chrono-0.4.22
 cipher-0.4.3
 clap-3.1.12
@@ -62,7 +60,6 @@ codespan-reporting-0.11.1
 console_static_text-0.3.4
 const-oid-0.9.0
 convert_case-0.4.0
-copyless-0.1.5
 core-foundation-0.9.3
 core-foundation-sys-0.8.3
 core-graphics-types-0.1.1
@@ -79,7 +76,7 @@ ctr-0.9.1
 cty-0.2.2
 curve25519-dalek-2.1.3
 curve25519-dalek-3.2.0
-d3d12-0.5.0
+d3d12-0.6.0
 darling-0.13.4
 darling_core-0.13.4
 darling_macro-0.13.4
@@ -105,7 +102,7 @@ dotenv-0.15.0
 dprint-core-0.60.0
 dprint-plugin-json-0.17.0
 dprint-plugin-markdown-0.15.2
-dprint-plugin-typescript-0.80.2
+dprint-plugin-typescript-0.81.1
 dprint-swc-ext-0.6.0
 dyn-clone-1.0.9
 dynasm-1.2.3
@@ -160,7 +157,7 @@ getrandom-0.2.7
 ghash-0.5.0
 glibc_version-0.1.2
 glob-0.3.0
-glow-0.11.2
+glow-0.12.0
 gpu-alloc-0.5.3
 gpu-alloc-types-0.2.0
 gpu-descriptor-0.2.3
@@ -193,7 +190,6 @@ indexmap-1.9.2
 inotify-0.9.6
 inotify-sys-0.1.5
 inout-0.1.3
-inplace_it-0.3.5
 instant-0.1.12
 io-lifetimes-0.7.3
 ipconfig-0.3.0
@@ -241,7 +237,7 @@ miniz_oxide-0.5.4
 mio-0.8.4
 mitata-0.0.7
 monch-0.4.0
-naga-0.9.0
+naga-0.11.0
 napi-build-1.2.1
 napi-sys-2.2.2
 netif-0.1.6
@@ -314,19 +310,18 @@ rand_chacha-0.3.1
 rand_core-0.5.1
 rand_core-0.6.4
 range-alloc-0.1.2
-raw-window-handle-0.4.3
+raw-window-handle-0.5.0
 redox_syscall-0.2.16
 regex-1.6.0
 regex-syntax-0.6.27
 relative-path-1.7.2
 remove_dir_all-0.5.3
-renderdoc-sys-0.7.1
 reqwest-0.11.11
 resolv-conf-0.7.0
 retain_mut-0.1.9
 rfc6979-0.3.0
 ring-0.16.20
-ron-0.7.1
+ron-0.8.0
 rsa-0.7.0
 rusqlite-0.28.0
 rustc-hash-1.1.0
@@ -489,9 +484,9 @@ wasm-bindgen-shared-0.2.83
 web-sys-0.3.60
 webpki-0.22.0
 webpki-roots-0.22.4
-wgpu-core-0.13.2
-wgpu-hal-0.13.2
-wgpu-types-0.13.2
+wgpu-core-0.15.0
+wgpu-hal-0.15.1
+wgpu-types-0.15.0
 which-4.3.0
 widestring-0.5.1
 winapi-0.3.9
@@ -529,7 +524,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.30.0 -> deno-1.30.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.30.1 -> deno-1.30.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
