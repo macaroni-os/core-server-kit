@@ -141,7 +141,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/mongodb/mongo-tools/archive/b9e9e5684f9d8a4fac35983b8b47fb6bf5043ec1.tar.gz -> mongo-tools-100.6.1-b9e9e568.tar.gz
+SRC_URI="https://github.com/mongodb/mongo-tools/archive/c28b381c661ec65198a1f866202d8361cf72cfbb.tar.gz -> mongo-tools-100.7.0-c28b381c.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0"
@@ -175,7 +175,7 @@ src_compile() {
 
 		go build -mod=mod \
 			-o bin/"${bin_name}" \
-			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=b9e9e5684f9d8a4fac35983b8b47fb6bf5043ec1" \
+			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=c28b381c661ec65198a1f866202d8361cf72cfbb" \
 			-buildmode=pie \
 			--tags "${myconf[*]}" \
 			./"${bin_path}" || die "compile failed"
