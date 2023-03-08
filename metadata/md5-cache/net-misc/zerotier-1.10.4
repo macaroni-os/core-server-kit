@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install prepare setup test unpack
+DEPEND=dev-libs/json-glib net-libs/libnatpmp net-libs/miniupnpc:= clang? ( >=sys-devel/clang-6:* ) !!sys-devel/llvm:0
+DESCRIPTION=A software-based managed Ethernet switch for planet Earth
+EAPI=7
+HOMEPAGE=https://www.zerotier.com/
+IUSE=clang neon
+KEYWORDS=*
+LICENSE=BSL-1.1
+RDEPEND=dev-libs/json-glib net-libs/libnatpmp net-libs/miniupnpc:= clang? ( >=sys-devel/clang-6:* )
+SLOT=0
+SRC_URI=https://api.github.com/repos/zerotier/ZeroTierOne/tarball/refs/tags/1.10.4 -> zerotier-1.10.4.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	llvm	d6218c82a2f721c6a2c46c7eaf87e13b	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=db1974f51c90eb67c2052ab7266212f0
