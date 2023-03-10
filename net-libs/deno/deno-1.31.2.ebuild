@@ -4,6 +4,7 @@ EAPI=7
 
 CRATES="
 Inflector-0.11.4
+addr2line-0.19.0
 adler-1.0.2
 aead-0.5.1
 aes-0.8.2
@@ -25,6 +26,7 @@ async-trait-0.1.64
 atty-0.2.14
 auto_impl-0.5.0
 autocfg-1.1.0
+backtrace-0.3.67
 base16ct-0.1.1
 base32-0.4.0
 base64-0.13.1
@@ -59,7 +61,7 @@ clap_complete_fig-3.1.5
 clap_lex-0.1.1
 clipboard-win-4.5.0
 codespan-reporting-0.11.1
-console_static_text-0.3.4
+console_static_text-0.7.1
 const-oid-0.9.1
 convert_case-0.4.0
 core-foundation-0.9.3
@@ -92,8 +94,8 @@ data-url-0.2.0
 deno_ast-0.24.0
 deno_doc-0.57.0
 deno_emit-0.16.0
-deno_graph-0.44.2
-deno_lint-0.40.0
+deno_graph-0.44.3
+deno_lint-0.41.0
 deno_task_shell-0.10.0
 der-0.6.1
 derive_more-0.99.17
@@ -161,6 +163,7 @@ generic-array-0.14.6
 getrandom-0.1.16
 getrandom-0.2.8
 ghash-0.5.0
+gimli-0.27.2
 glibc_version-0.1.2
 glob-0.3.1
 glow-0.12.0
@@ -175,6 +178,7 @@ hashlink-0.8.1
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
+hex-0.4.3
 hexf-parse-0.2.1
 hkdf-0.12.3
 hmac-0.12.1
@@ -246,9 +250,10 @@ memoffset-0.6.5
 metal-0.24.0
 mime-0.3.16
 miniz_oxide-0.5.4
+miniz_oxide-0.6.2
 mio-0.8.5
 mitata-0.0.7
-monch-0.4.0
+monch-0.4.1
 naga-0.11.0
 napi-build-1.2.1
 napi-sys-2.2.3
@@ -267,7 +272,8 @@ num-traits-0.2.15
 num_cpus-1.15.0
 objc-0.2.7
 objc_exception-0.1.2
-once_cell-1.16.0
+object-0.30.3
+once_cell-1.17.1
 opaque-debug-0.3.0
 openssl-probe-0.1.5
 ordered-float-2.10.0
@@ -325,10 +331,9 @@ rand_core-0.6.4
 range-alloc-0.1.2
 raw-window-handle-0.5.0
 redox_syscall-0.2.16
-regex-1.6.0
+regex-1.7.1
 regex-syntax-0.6.28
 relative-path-1.7.3
-remove_dir_all-0.5.3
 reqwest-0.11.14
 resolv-conf-0.7.0
 rfc6979-0.3.1
@@ -337,6 +342,7 @@ ripemd-0.1.3
 ron-0.8.0
 rsa-0.7.2
 rusqlite-0.28.0
+rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.2.3
 rustc_version-0.4.0
@@ -422,7 +428,7 @@ syn-0.15.44
 syn-1.0.107
 synstructure-0.12.6
 tar-0.4.38
-tempfile-3.3.0
+tempfile-3.4.0
 termcolor-1.2.0
 testing_macros-0.2.7
 text-size-1.1.0
@@ -483,8 +489,8 @@ url-2.3.1
 urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.0
-uuid-1.1.2
-v8-0.63.0
+uuid-1.3.0
+v8-0.64.0
 vcpkg-0.2.15
 version_check-0.9.4
 vsimd-0.8.0
@@ -539,7 +545,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.31.1 -> deno-1.31.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.31.2 -> deno-1.31.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
