@@ -48,7 +48,7 @@ brotli-3.3.4
 brotli-decompressor-2.3.4
 bumpalo-3.12.0
 byteorder-1.4.3
-bytes-1.2.1
+bytes-1.4.0
 cache_control-0.2.0
 cbc-0.1.2
 cc-1.0.79
@@ -80,10 +80,6 @@ ctr-0.9.2
 cty-0.2.2
 curve25519-dalek-2.1.3
 curve25519-dalek-3.2.0
-cxx-1.0.89
-cxx-build-1.0.89
-cxxbridge-flags-1.0.89
-cxxbridge-macro-1.0.89
 d3d12-0.6.0
 darling-0.13.4
 darling_core-0.13.4
@@ -190,8 +186,6 @@ httpdate-1.0.2
 humantime-2.1.0
 hyper-0.14.24
 hyper-rustls-0.23.2
-iana-time-zone-0.1.53
-iana-time-zone-haiku-0.1.1
 ident_case-1.0.1
 idna-0.2.3
 idna-0.3.0
@@ -231,7 +225,6 @@ libffi-sys-2.1.0
 libloading-0.7.4
 libm-0.2.6
 libsqlite3-sys-0.25.2
-link-cplusplus-1.0.8
 linked-hash-map-0.5.6
 linux-raw-sys-0.1.4
 lock_api-0.4.9
@@ -358,7 +351,6 @@ same-file-1.0.6
 schannel-0.1.21
 scoped-tls-1.0.1
 scopeguard-1.1.0
-scratch-1.0.3
 sct-0.7.0
 sec1-0.3.0
 security-framework-2.8.2
@@ -545,7 +537,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.31.2 -> deno-1.31.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.31.3 -> deno-1.31.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
