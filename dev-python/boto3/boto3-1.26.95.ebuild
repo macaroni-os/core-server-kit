@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION=""
 HOMEPAGE="https://github.com/boto/boto3 https://pypi.org/project/boto3/"
-SRC_URI="https://files.pythonhosted.org/packages/00/74/13c56870c2eaa4a806702e185332995b0e70ab9d613758e5bb997a97dc93/boto3-1.26.94.tar.gz -> boto3-1.26.94.tar.gz
+SRC_URI="https://files.pythonhosted.org/packages/d7/f7/514ce0b134e47deaf16427e0cd26196a98cf4d61c7fb831259079b69fd6d/boto3-1.26.95.tar.gz -> boto3-1.26.95.tar.gz
 "
 
 DEPEND=""
@@ -20,4 +20,4 @@ IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-S="${WORKDIR}/boto3-1.26.94"
+S="${WORKDIR}/boto3-1.26.95"
