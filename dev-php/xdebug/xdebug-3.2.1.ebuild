@@ -21,7 +21,7 @@ KEYWORDS="*"
 DESCRIPTION="A PHP debugging and profiling extension"
 HOMEPAGE="https://xdebug.org/"
 # Using tarball from GitHub for tests
-SRC_URI="https://api.github.com/repos/xdebug/xdebug/tarball/refs/tags/3.2.0 -> xdebug-3.2.0.tar.gz"
+SRC_URI="https://api.github.com/repos/xdebug/xdebug/tarball/refs/tags/3.2.1 -> xdebug-3.2.1.tar.gz"
 LICENSE="Xdebug"
 SLOT="0"
 IUSE=""
