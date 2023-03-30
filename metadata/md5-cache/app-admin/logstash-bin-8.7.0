@@ -9,6 +9,6 @@ LICENSE=Apache-2.0 MIT Elastic-2.0
 RDEPEND=virtual/jre >=dev-java/java-config-2.2.0-r3
 RESTRICT=strip
 SLOT=0
-SRC_URI=amd64? ( https://artifacts.elastic.co/downloads/logstash/logstash-8.6.2-linux-x86_64.tar.gz -> logstash-8.6.2-linux-x86_64.tar.gz ) arm64? ( https://artifacts.elastic.co/downloads/logstash/logstash-8.6.2-linux-aarch64.tar.gz -> logstash-8.6.2-linux-aarch64.tar.gz )
+SRC_URI=amd64? ( https://artifacts.elastic.co/downloads/logstash/logstash-8.7.0-linux-x86_64.tar.gz -> logstash-8.7.0-linux-x86_64.tar.gz ) arm64? ( https://artifacts.elastic.co/downloads/logstash/logstash-8.7.0-linux-aarch64.tar.gz -> logstash-8.7.0-linux-aarch64.tar.gz )
 _eclasses_=java-pkg-2	c4e6af2574fd1dc79b43a6e27af4b5fb	java-utils-2	dd352559d0e143500ec878acc74da909	user	875055ddd565382c728563992ae3abf7
-_md5_=99cd92dbd9d8e87f945b96bb853750ed
+_md5_=8726be2a5a7685a7b163b61770d0f11b
