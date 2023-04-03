@@ -4,7 +4,6 @@ EAPI=7
 
 CRATES="
 Inflector-0.11.4
-addr2line-0.19.0
 adler-1.0.2
 aead-0.5.1
 aes-0.8.2
@@ -14,17 +13,16 @@ ahash-0.7.6
 aho-corasick-0.7.20
 alloc-no-stdlib-2.0.4
 alloc-stdlib-0.2.2
-anyhow-1.0.69
+anyhow-1.0.70
 arrayvec-0.7.2
 ast_node-0.8.6
 async-compression-0.3.15
 async-stream-0.3.4
 async-stream-impl-0.3.4
-async-trait-0.1.66
+async-trait-0.1.67
 atty-0.2.14
 auto_impl-0.5.0
 autocfg-1.1.0
-backtrace-0.3.67
 base16ct-0.1.1
 base32-0.4.0
 base64-0.13.1
@@ -52,12 +50,12 @@ cc-1.0.79
 cfg-if-1.0.0
 chrono-0.4.22
 cipher-0.4.4
-clap-3.1.12
-clap_complete-3.1.2
-clap_complete_fig-3.1.5
-clap_lex-0.1.1
+clap-4.1.10
+clap_complete-4.1.5
+clap_complete_fig-4.1.2
+clap_lex-0.3.3
 clipboard-win-4.5.0
-console_static_text-0.7.1
+console_static_text-0.8.1
 const-oid-0.9.2
 convert_case-0.4.0
 core-foundation-0.9.3
@@ -104,6 +102,7 @@ dprint-swc-ext-0.8.0
 dyn-clone-1.0.11
 dynasm-1.2.3
 dynasmrt-1.2.3
+ecb-0.1.1
 ecdsa-0.14.8
 either-1.8.1
 elliptic-curve-0.12.3
@@ -134,22 +133,21 @@ from_variant-0.1.4
 fs3-0.5.0
 fsevent-sys-4.1.0
 fslock-0.1.8
-futures-0.3.26
-futures-channel-0.3.26
-futures-core-0.3.26
-futures-executor-0.3.26
-futures-io-0.3.26
-futures-macro-0.3.26
-futures-sink-0.3.26
-futures-task-0.3.26
-futures-util-0.3.26
+futures-0.3.27
+futures-channel-0.3.27
+futures-core-0.3.27
+futures-executor-0.3.27
+futures-io-0.3.27
+futures-macro-0.3.27
+futures-sink-0.3.27
+futures-task-0.3.27
+futures-util-0.3.27
 fwdansi-1.1.0
 generic-array-0.12.4
 generic-array-0.14.6
 getrandom-0.1.16
 getrandom-0.2.8
 ghash-0.5.0
-gimli-0.27.2
 glibc_version-0.1.2
 glob-0.3.1
 group-0.12.1
@@ -159,6 +157,7 @@ hashlink-0.8.1
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
+hermit-abi-0.3.1
 hex-0.4.3
 hkdf-0.12.3
 hmac-0.12.1
@@ -168,7 +167,7 @@ http-body-0.4.5
 httparse-1.8.0
 httpdate-1.0.2
 humantime-2.1.0
-hyper-0.14.24
+hyper-0.14.25
 hyper-rustls-0.23.2
 ident_case-1.0.1
 idna-0.2.3
@@ -181,10 +180,11 @@ inotify-0.9.6
 inotify-sys-0.1.5
 inout-0.1.3
 instant-0.1.12
-io-lifetimes-1.0.6
+io-lifetimes-1.0.7
 ipconfig-0.3.1
 ipnet-2.7.1
 is-macro-0.2.2
+is-terminal-0.4.4
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
@@ -202,12 +202,13 @@ lexical-parse-integer-0.8.6
 lexical-util-0.8.5
 lexical-write-float-0.8.5
 lexical-write-integer-0.8.5
-libc-0.2.139
+libc-0.2.140
 libffi-3.1.0
 libffi-sys-2.1.0
 libloading-0.7.4
 libm-0.2.6
 libsqlite3-sys-0.25.2
+libz-sys-1.1.8
 linked-hash-map-0.5.6
 linux-raw-sys-0.1.4
 lock_api-0.4.9
@@ -223,9 +224,7 @@ memmap2-0.5.10
 memoffset-0.6.5
 mime-0.3.16
 miniz_oxide-0.5.4
-miniz_oxide-0.6.2
 mio-0.8.6
-mitata-0.0.7
 monch-0.4.1
 napi-build-1.2.1
 napi-sys-2.2.3
@@ -241,7 +240,6 @@ num-integer-0.1.45
 num-iter-0.1.43
 num-traits-0.2.15
 num_cpus-1.15.0
-object-0.30.3
 once_cell-1.17.1
 opaque-debug-0.3.0
 openssl-probe-0.1.5
@@ -259,6 +257,7 @@ parking_lot_core-0.9.7
 path-clean-0.1.0
 path-dedot-3.0.18
 pathdiff-0.2.1
+pbkdf2-0.12.1
 pem-rfc7468-0.6.0
 percent-encoding-2.2.0
 petgraph-0.6.3
@@ -278,19 +277,19 @@ polyval-0.6.0
 ppv-lite86-0.2.17
 precomputed-hash-0.1.1
 pretty_assertions-1.3.0
-prettyplease-0.1.24
+prettyplease-0.1.25
 proc-macro-crate-1.3.1
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro-hack-0.5.20+deprecated
 proc-macro2-0.4.30
-proc-macro2-1.0.51
+proc-macro2-1.0.52
 psm-0.1.21
 pty2-0.1.0
 pulldown-cmark-0.9.2
 quick-error-1.2.3
 quote-0.6.13
-quote-1.0.23
+quote-1.0.26
 radix_fmt-1.0.0
 radix_trie-0.2.1
 rand-0.8.5
@@ -308,7 +307,6 @@ ring-0.16.20
 ripemd-0.1.3
 rsa-0.7.2
 rusqlite-0.28.0
-rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.2.3
 rustc_version-0.4.0
@@ -331,10 +329,10 @@ security-framework-sys-2.8.0
 semver-0.9.0
 semver-1.0.14
 semver-parser-0.7.0
-serde-1.0.154
+serde-1.0.157
 serde-value-0.7.0
 serde_bytes-0.11.9
-serde_derive-1.0.154
+serde_derive-1.0.157
 serde_json-1.0.94
 serde_repr-0.1.9
 serde_urlencoded-0.7.1
@@ -391,14 +389,14 @@ swc_visit-0.5.4
 swc_visit_macros-0.5.5
 syn-0.15.44
 syn-1.0.109
+syn-2.0.0
 synstructure-0.12.6
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
-testing_macros-0.2.7
+testing_macros-0.2.8
 text-size-1.1.0
 text_lines-0.6.0
-textwrap-0.15.2
 thiserror-1.0.38
 thiserror-impl-1.0.38
 time-0.3.20
@@ -414,7 +412,7 @@ tokio-tungstenite-0.16.1
 tokio-util-0.7.7
 toml-0.5.11
 toml_datetime-0.6.1
-toml_edit-0.19.4
+toml_edit-0.19.7
 tower-0.4.13
 tower-layer-0.3.2
 tower-lsp-0.17.0
@@ -440,7 +438,7 @@ unic-common-0.9.0
 unic-ucd-ident-0.9.0
 unic-ucd-version-0.9.0
 unicase-2.6.0
-unicode-bidi-0.3.11
+unicode-bidi-0.3.12
 unicode-id-0.3.3
 unicode-ident-1.0.8
 unicode-normalization-0.1.22
@@ -453,9 +451,9 @@ untrusted-0.7.1
 url-2.3.1
 urlpattern-0.2.0
 utf-8-0.7.6
-utf8parse-0.2.0
+utf8parse-0.2.1
 uuid-1.3.0
-v8-0.66.0
+v8-0.68.0
 vcpkg-0.2.15
 version_check-0.9.4
 vsimd-0.8.0
@@ -483,15 +481,15 @@ winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
 windows-sys-0.45.0
-windows-targets-0.42.1
-windows_aarch64_gnullvm-0.42.1
-windows_aarch64_msvc-0.42.1
-windows_i686_gnu-0.42.1
-windows_i686_msvc-0.42.1
-windows_x86_64_gnu-0.42.1
-windows_x86_64_gnullvm-0.42.1
-windows_x86_64_msvc-0.42.1
-winnow-0.3.5
+windows-targets-0.42.2
+windows_aarch64_gnullvm-0.42.2
+windows_aarch64_msvc-0.42.2
+windows_i686_gnu-0.42.2
+windows_i686_msvc-0.42.2
+windows_x86_64_gnu-0.42.2
+windows_x86_64_gnullvm-0.42.2
+windows_x86_64_msvc-0.42.2
+winnow-0.3.6
 winreg-0.10.1
 winres-0.1.12
 x25519-dalek-2.0.0-pre.1
@@ -508,7 +506,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.32.1 -> deno-1.32.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.32.3 -> deno-1.32.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
