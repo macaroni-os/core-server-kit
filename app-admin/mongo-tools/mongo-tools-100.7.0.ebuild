@@ -148,16 +148,13 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
 IUSE="sasl ssl"
+S="${WORKDIR}/mongo-tools-c28b381c661ec65198a1f866202d8361cf72cfbb"
 
 RDEPEND="
 	net-libs/libpcap
 	sasl? ( dev-libs/cyrus-sasl )
 	ssl? ( dev-libs/openssl:0= )
 "
-
-post_src_unpack() {
-	mv "${WORKDIR}"/mongo-tools-* "${S}" || die
-}
 
 src_compile() {
 	local myconf=()
