@@ -1,16 +1,16 @@
-BDEPEND=php_targets_php7-4? ( dev-lang/php:7.4[json,ssl,zlib] ) php_targets_php8-0? ( dev-lang/php:8.0[ssl,zlib] ) php_targets_php8-1? ( dev-lang/php:8.1[ssl,zlib] ) virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 )
+BDEPEND=php_targets_php7-4? ( dev-lang/php:7.4[json,ssl,zlib] ) php_targets_php8-0? ( dev-lang/php:8.0[ssl,zlib] ) php_targets_php8-1? ( dev-lang/php:8.1[ssl,zlib] ) virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 ) php_targets_php8-2? ( dev-lang/php:8.2 )
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=php_targets_php7-4? ( dev-lang/php:7.4[json,ssl,zlib] ) php_targets_php8-0? ( dev-lang/php:8.0[ssl,zlib] ) php_targets_php8-1? ( dev-lang/php:8.1[ssl,zlib] ) >=dev-libs/libbson-1.18.0 >=dev-libs/mongo-c-driver-1.18.0[sasl?,ssl] dev-libs/openssl:0= sasl? ( dev-libs/cyrus-sasl ) test? ( dev-db/mongodb ) php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 )
+DEPEND=php_targets_php7-4? ( dev-lang/php:7.4[json,ssl,zlib] ) php_targets_php8-0? ( dev-lang/php:8.0[ssl,zlib] ) php_targets_php8-1? ( dev-lang/php:8.1[ssl,zlib] ) >=dev-libs/libbson-1.18.0 >=dev-libs/mongo-c-driver-1.18.0[sasl?,ssl] dev-libs/openssl:0= sasl? ( dev-libs/cyrus-sasl ) test? ( dev-db/mongodb ) php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 ) php_targets_php8-2? ( dev-lang/php:8.2 )
 DESCRIPTION=MongoDB database driver for PHP
 EAPI=7
 HOMEPAGE=https://pecl.php.net/mongodb
-IUSE=sasl test php_targets_php7-4 php_targets_php8-0 php_targets_php8-1
+IUSE=sasl test php_targets_php7-4 php_targets_php8-0 php_targets_php8-1 php_targets_php8-2
 KEYWORDS=*
 LICENSE=Apache-2.0
-RDEPEND=php_targets_php7-4? ( dev-lang/php:7.4[json,ssl,zlib] ) php_targets_php8-0? ( dev-lang/php:8.0[ssl,zlib] ) php_targets_php8-1? ( dev-lang/php:8.1[ssl,zlib] ) >=dev-libs/libbson-1.18.0 >=dev-libs/mongo-c-driver-1.18.0[sasl?,ssl] dev-libs/openssl:0= sasl? ( dev-libs/cyrus-sasl ) php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 )
-REQUIRED_USE=|| ( php_targets_php7-4 php_targets_php8-0 php_targets_php8-1 )
+RDEPEND=php_targets_php7-4? ( dev-lang/php:7.4[json,ssl,zlib] ) php_targets_php8-0? ( dev-lang/php:8.0[ssl,zlib] ) php_targets_php8-1? ( dev-lang/php:8.1[ssl,zlib] ) >=dev-libs/libbson-1.18.0 >=dev-libs/mongo-c-driver-1.18.0[sasl?,ssl] dev-libs/openssl:0= sasl? ( dev-libs/cyrus-sasl ) php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 ) php_targets_php8-2? ( dev-lang/php:8.2 )
+REQUIRED_USE=|| ( php_targets_php7-4 php_targets_php8-0 php_targets_php8-1 php_targets_php8-2 )
 RESTRICT=x86? ( test ) !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/mongodb/mongo-php-driver/tarball/3be2d9cf97882ef2fb7e0706ea7bd28bab8ffb53 -> mongo-php-driver-1.15.1-3be2d9c.tar.gz
 _eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	php-ext-pecl-r3	a59741d3df8ea9f17afcdcfb7edaee6d	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=520a965f5976a18cdce503390a11f30d
+_md5_=4c8d19a1f41527b0056369bcb57cce85

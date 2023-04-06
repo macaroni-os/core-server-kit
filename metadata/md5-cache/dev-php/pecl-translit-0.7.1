@@ -1,0 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 ) php_targets_php8-2? ( dev-lang/php:8.2 )
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 ) php_targets_php8-2? ( dev-lang/php:8.2 )
+DESCRIPTION=Transliterates non-latin character sets to latin
+EAPI=7
+HOMEPAGE=https://github.com/derickr/pecl-translit
+IUSE=php_targets_php7-4 php_targets_php8-0 php_targets_php8-1 php_targets_php8-2
+KEYWORDS=*
+LICENSE=BSD-2
+RDEPEND=php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php8-0? ( dev-lang/php:8.0 ) php_targets_php8-1? ( dev-lang/php:8.1 ) php_targets_php8-2? ( dev-lang/php:8.2 )
+REQUIRED_USE=|| ( php_targets_php7-4 php_targets_php8-0 php_targets_php8-1 php_targets_php8-2 )
+SLOT=0
+SRC_URI=https://github.com/derickr/pecl-translit/tarball/3e18190e94f1b231ef0c4027673484e4191a49bf -> pecl-translit-0.7.1-3e18190.tar.gz
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=22c49034713efa5b574b0391f160ddf8

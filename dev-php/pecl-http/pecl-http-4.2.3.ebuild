@@ -1,22 +1,20 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
 PHP_EXT_NAME="http"
-PHP_EXT_PECL_PKG="http"
-#PHP_EXT_INI="yes"
+PHP_EXT_PECL_PKG="pecl_http"
+PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 PHP_INI_NAME="50-http"
 
-USE_PHP="php8-0"
-PHP_EXT_PECL_FILENAME="${PN/pecl-/}-2.0.1.tgz"
-
-
 inherit php-ext-pecl-r3
 
-SRC_URI="https://github.com/m6w6/ext-http/tarball/a6785d51967e49fca5a096a12d70f72f88205623 -> ext-http-4.2.3-a6785d5.tar.gz"
+USE_PHP="php7-4 php8-0 php8-1 php8-2"
 
 KEYWORDS="*"
+
+SRC_URI="https://github.com/m6w6/ext-http/tarball/a6785d51967e49fca5a096a12d70f72f88205623 -> ext-http-4.2.3-a6785d5.tar.gz"
 
 DESCRIPTION="Extended HTTP Support for PHP"
 LICENSE="BSD-2 MIT"
@@ -34,30 +32,30 @@ COMMON_DEPEND="app-arch/brotli:=
 DEPEND="
 	php_targets_php8-0? ( ${COMMON_DEPEND} dev-lang/php:8.0[session(-),iconv(-)] )"
 RDEPEND="${DEPEND}
-	php_targets_php8-0? ( dev-php/pecl-http:8[php_targets_php8-0(-)] )
+	php_targets_php7-4? ( dev-php/pecl-http:7[php_targets_php7-4(-)] )
+	php_targets_php8-0? ( dev-php/pecl-http:7[php_targets_php8-0(-)] )
+	php_targets_php8-1? ( dev-php/pecl-http:7[php_targets_php8-1(-)] )
+	php_targets_php8-2? ( dev-php/pecl-http:7[php_targets_php8-2(-)] )
 	"
 
 PHP_EXT_ECONF_ARGS=( --with-http --without-http-shared-deps --without-http-libidn-dir )
 
-S="${WORKDIR}/${PHP_EXT_PECL_FILENAME/.tgz/}"
-PHP_EXT_S="${S}"
-
 post_src_unpack() {
-	if [ ! -d "${S}" ] ; then
-		mv ${WORKDIR}/m6w6-* ${S} || die
-	fi
+    if [ ! -d "${S}" ] ; then
+        mv ${WORKDIR}/m6w6-* ${S} || die
+    fi
 }
 
-#src_prepare() {
-#	if use php_targets_php8-0 ; then
-#		php-ext-source-r3_src_prepare
-#	else
-#		default_src_prepare
-#	fi
-#
-#	# Respect LDFLAGS, bug 727134
-#	export EXTRA_LDFLAGS="${LDFLAGS}"
-#}
+src_prepare() {
+	if use php_targets_php8-0 ; then
+		php-ext-source-r3_src_prepare
+	else
+		default_src_prepare
+	fi
+
+	# Respect LDFLAGS, bug 727134
+	export EXTRA_LDFLAGS="${LDFLAGS}"
+}
 
 src_test() {
 	# Cannot use eclass function due to required modules
