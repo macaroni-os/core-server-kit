@@ -4,7 +4,7 @@ EAPI=7
 
 PHP_EXT_NAME="mongodb"
 
-USE_PHP="php7-4 php8-0 php8-1"
+USE_PHP="php7-4 php8-0 php8-1 php8-2"
 
 inherit php-ext-pecl-r3
 
@@ -13,6 +13,9 @@ SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/3be2d9cf97882ef2fb7
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
+
+SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/3be2d9cf97882ef2fb7e0706ea7bd28bab8ffb53 -> mongo-php-driver-1.15.1-3be2d9c.tar.gz"
+
 IUSE="sasl test"
 
 PHP_DEPEND="
@@ -36,7 +39,9 @@ RESTRICT="x86? ( test )
 	!test? ( test )"
 
 post_src_unpack() {
-	mv mongodb-mongo-php-driver* ${S} || die
+    if [ ! -d "${S}" ] ; then
+        mv ${WORKDIR}/mongodb-* ${S} || die
+    fi
 }
 
 src_configure() {

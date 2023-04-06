@@ -7,11 +7,12 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS=( NOTICE README.md TECHNOTES.txt )
 
-USE_PHP="php7-4 php8-0 php8-1"
+USE_PHP="php7-4 php8-0 php8-1 php8-2"
 
 inherit php-ext-pecl-r3
 
 KEYWORDS="*"
+
 SRC_URI="https://github.com/krakjoe/apcu/tarball/ab01a6e30d5b232f69a9ab12b0fb3069d3306862 -> apcu-5.1.22-ab01a6e.tar.gz"
 
 DESCRIPTION="Stripped down version of APC supporting only user cache"

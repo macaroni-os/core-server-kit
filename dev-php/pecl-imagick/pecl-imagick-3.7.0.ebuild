@@ -1,14 +1,16 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
 PHP_EXT_NAME="imagick"
-USE_PHP="php7-4 php8-0 php8-1"
+
+USE_PHP="php7-4 php8-0 php8-1 php8-2"
 
 inherit php-ext-pecl-r3
 
-SRC_URI="https://github.com/Imagick/Imagick/tarball/52ec37ff633de0e5cca159a6437b8c340afe7831 -> Imagick-3.7.0-52ec37f.tar.gz"
 KEYWORDS="*"
+
+SRC_URI="https://github.com/Imagick/imagick/tarball/52ec37ff633de0e5cca159a6437b8c340afe7831 -> imagick-3.7.0-52ec37f.tar.gz"
 
 DESCRIPTION="PHP wrapper for the ImageMagick library"
 HOMEPAGE="https://pecl.php.net/package/imagick https://github.com/Imagick/imagick"
@@ -26,9 +28,9 @@ DEPEND="${RDEPEND}
 PHP_EXT_ECONF_ARGS="--with-imagick=${EPREFIX}/usr"
 
 post_src_unpack() {
-	if [ ! -d "${S}" ] ; then
-		mv ${WORKDIR}/Imagick-* ${S} || die
-	fi
+    if [ ! -d "${S}" ] ; then
+        mv ${WORKDIR}/Imagick-* ${S} || die
+    fi
 }
 
 src_install() {

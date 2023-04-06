@@ -142,22 +142,19 @@ EGO_SUM=(
 go-module_set_globals
 
 SRC_URI="https://github.com/mongodb/mongo-tools/archive/c28b381c661ec65198a1f866202d8361cf72cfbb.tar.gz -> mongo-tools-100.7.0-c28b381c.tar.gz
-	${EGO_SUM_SRC_URI}"
+https://direct.funtoo.org/2d/45/2e/2d452e8c1ec90c1de4b6a8cd9543b4a888e65dd543a9afbbe2e0f47fcf84106879b5f4f88b5bd9dc6114e55147e6cb7f4dfa0933f165ed13624ca72fb79cc359 -> mongo-tools-100.7.0-funtoo-go-bundle-4988c78855943a6eb3b8a1b4a0ba3d6d79e062456abde245c3eb535d70121b5ab8c9ad33782a40b9b27dbf18ebccfc849088de83b6884dd2eea908fbd2c8567c.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
 IUSE="sasl ssl"
+S="${WORKDIR}/mongo-tools-c28b381c661ec65198a1f866202d8361cf72cfbb"
 
 RDEPEND="
 	net-libs/libpcap
 	sasl? ( dev-libs/cyrus-sasl )
 	ssl? ( dev-libs/openssl:0= )
 "
-
-post_src_unpack() {
-	mv "${WORKDIR}"/mongo-tools-* "${S}" || die
-}
 
 src_compile() {
 	local myconf=()
