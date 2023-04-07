@@ -10,5 +10,5 @@ RDEPEND=net-libs/libpcap sasl? ( dev-libs/cyrus-sasl ) ssl? ( dev-libs/openssl:0
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/mongodb/mongo-tools/archive/c28b381c661ec65198a1f866202d8361cf72cfbb.tar.gz -> mongo-tools-100.7.0-c28b381c.tar.gz https://direct.funtoo.org/2d/45/2e/2d452e8c1ec90c1de4b6a8cd9543b4a888e65dd543a9afbbe2e0f47fcf84106879b5f4f88b5bd9dc6114e55147e6cb7f4dfa0933f165ed13624ca72fb79cc359 -> mongo-tools-100.7.0-funtoo-go-bundle-4988c78855943a6eb3b8a1b4a0ba3d6d79e062456abde245c3eb535d70121b5ab8c9ad33782a40b9b27dbf18ebccfc849088de83b6884dd2eea908fbd2c8567c.tar.gz
-_eclasses_=go-module	67d6d3669d71be01a4f7523db6e95038	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=go-module	7aad60675732a578d7eb16e3e26a47e8	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=d8985f02644373535eab05c74593bd92
