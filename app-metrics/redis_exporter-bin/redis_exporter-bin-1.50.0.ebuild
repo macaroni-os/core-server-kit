@@ -10,8 +10,8 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Prometheus Exporter for Redis Metrics. Supports Redis 2.x, 3.x, 4.x, 5.x, 6.x, and 7.x"
 HOMEPAGE="https://github.com/oliver006/redis_exporter"
 SRC_URI="
-	amd64? ( https://github.com/oliver006/redis_exporter/releases/download/v1.49.0/redis_exporter-v1.49.0.linux-amd64.tar.gz -> redis_exporter-v1.49.0.linux-amd64.tar.gz )
-	arm64? ( https://github.com/oliver006/redis_exporter/releases/download/v1.49.0/redis_exporter-v1.49.0.linux-arm64.tar.gz -> redis_exporter-v1.49.0.linux-arm64.tar.gz )"
+	arm64? ( https://github.com/oliver006/redis_exporter/releases/download/v1.50.0/redis_exporter-v1.50.0.linux-arm64.tar.gz -> redis_exporter-v1.50.0.linux-arm64.tar.gz )
+	amd64? ( https://github.com/oliver006/redis_exporter/releases/download/v1.50.0/redis_exporter-v1.50.0.linux-amd64.tar.gz -> redis_exporter-v1.50.0.linux-amd64.tar.gz )"
 
 KEYWORDS="-* amd64 arm64"
 LICENSE="Apache-2.0"
