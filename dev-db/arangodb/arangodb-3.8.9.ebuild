@@ -4,16 +4,16 @@ EAPI=6
 CMAKE_BUILD_TYPE=Release
 PYTHON_COMPAT=( python3+ )
 
-inherit eutils user systemd python-any-r1 cmake-utils
+inherit cmake-utils eutils memsaver python-any-r1 systemd user
 
 DESCRIPTION="The multi-purpose multi-model NoSQL DB"
-HOMEPAGE="http://www.arangodb.org/"
+HOMEPAGE="http://www.arangodb.com/"
 SRC_URI="https://github.com/arangodb/arangodb/archive/v3.8.9.tar.gz -> arangodb-v3.8.9.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="~amd64 ~arm"
-IUSE="system-boost jemalloc systemd"
+KEYWORDS="*"
+IUSE="jemalloc +memsaver +system-boost systemd"
 
 DEPEND=">=sys-libs/readline-6.2_p1
 	>=dev-libs/openssl-1.1.0[-bindist]
@@ -76,6 +76,7 @@ src_configure() {
 		mycmakeargs+=( -DUSE_JEMALLOC=OFF )
 	fi
 
+	memsaver_src_configure
 	cmake-utils_src_configure
 }
 
