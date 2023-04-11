@@ -4,7 +4,7 @@
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
-SRC_URI="https://files.pythonhosted.org/packages/08/3e/d83d1fc0768cdb4d618a55b3319039b544685a0457b16085906b9cd32966/certbot-dns-rfc2136-2.2.0.tar.gz -> certbot-dns-rfc2136-2.2.0.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/63/12/db842dd9ef943d6f077a9a255fcc795afd3f172482402dfdc751e0d5819e/certbot-dns-rfc2136-2.5.0.tar.gz -> certbot-dns-rfc2136-2.5.0.tar.gz"
 KEYWORDS="*"
 
 inherit distutils-r1
