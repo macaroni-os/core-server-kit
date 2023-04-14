@@ -5,7 +5,6 @@ EAPI=7
 inherit systemd user
 
 MY_PN="${PN%-bin}"
-MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
@@ -25,7 +24,6 @@ RDEPEND="
 	>=net-libs/nodejs-16.18.1
 	=net-libs/nodejs-16*
 	dev-libs/nss
-	
 "
 
 # Do not complain about CFLAGS etc since we don't use them
@@ -37,7 +35,6 @@ QA_PRESTRIPPED="
 	opt/kibana/node_modules/re2/build/Release/re2.node
 "
 
-S="${WORKDIR}/${MY_P}"
 
 MY_FILESDIR="${REPODIR}/www-apps/elastic/files/${PN}"
 
@@ -48,7 +45,7 @@ pkg_setup() {
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
-		mv ${MY_P}* "${S}" || die
+		mv kibana-7.17.9 "${S}" || die
 	fi
 }
 
@@ -65,9 +62,6 @@ src_prepare() {
 	# move plugins to /var/lib/kibana
 	rm -r plugins || die
 	
-	# handle node.js version with RDEPEND
-	sed -i /node_version_validator/d \
-		src/setup_node_env/no_transpilation_dist.js || die
 }
 
 src_install() {

@@ -15,11 +15,14 @@ alloc-no-stdlib-2.0.4
 alloc-stdlib-0.2.2
 anyhow-1.0.70
 arrayvec-0.7.2
+asn1-rs-0.5.2
+asn1-rs-derive-0.4.0
+asn1-rs-impl-0.1.0
 ast_node-0.8.6
 async-compression-0.3.15
 async-stream-0.3.4
 async-stream-impl-0.3.4
-async-trait-0.1.67
+async-trait-0.1.68
 atty-0.2.14
 auto_impl-0.5.0
 autocfg-1.1.0
@@ -79,17 +82,22 @@ dashmap-5.4.0
 data-encoding-2.3.3
 data-url-0.2.0
 deno_ast-0.25.0
-deno_doc-0.59.0
-deno_emit-0.17.0
-deno_graph-0.45.0
+deno_doc-0.61.0
+deno_emit-0.19.0
+deno_graph-0.47.1
 deno_lint-0.43.0
+deno_lockfile-0.13.0
+deno_npm-0.2.0
+deno_semver-0.2.1
 deno_task_shell-0.10.0
 der-0.6.1
+der-parser-8.2.0
 derive_more-0.99.17
 diff-0.1.13
 digest-0.8.1
 digest-0.9.0
 digest-0.10.6
+displaydoc-0.2.3
 dissimilar-1.0.4
 dlopen-0.1.8
 dlopen_derive-0.1.4
@@ -115,11 +123,12 @@ errno-0.2.8
 errno-dragonfly-0.1.2
 error-code-2.3.1
 escape8259-0.5.2
-eszip-0.38.0
+eszip-0.40.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
 fastrand-1.9.0
+fastwebsockets-0.1.0
 fd-lock-3.0.10
 ff-0.12.1
 filetime-0.2.20
@@ -133,15 +142,15 @@ from_variant-0.1.4
 fs3-0.5.0
 fsevent-sys-4.1.0
 fslock-0.1.8
-futures-0.3.27
-futures-channel-0.3.27
-futures-core-0.3.27
-futures-executor-0.3.27
-futures-io-0.3.27
-futures-macro-0.3.27
-futures-sink-0.3.27
-futures-task-0.3.27
-futures-util-0.3.27
+futures-0.3.28
+futures-channel-0.3.28
+futures-core-0.3.28
+futures-executor-0.3.28
+futures-io-0.3.28
+futures-macro-0.3.28
+futures-sink-0.3.28
+futures-task-0.3.28
+futures-util-0.3.28
 fwdansi-1.1.0
 generic-array-0.12.4
 generic-array-0.14.6
@@ -221,8 +230,10 @@ md-5-0.10.5
 md4-0.10.2
 memchr-2.5.0
 memmap2-0.5.10
+memmem-0.1.1
 memoffset-0.6.5
 mime-0.3.16
+minimal-lexical-0.2.1
 miniz_oxide-0.5.4
 mio-0.8.6
 monch-0.4.1
@@ -232,6 +243,7 @@ netif-0.1.6
 new_debug_unreachable-1.0.4
 nibble_vec-0.1.0
 nix-0.24.2
+nom-7.1.3
 notify-5.0.0
 ntapi-0.4.0
 num-bigint-0.4.3
@@ -240,6 +252,7 @@ num-integer-0.1.45
 num-iter-0.1.43
 num-traits-0.2.15
 num_cpus-1.15.0
+oid-registry-0.6.1
 once_cell-1.17.1
 opaque-debug-0.3.0
 openssl-probe-0.1.5
@@ -283,7 +296,7 @@ proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro-hack-0.5.20+deprecated
 proc-macro2-0.4.30
-proc-macro2-1.0.52
+proc-macro2-1.0.56
 psm-0.1.21
 pty2-0.1.0
 pulldown-cmark-0.9.2
@@ -310,6 +323,7 @@ rusqlite-0.28.0
 rustc-hash-1.1.0
 rustc_version-0.2.3
 rustc_version-0.4.0
+rusticata-macros-4.1.0
 rustix-0.36.9
 rustls-0.20.8
 rustls-native-certs-0.6.2
@@ -344,6 +358,7 @@ sha3-0.10.6
 shell-escape-0.1.5
 signal-hook-registry-1.4.1
 signature-1.6.4
+simdutf8-0.1.4
 siphasher-0.3.10
 slab-0.4.8
 smallvec-1.10.0
@@ -389,7 +404,7 @@ swc_visit-0.5.4
 swc_visit_macros-0.5.5
 syn-0.15.44
 syn-1.0.109
-syn-2.0.0
+syn-2.0.13
 synstructure-0.12.6
 tar-0.4.38
 tempfile-3.4.0
@@ -401,6 +416,7 @@ thiserror-1.0.38
 thiserror-impl-1.0.38
 time-0.3.20
 time-core-0.1.0
+time-macros-0.2.8
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 tokio-1.25.0
@@ -493,6 +509,7 @@ winnow-0.3.6
 winreg-0.10.1
 winres-0.1.12
 x25519-dalek-2.0.0-pre.1
+x509-parser-0.15.0
 xattr-0.2.3
 yansi-0.5.1
 zeroize-1.5.7
@@ -506,7 +523,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.32.3 -> deno-1.32.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.32.4 -> deno-1.32.4.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
