@@ -8,9 +8,9 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 PHP_INI_NAME="50-http"
 
-inherit php-ext-pecl-r3
-
 USE_PHP="php7-4 php8-0 php8-1 php8-2"
+
+inherit php-ext-pecl-r3
 
 KEYWORDS="*"
 
