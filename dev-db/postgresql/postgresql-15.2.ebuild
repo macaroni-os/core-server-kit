@@ -6,16 +6,16 @@ PYTHON_COMPAT=( python3+ )
 
 inherit flag-o-matic linux-info multilib pam prefix python-single-r1 user
 
-KEYWORDS="*"
+KEYWORDS="next"
 
-SLOT=10
+SLOT=15
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
-SRC_URI="https://ftp.postgresql.org/pub/source/v10.23/postgresql-10.23.tar.bz2 -> postgresql-10.23.tar.bz2"
+SRC_URI="https://ftp.postgresql.org/pub/source/v15.2/postgresql-15.2.tar.bz2 -> postgresql-15.2.tar.bz2"
 
-IUSE="debug doc icu kerberos ldap nls pam
+IUSE="debug doc icu kerberos ldap llvm lz4 nls pam
 	perl python +readline selinux +server ssl static-libs tcl
 	threads uuid xml zlib"
 
@@ -28,6 +28,11 @@ virtual/libintl
 icu? ( dev-libs/icu:= )
 kerberos? ( virtual/krb5 )
 ldap? ( net-nds/openldap:= )
+llvm? (
+	sys-devel/llvm:=
+	sys-devel/clang:=
+)
+lz4? ( app-arch/lz4 )
 pam? ( sys-libs/pam )
 perl? ( >=dev-lang/perl-5.8:= )
 python? ( ${PYTHON_DEPS} )
@@ -69,9 +74,6 @@ xml? ( virtual/pkgconfig )
 RDEPEND="${CDEPEND}
 selinux? ( sec-policy/selinux-postgresql )
 "
-PATCHES=(
-	"${FILESDIR}"/postgresql-10.0-icu68.patch
-)
 pkg_setup() {
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/sh /var/lib/postgresql postgres
@@ -89,7 +91,7 @@ src_prepare() {
 	# hardened and non-hardened environments. (Bug #528786)
 	sed -e 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
 
-	use server || eapply "${FILESDIR}/${PN}-10-no-server.patch"
+	use server || eapply "${FILESDIR}/${PN}-15-no-server.patch"
 
 	if use pam ; then
 		sed "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -133,8 +135,8 @@ src_configure() {
 		$(use_with icu)
 		$(use_with kerberos gssapi)
 		$(use_with ldap)
-		
-		
+		$(use_with llvm)
+		$(use_with lz4)
 		$(use_with pam)
 		$(use_with perl)
 		$(use_with python)
