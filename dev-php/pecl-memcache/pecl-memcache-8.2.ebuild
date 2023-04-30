@@ -15,7 +15,7 @@ inherit php-ext-pecl-r3
 
 KEYWORDS="*"
 
-SRC_URI="https://github.com/websupport-sk/pecl-memcache/tarball/96910ce9c4b59733d94162f422918256fe738e83 -> pecl-memcache-8.0.1-96910ce.tar.gz"
+SRC_URI="https://github.com/websupport-sk/pecl-memcache/tarball/05db30910e791b3841587d18a4e37b4cb6aa04c3 -> pecl-memcache-8.2-05db309.tar.gz"
 
 DESCRIPTION="PHP extension for using memcached"
 LICENSE="PHP-3"
