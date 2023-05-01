@@ -12,7 +12,7 @@ SRC_URI="https://api.github.com/repos/nodejs/node/tarball/v14.21.3 -> nodejs-14.
 
 LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=""
