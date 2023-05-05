@@ -104,7 +104,7 @@ dlopen-0.1.8
 dlopen_derive-0.1.4
 dotenv-0.15.0
 dprint-core-0.60.0
-dprint-plugin-json-0.17.0
+dprint-plugin-json-0.17.2
 dprint-plugin-markdown-0.15.2
 dprint-plugin-typescript-0.84.2
 dprint-swc-ext-0.9.0
@@ -131,7 +131,7 @@ fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
 fastrand-1.9.0
-fastwebsockets-0.2.6
+fastwebsockets-0.3.1
 fd-lock-3.0.10
 ff-0.12.1
 ff-0.13.0
@@ -204,7 +204,7 @@ itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
 js-sys-0.3.61
-jsonc-parser-0.21.0
+jsonc-parser-0.21.1
 junction-0.2.0
 keccak-0.1.3
 kqueue-1.0.7
@@ -436,6 +436,8 @@ text-size-1.1.0
 text_lines-0.6.0
 thiserror-1.0.38
 thiserror-impl-1.0.38
+tikv-jemalloc-sys-0.5.3+5.3.0-patched
+tikv-jemallocator-0.5.0
 time-0.3.20
 time-core-0.1.0
 time-macros-0.2.8
@@ -543,7 +545,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.33.1 -> deno-1.33.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.33.2 -> deno-1.33.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
