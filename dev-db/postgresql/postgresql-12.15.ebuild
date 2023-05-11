@@ -6,14 +6,14 @@ PYTHON_COMPAT=( python3+ )
 
 inherit flag-o-matic linux-info multilib pam prefix python-single-r1 user
 
-KEYWORDS="*"
+KEYWORDS="next"
 
-SLOT=11
+SLOT=12
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
-SRC_URI="https://ftp.postgresql.org/pub/source/v11.19/postgresql-11.19.tar.bz2 -> postgresql-11.19.tar.bz2"
+SRC_URI="https://ftp.postgresql.org/pub/source/v12.15/postgresql-12.15.tar.bz2 -> postgresql-12.15.tar.bz2"
 
 IUSE="debug doc icu kerberos ldap llvm nls pam
 	perl python +readline selinux +server ssl static-libs tcl
@@ -90,7 +90,7 @@ src_prepare() {
 	# hardened and non-hardened environments. (Bug #528786)
 	sed -e 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
 
-	use server || eapply "${FILESDIR}/${PN}-11-no-server.patch"
+	use server || eapply "${FILESDIR}/${PN}-12-no-server.patch"
 
 	if use pam ; then
 		sed "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
