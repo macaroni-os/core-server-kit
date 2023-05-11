@@ -5,7 +5,7 @@ EAPI=7
 PYTHON_COMPAT=( python3+ )
 inherit distutils-r1
 
-DESCRIPTION=""
+DESCRIPTION="ACME client"
 HOMEPAGE="https://github.com/letsencrypt/letsencrypt https://pypi.org/project/certbot/"
 SRC_URI="https://files.pythonhosted.org/packages/0e/fd/192cb7d79f798432b1b2e7a9998b2f12dd589c50ff88e31553d95143b01c/certbot-2.6.0.tar.gz -> certbot-2.6.0.tar.gz
 "

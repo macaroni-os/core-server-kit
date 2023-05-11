@@ -5,7 +5,7 @@ EAPI=7
 PYTHON_COMPAT=( python3+ )
 inherit distutils-r1
 
-DESCRIPTION=""
+DESCRIPTION="Low-level, data-driven core of boto 3."
 HOMEPAGE="https://github.com/boto/botocore https://pypi.org/project/botocore/"
 SRC_URI="https://files.pythonhosted.org/packages/51/45/13f2419915adc6ca8eeb11069df42a29a693134be65ba368d72fc07a5211/botocore-1.29.132.tar.gz -> botocore-1.29.132.tar.gz
 "
