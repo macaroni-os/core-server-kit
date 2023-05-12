@@ -12,16 +12,16 @@ SRC_URI="https://files.pythonhosted.org/packages/0e/fd/192cb7d79f798432b1b2e7a99
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/acme-1.28.0[${PYTHON_USEDEP}]
+	>=dev-python/cryptography-2.1.4[${PYTHON_USEDEP}]
+	>=dev-python/parsedatetime-2.4[${PYTHON_USEDEP}]
 	dev-python/configargparse[${PYTHON_USEDEP}]
 	dev-python/configobj[${PYTHON_USEDEP}]
-	>=dev-python/cryptography-2.1.4[${PYTHON_USEDEP}]
 	dev-python/distro[${PYTHON_USEDEP}]
 	dev-python/josepy[${PYTHON_USEDEP}]
-	>=dev-python/parsedatetime-2.4[${PYTHON_USEDEP}]
 	dev-python/pyrfc3339[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/zope-component[${PYTHON_USEDEP}]
 	dev-python/zope-interface[${PYTHON_USEDEP}]"
 

@@ -13,14 +13,14 @@ SRC_URI="https://files.pythonhosted.org/packages/fd/8e/166279430adea94c9fa72079f
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
 	!app-crypt/acme[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-2.1.4[${PYTHON_USEDEP}]
 	>=dev-python/josepy-1.9.0[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-17.3.0[${PYTHON_USEDEP}]
 	dev-python/pyrfc3339[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
+	dev-python/requests-toolbelt[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/requests-toolbelt[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 IUSE=""
 SLOT="0"
