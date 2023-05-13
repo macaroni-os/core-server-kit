@@ -85,7 +85,7 @@ deno_doc-0.62.0
 deno_emit-0.20.0
 deno_graph-0.48.1
 deno_lint-0.45.0
-deno_lockfile-0.13.0
+deno_lockfile-0.14.0
 deno_media_type-0.1.0
 deno_npm-0.3.0
 deno_semver-0.2.2
@@ -106,7 +106,7 @@ dotenv-0.15.0
 dprint-core-0.60.0
 dprint-plugin-json-0.17.2
 dprint-plugin-markdown-0.15.2
-dprint-plugin-typescript-0.84.2
+dprint-plugin-typescript-0.84.4
 dprint-swc-ext-0.9.0
 dsa-0.6.1
 dyn-clone-1.0.11
@@ -244,7 +244,7 @@ mime-0.3.16
 minimal-lexical-0.2.1
 miniz_oxide-0.5.4
 mio-0.8.6
-monch-0.4.1
+monch-0.4.2
 napi-build-1.2.1
 napi-sys-2.2.3
 netif-0.1.6
@@ -434,8 +434,8 @@ termcolor-1.2.0
 testing_macros-0.2.8
 text-size-1.1.0
 text_lines-0.6.0
-thiserror-1.0.38
-thiserror-impl-1.0.38
+thiserror-1.0.40
+thiserror-impl-1.0.40
 tikv-jemalloc-sys-0.5.3+5.3.0-patched
 tikv-jemallocator-0.5.0
 time-0.3.20
@@ -443,8 +443,8 @@ time-core-0.1.0
 time-macros-0.2.8
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
-tokio-1.25.0
-tokio-macros-1.8.2
+tokio-1.28.1
+tokio-macros-2.1.0
 tokio-rustls-0.23.4
 tokio-socks-0.5.1
 tokio-stream-0.1.12
@@ -491,7 +491,7 @@ urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.1
 uuid-1.3.0
-v8-0.71.0
+v8-0.71.1
 vcpkg-0.2.15
 version_check-0.9.4
 vsimd-0.8.0
@@ -519,14 +519,23 @@ winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
 windows-sys-0.45.0
+windows-sys-0.48.0
 windows-targets-0.42.2
+windows-targets-0.48.0
 windows_aarch64_gnullvm-0.42.2
+windows_aarch64_gnullvm-0.48.0
 windows_aarch64_msvc-0.42.2
+windows_aarch64_msvc-0.48.0
 windows_i686_gnu-0.42.2
+windows_i686_gnu-0.48.0
 windows_i686_msvc-0.42.2
+windows_i686_msvc-0.48.0
 windows_x86_64_gnu-0.42.2
+windows_x86_64_gnu-0.48.0
 windows_x86_64_gnullvm-0.42.2
+windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
+windows_x86_64_msvc-0.48.0
 winnow-0.3.6
 winreg-0.10.1
 winres-0.1.12
@@ -545,7 +554,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.33.2 -> deno-1.33.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.33.3 -> deno-1.33.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
