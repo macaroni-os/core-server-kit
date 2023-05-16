@@ -6,7 +6,7 @@ inherit autotools flag-o-matic multilib-minimal toolchain-funcs
 
 # This works, but autogen makes it unnecessary to work out
 # MY_PV="$(printf "%u%02u%02u%02u" $(ver_rs 1- " "))"
-MY_PV=3410200
+MY_PV=3420000
 
 S="${WORKDIR}/${PN}-src-${MY_PV}"
 DESCRIPTION="SQL database engine"
@@ -15,8 +15,8 @@ HOMEPAGE="https://sqlite.org/"
 # On version updates, make sure to read the forum (https://sqlite.org/forum/forum)
 # for hints regarding test failures, backports, etc.
 SRC_URI="
-	doc? ( https://sqlite.org/2023/sqlite-doc-3410200.zip -> sqlite-doc-3410200.zip )
-	https://sqlite.org/2023/sqlite-src-3410200.zip -> sqlite-src-3410200.zip
+	doc? ( https://sqlite.org/2023/sqlite-doc-3420000.zip -> sqlite-doc-3420000.zip )
+	https://sqlite.org/2023/sqlite-src-3420000.zip -> sqlite-src-3420000.zip
 "
 
 LICENSE="public-domain"
