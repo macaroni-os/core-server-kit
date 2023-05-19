@@ -20,6 +20,7 @@ asn1-rs-derive-0.4.0
 asn1-rs-impl-0.1.0
 ast_node-0.9.3
 async-compression-0.3.15
+async-compression-0.4.0
 async-stream-0.3.4
 async-stream-impl-0.3.4
 async-trait-0.1.68
@@ -87,7 +88,7 @@ deno_graph-0.48.1
 deno_lint-0.45.0
 deno_lockfile-0.14.0
 deno_media_type-0.1.0
-deno_npm-0.3.0
+deno_npm-0.4.0
 deno_semver-0.2.2
 deno_task_shell-0.11.0
 der-0.6.1
@@ -184,7 +185,7 @@ httpdate-1.0.2
 humantime-2.1.0
 hyper-0.14.26
 hyper-1.0.0-rc.3
-hyper-rustls-0.23.2
+hyper-rustls-0.24.0
 idna-0.2.3
 idna-0.3.0
 if_chain-1.0.2
@@ -328,7 +329,7 @@ redox_syscall-0.2.16
 regex-1.7.1
 regex-syntax-0.6.28
 relative-path-1.8.0
-reqwest-0.11.14
+reqwest-0.11.18
 resolv-conf-0.7.0
 rfc6979-0.3.1
 rfc6979-0.4.0
@@ -341,9 +342,10 @@ rustc_version-0.2.3
 rustc_version-0.4.0
 rusticata-macros-4.1.0
 rustix-0.36.9
-rustls-0.20.8
+rustls-0.21.0
 rustls-native-certs-0.6.2
 rustls-pemfile-1.0.2
+rustls-webpki-0.100.1
 rustversion-1.0.12
 rustyline-10.0.0
 rustyline-derive-0.7.0
@@ -445,7 +447,7 @@ tinyvec-1.6.0
 tinyvec_macros-0.1.1
 tokio-1.28.1
 tokio-macros-2.1.0
-tokio-rustls-0.23.4
+tokio-rustls-0.24.0
 tokio-socks-0.5.1
 tokio-stream-0.1.12
 tokio-util-0.7.7
@@ -491,7 +493,7 @@ urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.1
 uuid-1.3.0
-v8-0.71.1
+v8-0.71.2
 vcpkg-0.2.15
 version_check-0.9.4
 vsimd-0.8.0
@@ -554,7 +556,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.33.3 -> deno-1.33.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.33.4 -> deno-1.33.4.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
