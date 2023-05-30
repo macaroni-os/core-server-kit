@@ -15,7 +15,6 @@ RDEPEND="
 	dev-python/botocore[${PYTHON_USEDEP}]
 	dev-python/jmespath[${PYTHON_USEDEP}]
 	dev-python/s3transfer[${PYTHON_USEDEP}]"
-
 IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"

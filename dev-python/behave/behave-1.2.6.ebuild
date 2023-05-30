@@ -17,7 +17,6 @@ RDEPEND="
 	>=dev-python/parse_type-0.4.2[${PYTHON_USEDEP}]
 	>=dev-python/six-1.12.0[${PYTHON_USEDEP}]
 	dev-python/colorama[${PYTHON_USEDEP}]"
-
 IUSE=""
 SLOT="0"
 LICENSE="BSD"

@@ -21,7 +21,6 @@ RDEPEND="
 	dev-python/pytz[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/requests-toolbelt[${PYTHON_USEDEP}]"
-
 IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"

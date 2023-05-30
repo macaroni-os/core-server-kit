@@ -15,7 +15,6 @@ RDEPEND="
 	dev-python/jmespath[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/urllib3[${PYTHON_USEDEP}]"
-
 IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"

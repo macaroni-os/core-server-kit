@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -7,11 +6,11 @@ MY_PN="${PN/PEAR-/}"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A class that facillitates the search of filesystems"
-HOMEPAGE="https://pear.php.net/package/${MY_PN}"
-SRC_URI="http://download.pear.php.net/package/${MY_P}.tgz"
+HOMEPAGE="http://pear.php.net/package/${MY_PN}"
+SRC_URI="https://github.com/pear/File_Find/tarball/b074ada71e3419bbffc9a4b7db8abe9ac23c8e9e -> File_Find-1.3.3-b074ada.tar.gz"
 LICENSE="PHP-3.01"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="*"
 IUSE="test"
 
 # Really only needs PEAR-Exception at runtime.
@@ -20,6 +19,12 @@ RDEPEND="dev-lang/php:*
 DEPEND="test? ( dev-php/PEAR-PEAR )"
 
 S="${WORKDIR}/${MY_P}"
+
+post_src_unpack() {
+    if [ ! -d "${S}" ] ; then
+        mv ${WORKDIR}/pear-* ${S} || die
+    fi
+}
 
 src_prepare() {
 	eapply_user
