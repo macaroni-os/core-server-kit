@@ -19,7 +19,6 @@ RDEPEND="
 	dev-python/rsa[${PYTHON_USEDEP}]
 	dev-python/s3transfer[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]"
-
 IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"

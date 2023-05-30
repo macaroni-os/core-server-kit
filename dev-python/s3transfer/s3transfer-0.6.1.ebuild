@@ -11,8 +11,6 @@ SRC_URI="https://files.pythonhosted.org/packages/49/bd/def2ab4c04063a5e114963aae
 "
 
 DEPEND=""
-RDEPEND="$(python_gen_cond_dep '<dev-python/futures-4.0.0[${PYTHON_USEDEP}] >=dev-python/futures-2.2.0[${PYTHON_USEDEP}]' -2)"
-
 IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"

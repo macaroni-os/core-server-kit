@@ -1,23 +1,25 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
 inherit php-pear-r2
 
 DESCRIPTION="Class that makes it easy to build console style tables"
+SRC_URI="https://github.com/pear/Console_Table/tarball/1930c11897ca61fd24b95f2f785e99e0f36dcdea -> Console_Table-1.3.1-1930c11.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="test"
-BDEPEND="test? ( dev-php/pear )"
+KEYWORDS="*"
+IUSE=""
+
+post_src_unpack() {
+    if [ ! -d "${S}" ] ; then
+        mv ${WORKDIR}/pear-* ${S} || die
+    fi
+}
 
 src_install() {
 	insinto /usr/share/php/Console
 	doins Table.php
 	php-pear-r2_install_packagexml
-}
-
-src_test() {
-	pear run-tests tests || die "Tests failed"
 }

@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm test
+DEPEND=test? ( >=dev-php/PEAR-PEAR-1.10.1 )
+DESCRIPTION=Fast and safe little cache system
+EAPI=6
+HOMEPAGE=https://pear.php.net/package/Cache_Lite
+IUSE=test
+KEYWORDS=*
+LICENSE=LGPL-2.1
+RDEPEND=>=dev-php/PEAR-PEAR-1.10.1 >=dev-php/pear-1.8.1
+SLOT=0
+SRC_URI=https://github.com/pear/Cache_Lite/tarball/fc7c6703cfbddc55c80c5ae3926dcc80c1d993f9 -> Cache_Lite-2.0.0-fc7c670.tar.gz
+_eclasses_=php-pear-r2	479e8a084e98f4d730da647bba3e589e
+_md5_=4429c9c3b976098b9e8f857d9cb2d64e

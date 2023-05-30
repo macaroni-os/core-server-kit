@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Tar file management class
+EAPI=7
+HOMEPAGE=http://pear.php.net/package/Archive_Tar
+KEYWORDS=*
+LICENSE=BSD
+PDEPEND=dev-php/PEAR-PEAR
+RDEPEND=dev-lang/php:*[bzip2,pcre(+),zlib]
+SLOT=0
+SRC_URI=https://github.com/pear/Archive_Tar/tarball/4d761c5334c790e45ef3245f0864b8955c562caa -> Archive_Tar-1.4.14-4d761c5.tar.gz
+_md5_=a5df2674b467ae2d893b27eb91b66b7b
