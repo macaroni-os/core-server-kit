@@ -8,7 +8,7 @@ MY_P="${PN}-${PV/_beta/-dev}"
 
 DESCRIPTION="A TCP/HTTP reverse proxy for high availability environments"
 HOMEPAGE="http://www.haproxy.org"
-SRC_URI="http://www.haproxy.org/download/2.4/src/haproxy-2.4.22.tar.gz -> haproxy-2.4.22.tar.gz"
+SRC_URI="http://www.haproxy.org/download/2.4/src/haproxy-2.4.23.tar.gz -> haproxy-2.4.23.tar.gz"
 KEYWORDS="*"
 
 LICENSE="GPL-2 LGPL-2.1"

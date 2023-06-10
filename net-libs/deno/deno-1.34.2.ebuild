@@ -10,6 +10,7 @@ aes-0.8.2
 aes-gcm-0.10.1
 aes-kw-0.2.1
 ahash-0.7.6
+ahash-0.8.3
 aho-corasick-0.7.20
 alloc-no-stdlib-2.0.4
 alloc-stdlib-0.2.2
@@ -18,7 +19,7 @@ arrayvec-0.7.2
 asn1-rs-0.5.2
 asn1-rs-derive-0.4.0
 asn1-rs-impl-0.1.0
-ast_node-0.9.3
+ast_node-0.9.4
 async-compression-0.3.15
 async-compression-0.4.0
 async-stream-0.3.4
@@ -46,7 +47,7 @@ block-modes-0.9.1
 block-padding-0.3.2
 brotli-3.3.4
 brotli-decompressor-2.3.4
-bumpalo-3.12.0
+bumpalo-3.13.0
 byteorder-1.4.3
 bytes-1.4.0
 cache_control-0.2.0
@@ -81,14 +82,14 @@ curve25519-dalek-3.2.0
 dashmap-5.4.0
 data-encoding-2.3.3
 data-url-0.2.0
-deno_ast-0.26.0
-deno_doc-0.62.0
-deno_emit-0.20.0
-deno_graph-0.48.1
-deno_lint-0.45.0
+deno_ast-0.27.0
+deno_doc-0.63.1
+deno_emit-0.24.0
+deno_graph-0.49.0
+deno_lint-0.47.0
 deno_lockfile-0.14.1
 deno_media_type-0.1.0
-deno_npm-0.6.0
+deno_npm-0.8.0
 deno_semver-0.2.2
 deno_task_shell-0.12.0
 der-0.6.1
@@ -104,11 +105,11 @@ dissimilar-1.0.4
 dlopen-0.1.8
 dlopen_derive-0.1.4
 dotenv-0.15.0
-dprint-core-0.60.0
-dprint-plugin-json-0.17.2
-dprint-plugin-markdown-0.15.2
-dprint-plugin-typescript-0.84.4
-dprint-swc-ext-0.9.0
+dprint-core-0.62.0
+dprint-plugin-json-0.17.3
+dprint-plugin-markdown-0.15.3
+dprint-plugin-typescript-0.85.0
+dprint-swc-ext-0.10.0
 dsa-0.6.1
 dyn-clone-1.0.11
 dynasm-1.2.3
@@ -127,7 +128,7 @@ errno-0.2.8
 errno-dragonfly-0.1.2
 error-code-2.3.1
 escape8259-0.5.2
-eszip-0.41.0
+eszip-0.44.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
@@ -168,7 +169,8 @@ group-0.12.1
 group-0.13.0
 h2-0.3.17
 hashbrown-0.12.3
-hashlink-0.8.1
+hashbrown-0.13.2
+hashlink-0.8.2
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
@@ -189,7 +191,6 @@ hyper-rustls-0.24.0
 idna-0.2.3
 idna-0.3.0
 if_chain-1.0.2
-import_map-0.13.0
 import_map-0.15.0
 indexmap-1.9.2
 inotify-0.9.6
@@ -221,8 +222,8 @@ lexical-util-0.8.5
 lexical-write-float-0.8.5
 lexical-write-integer-0.8.5
 libc-0.2.140
-libffi-3.1.0
-libffi-sys-2.1.0
+libffi-3.2.0
+libffi-sys-2.2.1
 libloading-0.7.4
 libm-0.2.6
 libsqlite3-sys-0.25.2
@@ -315,7 +316,7 @@ proc-macro2-0.4.30
 proc-macro2-1.0.56
 psm-0.1.21
 pty2-0.1.0
-pulldown-cmark-0.9.2
+pulldown-cmark-0.9.3
 quick-error-1.2.3
 quote-0.6.13
 quote-1.0.26
@@ -400,32 +401,32 @@ string_cache_codegen-0.5.2
 string_enum-0.4.0
 strsim-0.10.0
 subtle-2.4.1
-swc_atoms-0.5.3
-swc_bundler-0.213.23
-swc_common-0.31.4
+swc_atoms-0.5.6
+swc_bundler-0.214.25
+swc_common-0.31.12
 swc_config-0.1.5
 swc_config_macro-0.1.1
-swc_ecma_ast-0.103.4
-swc_ecma_codegen-0.138.11
+swc_ecma_ast-0.104.5
+swc_ecma_codegen-0.139.15
 swc_ecma_codegen_macros-0.7.2
-swc_ecma_dep_graph-0.105.10
-swc_ecma_loader-0.43.6
-swc_ecma_parser-0.133.10
-swc_ecma_transforms_base-0.126.13
-swc_ecma_transforms_classes-0.115.13
+swc_ecma_dep_graph-0.106.12
+swc_ecma_loader-0.43.14
+swc_ecma_parser-0.134.12
+swc_ecma_transforms_base-0.127.16
+swc_ecma_transforms_classes-0.116.16
 swc_ecma_transforms_macros-0.5.1
-swc_ecma_transforms_optimization-0.186.20
-swc_ecma_transforms_proposal-0.160.16
-swc_ecma_transforms_react-0.172.19
-swc_ecma_transforms_typescript-0.176.19
-swc_ecma_utils-0.116.10
-swc_ecma_visit-0.89.4
+swc_ecma_transforms_optimization-0.187.21
+swc_ecma_transforms_proposal-0.161.20
+swc_ecma_transforms_react-0.173.18
+swc_ecma_transforms_typescript-0.177.20
+swc_ecma_utils-0.117.13
+swc_ecma_visit-0.90.5
 swc_eq_ignore_macros-0.1.1
-swc_fast_graph-0.19.4
-swc_graph_analyzer-0.20.5
+swc_fast_graph-0.19.12
+swc_graph_analyzer-0.20.13
 swc_macros_common-0.3.7
-swc_visit-0.5.5
-swc_visit_macros-0.5.6
+swc_visit-0.5.6
+swc_visit_macros-0.5.7
 syn-0.15.44
 syn-1.0.109
 syn-2.0.13
@@ -554,7 +555,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.34.1 -> deno-1.34.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.34.2 -> deno-1.34.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
