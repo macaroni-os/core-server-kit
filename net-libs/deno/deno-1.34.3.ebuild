@@ -14,6 +14,11 @@ ahash-0.8.3
 aho-corasick-0.7.20
 alloc-no-stdlib-2.0.4
 alloc-stdlib-0.2.2
+anstream-0.3.2
+anstyle-1.0.0
+anstyle-parse-0.2.0
+anstyle-query-1.0.0
+anstyle-wincon-1.0.1
 anyhow-1.0.70
 arrayvec-0.7.2
 asn1-rs-0.5.2
@@ -56,11 +61,13 @@ cc-1.0.79
 cfg-if-1.0.0
 chrono-0.4.22
 cipher-0.4.4
-clap-4.1.10
-clap_complete-4.1.5
-clap_complete_fig-4.1.2
-clap_lex-0.3.3
+clap-4.3.3
+clap_builder-4.3.3
+clap_complete-4.3.1
+clap_complete_fig-4.3.1
+clap_lex-0.5.0
 clipboard-win-4.5.0
+colorchoice-1.0.0
 console_static_text-0.8.1
 const-oid-0.9.2
 convert_case-0.4.0
@@ -89,7 +96,7 @@ deno_graph-0.49.0
 deno_lint-0.47.0
 deno_lockfile-0.14.1
 deno_media_type-0.1.0
-deno_npm-0.8.0
+deno_npm-0.8.1
 deno_semver-0.2.2
 deno_task_shell-0.12.0
 der-0.6.1
@@ -105,8 +112,8 @@ dissimilar-1.0.4
 dlopen-0.1.8
 dlopen_derive-0.1.4
 dotenv-0.15.0
-dprint-core-0.62.0
-dprint-plugin-json-0.17.3
+dprint-core-0.62.1
+dprint-plugin-json-0.17.4
 dprint-plugin-markdown-0.15.3
 dprint-plugin-typescript-0.85.0
 dprint-swc-ext-0.10.0
@@ -268,7 +275,6 @@ opaque-debug-0.3.0
 openssl-probe-0.1.5
 ordered-float-2.10.0
 os_pipe-1.0.1
-os_str_bytes-6.4.1
 output_vt100-0.1.3
 outref-0.5.1
 p224-0.13.2
@@ -446,6 +452,7 @@ tinyvec-1.6.0
 tinyvec_macros-0.1.1
 tokio-1.28.1
 tokio-macros-2.1.0
+tokio-metrics-0.2.2
 tokio-rustls-0.24.0
 tokio-socks-0.5.1
 tokio-stream-0.1.12
@@ -555,7 +562,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.34.2 -> deno-1.34.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.34.3 -> deno-1.34.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
