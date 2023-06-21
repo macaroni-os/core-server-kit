@@ -11,6 +11,6 @@ RDEPEND=>=dev-libs/libfastjson-0.99.8:= >=dev-libs/libestr-0.1.9 >=sys-libs/zlib
 REQUIRED_USE=kubernetes? ( normalize ) ssl? ( || ( gnutls openssl ) )
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://github.com/rsyslog/rsyslog/tarball/63fed99bccb7bef93d5d386674f0471c26cd9173 -> rsyslog-8.2304.0-63fed99.tar.gz src? ( https://github.com/rsyslog/rsyslog/tarball/63fed99bccb7bef93d5d386674f0471c26cd9173 -> rsyslog-8.2304.0-63fed99.tar.gz ) doc? ( https://github.com/rsyslog/rsyslog-doc/tarball/a1ff6c8b024f6bc295127129f02e05adb9a14274 -> rsyslog-doc-8.2304.0-a1ff6c8.tar.gz )
+SRC_URI=https://github.com/rsyslog/rsyslog/tarball/9f32d85d43285a5577b1cc29b58768f0fee2e367 -> rsyslog-8.2306.0-9f32d85.tar.gz src? ( https://github.com/rsyslog/rsyslog/tarball/9f32d85d43285a5577b1cc29b58768f0fee2e367 -> rsyslog-8.2306.0-9f32d85.tar.gz ) doc? ( https://github.com/rsyslog/rsyslog-doc/tarball/8408b26541b4b1c4884fb5644a150e4b70990485 -> rsyslog-doc-8.2306.0-8408b26.tar.gz )
 _eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	libtool	f143db5a74ccd9ca28c1234deffede96	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	d3f9ec72badd0291b655682d67876adc	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=a614361c6228e5689b009f7c859d189c
+_md5_=6ef5e50fca4e51b1f4b8daddd206bbff

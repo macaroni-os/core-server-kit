@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="Low-level, data-driven core of boto 3."
 HOMEPAGE="https://github.com/boto/botocore https://pypi.org/project/botocore/"
-SRC_URI="https://files.pythonhosted.org/packages/51/a4/e6c275b3d9774efd9e919fc368ffed3fdd79cd7903bb35c73fe29ac9d357/botocore-1.29.155.tar.gz -> botocore-1.29.155.tar.gz
+SRC_URI="https://files.pythonhosted.org/packages/26/3b/3481a25121ffa730b3070cc048f76073584bcdc8cfd1f709429ac188ab6e/botocore-1.29.157.tar.gz -> botocore-1.29.157.tar.gz
 "
 
 DEPEND="dev-python/tomli[${PYTHON_USEDEP}]"
@@ -19,4 +19,4 @@ IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-S="${WORKDIR}/botocore-1.29.155"
+S="${WORKDIR}/botocore-1.29.157"
