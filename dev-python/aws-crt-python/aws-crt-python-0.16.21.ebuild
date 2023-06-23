@@ -9,7 +9,7 @@ DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
 	https://github.com/awslabs/aws-crt-python/tarball/462596483dc088a66750d95258cddd62ff1d9091 -> aws-crt-python-0.16.21-4625964.tar.gz
-	https://github.com/awslabs/aws-c-auth/tarball/c3c542fe67225b81fa4bab9151c4d879f34587f4 -> aws-c-auth-0.6.28-c3c542f.tar.gz
+	https://github.com/awslabs/aws-c-auth/tarball/67232eee051e5827dbdd23529f653cc475cc9d6d -> aws-c-auth-0.6.29-67232ee.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/c5f58572556bab507559d06662738220cc2f7b8a -> aws-c-cal-0.5.27-c5f5857.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/9f36d07189435db27f746c10e39ba58511fadd0d -> aws-c-common-0.8.23-9f36d07.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/99ec79ee2970f1a045d4ced1501b97ee521f2f85 -> aws-c-compression-0.2.17-99ec79e.tar.gz
@@ -17,10 +17,10 @@ SRC_URI="
 	https://github.com/awslabs/aws-c-http/tarball/27efc273f228306031c7345de8acaeee956db765 -> aws-c-http-0.7.10-27efc27.tar.gz
 	https://github.com/awslabs/aws-c-io/tarball/c3f95ebf3d6d1608e1656bb08eca05e303cc4fd3 -> aws-c-io-0.13.26-c3f95eb.tar.gz
 	https://github.com/awslabs/aws-c-mqtt/tarball/8e40355e03b456bb7b4bf0cd37c5d878afa2476f -> aws-c-mqtt-0.8.13-8e40355.tar.gz
-	https://github.com/awslabs/aws-c-s3/tarball/9263f9b2e1b38d2c19ad2ba3d82e0d77b99f602f -> aws-c-s3-0.3.8-9263f9b.tar.gz
+	https://github.com/awslabs/aws-c-s3/tarball/1dbc4e9f85eac6cea4562c148af651afc7f0732e -> aws-c-s3-0.3.11-1dbc4e9.tar.gz
 	https://github.com/awslabs/aws-c-sdkutils/tarball/df511a1f2518279eb5721ab5fca6bc816efc6b32 -> aws-c-sdkutils-0.1.11-df511a1.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/a5b0e7f00be4240f77d3b6e090c8bed3c9c2e536 -> aws-checksums-0.1.16-a5b0e7f.tar.gz
-	https://github.com/awslabs/aws-lc/tarball/987bd7c672e2c3dd1cc76be3ce9eece93ba9bd88 -> aws-lc-1.10.0-987bd7c.tar.gz
+	https://github.com/awslabs/aws-lc/tarball/80c394324382c78d2cbd783babaad1f612c1642d -> aws-lc-1.11.0-80c3943.tar.gz
 	https://github.com/aws/s2n-tls/tarball/b9c4d60de49193cea31f0acfbddc47cc66d41d2c -> s2n-tls-1.3.45-b9c4d60.tar.gz
 "
 
