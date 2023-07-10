@@ -6,16 +6,18 @@ inherit autotools flag-o-matic systemd toolchain-funcs tmpfiles user
 
 DESCRIPTION="A persistent caching system, key-value and data structures database"
 HOMEPAGE="https://redis.io"
-SRC_URI="https://api.github.com/repos/redis/redis/tarball/5.0.14 -> redis-5.0.14.tar.gz"
+SRC_URI="https://github.com/redis/redis/tarball/8e73f9d34821a937165884f13a2981883f44a074 -> redis-7.0.12-8e73f9d.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="*"
 
-IUSE="+jemalloc split-conf tcmalloc test"
+IUSE="+jemalloc ssl split-conf systemd tcmalloc test"
 RESTRICT="!test? ( test )"
 
 COMMON_DEPEND="
+	ssl? ( dev-libs/openssl:0= )
+	systemd? ( sys-apps/systemd:= )
 	tcmalloc? ( dev-util/google-perftools )
 "
 
@@ -30,6 +32,7 @@ DEPEND="
 	${COMMON_DEPEND}
 	test? (
 		dev-lang/tcl:0=
+		ssl? ( dev-tcltk/tls )
 	)"
 
 REQUIRED_USE="?? ( jemalloc tcmalloc )"
@@ -66,16 +69,19 @@ src_configure() {
 }
 
 src_compile() {
-	# This is needed because deps/hiredis uses this variable.
-	unset ARCH
 	local myconf=""
-	if use tcmalloc; then
-		myconf="${myconf} USE_TCMALLOC=yes"
-	elif use jemalloc; then
-		myconf="${myconf} JEMALLOC_SHARED=yes"
+	if use jemalloc; then
+		myconf+="MALLOC=jemalloc"
+	elif use tcmalloc; then
+		myconf+="MALLOC=tcmalloc"
 	else
-		myconf="${myconf} MALLOC=yes"
+		myconf+="MALLOC=libc"
 	fi
+
+	if use ssl; then
+		myconf+=" BUILD_TLS=yes"
+	fi
+	export USE_SYSTEMD=$(usex systemd)
 	export CFLAGS
 	emake V=1 ${myconf}
 }

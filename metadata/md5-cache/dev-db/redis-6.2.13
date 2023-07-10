@@ -11,6 +11,6 @@ RDEPEND=ssl? ( dev-libs/openssl:0= ) systemd? ( sys-apps/systemd:= ) tcmalloc? (
 REQUIRED_USE=?? ( jemalloc tcmalloc )
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://api.github.com/repos/redis/redis/tarball/6.2.12 -> redis-6.2.12.tar.gz
+SRC_URI=https://api.github.com/repos/redis/redis/tarball/6.2.13 -> redis-6.2.13.tar.gz
 _eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	tmpfiles	6f14f7c8fb6f63585daa89581247c82c	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
-_md5_=8d5ea7e84c8ba8b31bde55813bbe88d7
+_md5_=4d5e6554c07300e710397da46995046e
