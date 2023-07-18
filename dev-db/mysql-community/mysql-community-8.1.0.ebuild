@@ -9,7 +9,7 @@ inherit cmake flag-o-matic linux-info multiprocessing prefix toolchain-funcs use
 MY_PV="${PV//_pre*}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="{{src_uri}}"
+SRC_URI="https://cdn.mysql.com/Downloads/MySQL-8.1/mysql-boost-8.1.0.tar.gz -> mysql-boost-8.1.0.tar.gz"
 
 HOMEPAGE="https://www.mysql.com/"
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
@@ -26,7 +26,7 @@ REQUIRED_USE="?? ( tcmalloc jemalloc )
 	router? ( server )
 	tcmalloc? ( server )"
 
-KEYWORDS="{{keywords}}"
+KEYWORDS=""
 
 COMMON_DEPEND="
 	>=app-arch/lz4-0_p131:=
