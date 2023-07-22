@@ -11,8 +11,8 @@ EGO_SUM=(
 	"github.com/3rf/mongo-lint v0.0.0-20140604191638-3550fdcf1f43"
 	"github.com/3rf/mongo-lint v0.0.0-20140604191638-3550fdcf1f43/go.mod"
 	"github.com/aws/aws-sdk-go v1.22.1/go.mod"
-	"github.com/aws/aws-sdk-go v1.44.284"
-	"github.com/aws/aws-sdk-go v1.44.284/go.mod"
+	"github.com/aws/aws-sdk-go v1.44.289"
+	"github.com/aws/aws-sdk-go v1.44.289/go.mod"
 	"github.com/craiggwilson/goke v0.0.0-20220110201909-adb8bfb05d58"
 	"github.com/craiggwilson/goke v0.0.0-20220110201909-adb8bfb05d58/go.mod"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
@@ -162,14 +162,14 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/mongodb/mongo-tools/archive/5108ba0688a77cfa44d47af55dc79543d867b357.tar.gz -> mongo-tools-100.7.3-5108ba06.tar.gz
-https://direct.funtoo.org/47/3d/db/473ddb4f5314b1764d8e7f3b7b3d3d932f34ab70016e0faf4a0a29844c13503d62f80fb212dd4de7955cf3d890a7f25b241586eb3c7c513f012cdadf7cebdc42 -> mongo-tools-100.7.3-funtoo-go-bundle-446118dad17c93656d3512b9643cb31a20a430338f6f4e007ea0640c126626d5a00e5f2ce57e78a91d705a5a77106827980c259e30a3363646f8c3913decca3c.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-tools/archive/efdb9b61b16dc4696ead0560e03404738503e29e.tar.gz -> mongo-tools-100.7.4-efdb9b61.tar.gz
+https://direct.funtoo.org/3e/03/bd/3e03bdb013f781f25adff309ad6b9cc285fb66be78c305ddfecb8f5c000e8eacf5da246bfc192c2e99fb40a9865d67c3c575a5a5296de6e911eef4c3f0eb212b -> mongo-tools-100.7.4-funtoo-go-bundle-9080ea992a2f97cab28e0a4a005278ea6feb00b5a5c4f94da1d04c7ab31ea77b2fb9d6a0cb60479214520b0541d2c75c795b03a258059da17b5b5207443f28e1.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
 IUSE="sasl ssl"
-S="${WORKDIR}/mongo-tools-5108ba0688a77cfa44d47af55dc79543d867b357"
+S="${WORKDIR}/mongo-tools-efdb9b61b16dc4696ead0560e03404738503e29e"
 
 RDEPEND="
 	net-libs/libpcap
@@ -193,7 +193,7 @@ src_compile() {
 
 		go build -mod=mod \
 			-o bin/"${bin_name}" \
-			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=5108ba0688a77cfa44d47af55dc79543d867b357" \
+			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=efdb9b61b16dc4696ead0560e03404738503e29e" \
 			-buildmode=pie \
 			--tags "${myconf[*]}" \
 			./"${bin_path}" || die "compile failed"
