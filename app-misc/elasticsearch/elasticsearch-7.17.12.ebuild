@@ -7,9 +7,9 @@ inherit systemd tmpfiles user
 DESCRIPTION="Free and Open, Distributed, RESTful Search Engine"
 HOMEPAGE="https://www.elastic.co/elasticsearch/"
 SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.11-linux-x86_64.tar.gz -> elasticsearch-7.17.11-linux-x86_64.tar.gz )
+	amd64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.12-linux-x86_64.tar.gz -> elasticsearch-7.17.12-linux-x86_64.tar.gz )
 
-	arm64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.11-linux-aarch64.tar.gz -> elasticsearch-7.17.11-linux-aarch64.tar.gz )
+	arm64? ( https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.12-linux-aarch64.tar.gz -> elasticsearch-7.17.12-linux-aarch64.tar.gz )
 "
 
 LICENSE="Apache-2.0 BSD-2 Elastic-2.0 LGPL-3 MIT public-domain"
