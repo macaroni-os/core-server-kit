@@ -37,7 +37,7 @@ src_prepare() {
 
 	if use mini-dashboard; then
 		# Inject path to downloaded mini-dashboard build
-		sed -i "s||${DISTDIR}/meilisearch-mini-dashboard-28b45bf772c84f9a6e16bc1689b393bfce8da7d6.zip|g" "${S}"/meilisearch/Cargo.toml
+		sed -i "s|https://github.com/meilisearch/mini-dashboard/releases/download/v0.2.7/build.zip|${DISTDIR}/meilisearch-mini-dashboard-28b45bf772c84f9a6e16bc1689b393bfce8da7d6.zip|g" "${S}"/meilisearch/Cargo.toml
 
 		# Replace HTTP fetch with direct file read
 		sed -i -r 's|(let dashboard_assets_bytes =)(.*)$|\1 std::fs::read(url)?;|' "${S}"/meilisearch/build.rs
