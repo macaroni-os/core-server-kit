@@ -14,6 +14,7 @@ ahash-0.8.3
 aho-corasick-0.7.20
 alloc-no-stdlib-2.0.4
 alloc-stdlib-0.2.2
+android-tzdata-0.1.1
 anstream-0.3.2
 anstyle-1.0.0
 anstyle-parse-0.2.0
@@ -59,7 +60,7 @@ cache_control-0.2.0
 cbc-0.1.2
 cc-1.0.79
 cfg-if-1.0.0
-chrono-0.4.22
+chrono-0.4.26
 cipher-0.4.4
 clap-4.3.3
 clap_builder-4.3.3
@@ -92,7 +93,7 @@ data-url-0.2.0
 deno-proc-macro-rules-0.3.2
 deno-proc-macro-rules-macros-0.3.2
 deno_ast-0.27.0
-deno_core-0.195.0
+deno_core-0.197.0
 deno_doc-0.63.1
 deno_emit-0.24.0
 deno_graph-0.49.0
@@ -100,9 +101,9 @@ deno_lint-0.49.0
 deno_lockfile-0.14.1
 deno_media_type-0.1.0
 deno_npm-0.9.1
-deno_ops-0.73.0
+deno_ops-0.75.0
 deno_semver-0.2.2
-deno_task_shell-0.12.0
+deno_task_shell-0.13.1
 der-0.6.1
 der-0.7.3
 der-parser-8.2.0
@@ -172,7 +173,7 @@ fwdansi-1.1.0
 generic-array-0.12.4
 generic-array-0.14.6
 getrandom-0.1.16
-getrandom-0.2.8
+getrandom-0.2.10
 ghash-0.5.0
 glibc_version-0.1.2
 glob-0.3.1
@@ -232,7 +233,7 @@ lexical-parse-integer-0.8.6
 lexical-util-0.8.5
 lexical-write-float-0.8.5
 lexical-write-integer-0.8.5
-libc-0.2.140
+libc-0.2.147
 libffi-3.2.0
 libffi-sys-2.3.0
 libloading-0.7.4
@@ -312,6 +313,7 @@ pkcs8-0.9.0
 pkcs8-0.10.2
 pkg-config-0.3.26
 pmutil-0.5.3
+pmutil-0.6.1
 polyval-0.6.0
 ppv-lite86-0.2.17
 precomputed-hash-0.1.1
@@ -322,7 +324,7 @@ proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro-hack-0.5.20+deprecated
 proc-macro2-0.4.30
-proc-macro2-1.0.60
+proc-macro2-1.0.66
 psm-0.1.21
 pty2-0.1.0
 pulldown-cmark-0.9.3
@@ -383,7 +385,7 @@ serde_derive-1.0.157
 serde_json-1.0.94
 serde_repr-0.1.9
 serde_urlencoded-0.7.1
-serde_v8-0.106.0
+serde_v8-0.108.0
 sha-1-0.10.0
 sha1-0.10.5
 sha2-0.10.6
@@ -410,8 +412,8 @@ string_cache-0.8.7
 string_cache_codegen-0.5.2
 string_enum-0.4.0
 strsim-0.10.0
-strum-0.24.1
-strum_macros-0.24.3
+strum-0.25.0
+strum_macros-0.25.1
 subtle-2.4.1
 swc_atoms-0.5.6
 swc_bundler-0.214.25
@@ -441,7 +443,7 @@ swc_visit-0.5.6
 swc_visit_macros-0.5.7
 syn-0.15.44
 syn-1.0.109
-syn-2.0.18
+syn-2.0.22
 synstructure-0.12.6
 tar-0.4.38
 tempfile-3.4.0
@@ -502,8 +504,8 @@ url-2.3.1
 urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.1
-uuid-1.3.0
-v8-0.74.2
+uuid-1.4.1
+v8-0.74.3
 vcpkg-0.2.15
 version_check-0.9.4
 vsimd-0.8.0
@@ -566,7 +568,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.35.2 -> deno-1.35.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.35.3 -> deno-1.35.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
