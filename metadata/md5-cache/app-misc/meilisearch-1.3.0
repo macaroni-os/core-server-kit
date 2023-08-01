@@ -1,0 +1,13 @@
+BDEPEND=virtual/rust >=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=sys-apps/shadow
+DESCRIPTION=A lightning-fast search engine that fits effortlessly into your apps, websites, and workflow
+EAPI=7
+HOMEPAGE=https://www.meilisearch.com/
+IUSE=+mini-dashboard debug
+KEYWORDS=*
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://github.com/meilisearch/meilisearch/tarball/5b0157c6c6e719bb4982a915d49b0b103a0302b4 -> meilisearch-1.3.0-5b0157c.tar.gz https://direct.funtoo.org/c0/76/37/c076371e78d643114ce2f4a8a503555e5ed64c868be77f98e67624aa59fe9e60ff382165fbc6019b7698ac791aa4a54c69efe398591a955ac6207c371b1531b7 -> meilisearch-1.3.0-funtoo-crates-bundle-20a78e9600e9c49368d8bf2082be2efd6bd82243529d3f3a068626d749b6c56e12e37f900b08937b1d6f587b0304f2ca442d1aa53163f3d58aef21d0918604d6.tar.gz mini-dashboard? ( https://github.com/meilisearch/mini-dashboard/releases/download/v0.2.11/build.zip -> meilisearch-mini-dashboard-83cd44ed1e5f97ecb581dc9f958a63f4ccc982d9.zip )
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=f620e1310a02d129129b3aae6dff7812
