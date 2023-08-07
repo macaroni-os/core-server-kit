@@ -868,10 +868,10 @@ EGO_SUM=(
 	"github.com/pseudomuto/protokit v0.2.0/go.mod"
 	"github.com/quic-go/qpack v0.4.0"
 	"github.com/quic-go/qpack v0.4.0/go.mod"
-	"github.com/quic-go/qtls-go1-20 v0.3.0"
-	"github.com/quic-go/qtls-go1-20 v0.3.0/go.mod"
-	"github.com/quic-go/quic-go v0.37.1"
-	"github.com/quic-go/quic-go v0.37.1/go.mod"
+	"github.com/quic-go/qtls-go1-20 v0.3.1"
+	"github.com/quic-go/qtls-go1-20 v0.3.1/go.mod"
+	"github.com/quic-go/quic-go v0.37.3"
+	"github.com/quic-go/quic-go v0.37.3/go.mod"
 	"github.com/rcrowley/go-metrics v0.0.0-20181016184325-3113b8401b8a/go.mod"
 	"github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af/go.mod"
 	"github.com/rogpeppe/fastuuid v1.1.0/go.mod"
@@ -1741,8 +1741,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/caddyserver/caddy/tarball/e2fc08bd34cc17b8cbb6ac364fa1ec41c4c643b9 -> caddy-2.7.2-e2fc08b.tar.gz
-https://direct.funtoo.org/d8/4f/89/d84f89d50103d5ce7926967ea6afe74ff81f384a0a3def49816c4bd39170556ddddea11b1ce3cd96033d90da24ef6fbba517fdbe1905184b14534d1914fa80fa -> caddy-2.7.2-funtoo-go-bundle-0bceefcfe858484636727602882c1e2036944ab9523f8efca256c0f3c40eadb9cc5a7559b4e601e21f3fe71845ee691bce5db6159f01b41a212a36ef1753a258.tar.gz"
+SRC_URI="https://github.com/caddyserver/caddy/tarball/a8cc5d1a7d9d80e12ab895beaf4eaed34cc6bded -> caddy-2.7.3-a8cc5d1.tar.gz
+https://direct.funtoo.org/3a/2e/60/3a2e602ca031251cd8f841fb297b6095f2ecf0ea2b271f846a7148c0690d15d5c1886343cd19b86c5baee00186cf010cd1ef96c7a89d1710451a237018ef7a8a -> caddy-2.7.3-funtoo-go-bundle-faec65187d8160f11f76ea9690731276afb2fe663546d1a40e8e230bfa783bab727ab5546ae22086aaa09ef0722970c6681095b955ea4306a11a59944d343b3f.tar.gz"
 
 DESCRIPTION="Fast, cross-platform HTTP/2 web server with automatic HTTPS"
 HOMEPAGE="https://caddyserver.com/ https://github.com/caddyserver/caddy"
