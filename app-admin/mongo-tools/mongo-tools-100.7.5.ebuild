@@ -11,8 +11,8 @@ EGO_SUM=(
 	"github.com/3rf/mongo-lint v0.0.0-20140604191638-3550fdcf1f43"
 	"github.com/3rf/mongo-lint v0.0.0-20140604191638-3550fdcf1f43/go.mod"
 	"github.com/aws/aws-sdk-go v1.22.1/go.mod"
-	"github.com/aws/aws-sdk-go v1.44.289"
-	"github.com/aws/aws-sdk-go v1.44.289/go.mod"
+	"github.com/aws/aws-sdk-go v1.44.317"
+	"github.com/aws/aws-sdk-go v1.44.317/go.mod"
 	"github.com/craiggwilson/goke v0.0.0-20220110201909-adb8bfb05d58"
 	"github.com/craiggwilson/goke v0.0.0-20220110201909-adb8bfb05d58/go.mod"
 	"github.com/davecgh/go-spew v1.1.0/go.mod"
@@ -25,8 +25,8 @@ EGO_SUM=(
 	"github.com/google/go-cmp v0.5.9"
 	"github.com/google/go-cmp v0.5.9/go.mod"
 	"github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod"
-	"github.com/gopherjs/gopherjs v0.0.0-20190430165422-3e4dfb77656c"
-	"github.com/gopherjs/gopherjs v0.0.0-20190430165422-3e4dfb77656c/go.mod"
+	"github.com/gopherjs/gopherjs v1.17.2"
+	"github.com/gopherjs/gopherjs v1.17.2/go.mod"
 	"github.com/jessevdk/go-flags v1.5.0"
 	"github.com/jessevdk/go-flags v1.5.0/go.mod"
 	"github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod"
@@ -95,11 +95,13 @@ EGO_SUM=(
 	"golang.org/x/crypto v0.0.0-20200302210943-78000ba7a073/go.mod"
 	"golang.org/x/crypto v0.0.0-20210921155107-089bfa567519/go.mod"
 	"golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d/go.mod"
-	"golang.org/x/crypto v0.10.0"
-	"golang.org/x/crypto v0.10.0/go.mod"
+	"golang.org/x/crypto v0.12.0"
+	"golang.org/x/crypto v0.12.0/go.mod"
 	"golang.org/x/exp v0.0.0-20230321023759-10a507213a29"
 	"golang.org/x/exp v0.0.0-20230321023759-10a507213a29/go.mod"
 	"golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4/go.mod"
+	"golang.org/x/mod v0.12.0"
+	"golang.org/x/mod v0.12.0/go.mod"
 	"golang.org/x/net v0.0.0-20190311183353-d8887717615a/go.mod"
 	"golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod"
 	"golang.org/x/net v0.0.0-20190620200207-3b0461eec859/go.mod"
@@ -113,8 +115,8 @@ EGO_SUM=(
 	"golang.org/x/sync v0.0.0-20190423024810-112230192c58/go.mod"
 	"golang.org/x/sync v0.0.0-20210220032951-036812b2e83c/go.mod"
 	"golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4/go.mod"
-	"golang.org/x/sync v0.0.0-20220923202941-7f9b1623fab7"
-	"golang.org/x/sync v0.0.0-20220923202941-7f9b1623fab7/go.mod"
+	"golang.org/x/sync v0.1.0"
+	"golang.org/x/sync v0.1.0/go.mod"
 	"golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod"
 	"golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod"
 	"golang.org/x/sys v0.0.0-20190804053845-51ab0e2deafa/go.mod"
@@ -126,20 +128,20 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f/go.mod"
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod"
 	"golang.org/x/sys v0.1.0/go.mod"
-	"golang.org/x/sys v0.9.0"
-	"golang.org/x/sys v0.9.0/go.mod"
+	"golang.org/x/sys v0.11.0"
+	"golang.org/x/sys v0.11.0/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
 	"golang.org/x/term v0.1.0/go.mod"
-	"golang.org/x/term v0.9.0"
-	"golang.org/x/term v0.9.0/go.mod"
+	"golang.org/x/term v0.11.0"
+	"golang.org/x/term v0.11.0/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
 	"golang.org/x/text v0.3.3/go.mod"
 	"golang.org/x/text v0.3.6/go.mod"
 	"golang.org/x/text v0.3.7/go.mod"
 	"golang.org/x/text v0.4.0/go.mod"
-	"golang.org/x/text v0.10.0"
-	"golang.org/x/text v0.10.0/go.mod"
+	"golang.org/x/text v0.12.0"
+	"golang.org/x/text v0.12.0/go.mod"
 	"golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod"
 	"golang.org/x/tools v0.0.0-20190328211700-ab21143f2384/go.mod"
 	"golang.org/x/tools v0.0.0-20191119224855-298f0cb1881e/go.mod"
@@ -162,14 +164,14 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/mongodb/mongo-tools/archive/efdb9b61b16dc4696ead0560e03404738503e29e.tar.gz -> mongo-tools-100.7.4-efdb9b61.tar.gz
-https://direct.funtoo.org/3e/03/bd/3e03bdb013f781f25adff309ad6b9cc285fb66be78c305ddfecb8f5c000e8eacf5da246bfc192c2e99fb40a9865d67c3c575a5a5296de6e911eef4c3f0eb212b -> mongo-tools-100.7.4-funtoo-go-bundle-9080ea992a2f97cab28e0a4a005278ea6feb00b5a5c4f94da1d04c7ab31ea77b2fb9d6a0cb60479214520b0541d2c75c795b03a258059da17b5b5207443f28e1.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-tools/archive/4a5576b3fab5267a228df79130a75c4f709c03dd.tar.gz -> mongo-tools-100.7.5-4a5576b3.tar.gz
+https://direct.funtoo.org/af/ea/99/afea99a2eec6a8837ff4f255ab817b816e791017b7dbb3568aa980c9b111423d577b0e8562094765b97b2c3ab685f0f134849bf97377cd0884d624feef9297f7 -> mongo-tools-100.7.5-funtoo-go-bundle-35173fa1492fb4009df40a48920ece647c1d26f780a748819ed4fe5db3202abc5a27eed62ca9203ee93ef03856d959d245fa96110dcb32a6005dc5eece062e92.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
 IUSE="sasl ssl"
-S="${WORKDIR}/mongo-tools-efdb9b61b16dc4696ead0560e03404738503e29e"
+S="${WORKDIR}/mongo-tools-4a5576b3fab5267a228df79130a75c4f709c03dd"
 
 RDEPEND="
 	net-libs/libpcap
@@ -193,7 +195,7 @@ src_compile() {
 
 		go build -mod=mod \
 			-o bin/"${bin_name}" \
-			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=efdb9b61b16dc4696ead0560e03404738503e29e" \
+			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=4a5576b3fab5267a228df79130a75c4f709c03dd" \
 			-buildmode=pie \
 			--tags "${myconf[*]}" \
 			./"${bin_path}" || die "compile failed"
