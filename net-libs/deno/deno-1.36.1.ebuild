@@ -21,14 +21,13 @@ anstyle-1.0.0
 anstyle-parse-0.2.0
 anstyle-query-1.0.0
 anstyle-wincon-1.0.1
-anyhow-1.0.70
+anyhow-1.0.72
 arrayvec-0.7.2
 asn1-rs-0.5.2
 asn1-rs-derive-0.4.0
 asn1-rs-impl-0.1.0
 ast_node-0.9.4
-async-compression-0.3.15
-async-compression-0.4.0
+async-compression-0.4.1
 async-stream-0.3.4
 async-stream-impl-0.3.4
 async-trait-0.1.68
@@ -68,6 +67,7 @@ clap_complete-4.3.1
 clap_complete_fig-4.3.1
 clap_lex-0.5.0
 clipboard-win-4.5.0
+cmake-0.1.50
 colorchoice-1.0.0
 console_static_text-0.8.1
 const-oid-0.9.2
@@ -93,15 +93,16 @@ data-url-0.2.0
 deno-proc-macro-rules-0.3.2
 deno-proc-macro-rules-macros-0.3.2
 deno_ast-0.27.0
-deno_core-0.199.0
+deno_cache_dir-0.5.0
+deno_core-0.200.0
 deno_doc-0.64.0
 deno_emit-0.25.0
 deno_graph-0.50.0
 deno_lint-0.49.0
-deno_lockfile-0.14.1
-deno_media_type-0.1.0
-deno_npm-0.10.1
-deno_ops-0.77.0
+deno_lockfile-0.15.0
+deno_media_type-0.1.1
+deno_npm-0.11.0
+deno_ops-0.78.0
 deno_semver-0.3.0
 deno_task_shell-0.13.1
 der-0.6.1
@@ -119,7 +120,7 @@ dlopen_derive-0.1.4
 dprint-core-0.62.1
 dprint-plugin-json-0.17.4
 dprint-plugin-markdown-0.15.3
-dprint-plugin-typescript-0.85.0
+dprint-plugin-typescript-0.86.1
 dprint-swc-ext-0.10.0
 dsa-0.6.1
 dyn-clone-1.0.11
@@ -140,19 +141,19 @@ errno-0.2.8
 errno-dragonfly-0.1.2
 error-code-2.3.1
 escape8259-0.5.2
-eszip-0.48.0
+eszip-0.49.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
 fastrand-1.9.0
-fastwebsockets-0.3.1
+fastwebsockets-0.4.4
 fd-lock-3.0.10
 ff-0.12.1
 ff-0.13.0
 filetime-0.2.20
 fixedbitset-0.4.2
 flaky_test-0.1.0
-flate2-1.0.24
+flate2-1.0.26
 fly-accept-encoding-0.2.0
 fnv-1.0.7
 form_urlencoded-1.1.0
@@ -242,6 +243,7 @@ libffi-sys-2.3.0
 libloading-0.7.4
 libm-0.2.6
 libsqlite3-sys-0.26.0
+libz-ng-sys-1.1.12
 libz-sys-1.1.8
 linked-hash-map-0.5.6
 linux-raw-sys-0.1.4
@@ -259,7 +261,7 @@ memmem-0.1.1
 memoffset-0.6.5
 mime-0.3.16
 minimal-lexical-0.2.1
-miniz_oxide-0.5.4
+miniz_oxide-0.7.1
 mio-0.8.6
 monch-0.4.2
 napi-build-1.2.1
@@ -279,7 +281,7 @@ num-iter-0.1.43
 num-traits-0.2.15
 num_cpus-1.15.0
 oid-registry-0.6.1
-once_cell-1.17.1
+once_cell-1.18.0
 opaque-debug-0.3.0
 openssl-probe-0.1.5
 ordered-float-2.10.0
@@ -330,13 +332,12 @@ proc-macro-hack-0.5.20+deprecated
 proc-macro2-0.4.30
 proc-macro2-1.0.66
 psm-0.1.21
-pty2-0.1.0
 pulldown-cmark-0.9.3
 quick-error-1.2.3
 quick-junit-0.3.3
 quick-xml-0.29.0
 quote-0.6.13
-quote-1.0.28
+quote-1.0.32
 radix_fmt-1.0.0
 radix_trie-0.2.1
 rand-0.8.5
@@ -384,14 +385,14 @@ security-framework-sys-2.8.0
 semver-0.9.0
 semver-1.0.14
 semver-parser-0.7.0
-serde-1.0.157
+serde-1.0.183
 serde-value-0.7.0
 serde_bytes-0.11.9
-serde_derive-1.0.157
-serde_json-1.0.94
+serde_derive-1.0.183
+serde_json-1.0.104
 serde_repr-0.1.9
 serde_urlencoded-0.7.1
-serde_v8-0.110.0
+serde_v8-0.111.0
 sha-1-0.10.0
 sha1-0.10.5
 sha2-0.10.6
@@ -448,15 +449,15 @@ swc_visit-0.5.6
 swc_visit_macros-0.5.7
 syn-0.15.44
 syn-1.0.109
-syn-2.0.22
+syn-2.0.28
 synstructure-0.12.6
 tar-0.4.38
 tempfile-3.4.0
 termcolor-1.2.0
 text-size-1.1.0
 text_lines-0.6.0
-thiserror-1.0.40
-thiserror-impl-1.0.40
+thiserror-1.0.44
+thiserror-impl-1.0.44
 time-0.1.45
 time-0.3.20
 time-core-0.1.0
@@ -577,7 +578,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.36.0 -> deno-1.36.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.36.1 -> deno-1.36.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
