@@ -83,7 +83,6 @@ crossbeam-utils-0.8.15
 crypto-bigint-0.4.9
 crypto-bigint-0.5.2
 crypto-common-0.1.6
-ctor-0.1.26
 ctr-0.9.2
 curve25519-dalek-2.1.3
 curve25519-dalek-3.2.0
@@ -94,17 +93,19 @@ deno-proc-macro-rules-0.3.2
 deno-proc-macro-rules-macros-0.3.2
 deno_ast-0.28.0
 deno_cache_dir-0.5.2
-deno_core-0.202.0
+deno_config-0.2.1
+deno_core-0.204.0
 deno_doc-0.65.0
 deno_emit-0.26.0
 deno_graph-0.52.0
-deno_lint-0.50.1
+deno_lint-0.50.2
 deno_lockfile-0.15.0
 deno_media_type-0.1.1
 deno_npm-0.12.0
-deno_ops-0.80.0
+deno_ops-0.82.0
 deno_semver-0.4.0
 deno_task_shell-0.13.2
+deno_unsync-0.1.1
 der-0.6.1
 der-0.7.3
 der-parser-8.2.0
@@ -242,7 +243,7 @@ libz-sys-1.1.8
 linked-hash-map-0.5.6
 linux-raw-sys-0.1.4
 lock_api-0.4.9
-log-0.4.19
+log-0.4.20
 lru-cache-0.1.2
 lsp-types-0.93.2
 match_cfg-0.1.0
@@ -280,7 +281,6 @@ opaque-debug-0.3.0
 openssl-probe-0.1.5
 ordered-float-2.10.0
 os_pipe-1.0.1
-output_vt100-0.1.3
 outref-0.5.1
 p224-0.13.2
 p256-0.11.1
@@ -316,7 +316,7 @@ pmutil-0.6.1
 polyval-0.6.0
 ppv-lite86-0.2.17
 precomputed-hash-0.1.1
-pretty_assertions-1.3.0
+pretty_assertions-1.4.0
 primeorder-0.13.1
 proc-macro-crate-1.3.1
 proc-macro-error-1.0.4
@@ -357,7 +357,7 @@ rustix-0.36.9
 rustls-0.21.0
 rustls-native-certs-0.6.2
 rustls-pemfile-1.0.2
-rustls-webpki-0.100.1
+rustls-webpki-0.100.2
 rustversion-1.0.12
 rustyline-10.0.0
 rustyline-derive-0.7.0
@@ -385,7 +385,7 @@ serde_derive-1.0.183
 serde_json-1.0.104
 serde_repr-0.1.9
 serde_urlencoded-0.7.1
-serde_v8-0.113.0
+serde_v8-0.115.0
 sha-1-0.10.0
 sha1-0.10.5
 sha2-0.10.6
@@ -479,7 +479,7 @@ triomphe-0.1.8
 trust-dns-client-0.22.0
 trust-dns-proto-0.22.0
 trust-dns-resolver-0.22.0
-trust-dns-server-0.22.0
+trust-dns-server-0.22.1
 try-lock-0.2.4
 twox-hash-1.6.3
 typed-arena-2.0.1
@@ -505,7 +505,7 @@ urlpattern-0.2.0
 utf-8-0.7.6
 utf8parse-0.2.1
 uuid-1.4.1
-v8-0.75.0
+v8-0.74.3
 vcpkg-0.2.15
 version_check-0.9.4
 vsimd-0.8.0
@@ -571,7 +571,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.36.2 -> deno-1.36.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.36.3 -> deno-1.36.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
