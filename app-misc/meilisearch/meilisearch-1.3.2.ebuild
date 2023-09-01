@@ -9,6 +9,7 @@ HOMEPAGE="https://www.meilisearch.com/"
 SRC_URI="
 	https://github.com/meilisearch/meilisearch/tarball/cdb4b3e024a06472b9e2ec5e861c9998cfc7e964 -> meilisearch-1.3.2-cdb4b3e.tar.gz
 	https://direct.funtoo.org/96/27/ce/9627ce11820e8eda6ad8eb9c15081ba63a697da624ae77ecd066da426243bc0bd3ec027ccb4100a59882208ec0e5d0229535b56b974c270ee0bb1ed084d3ea54 -> meilisearch-1.3.2-funtoo-crates-bundle-2e4c3a9bdc8f9944ff2a2780b95ebca0b1ae77d18d49bf7a2c71a07b89ec6c62334e14c016c070097d57de148f281e06828e4821b1133f21dcaa40c4910ce3b1.tar.gz
+	https://dotsrc.dl.osdn.net/osdn/unidic/58338/unidic-mecab-2.1.2_src.zip -> unidic-mecab-2.1.2_src.zip
 	mini-dashboard? ( https://github.com/meilisearch/mini-dashboard/releases/download/v0.2.11/build.zip -> meilisearch-mini-dashboard-83cd44ed1e5f97ecb581dc9f958a63f4ccc982d9.zip )
 "
 
@@ -34,6 +35,15 @@ pkg_setup() {
 
 src_prepare() {
 	default
+
+	# Patch lindera-unidic to use the unidic-mecab src downloaded by the ebuild
+	local lindera_unidic_build=$(find "${WORKDIR}"/cargo_home/gentoo/lindera-unidic-* -iname build.rs)
+
+	# Replace the input/unpacked folder with our version
+	sed -i 's|\(let input_dir =.*\)\("unidic-mecab.*"\)\(.*\)|\1"unidic-mecab-2.1.2_src"\3|' "${lindera_unidic_build}"
+
+	# Replace the path to the source with the one downloaded by the ebuild
+	sed -i "s|\(let source_path_for_build =\).*$|\1 Path::new("'"'"${DISTDIR}/unidic-mecab-2.1.2_src.zip"'"'");|" "${lindera_unidic_build}"
 
 	if use mini-dashboard; then
 		# Inject path to downloaded mini-dashboard build
