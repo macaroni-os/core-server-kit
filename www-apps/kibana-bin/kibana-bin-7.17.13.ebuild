@@ -9,8 +9,8 @@ MY_PN="${PN%-bin}"
 DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
 SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.9.1-linux-x86_64.tar.gz -> kibana-8.9.1-linux-x86_64.tar.gz )
-	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.9.1-linux-aarch64.tar.gz -> kibana-8.9.1-linux-aarch64.tar.gz )
+	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.13-linux-x86_64.tar.gz -> kibana-7.17.13-linux-x86_64.tar.gz )
+	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.13-linux-aarch64.tar.gz -> kibana-7.17.13-linux-aarch64.tar.gz )
 "
 
 # source: LICENSE.txt and NOTICE.txt
@@ -21,8 +21,8 @@ KEYWORDS="-* amd64 arm64"
 IUSE="systemd"
 
 RDEPEND="
-	>=net-libs/nodejs-16.20.2
-	=net-libs/nodejs-16*
+	>=net-libs/nodejs-18.17.1
+	=net-libs/nodejs-18*
 	dev-libs/nss
 "
 
@@ -45,7 +45,7 @@ pkg_setup() {
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
-		mv kibana-8.9.1 "${S}" || die
+		mv kibana-7.17.13 "${S}" || die
 	fi
 }
 
@@ -94,7 +94,7 @@ src_install() {
 pkg_postinst() {
 
 	elog "This version of Kibana is compatible with Elasticsearch $(ver_cut 1-2) and"
-	elog "Node.js 16. Some plugins may fail with other versions of Node.js"
+	elog "Node.js 18. Some plugins may fail with other versions of Node.js"
 	elog
 	elog "To set a customized Elasticsearch instance:"
 	use systemd || elog "  OpenRC: set ES_INSTANCE in /etc/conf.d/${MY_PN}"
