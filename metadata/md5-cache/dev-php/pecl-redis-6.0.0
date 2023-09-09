@@ -11,6 +11,6 @@ RDEPEND=igbinary? ( >=dev-php/igbinary-3.0.1-r1[php_targets_php7-4(-)?,php_targe
 REQUIRED_USE=|| ( php_targets_php7-4 php_targets_php8-0 php_targets_php8-1 php_targets_php8-2 )
 RESTRICT=test
 SLOT=0
-SRC_URI=https://github.com/phpredis/phpredis/tarball/98d64ba86f37d2d3048500461f50b05f302f36ea -> phpredis-5.3.7-98d64ba.tar.gz
+SRC_URI=https://github.com/phpredis/phpredis/tarball/e193c873dea288a81ed0537749a5e8930013fa0b -> phpredis-6.0.0-e193c87.tar.gz
 _eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	php-ext-pecl-r3	a59741d3df8ea9f17afcdcfb7edaee6d	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=f2b4a8290c90b663344e496f28601827
+_md5_=5242366f797895194a9c1b87c18380d5
