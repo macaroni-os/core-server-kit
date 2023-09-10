@@ -18,7 +18,7 @@ inherit php-ext-pecl-r3
 
 KEYWORDS="*"
 
-SRC_URI="https://github.com/rosmanov/pecl-eio/tarball/b8b2996d50f5af4b37e4184ce612f0056f58ccd7 -> pecl-eio-2.0.3-b8b2996.tar.gz"
+SRC_URI="https://github.com/rosmanov/pecl-eio/tarball/a56d94b98a30073b2cf45cd1faf9e4ee66729761 -> pecl-eio-3.1.0-a56d94b.tar.gz"
 
 LICENSE="PHP-3.01"
 
