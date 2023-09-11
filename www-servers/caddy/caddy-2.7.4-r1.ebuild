@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit fcaps go-module
+inherit fcaps go-module user
 
 EGO_SUM=(
 	"bazil.org/fuse v0.0.0-20180421153158-65cc252bf669/go.mod"
@@ -1741,28 +1741,48 @@ EGO_SUM=(
 
 go-module_set_globals
 
+DESCRIPTION="Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS"
+HOMEPAGE="https://caddyserver.com/ https://github.com/caddyserver/caddy"
 SRC_URI="https://github.com/caddyserver/caddy/tarball/f11c3c9f5a1be082450d64369853e1dacda22dde -> caddy-2.7.4-f11c3c9.tar.gz
 https://direct.funtoo.org/4a/d2/d0/4ad2d0d11ae4a97f263de978069bd839d60500c58d207da375e45ff3e9b819a2dc2bf2c07e2ac50d6984641056ef6eb20c7a576c483fdfb8cc8efad72118126a -> caddy-2.7.4-funtoo-go-bundle-eaec80799355a970e071e409ac590790e345dc53debafb4a8295ac4f5f35e8f86edfe7e83fe51e107c10a1f099cd29d8030cd3573147a1e5e16cc4e5b82040a7.tar.gz"
-
-DESCRIPTION="Fast, cross-platform HTTP/2 web server with automatic HTTPS"
-HOMEPAGE="https://caddyserver.com/ https://github.com/caddyserver/caddy"
 
 LICENSE="Apache-2.0 BSD ECL-2.0 MIT"
 SLOT="0"
 KEYWORDS="*"
 IUSE=""
 
+CADDY_USER="${PN}"
+CADDY_HOME="/var/www/${CADDY_USER}"
+
+pkg_setup() {
+	enewgroup ${CADDY_USER}
+	enewuser ${CADDY_USER} -1 -1 "${CADDY_HOME}" ${CADDY_USER}
+}
+
 post_src_unpack() {
 	mv ${WORKDIR}/caddyserver-* ${S} || die
 }
 
+# Upstream reference to set custom compile time Caddy versions:
+# https://github.com/caddyserver/caddy/pull/5072/files
 src_compile() {
-	go build -mod=mod ./cmd/caddy || die "compile failed"
+	go build -ldflags '-X github.com/caddyserver/caddy/v2.CustomVersion=v2.7.4-f11c3c9-funtoo' \
+	-mod=mod ./cmd/caddy || die "compile failed"
 }
 
 src_install() {
 	dobin ${PN}
 	dodoc README.md
+	insinto /etc/"${PN}"
+	doins "${FILESDIR}"/Caddyfile
+	newconfd "${FILESDIR}/${PN}".confd ${PN}
+	newinitd "${FILESDIR}/${PN}".initd ${PN}
+	keepdir /var/log/"${PN}"
+	keepdir /var/www/"${PN}"
+	fowners "${CADDY_USER}:${CADDY_USER}" /var/log/"${PN}"
+	fowners "${CADDY_USER}:${CADDY_USER}" /var/www/"${PN}"
+	fperms 0750 /var/log/"${PN}"
+	fperms 0750 /var/www/"${PN}"
 }
 
 pkg_postinst() {
