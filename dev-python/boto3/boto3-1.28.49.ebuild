@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="The AWS SDK for Python"
 HOMEPAGE="https://github.com/boto/boto3 https://pypi.org/project/boto3/"
-SRC_URI="https://files.pythonhosted.org/packages/97/ea/c8bbc2d3bb5f1990cd80390cfbb495b96e76c72d9d6747b39aa6b6d3e2d5/boto3-1.28.48.tar.gz -> boto3-1.28.48.tar.gz
+SRC_URI="https://files.pythonhosted.org/packages/c7/e5/1616432f43cb1766fde3025160ce25fb12e91789fdddd8f01948075356e2/boto3-1.28.49.tar.gz -> boto3-1.28.49.tar.gz
 "
 
 DEPEND=""
@@ -19,4 +19,4 @@ IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-S="${WORKDIR}/boto3-1.28.48"
+S="${WORKDIR}/boto3-1.28.49"
