@@ -1743,7 +1743,7 @@ go-module_set_globals
 
 DESCRIPTION="Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS"
 HOMEPAGE="https://caddyserver.com/ https://github.com/caddyserver/caddy"
-SRC_URI="https://github.com/caddyserver/caddy/tarball/f11c3c9f5a1be082450d64369853e1dacda22dde -> caddy-2.7.4-f11c3c9.tar.gz
+SRC_URI="https://github.com/caddyserver/caddy/tarball/47455e02fd8935f70e1f063f7453a0e3572f4540 -> caddy-2.7.4-47455e0.tar.gz
 https://direct.funtoo.org/4a/d2/d0/4ad2d0d11ae4a97f263de978069bd839d60500c58d207da375e45ff3e9b819a2dc2bf2c07e2ac50d6984641056ef6eb20c7a576c483fdfb8cc8efad72118126a -> caddy-2.7.4-funtoo-go-bundle-eaec80799355a970e071e409ac590790e345dc53debafb4a8295ac4f5f35e8f86edfe7e83fe51e107c10a1f099cd29d8030cd3573147a1e5e16cc4e5b82040a7.tar.gz"
 
 LICENSE="Apache-2.0 BSD ECL-2.0 MIT"
@@ -1766,7 +1766,7 @@ post_src_unpack() {
 # Upstream reference to set custom compile time Caddy versions:
 # https://github.com/caddyserver/caddy/pull/5072/files
 src_compile() {
-	go build -ldflags '-X github.com/caddyserver/caddy/v2.CustomVersion=v2.7.4-f11c3c9-funtoo' \
+	go build -ldflags '-X github.com/caddyserver/caddy/v2.CustomVersion=v2.7.4-47455e0-funtoo' \
 	-mod=mod ./cmd/caddy || die "compile failed"
 }
 
