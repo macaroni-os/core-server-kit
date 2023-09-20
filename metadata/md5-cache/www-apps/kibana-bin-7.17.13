@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=install postinst prepare setup
+DEPEND=sys-apps/shadow
+DESCRIPTION=Analytics and search dashboard for Elasticsearch
+EAPI=7
+HOMEPAGE=https://www.elastic.co/products/kibana
+IUSE=systemd
+KEYWORDS=-* amd64 arm64
+LICENSE=Apache-2.0 Artistic-2 BSD BSD-2 CC-BY-3.0 CC-BY-4.0 Elastic-2.0 icu ISC MIT MPL-2.0 OFL-1.1 openssl public-domain Unlicense WTFPL-2 ZLIB
+RDEPEND=>=net-libs/nodejs-18.17.1 =net-libs/nodejs-18* dev-libs/nss
+SLOT=0
+SRC_URI=amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.13-linux-x86_64.tar.gz -> kibana-7.17.13-linux-x86_64.tar.gz ) arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-7.17.13-linux-aarch64.tar.gz -> kibana-7.17.13-linux-aarch64.tar.gz )
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=2931b8d4261e1753ed5c24aca1588441
