@@ -14,7 +14,7 @@ inherit php-ext-pecl-r3 pam
 
 KEYWORDS="*"
 
-SRC_URI="https://github.com/amishmm/php-pam/tarball/bd8de3392283dbbf6598ecaa48c103dc9623c2e2 -> php-pam-2.2.4-bd8de33.tar.gz"
+SRC_URI="https://github.com/amishmm/php-pam/tarball/bab7e8f764a7a93a495a32e1b35bff7058c01a86 -> php-pam-2.2.5-bab7e8f.tar.gz"
 
 DESCRIPTION="This extension provides PAM (Pluggable Authentication Modules) integration"
 LICENSE="PHP-3.01"

@@ -7,7 +7,7 @@ LUA_COMPAT=( lua5-{1..3} )
 inherit autotools flag-o-matic readme.gentoo-r1 user
 
 DESCRIPTION="Lightweight high-performance web server"
-HOMEPAGE="['https://www.lighttpd.net', 'https://github.com/lighttpd/lighttpd1.4']"
+HOMEPAGE="https://www.lighttpd.net https://github.com/lighttpd/lighttpd1.4"
 SRC_URI="https://github.com/lighttpd/lighttpd1.4/tarball/a45bc54d182fe097981e365a09f90c47a8f68933 -> lighttpd1.4-1.4.71-a45bc54.tar.gz"
 
 LICENSE="BSD GPL-2"
