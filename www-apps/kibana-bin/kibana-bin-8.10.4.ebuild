@@ -9,8 +9,8 @@ MY_PN="${PN%-bin}"
 DESCRIPTION="Analytics and search dashboard for Elasticsearch"
 HOMEPAGE="https://www.elastic.co/products/kibana"
 SRC_URI="
-	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.10.3-linux-x86_64.tar.gz -> kibana-8.10.3-linux-x86_64.tar.gz )
-	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.10.3-linux-aarch64.tar.gz -> kibana-8.10.3-linux-aarch64.tar.gz )
+	amd64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.10.4-linux-x86_64.tar.gz -> kibana-8.10.4-linux-x86_64.tar.gz )
+	arm64? ( https://artifacts.elastic.co/downloads/kibana/kibana-8.10.4-linux-aarch64.tar.gz -> kibana-8.10.4-linux-aarch64.tar.gz )
 "
 
 # source: LICENSE.txt and NOTICE.txt
@@ -45,7 +45,7 @@ pkg_setup() {
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
-		mv kibana-8.10.3 "${S}" || die
+		mv kibana-8.10.4 "${S}" || die
 	fi
 }
 
