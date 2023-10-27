@@ -9,9 +9,9 @@ DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
 	https://github.com/awslabs/aws-crt-python/tarball/b83949d089c92e1a7e455ea87a830002ea27ae0a -> aws-crt-python-0.19.6-b83949d.tar.gz
-	https://github.com/awslabs/aws-c-auth/tarball/c75e00804da02fef8275b29509bd7180cb7e4667 -> aws-c-auth-0.7.4-c75e008.tar.gz
+	https://github.com/awslabs/aws-c-auth/tarball/ecbb37fe6549e7a0f5814050be076a2312118b38 -> aws-c-auth-0.7.5-ecbb37f.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/033a132dfbcd1822ac65969a1feee31d6e1a81f9 -> aws-c-cal-0.6.7-033a132.tar.gz
-	https://github.com/awslabs/aws-c-common/tarball/4c0a9f579d3064f086b42a2d39aaea721e7e71ca -> aws-c-common-0.9.4-4c0a9f5.tar.gz
+	https://github.com/awslabs/aws-c-common/tarball/e381a7beeacb070f1816989dcb0e2c0ae6eccaea -> aws-c-common-0.9.5-e381a7b.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/99ec79ee2970f1a045d4ced1501b97ee521f2f85 -> aws-c-compression-0.2.17-99ec79e.tar.gz
 	https://github.com/awslabs/aws-c-event-stream/tarball/08f24e384e5be20bcffa42b49213d24dad7881ae -> aws-c-event-stream-0.3.2-08f24e3.tar.gz
 	https://github.com/awslabs/aws-c-http/tarball/d777859b6da179b9098f87a2077fbf2129b574dc -> aws-c-http-0.7.13-d777859.tar.gz
@@ -20,7 +20,7 @@ SRC_URI="
 	https://github.com/awslabs/aws-c-s3/tarball/684484e39dbc1a7414907f0af4001a89e85d9708 -> aws-c-s3-0.3.19-684484e.tar.gz
 	https://github.com/awslabs/aws-c-sdkutils/tarball/a6fd80cf7c163062d31abb28f309e47330fbfc17 -> aws-c-sdkutils-0.1.12-a6fd80c.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/321b805559c8e911be5bddba13fcbd222a3e2d3a -> aws-checksums-0.1.17-321b805.tar.gz
-	https://github.com/awslabs/aws-lc/tarball/e42a4ef2270c4873e98101098edd1f0aaece966d -> aws-lc-1.16.0-e42a4ef.tar.gz
+	https://github.com/awslabs/aws-lc/tarball/40f0eb69cfbdb201308c51bf12feffc247fb4186 -> aws-lc-1.17.0-40f0eb6.tar.gz
 	https://github.com/aws/s2n-tls/tarball/3526e69d6b61efedf454f436a6d876fb3e9b6cd7 -> s2n-tls-1.3.55-3526e69.tar.gz
 "
 
