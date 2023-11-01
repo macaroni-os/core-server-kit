@@ -7,8 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="ACME protocol implementation in Python"
 HOMEPAGE="https://github.com/certbot/certbot https://pypi.org/project/acme/"
-SRC_URI="https://files.pythonhosted.org/packages/97/f7/9a3513b27b2196340d06137d7734e66c95af560ff3330928790bdcf9554a/acme-2.7.4.tar.gz -> acme-2.7.4.tar.gz
-"
+SRC_URI="https://files.pythonhosted.org/packages/97/f7/9a3513b27b2196340d06137d7734e66c95af560ff3330928790bdcf9554a/acme-2.7.4.tar.gz -> acme-2.7.4.tar.gz"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
