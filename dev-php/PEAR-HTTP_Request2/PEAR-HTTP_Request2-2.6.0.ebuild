@@ -5,7 +5,7 @@ EAPI=6
 inherit php-pear-r2
 
 DESCRIPTION="Provides an easy way to perform HTTP requests"
-SRC_URI="https://github.com/pear/HTTP_Request2/tarball/db4ce7844f838d3adca0513a77420c0fec22ed2d -> HTTP_Request2-2.5.1-db4ce78.tar.gz"
+SRC_URI="https://github.com/pear/HTTP_Request2/tarball/f010a16ccddd1ee7d2ee085e8006ee712c00f706 -> HTTP_Request2-2.6.0-f010a16.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
