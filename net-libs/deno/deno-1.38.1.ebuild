@@ -35,7 +35,6 @@ asynchronous-codec-0.7.0
 auto_impl-1.1.0
 autocfg-1.1.0
 backtrace-0.3.69
-base16ct-0.1.1
 base16ct-0.2.0
 base32-0.4.0
 base64-0.13.1
@@ -84,11 +83,9 @@ crc32fast-1.3.2
 crossbeam-channel-0.5.8
 crossbeam-queue-0.3.8
 crossbeam-utils-0.8.16
-crypto-bigint-0.4.9
 crypto-bigint-0.5.3
 crypto-common-0.1.6
 ctr-0.9.2
-curve25519-dalek-2.1.3
 curve25519-dalek-4.1.1
 curve25519-dalek-derive-0.1.0
 darling-0.14.4
@@ -98,21 +95,19 @@ dashmap-5.5.3
 data-encoding-2.4.0
 data-url-0.3.0
 debugid-0.8.0
-deno-proc-macro-rules-0.3.2
-deno-proc-macro-rules-macros-0.3.2
 deno_ast-0.31.3
 deno_cache_dir-0.6.1
 deno_config-0.5.0
-deno_core-0.224.0
+deno_core-0.229.0
 deno_doc-0.72.2
 deno_emit-0.31.1
 deno_graph-0.59.2
 deno_lint-0.52.2
 deno_lockfile-0.17.2
 deno_media_type-0.1.2
-deno_native_certs-0.1.1
+deno_native_certs-0.2.0
 deno_npm-0.15.2
-deno_ops-0.100.0
+deno_ops-0.105.0
 deno_semver-0.5.1
 deno_task_shell-0.14.0
 deno_unsync-0.1.1
@@ -121,7 +116,6 @@ deno_whoami-0.1.0
 denokv_proto-0.2.1
 denokv_remote-0.2.3
 denokv_sqlite-0.2.1
-der-0.6.1
 der-0.7.8
 der-parser-8.2.0
 deranged-0.3.8
@@ -132,12 +126,11 @@ derive_more-0.99.17
 deunicode-0.4.5
 deunicode-1.4.1
 diff-0.1.13
-digest-0.8.1
 digest-0.10.7
 displaydoc-0.2.4
 dissimilar-1.0.4
-dlopen-0.1.8
-dlopen_derive-0.1.4
+dlopen2-0.6.1
+dlopen2_derive-0.4.0
 dotenvy-0.15.7
 dprint-core-0.62.1
 dprint-plugin-json-0.19.0
@@ -149,10 +142,8 @@ dyn-clone-1.0.14
 dynasm-1.2.3
 dynasmrt-1.2.3
 ecb-0.1.2
-ecdsa-0.14.8
 ecdsa-0.16.8
 either-1.9.0
-elliptic-curve-0.12.3
 elliptic-curve-0.13.5
 encoding_rs-0.8.33
 endian-type-0.1.2
@@ -173,7 +164,6 @@ fancy-regex-0.11.0
 fastrand-2.0.1
 fastwebsockets-0.5.0
 fd-lock-3.0.13
-ff-0.12.1
 ff-0.13.0
 fiat-crypto-0.2.1
 filetime-0.2.22
@@ -197,15 +187,12 @@ futures-sink-0.3.29
 futures-task-0.3.29
 futures-util-0.3.29
 fwdansi-1.1.0
-generic-array-0.12.4
 generic-array-0.14.7
-getrandom-0.1.16
 getrandom-0.2.10
 ghash-0.5.0
 gimli-0.28.0
 glibc_version-0.1.2
 glob-0.3.1
-group-0.12.1
 group-0.13.0
 h2-0.3.21
 hashbrown-0.12.3
@@ -315,9 +302,7 @@ ordered-float-2.10.0
 os_pipe-1.1.4
 outref-0.5.1
 p224-0.13.2
-p256-0.11.1
 p256-0.13.2
-p384-0.11.2
 p384-0.13.0
 parking_lot-0.11.2
 parking_lot-0.12.1
@@ -328,7 +313,6 @@ path-clean-0.1.0
 path-dedot-3.1.1
 pathdiff-0.2.1
 pbkdf2-0.12.2
-pem-rfc7468-0.6.0
 pem-rfc7468-0.7.0
 percent-encoding-2.3.0
 petgraph-0.6.4
@@ -341,7 +325,6 @@ pin-project-internal-1.1.3
 pin-project-lite-0.2.13
 pin-utils-0.1.0
 pkcs1-0.7.5
-pkcs8-0.9.0
 pkcs8-0.10.2
 pkg-config-0.3.27
 platforms-3.1.2
@@ -353,11 +336,11 @@ precomputed-hash-0.1.1
 pretty_assertions-1.4.0
 prettyplease-0.1.25
 primeorder-0.13.2
-proc-macro-crate-1.3.1
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro-hack-0.5.20+deprecated
-proc-macro2-0.4.30
+proc-macro-rules-0.4.0
+proc-macro-rules-macros-0.4.0
 proc-macro2-1.0.67
 prost-0.11.9
 prost-build-0.11.9
@@ -369,13 +352,11 @@ quick-error-1.2.3
 quick-junit-0.3.5
 quick-xml-0.30.0
 quick-xml-0.31.0
-quote-0.6.13
 quote-1.0.33
 radix_fmt-1.0.0
 radix_trie-0.2.1
 rand-0.8.5
 rand_chacha-0.3.1
-rand_core-0.5.1
 rand_core-0.6.4
 redox_syscall-0.2.16
 redox_syscall-0.3.5
@@ -385,7 +366,6 @@ regex-syntax-0.7.5
 relative-path-1.9.0
 reqwest-0.11.20
 resolv-conf-0.7.0
-rfc6979-0.3.1
 rfc6979-0.4.0
 ring-0.17.2
 ripemd-0.1.3
@@ -401,7 +381,7 @@ rustix-0.38.19
 rustls-0.21.8
 rustls-native-certs-0.6.3
 rustls-pemfile-1.0.3
-rustls-tokio-stream-0.2.7
+rustls-tokio-stream-0.2.9
 rustls-webpki-0.101.7
 rustversion-1.0.14
 rustyline-10.0.0
@@ -417,10 +397,9 @@ scoped-tls-1.0.1
 scopeguard-1.2.0
 scrypt-0.11.0
 sct-0.7.1
-sec1-0.3.0
 sec1-0.7.3
-secp256k1-0.27.0
-secp256k1-sys-0.8.1
+secp256k1-0.28.0
+secp256k1-sys-0.9.0
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-0.9.0
@@ -433,14 +412,13 @@ serde_derive-1.0.188
 serde_json-1.0.107
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.133.0
+serde_v8-0.138.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
 shell-escape-0.1.5
 shell-words-1.1.0
 signal-hook-registry-1.4.1
-signature-1.6.4
 signature-2.1.0
 simdutf8-0.1.4
 siphasher-0.3.11
@@ -454,7 +432,6 @@ sourcemap-6.4.1
 sourcemap-7.0.0
 spin-0.5.2
 spin-0.9.8
-spki-0.6.0
 spki-0.7.2
 stable_deref_trait-1.2.0
 stacker-0.1.15
@@ -494,7 +471,6 @@ swc_graph_analyzer-0.22.0
 swc_macros_common-0.3.8
 swc_visit-0.5.7
 swc_visit_macros-0.5.8
-syn-0.15.44
 syn-1.0.109
 syn-2.0.37
 synstructure-0.12.6
@@ -521,8 +497,6 @@ tokio-socks-0.5.1
 tokio-stream-0.1.14
 tokio-util-0.7.10
 toml-0.5.11
-toml_datetime-0.6.3
-toml_edit-0.19.15
 tower-0.4.13
 tower-layer-0.3.2
 tower-lsp-0.20.0
@@ -552,7 +526,6 @@ unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-segmentation-1.10.1
 unicode-width-0.1.11
-unicode-xid-0.1.0
 unicode-xid-0.2.4
 unicode_categories-0.1.1
 universal-hash-0.5.1
@@ -571,7 +544,6 @@ vte-0.11.1
 vte_generate_state_changes-0.1.1
 walkdir-2.3.2
 want-0.3.1
-wasi-0.9.0+wasi-snapshot-preview1
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.87
 wasm-bindgen-backend-0.2.87
@@ -598,7 +570,6 @@ windows_i686_msvc-0.48.5
 windows_x86_64_gnu-0.48.5
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.48.5
-winnow-0.5.15
 winreg-0.50.0
 winres-0.1.12
 x25519-dalek-2.0.0
@@ -619,7 +590,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.38.0 -> deno-1.38.0.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.38.1 -> deno-1.38.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
