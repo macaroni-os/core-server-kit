@@ -29,7 +29,7 @@ KEYWORDS="*"
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
-		mv "${WORKDIR}"/aws-aws-cli* "$S" || die
+		mv "${WORKDIR}"/aws-* "$S" || die
 	fi
 }
 
