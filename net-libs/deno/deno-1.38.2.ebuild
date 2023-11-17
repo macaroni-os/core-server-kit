@@ -95,19 +95,19 @@ dashmap-5.5.3
 data-encoding-2.4.0
 data-url-0.3.0
 debugid-0.8.0
-deno_ast-0.31.3
+deno_ast-0.31.5
 deno_cache_dir-0.6.1
-deno_config-0.5.0
-deno_core-0.229.0
-deno_doc-0.72.2
-deno_emit-0.31.1
-deno_graph-0.59.2
+deno_config-0.6.4
+deno_core-0.230.0
+deno_doc-0.73.2
+deno_emit-0.31.4
+deno_graph-0.61.1
 deno_lint-0.52.2
 deno_lockfile-0.17.2
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
 deno_npm-0.15.2
-deno_ops-0.105.0
+deno_ops-0.106.0
 deno_semver-0.5.1
 deno_task_shell-0.14.0
 deno_unsync-0.1.1
@@ -156,7 +156,7 @@ errno-0.3.3
 errno-dragonfly-0.1.2
 error-code-2.3.1
 escape8259-0.5.2
-eszip-0.55.2
+eszip-0.55.4
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
@@ -205,10 +205,12 @@ hkdf-0.12.3
 hmac-0.12.1
 home-0.5.5
 hostname-0.3.1
+hstr-0.2.6
 html-escape-0.2.13
 http-0.2.9
 http-body-0.4.5
 http-body-1.0.0-rc.2
+http-body-util-0.1.0-rc.3
 httparse-1.8.0
 httpdate-1.0.3
 humantime-2.1.0
@@ -220,7 +222,7 @@ idna-0.2.3
 idna-0.3.0
 idna-0.4.0
 if_chain-1.0.2
-import_map-0.15.0
+import_map-0.17.0
 indexmap-1.9.3
 indexmap-2.0.2
 inotify-0.9.6
@@ -238,6 +240,7 @@ jobserver-0.1.26
 js-sys-0.3.64
 jsonc-parser-0.21.1
 junction-0.2.0
+k256-0.13.1
 kqueue-1.0.8
 kqueue-sys-1.0.4
 lazy-regex-3.0.2
@@ -249,7 +252,6 @@ libffi-sys-2.3.0
 libloading-0.7.4
 libm-0.2.7
 libsqlite3-sys-0.26.0
-libz-ng-sys-1.1.12
 libz-sys-1.1.12
 line-wrap-0.1.1
 linked-hash-map-0.5.6
@@ -316,10 +318,10 @@ pbkdf2-0.12.2
 pem-rfc7468-0.7.0
 percent-encoding-2.3.0
 petgraph-0.6.4
-phf-0.10.1
-phf_generator-0.10.0
-phf_macros-0.10.0
-phf_shared-0.10.0
+phf-0.11.2
+phf_generator-0.11.2
+phf_macros-0.11.2
+phf_shared-0.11.2
 pin-project-1.1.3
 pin-project-internal-1.1.3
 pin-project-lite-0.2.13
@@ -332,13 +334,11 @@ plist-1.5.1
 pmutil-0.6.1
 polyval-0.6.1
 ppv-lite86-0.2.17
-precomputed-hash-0.1.1
 pretty_assertions-1.4.0
 prettyplease-0.1.25
 primeorder-0.13.2
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro-hack-0.5.20+deprecated
 proc-macro-rules-0.4.0
 proc-macro-rules-macros-0.4.0
 proc-macro2-1.0.67
@@ -381,7 +381,7 @@ rustix-0.38.19
 rustls-0.21.8
 rustls-native-certs-0.6.3
 rustls-pemfile-1.0.3
-rustls-tokio-stream-0.2.9
+rustls-tokio-stream-0.2.16
 rustls-webpki-0.101.7
 rustversion-1.0.14
 rustyline-10.0.0
@@ -398,8 +398,6 @@ scopeguard-1.2.0
 scrypt-0.11.0
 sct-0.7.1
 sec1-0.7.3
-secp256k1-0.28.0
-secp256k1-sys-0.9.0
 security-framework-2.9.2
 security-framework-sys-2.9.1
 semver-0.9.0
@@ -412,7 +410,7 @@ serde_derive-1.0.188
 serde_json-1.0.107
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.138.0
+serde_v8-0.139.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
@@ -433,41 +431,38 @@ sourcemap-7.0.0
 spin-0.5.2
 spin-0.9.8
 spki-0.7.2
-stable_deref_trait-1.2.0
 stacker-0.1.15
 static_assertions-1.1.0
 str-buf-1.0.6
-string_cache-0.8.7
-string_cache_codegen-0.5.2
 string_enum-0.4.1
 strip-ansi-escapes-0.2.0
 strsim-0.10.0
 strum-0.25.0
 strum_macros-0.25.2
 subtle-2.5.0
-swc_atoms-0.6.0
-swc_bundler-0.222.13
-swc_common-0.33.0
+swc_atoms-0.6.4
+swc_bundler-0.222.49
+swc_common-0.33.9
 swc_config-0.1.7
 swc_config_macro-0.1.2
-swc_ecma_ast-0.110.0
-swc_ecma_codegen-0.146.3
+swc_ecma_ast-0.110.10
+swc_ecma_codegen-0.146.28
 swc_ecma_codegen_macros-0.7.3
-swc_ecma_dep_graph-0.113.3
-swc_ecma_loader-0.45.0
-swc_ecma_parser-0.141.3
-swc_ecma_transforms_base-0.134.8
-swc_ecma_transforms_classes-0.123.8
+swc_ecma_dep_graph-0.113.22
+swc_ecma_loader-0.45.10
+swc_ecma_parser-0.141.23
+swc_ecma_transforms_base-0.134.35
+swc_ecma_transforms_classes-0.123.36
 swc_ecma_transforms_macros-0.5.3
-swc_ecma_transforms_optimization-0.195.8
-swc_ecma_transforms_proposal-0.168.12
-swc_ecma_transforms_react-0.180.11
-swc_ecma_transforms_typescript-0.185.8
-swc_ecma_utils-0.124.7
-swc_ecma_visit-0.96.0
+swc_ecma_transforms_optimization-0.195.43
+swc_ecma_transforms_proposal-0.168.43
+swc_ecma_transforms_react-0.180.44
+swc_ecma_transforms_typescript-0.185.41
+swc_ecma_utils-0.124.29
+swc_ecma_visit-0.96.10
 swc_eq_ignore_macros-0.1.2
-swc_fast_graph-0.21.0
-swc_graph_analyzer-0.22.0
+swc_fast_graph-0.21.9
+swc_graph_analyzer-0.22.11
 swc_macros_common-0.3.8
 swc_visit-0.5.7
 swc_visit_macros-0.5.8
@@ -505,7 +500,6 @@ tower-service-0.3.2
 tracing-0.1.37
 tracing-attributes-0.1.26
 tracing-core-0.1.31
-triomphe-0.1.9
 trust-dns-client-0.22.0
 trust-dns-proto-0.22.0
 trust-dns-resolver-0.22.0
@@ -590,7 +584,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.38.1 -> deno-1.38.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.38.2 -> deno-1.38.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
