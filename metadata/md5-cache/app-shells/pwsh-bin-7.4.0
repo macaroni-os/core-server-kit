@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=app-crypt/mit-krb5:0/0 || ( dev-libs/openssl-compat:1.0.0 =dev-libs/openssl-1.0*:0/0 ) sys-libs/pam:0/0 sys-libs/zlib:0 pwsh-symlink? ( !app-shells/pwsh )
 REQUIRED_USE=elibc_glibc
 SLOT=0
-SRC_URI=https://github.com/PowerShell/PowerShell/releases/download/v7.3.9/powershell-7.3.9-linux-x64.tar.gz -> powershell-7.3.9-linux-x64.tar.gz
-_md5_=d4c36d011696ae0117fed314c7c528c8
+SRC_URI=https://github.com/PowerShell/PowerShell/releases/download/v7.4.0/powershell-7.4.0-linux-x64.tar.gz -> powershell-7.4.0-linux-x64.tar.gz
+_md5_=36874eb84eae08728265ada19137037d
