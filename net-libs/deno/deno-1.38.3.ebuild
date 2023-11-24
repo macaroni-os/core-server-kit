@@ -65,7 +65,6 @@ clap-4.3.3
 clap_builder-4.3.3
 clap_complete-4.3.1
 clap_complete_fig-4.3.1
-clap_derive-4.3.2
 clap_lex-0.5.1
 clipboard-win-4.5.0
 cmake-0.1.50
@@ -95,11 +94,11 @@ dashmap-5.5.3
 data-encoding-2.4.0
 data-url-0.3.0
 debugid-0.8.0
-deno_ast-0.31.5
+deno_ast-0.31.6
 deno_cache_dir-0.6.1
 deno_config-0.6.4
-deno_core-0.230.0
-deno_doc-0.73.2
+deno_core-0.232.0
+deno_doc-0.73.3
 deno_emit-0.31.4
 deno_graph-0.61.1
 deno_lint-0.52.2
@@ -107,7 +106,7 @@ deno_lockfile-0.17.2
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
 deno_npm-0.15.2
-deno_ops-0.106.0
+deno_ops-0.108.0
 deno_semver-0.5.1
 deno_task_shell-0.14.0
 deno_unsync-0.1.1
@@ -135,7 +134,7 @@ dotenvy-0.15.7
 dprint-core-0.62.1
 dprint-plugin-json-0.19.0
 dprint-plugin-markdown-0.16.2
-dprint-plugin-typescript-0.88.3
+dprint-plugin-typescript-0.88.4
 dprint-swc-ext-0.13.0
 dsa-0.6.1
 dyn-clone-1.0.14
@@ -160,7 +159,6 @@ eszip-0.55.4
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
-fancy-regex-0.11.0
 fastrand-2.0.1
 fastwebsockets-0.5.0
 fd-lock-3.0.13
@@ -229,7 +227,6 @@ inotify-0.9.6
 inotify-sys-0.1.5
 inout-0.1.3
 instant-0.1.12
-io-lifetimes-1.0.11
 ipconfig-0.3.2
 ipnet-2.8.0
 is-macro-0.3.0
@@ -253,9 +250,7 @@ libloading-0.7.4
 libm-0.2.7
 libsqlite3-sys-0.26.0
 libz-sys-1.1.12
-line-wrap-0.1.1
 linked-hash-map-0.5.6
-linux-raw-sys-0.3.8
 linux-raw-sys-0.4.10
 lock_api-0.4.10
 log-0.4.20
@@ -296,8 +291,6 @@ num_cpus-1.16.0
 object-0.32.1
 oid-registry-0.6.1
 once_cell-1.18.0
-onig-6.4.0
-onig_sys-69.8.1
 opaque-debug-0.3.0
 openssl-probe-0.1.5
 ordered-float-2.10.0
@@ -330,7 +323,6 @@ pkcs1-0.7.5
 pkcs8-0.10.2
 pkg-config-0.3.27
 platforms-3.1.2
-plist-1.5.1
 pmutil-0.6.1
 polyval-0.6.1
 ppv-lite86-0.2.17
@@ -350,7 +342,6 @@ psm-0.1.21
 pulldown-cmark-0.9.3
 quick-error-1.2.3
 quick-junit-0.3.5
-quick-xml-0.30.0
 quick-xml-0.31.0
 quote-1.0.33
 radix_fmt-1.0.0
@@ -376,7 +367,6 @@ rustc-hash-1.1.0
 rustc_version-0.2.3
 rustc_version-0.4.0
 rusticata-macros-4.1.0
-rustix-0.37.27
 rustix-0.38.19
 rustls-0.21.8
 rustls-native-certs-0.6.3
@@ -388,7 +378,6 @@ rustyline-10.0.0
 rustyline-derive-0.7.0
 ryu-1.0.15
 ryu-js-1.0.0
-safemem-0.3.3
 saffron-0.1.0
 salsa20-0.10.2
 same-file-1.0.6
@@ -410,12 +399,11 @@ serde_derive-1.0.188
 serde_json-1.0.107
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.139.0
+serde_v8-0.141.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
 shell-escape-0.1.5
-shell-words-1.1.0
 signal-hook-registry-1.4.1
 signature-2.1.0
 simdutf8-0.1.4
@@ -441,24 +429,24 @@ strum-0.25.0
 strum_macros-0.25.2
 subtle-2.5.0
 swc_atoms-0.6.4
-swc_bundler-0.222.49
+swc_bundler-0.222.62
 swc_common-0.33.9
 swc_config-0.1.7
 swc_config_macro-0.1.2
 swc_ecma_ast-0.110.10
-swc_ecma_codegen-0.146.28
+swc_ecma_codegen-0.146.32
 swc_ecma_codegen_macros-0.7.3
 swc_ecma_dep_graph-0.113.22
 swc_ecma_loader-0.45.10
-swc_ecma_parser-0.141.23
-swc_ecma_transforms_base-0.134.35
-swc_ecma_transforms_classes-0.123.36
+swc_ecma_parser-0.141.26
+swc_ecma_transforms_base-0.134.42
+swc_ecma_transforms_classes-0.123.43
 swc_ecma_transforms_macros-0.5.3
-swc_ecma_transforms_optimization-0.195.43
-swc_ecma_transforms_proposal-0.168.43
-swc_ecma_transforms_react-0.180.44
-swc_ecma_transforms_typescript-0.185.41
-swc_ecma_utils-0.124.29
+swc_ecma_transforms_optimization-0.195.54
+swc_ecma_transforms_proposal-0.168.52
+swc_ecma_transforms_react-0.180.52
+swc_ecma_transforms_typescript-0.185.52
+swc_ecma_utils-0.124.32
 swc_ecma_visit-0.96.10
 swc_eq_ignore_macros-0.1.2
 swc_fast_graph-0.21.9
@@ -469,11 +457,9 @@ swc_visit_macros-0.5.8
 syn-1.0.109
 syn-2.0.37
 synstructure-0.12.6
-syntect-5.1.0
 tar-0.4.40
 tempfile-3.8.0
 termcolor-1.3.0
-terminal_size-0.2.6
 text-size-1.1.0
 text_lines-0.6.0
 thiserror-1.0.50
@@ -569,8 +555,6 @@ winres-0.1.12
 x25519-dalek-2.0.0
 x509-parser-0.15.1
 xattr-1.0.1
-xdg-2.5.2
-yaml-rust-0.4.5
 yansi-0.5.1
 zeroize-1.6.0
 zeroize_derive-1.4.2
@@ -584,7 +568,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.38.2 -> deno-1.38.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.38.3 -> deno-1.38.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
