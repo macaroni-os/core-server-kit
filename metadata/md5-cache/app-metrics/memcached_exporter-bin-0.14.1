@@ -1,0 +1,12 @@
+DEFINED_PHASES=install setup
+DEPEND=sys-apps/shadow
+DESCRIPTION=Exports metrics from memcached servers for consumption by Prometheus.
+EAPI=7
+HOMEPAGE=https://github.com/prometheus/memcached_exporter
+IUSE=amd64 arm64
+KEYWORDS=-* amd64 arm64
+LICENSE=Apache-2.0
+SLOT=0
+SRC_URI=amd64? ( https://github.com/prometheus/memcached_exporter/releases/download/v0.14.1/memcached_exporter-0.14.1.linux-amd64.tar.gz -> memcached_exporter-0.14.1.linux-amd64.tar.gz ) arm64? ( https://github.com/prometheus/memcached_exporter/releases/download/v0.14.1/memcached_exporter-0.14.1.linux-arm64.tar.gz -> memcached_exporter-0.14.1.linux-arm64.tar.gz )
+_eclasses_=user	875055ddd565382c728563992ae3abf7
+_md5_=70ab94540a3a229e3bf0259da4426de3
