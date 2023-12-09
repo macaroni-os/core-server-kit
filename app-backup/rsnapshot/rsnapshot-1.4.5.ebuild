@@ -1,15 +1,16 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
 DESCRIPTION="A filesystem backup utility based on rsync"
 HOMEPAGE="http://www.rsnapshot.org"
-SRC_URI="http://www.rsnapshot.org/downloads/${P}.tar.gz"
+SRC_URI="https://github.com/rsnapshot/rsnapshot/tarball/1b943dbc7695d62fac5c0f9549ec696a538be19c -> rsnapshot-1.4.5-1b943db.tar.gz"
+
+S="${WORKDIR}/rsnapshot-rsnapshot-1b943db"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="*"
 
 RDEPEND=">=dev-lang/perl-5.8.2
 		dev-perl/Lchown
@@ -19,19 +20,27 @@ RDEPEND=">=dev-lang/perl-5.8.2
 		>=net-misc/rsync-2.6.0"
 DEPEND="${RDEPEND}"
 
+
 src_prepare() {
 	default
 	# remove '/etc/' since we don't place it here, bug #461554
 	sed -i -e 's:/etc/rsnapshot.conf.default:rsnapshot.conf.default:' rsnapshot-program.pl || die
+	./autogen.sh || die "autogen failed"
+}
+
+src_configure() {
+	# Change sysconfdir to install the template file as documentation
+	# rather than in /etc.
+	econf --sysconfdir="${EPREFIX}/usr/share/doc/${PF}"
+	# If the version didn't get set, fix it here.
+	# See: https://github.com/rsnapshot/rsnapshot/issues/321
+	sed -i "s/my \$VERSION = '@.*@'/my \$VERSION = '${PV}'/g" rsnapshot-program.pl || die
 }
 
 src_install() {
 	docompress -x "/usr/share/doc/${PF}/rsnapshot.conf.default"
 
-	# Change sysconfdir to install the template file as documentation
-	# rather than in /etc.
-	emake install DESTDIR="${D}" \
-		sysconfdir="${EPREFIX}/usr/share/doc/${PF}"
+	emake install DESTDIR="${D}"
 
 	dodoc README.md AUTHORS ChangeLog \
 		docs/Upgrading_from_1.1
