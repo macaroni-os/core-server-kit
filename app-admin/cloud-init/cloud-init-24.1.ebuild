@@ -10,7 +10,7 @@ IUSE="test systemd"
 
 DESCRIPTION="Official upstream for the cloud-init: cloud instance initialization"
 HOMEPAGE="https://launchpad.net/cloud-init"
-SRC_URI="https://github.com/canonical/cloud-init/tarball/2c452ebfb86d2007d81dcbd986adf1e4cdc6a7f3 -> cloud-init-23.4.1-2c452eb.tar.gz"
+SRC_URI="https://github.com/canonical/cloud-init/tarball/00e4cfab0bd7c2a392bc3a5f2480788d7ea4e1e5 -> cloud-init-24.1-00e4cfa.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
