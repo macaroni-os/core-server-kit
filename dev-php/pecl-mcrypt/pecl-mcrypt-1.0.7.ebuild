@@ -16,7 +16,7 @@ LICENSE="PHP-3.01"
 SLOT="0"
 KEYWORDS="*"
 
-SRC_URI="https://github.com/php/pecl-encryption-mcrypt/tarball/afb7052e1fa604c383c57a4354443167522f3953 -> pecl-encryption-mcrypt-1.0.6-afb7052.tar.gz"
+SRC_URI="https://github.com/php/pecl-encryption-mcrypt/tarball/15949865d9d8eb3a2f06e846d667d55b0033bfa5 -> pecl-encryption-mcrypt-1.0.7-1594986.tar.gz"
 
 DEPEND="dev-libs/libltdl
 	dev-libs/libmcrypt"
