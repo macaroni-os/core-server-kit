@@ -10,8 +10,8 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Exports metrics from memcached servers for consumption by Prometheus."
 HOMEPAGE="https://github.com/prometheus/memcached_exporter"
 SRC_URI="
-	amd64? ( https://github.com/prometheus/memcached_exporter/releases/download/v0.14.1/memcached_exporter-0.14.1.linux-amd64.tar.gz -> memcached_exporter-0.14.1.linux-amd64.tar.gz )
-	arm64? ( https://github.com/prometheus/memcached_exporter/releases/download/v0.14.1/memcached_exporter-0.14.1.linux-arm64.tar.gz -> memcached_exporter-0.14.1.linux-arm64.tar.gz )"
+	amd64? ( https://github.com/prometheus/memcached_exporter/releases/download/v0.14.2/memcached_exporter-0.14.2.linux-amd64.tar.gz -> memcached_exporter-0.14.2.linux-amd64.tar.gz )
+	arm64? ( https://github.com/prometheus/memcached_exporter/releases/download/v0.14.2/memcached_exporter-0.14.2.linux-arm64.tar.gz -> memcached_exporter-0.14.2.linux-arm64.tar.gz )"
 
 KEYWORDS="-* amd64 arm64"
 LICENSE="Apache-2.0"
