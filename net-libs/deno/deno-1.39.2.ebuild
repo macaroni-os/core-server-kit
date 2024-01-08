@@ -73,7 +73,7 @@ clipboard-win-5.0.0
 cmake-0.1.50
 codespan-reporting-0.11.1
 colorchoice-1.0.0
-comrak-0.19.0
+comrak-0.20.0
 console_static_text-0.8.1
 const-oid-0.9.5
 convert_case-0.4.0
@@ -104,8 +104,8 @@ debugid-0.8.0
 deno_ast-0.31.6
 deno_cache_dir-0.6.1
 deno_config-0.6.5
-deno_core-0.238.0
-deno_doc-0.75.1
+deno_core-0.243.0
+deno_doc-0.85.0
 deno_emit-0.32.0
 deno_graph-0.62.2
 deno_lint-0.52.2
@@ -113,11 +113,11 @@ deno_lockfile-0.17.2
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
 deno_npm-0.15.3
-deno_ops-0.114.0
+deno_ops-0.119.0
 deno_semver-0.5.1
 deno_task_shell-0.14.0
 deno_unsync-0.1.1
-deno_unsync-0.3.0
+deno_unsync-0.3.1
 deno_whoami-0.1.0
 denokv_proto-0.5.0
 denokv_remote-0.5.0
@@ -167,7 +167,7 @@ fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
 fastrand-2.0.1
-fastwebsockets-0.5.0
+fastwebsockets-0.6.0
 fd-lock-4.0.1
 ff-0.13.0
 fiat-crypto-0.2.5
@@ -211,7 +211,9 @@ gpu-descriptor-0.2.4
 gpu-descriptor-types-0.1.2
 group-0.13.0
 h2-0.3.22
+h2-0.4.0
 halfbrown-0.2.4
+handlebars-4.5.0
 hashbrown-0.12.3
 hashbrown-0.13.2
 hashbrown-0.14.3
@@ -227,15 +229,17 @@ hostname-0.3.1
 hstr-0.2.6
 html-escape-0.2.13
 http-0.2.11
+http-1.0.0
 http-body-0.4.5
-http-body-1.0.0-rc.2
-http-body-util-0.1.0-rc.3
+http-body-1.0.0
+http-body-util-0.1.0
 httparse-1.8.0
 httpdate-1.0.3
 humantime-2.1.0
 hyper-0.14.27
-hyper-1.0.0-rc.4
+hyper-1.1.0
 hyper-rustls-0.24.2
+hyper-util-0.1.2
 ident_case-1.0.1
 idna-0.2.3
 idna-0.3.0
@@ -295,6 +299,7 @@ memchr-2.6.4
 memmap2-0.5.10
 memmem-0.1.1
 memoffset-0.7.1
+memoffset-0.9.0
 metal-0.27.0
 mime-0.3.17
 minimal-lexical-0.2.1
@@ -326,6 +331,8 @@ objc_exception-0.1.2
 object-0.32.1
 oid-registry-0.6.1
 once_cell-1.19.0
+onig-6.4.0
+onig_sys-69.8.1
 opaque-debug-0.3.0
 openssl-probe-0.1.5
 ordered-float-2.10.1
@@ -346,6 +353,10 @@ pathdiff-0.2.1
 pbkdf2-0.12.2
 pem-rfc7468-0.7.0
 percent-encoding-2.3.0
+pest-2.7.5
+pest_derive-2.7.5
+pest_generator-2.7.5
+pest_meta-2.7.5
 petgraph-0.6.4
 phf-0.11.2
 phf_generator-0.11.2
@@ -396,6 +407,7 @@ ref-cast-1.0.20
 ref-cast-impl-1.0.20
 regex-1.10.2
 regex-automata-0.4.3
+regex-syntax-0.7.5
 regex-syntax-0.8.2
 relative-path-1.9.0
 reqwest-0.11.20
@@ -415,7 +427,7 @@ rustix-0.38.27
 rustls-0.21.10
 rustls-native-certs-0.6.3
 rustls-pemfile-1.0.4
-rustls-tokio-stream-0.2.16
+rustls-tokio-stream-0.2.17
 rustls-webpki-0.101.7
 rustversion-1.0.14
 rustyline-13.0.0
@@ -443,7 +455,7 @@ serde_derive-1.0.193
 serde_json-1.0.108
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.147.0
+serde_v8-0.152.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
@@ -503,6 +515,7 @@ swc_visit_macros-0.5.8
 syn-1.0.109
 syn-2.0.39
 synstructure-0.12.6
+syntect-5.1.0
 tar-0.4.40
 tempfile-3.8.1
 termcolor-1.4.0
@@ -513,7 +526,6 @@ thiserror-impl-1.0.50
 time-0.3.30
 time-core-0.1.2
 time-macros-0.2.15
-tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 tokio-1.34.0
@@ -540,6 +552,7 @@ try-lock-0.2.5
 twox-hash-1.6.3
 typed-arena-2.0.1
 typenum-1.17.0
+ucd-trie-0.1.6
 unic-char-property-0.9.0
 unic-char-range-0.9.0
 unic-common-0.9.0
@@ -632,7 +645,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.39.1 -> deno-1.39.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.39.2 -> deno-1.39.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
