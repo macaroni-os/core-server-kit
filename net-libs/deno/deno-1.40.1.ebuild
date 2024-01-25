@@ -17,11 +17,11 @@ alloc-no-stdlib-2.0.4
 alloc-stdlib-0.2.2
 allocator-api2-0.2.16
 android_system_properties-0.1.5
-anstream-0.3.2
+anstream-0.6.7
 anstyle-1.0.4
 anstyle-parse-0.2.3
 anstyle-query-1.0.1
-anstyle-wincon-1.0.2
+anstyle-wincon-3.0.2
 anyhow-1.0.79
 arrayvec-0.7.4
 ash-0.37.3+1.3.251
@@ -55,6 +55,7 @@ block-padding-0.3.3
 brotli-3.4.0
 brotli-decompressor-2.5.1
 bumpalo-3.14.0
+bytemuck-1.14.0
 byteorder-1.5.0
 bytes-1.5.0
 cache_control-0.2.0
@@ -63,14 +64,17 @@ cc-1.0.83
 cfg-if-1.0.0
 chrono-0.4.31
 cipher-0.4.4
-clap-4.3.3
-clap_builder-4.3.3
-clap_complete-4.3.1
-clap_complete_fig-4.3.1
-clap_lex-0.5.1
+clap-4.4.17
+clap_builder-4.4.17
+clap_complete-4.4.7
+clap_complete_fig-4.4.2
+clap_lex-0.6.0
 clipboard-win-5.0.0
 cmake-0.1.50
 codespan-reporting-0.11.1
+color-print-0.3.5
+color-print-proc-macro-0.3.5
+color_quant-1.1.0
 colorchoice-1.0.0
 comrak-0.20.0
 console_static_text-0.8.1
@@ -102,21 +106,21 @@ dashmap-5.5.3
 data-encoding-2.5.0
 data-url-0.3.0
 debugid-0.8.0
-deno_ast-1.0.1
+deno_ast-0.32.1
 deno_cache_dir-0.6.1
-deno_config-0.6.5
-deno_core-0.245.0
-deno_doc-0.89.1
-deno_emit-0.33.0
-deno_graph-0.63.3
-deno_lint-0.53.0
-deno_lockfile-0.17.2
+deno_config-0.9.1
+deno_core-0.249.0
+deno_doc-0.94.1
+deno_emit-0.34.0
+deno_graph-0.63.6
+deno_lint-0.55.0
+deno_lockfile-0.18.0
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
-deno_npm-0.15.3
-deno_ops-0.121.0
-deno_semver-0.5.1
-deno_task_shell-0.14.0
+deno_npm-0.16.0
+deno_ops-0.125.0
+deno_semver-0.5.4
+deno_task_shell-0.14.3
 deno_unsync-0.1.1
 deno_unsync-0.3.2
 deno_whoami-0.1.0
@@ -142,7 +146,7 @@ dprint-core-0.63.3
 dprint-plugin-json-0.19.1
 dprint-plugin-jupyter-0.1.2
 dprint-plugin-markdown-0.16.3
-dprint-plugin-typescript-0.88.8
+dprint-plugin-typescript-0.88.10
 dprint-swc-ext-0.13.0
 dsa-0.6.2
 dyn-clone-1.0.16
@@ -163,13 +167,14 @@ errno-0.3.8
 errno-dragonfly-0.1.2
 error-code-3.0.0
 escape8259-0.5.2
-eszip-0.57.0
+eszip-0.59.0
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
 fastrand-2.0.1
 fastwebsockets-0.6.0
 fd-lock-4.0.1
+fdeflate-0.3.3
 ff-0.13.0
 fiat-crypto-0.2.5
 filetime-0.2.23
@@ -185,7 +190,7 @@ form_urlencoded-1.2.1
 from_variant-0.1.7
 fs3-0.5.0
 fsevent-sys-4.1.0
-fslock-0.1.8
+fslock-0.2.1
 futures-0.3.29
 futures-channel-0.3.29
 futures-core-0.3.29
@@ -245,7 +250,8 @@ idna-0.2.3
 idna-0.3.0
 idna-0.4.0
 if_chain-1.0.2
-import_map-0.18.1
+image-0.24.7
+import_map-0.18.2
 indexmap-2.1.0
 inotify-0.9.6
 inotify-sys-0.1.5
@@ -304,7 +310,7 @@ mime-0.3.17
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
 mio-0.8.10
-monch-0.4.3
+monch-0.5.0
 multimap-0.8.3
 naga-0.14.2
 napi-build-1.2.1
@@ -323,6 +329,7 @@ num-bigint-0.4.4
 num-bigint-dig-0.8.4
 num-integer-0.1.45
 num-iter-0.1.43
+num-rational-0.4.1
 num-traits-0.2.17
 num_cpus-1.16.0
 objc-0.2.7
@@ -330,8 +337,6 @@ objc_exception-0.1.2
 object-0.32.1
 oid-registry-0.6.1
 once_cell-1.19.0
-onig-6.4.0
-onig_sys-69.8.1
 opaque-debug-0.3.0
 openssl-probe-0.1.5
 ordered-float-2.10.1
@@ -371,6 +376,7 @@ pkcs8-0.10.2
 pkg-config-0.3.27
 platforms-3.2.0
 pmutil-0.6.1
+png-0.17.10
 polyval-0.6.1
 powerfmt-0.2.0
 ppv-lite86-0.2.17
@@ -409,7 +415,6 @@ ref-cast-1.0.20
 ref-cast-impl-1.0.20
 regex-1.10.2
 regex-automata-0.4.3
-regex-syntax-0.7.5
 regex-syntax-0.8.2
 relative-path-1.9.0
 reqwest-0.11.20
@@ -457,13 +462,14 @@ serde_derive-1.0.195
 serde_json-1.0.111
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.154.0
+serde_v8-0.158.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
 shell-escape-0.1.5
 signal-hook-registry-1.4.1
 signature-2.2.0
+simd-adler32-0.3.7
 simd-json-0.13.4
 simdutf8-0.1.4
 siphasher-0.3.11
@@ -489,7 +495,7 @@ strum-0.25.0
 strum_macros-0.25.3
 subtle-2.5.0
 swc_atoms-0.6.5
-swc_bundler-0.223.15
+swc_bundler-0.223.20
 swc_common-0.33.12
 swc_config-0.1.9
 swc_config_macro-0.1.3
@@ -502,10 +508,10 @@ swc_ecma_parser-0.141.37
 swc_ecma_transforms_base-0.135.11
 swc_ecma_transforms_classes-0.124.11
 swc_ecma_transforms_macros-0.5.4
-swc_ecma_transforms_optimization-0.196.14
-swc_ecma_transforms_proposal-0.169.14
-swc_ecma_transforms_react-0.181.15
-swc_ecma_transforms_typescript-0.186.14
+swc_ecma_transforms_optimization-0.196.17
+swc_ecma_transforms_proposal-0.169.16
+swc_ecma_transforms_react-0.181.18
+swc_ecma_transforms_typescript-0.186.17
 swc_ecma_utils-0.125.4
 swc_ecma_visit-0.96.17
 swc_eq_ignore_macros-0.1.3
@@ -517,7 +523,6 @@ swc_visit_macros-0.5.9
 syn-1.0.109
 syn-2.0.48
 synstructure-0.12.6
-syntect-5.1.0
 tar-0.4.40
 tempfile-3.8.1
 termcolor-1.4.0
@@ -546,6 +551,16 @@ tower-service-0.3.2
 tracing-0.1.40
 tracing-attributes-0.1.27
 tracing-core-0.1.32
+tree-sitter-0.20.10
+tree-sitter-css-0.20.0
+tree-sitter-highlight-0.20.1
+tree-sitter-javascript-0.20.1
+tree-sitter-json-0.20.1
+tree-sitter-md-0.1.7
+tree-sitter-regex-0.20.0
+tree-sitter-rust-0.20.4
+tree-sitter-toml-0.20.0
+tree-sitter-typescript-0.20.3
 trust-dns-client-0.22.0
 trust-dns-proto-0.22.0
 trust-dns-resolver-0.22.0
@@ -577,7 +592,7 @@ utf-8-0.7.6
 utf8-width-0.1.7
 utf8parse-0.2.1
 uuid-1.6.1
-v8-0.82.0
+v8-0.83.1
 value-trait-0.8.0
 vcpkg-0.2.15
 version_check-0.9.4
@@ -600,6 +615,7 @@ wgpu-core-0.18.1
 wgpu-hal-0.18.1
 wgpu-types-0.18.0
 which-4.4.2
+which-5.0.0
 whoami-1.4.1
 widestring-1.0.2
 winapi-0.3.9
@@ -647,7 +663,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.39.4 -> deno-1.39.4.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.40.1 -> deno-1.40.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
