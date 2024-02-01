@@ -1,4 +1,4 @@
-BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 virtual/pkgconfig
 DEFINED_PHASES=configure install prepare setup
 DEPEND=sys-libs/readline:0= dev-libs/libpcre[jit?] jemalloc? ( dev-libs/jemalloc ) sys-libs/ncurses:0= dev-python/docutils dev-python/sphinx virtual/pkgconfig sys-apps/shadow
 DESCRIPTION=Varnish is a state-of-the-art, high-performance HTTP accelerator
@@ -12,5 +12,5 @@ REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_7 python_targ
 RESTRICT=test
 SLOT=0/2
 SRC_URI=http://varnish-cache.org/_downloads/varnish-6.5.1.tgz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	d3f9ec72badd0291b655682d67876adc	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	5bbb250a8d0b8f4496dcef8e8c1c1a8a	python-utils-r1	d3f9ec72badd0291b655682d67876adc	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
 _md5_=19f462a09dbc9d794fba30cfd7217d42

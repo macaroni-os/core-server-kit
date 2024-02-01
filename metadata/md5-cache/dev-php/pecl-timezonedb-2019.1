@@ -1,4 +1,4 @@
-BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php7-2? ( dev-lang/php:7.2 ) php_targets_php7-3? ( dev-lang/php:7.3 )
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php7-2? ( dev-lang/php:7.2 ) php_targets_php7-3? ( dev-lang/php:7.3 )
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php7-2? ( dev-lang/php:7.2 ) php_targets_php7-3? ( dev-lang/php:7.3 )
 DESCRIPTION=Timezone Database to be used with PHP's date and time functions
@@ -11,5 +11,5 @@ RDEPEND=php_targets_php7-4? ( dev-lang/php:7.4 ) php_targets_php7-2? ( dev-lang/
 REQUIRED_USE=|| ( php_targets_php7-4 php_targets_php7-2 php_targets_php7-3 )
 SLOT=0
 SRC_URI=https://pecl.php.net/get/timezonedb-2019.1.tgz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	php-ext-pecl-r3	a59741d3df8ea9f17afcdcfb7edaee6d	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	php-ext-pecl-r3	a59741d3df8ea9f17afcdcfb7edaee6d	php-ext-source-r3	dd53cd94748f9e498bea0f9480ba8d77	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=97976cc4036952d34903bbd52a0d4063

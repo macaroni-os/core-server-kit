@@ -1,4 +1,4 @@
-BDEPEND=dev-libs/libgamin virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+BDEPEND=dev-libs/libgamin virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DEFINED_PHASES=compile configure install postinst prepare setup test
 DEPEND=bzip2? ( app-arch/bzip2 ) dbi? ( dev-db/libdbi ) fam? ( virtual/fam ) ldap? ( >=net-nds/openldap-2.1.26 ) libev? ( >=dev-libs/libev-4.01 ) lua? ( >=dev-lang/lua-5.1:= ) mysql? ( dev-db/mysql-connector-c:= ) pcre? ( >=dev-libs/libpcre-3.1 ) php? ( dev-lang/php:*[cgi] ) postgres? ( dev-db/postgresql:* ) rrdtool? ( net-analyzer/rrdtool ) sasl? ( dev-libs/cyrus-sasl ) ssl? ( !libressl? ( >=dev-libs/openssl-0.9.7:0=[kerberos(-)?] ) libressl? ( dev-libs/libressl:= ) ) sqlite? ( dev-db/sqlite:3 ) webdav? ( dev-libs/libxml2 sys-fs/e2fsprogs ) xattr? ( kernel_linux? ( sys-apps/attr ) ) zlib? ( >=sys-libs/zlib-1.1 ) doc? ( dev-python/docutils ) test? ( virtual/perl-Test-Harness dev-libs/fcgi ) sys-apps/shadow
 DESCRIPTION=Lightweight high-performance web server
@@ -11,5 +11,5 @@ RDEPEND=bzip2? ( app-arch/bzip2 ) dbi? ( dev-db/libdbi ) fam? ( virtual/fam ) ld
 REQUIRED_USE=kerberos? ( ssl !libressl ) webdav? ( sqlite )
 SLOT=0
 SRC_URI=https://github.com/lighttpd/lighttpd1.4/tarball/8ee3dae0673ef5381de0fddea708fa3f1f3a2622 -> lighttpd1.4-1.4.73-8ee3dae.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
 _md5_=1f9e8970640115602e726d62cf45a4a1
