@@ -61,7 +61,6 @@ bytes-1.5.0
 cache_control-0.2.0
 cbc-0.1.2
 cc-1.0.83
-cesu8-1.1.0
 cfg-if-1.0.0
 chrono-0.4.31
 cipher-0.4.4
@@ -77,7 +76,6 @@ color-print-0.3.5
 color-print-proc-macro-0.3.5
 color_quant-1.1.0
 colorchoice-1.0.0
-combine-4.6.6
 comrak-0.20.0
 console_static_text-0.8.1
 const-oid-0.9.5
@@ -110,20 +108,21 @@ data-url-0.3.0
 debugid-0.8.0
 deno_ast-0.32.1
 deno_cache_dir-0.6.1
-deno_config-0.9.1
-deno_core-0.256.0
+deno_config-0.9.2
+deno_core-0.260.0
 deno_core_icudata-0.0.73
 deno_doc-0.100.0
 deno_emit-0.35.0
-deno_graph-0.64.1
-deno_lint-0.55.0
+deno_graph-0.64.2
+deno_lint-0.55.2
 deno_lockfile-0.18.0
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
 deno_npm-0.16.0
-deno_ops-0.132.0
+deno_ops-0.136.0
 deno_semver-0.5.4
 deno_task_shell-0.14.3
+deno_terminal-0.1.0
 deno_unsync-0.1.1
 deno_unsync-0.3.2
 deno_whoami-0.1.0
@@ -262,12 +261,12 @@ inout-0.1.3
 instant-0.1.12
 ipconfig-0.3.2
 ipnet-2.9.0
+is-docker-0.2.0
 is-macro-0.3.1
 is-terminal-0.4.9
+is-wsl-0.4.0
 itertools-0.10.5
 itoa-1.0.9
-jni-0.21.1
-jni-sys-0.3.0
 jobserver-0.1.27
 js-sys-0.3.66
 jsonc-parser-0.23.0
@@ -320,7 +319,6 @@ multimap-0.8.3
 naga-0.14.2
 napi-build-1.2.1
 napi-sys-2.2.2
-ndk-context-0.1.1
 netif-0.1.6
 new_debug_unreachable-1.0.4
 nextest-workspace-hack-0.1.0
@@ -346,6 +344,7 @@ once_cell-1.19.0
 onig-6.4.0
 onig_sys-69.8.1
 opaque-debug-0.3.0
+open-5.0.1
 openssl-probe-0.1.5
 ordered-float-2.10.1
 os_pipe-1.1.4
@@ -471,7 +470,7 @@ serde_derive-1.0.195
 serde_json-1.0.111
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.165.0
+serde_v8-0.169.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
@@ -610,7 +609,6 @@ wasm-bindgen-macro-support-0.2.89
 wasm-bindgen-shared-0.2.89
 wasm-streams-0.3.0
 web-sys-0.3.66
-webbrowser-0.8.12
 webpki-roots-0.25.3
 wgpu-core-0.18.1
 wgpu-hal-0.18.1
@@ -625,31 +623,22 @@ winapi-util-0.1.6
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-0.51.1
 windows-core-0.51.1
-windows-sys-0.45.0
 windows-sys-0.48.0
 windows-sys-0.52.0
-windows-targets-0.42.2
 windows-targets-0.48.5
 windows-targets-0.52.0
-windows_aarch64_gnullvm-0.42.2
 windows_aarch64_gnullvm-0.48.5
 windows_aarch64_gnullvm-0.52.0
-windows_aarch64_msvc-0.42.2
 windows_aarch64_msvc-0.48.5
 windows_aarch64_msvc-0.52.0
-windows_i686_gnu-0.42.2
 windows_i686_gnu-0.48.5
 windows_i686_gnu-0.52.0
-windows_i686_msvc-0.42.2
 windows_i686_msvc-0.48.5
 windows_i686_msvc-0.52.0
-windows_x86_64_gnu-0.42.2
 windows_x86_64_gnu-0.48.5
 windows_x86_64_gnu-0.52.0
-windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.5
 windows_x86_64_gnullvm-0.52.0
-windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
 winreg-0.50.0
@@ -673,7 +662,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.40.3 -> deno-1.40.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.40.4 -> deno-1.40.4.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
