@@ -9,7 +9,7 @@ DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
 	https://github.com/awslabs/aws-crt-python/tarball/2b5544200a929494b45d53533e4580dfd13c3327 -> aws-crt-python-0.20.3-2b55442.tar.gz
-	https://github.com/awslabs/aws-c-auth/tarball/119403930667b8f99f7873af5fb0ca5b0cdbe5ab -> aws-c-auth-0.7.14-1194039.tar.gz
+	https://github.com/awslabs/aws-c-auth/tarball/8e5e46188105c2072f06da366a02378074e40177 -> aws-c-auth-0.7.15-8e5e461.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/b52d9e8ee7af8155e6928c977ec5fde25a507ba0 -> aws-c-cal-0.6.9-b52d9e8.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/8eaa0986ad3cfd46c87432a2e4c8ab81a786085f -> aws-c-common-0.9.12-8eaa098.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/99ec79ee2970f1a045d4ced1501b97ee521f2f85 -> aws-c-compression-0.2.17-99ec79e.tar.gz
