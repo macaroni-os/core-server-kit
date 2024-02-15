@@ -17,6 +17,7 @@ net-misc
 net-proxy
 sys-apps
 sys-auth
+sys-cluster
 sys-libs
 virtual
 www-apache

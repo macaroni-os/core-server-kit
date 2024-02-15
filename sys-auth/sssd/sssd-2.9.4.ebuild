@@ -11,9 +11,9 @@ PYTHON_COMPAT=( python3+ )
 inherit autotools flag-o-matic linux-info optfeature plocale \
 	python-single-r1 pam toolchain-funcs
 
-DESCRIPTION="{{ desc }}"
-HOMEPAGE="{{ homepage }}"
-SRC_URI="{{ src_uri }}"
+DESCRIPTION="System Security Services Daemon provides access to identity and authentication"
+HOMEPAGE="https://pagure.io/SSSD/sssd"
+SRC_URI="https://github.com/SSSD/sssd/tarball/74d7ca72357e31566a72e36d0f1e2b5ea441cdaf -> sssd-2.9.4-74d7ca7.tar.gz"
 KEYWORDS="*"
 LICENSE="GPL-3"
 SLOT="0"
@@ -82,16 +82,12 @@ BDEPEND="
 	)
 "
 CONFIG_CHECK="~KEYS"
-
-{%- if patches %}
 PATCHES=(
-{%- for patch in patches %}
-	"${FILESDIR}"/"${PN}-{{ patch }}"
-{%- endfor %}
+	"${FILESDIR}"/"${PN}-2.8.2-krb5_pw_locked.patch"
+	"${FILESDIR}"/"${PN}-2.9.1-conditional-python-install.patch"
 )
-{%- endif %}
 
-S="${WORKDIR}/{{ github_user }}-{{ github_repo }}-{{ sha[:7] }}"
+S="${WORKDIR}/SSSD-sssd-74d7ca7"
 
 
 pkg_setup() {
