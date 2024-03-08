@@ -108,10 +108,10 @@ dashmap-5.5.3
 data-encoding-2.5.0
 data-url-0.3.0
 debugid-0.8.0
-deno_ast-0.34.1
+deno_ast-0.34.2
 deno_cache_dir-0.7.1
-deno_config-0.12.0
-deno_core-0.265.0
+deno_config-0.14.1
+deno_core-0.269.0
 deno_core_icudata-0.0.73
 deno_doc-0.113.1
 deno_emit-0.38.2
@@ -121,7 +121,7 @@ deno_lockfile-0.19.0
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
 deno_npm-0.17.0
-deno_ops-0.141.0
+deno_ops-0.145.0
 deno_semver-0.5.4
 deno_task_shell-0.14.3
 deno_terminal-0.1.1
@@ -176,6 +176,7 @@ eszip-0.64.2
 fallible-iterator-0.2.0
 fallible-streaming-iterator-0.1.9
 fancy-regex-0.10.0
+faster-hex-0.9.0
 fastrand-2.0.1
 fastwebsockets-0.6.0
 fd-lock-4.0.1
@@ -323,7 +324,7 @@ metal-0.27.0
 mime-0.3.17
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
-mio-0.8.10
+mio-0.8.11
 monch-0.5.0
 multimap-0.8.3
 naga-0.14.2
@@ -482,7 +483,7 @@ serde_derive-1.0.195
 serde_json-1.0.111
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.174.0
+serde_v8-0.178.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
@@ -680,7 +681,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.41.1 -> deno-1.41.1.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.41.2 -> deno-1.41.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
