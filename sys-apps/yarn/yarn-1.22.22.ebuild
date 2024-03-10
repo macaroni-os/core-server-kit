@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="Fast, reliable, and secure node dependency management"
 HOMEPAGE="https://yarnpkg.com"
-SRC_URI="https://github.com/yarnpkg/yarn/releases/download/v1.22.21/yarn-v1.22.21.tar.gz -> yarn-v1.22.21.tar.gz"
+SRC_URI="https://github.com/yarnpkg/yarn/releases/download/v1.22.22/yarn-v1.22.22.tar.gz -> yarn-v1.22.22.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
