@@ -11,7 +11,7 @@ aead-gcm-stream-0.1.0
 aes-0.8.3
 aes-gcm-0.10.3
 aes-kw-0.2.1
-ahash-0.8.6
+ahash-0.8.11
 aho-corasick-1.1.2
 alloc-no-stdlib-2.0.4
 alloc-stdlib-0.2.2
@@ -111,17 +111,17 @@ debugid-0.8.0
 deno_ast-0.34.2
 deno_cache_dir-0.7.1
 deno_config-0.14.1
-deno_core-0.269.0
+deno_core-0.270.0
 deno_core_icudata-0.0.73
 deno_doc-0.113.1
 deno_emit-0.38.2
-deno_graph-0.69.6
+deno_graph-0.69.9
 deno_lint-0.57.1
 deno_lockfile-0.19.0
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
 deno_npm-0.17.0
-deno_ops-0.145.0
+deno_ops-0.146.0
 deno_semver-0.5.4
 deno_task_shell-0.14.3
 deno_terminal-0.1.1
@@ -224,8 +224,8 @@ gpu-allocator-0.23.0
 gpu-descriptor-0.2.4
 gpu-descriptor-types-0.1.2
 group-0.13.0
-h2-0.3.22
-h2-0.4.0
+h2-0.3.24
+h2-0.4.2
 halfbrown-0.2.4
 handlebars-5.0.0
 hashbrown-0.13.2
@@ -483,11 +483,12 @@ serde_derive-1.0.195
 serde_json-1.0.111
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.178.0
+serde_v8-0.179.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
 shell-escape-0.1.5
+signal-hook-0.3.17
 signal-hook-registry-1.4.1
 signature-2.2.0
 simd-adler32-0.3.7
@@ -607,7 +608,7 @@ utf-8-0.7.6
 utf8-width-0.1.7
 utf8parse-0.2.1
 uuid-1.6.1
-v8-0.83.2
+v8-0.85.0
 value-trait-0.8.0
 vcpkg-0.2.15
 version_check-0.9.4
@@ -617,6 +618,7 @@ vte_generate_state_changes-0.1.1
 walkdir-2.3.2
 want-0.3.1
 wasi-0.11.0+wasi-snapshot-preview1
+wasite-0.1.0
 wasm-bindgen-0.2.89
 wasm-bindgen-backend-0.2.89
 wasm-bindgen-futures-0.4.39
@@ -631,7 +633,7 @@ wgpu-hal-0.18.1
 wgpu-types-0.18.0
 which-4.4.2
 which-5.0.0
-whoami-1.4.1
+whoami-1.5.0
 widestring-1.0.2
 win32job-2.0.0
 winapi-0.3.9
@@ -681,7 +683,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.41.2 -> deno-1.41.2.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.41.3 -> deno-1.41.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
