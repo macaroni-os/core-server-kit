@@ -7,5 +7,5 @@ LICENSE=BSD
 PDEPEND=dev-php/PEAR-PEAR
 RDEPEND=dev-lang/php:*[bzip2,pcre(+),zlib]
 SLOT=0
-SRC_URI=https://github.com/pear/Archive_Tar/tarball/4d761c5334c790e45ef3245f0864b8955c562caa -> Archive_Tar-1.4.14-4d761c5.tar.gz
-_md5_=a5df2674b467ae2d893b27eb91b66b7b
+SRC_URI=https://github.com/pear/Archive_Tar/tarball/b439c859564f5cbb0f64ad6002d0afe84a889602 -> Archive_Tar-1.5.0-b439c85.tar.gz
+_md5_=93308cb2f92572cd491553d66c16e711

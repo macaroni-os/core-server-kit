@@ -7,7 +7,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Tar file management class"
 HOMEPAGE="http://pear.php.net/package/${MY_PN}"
-SRC_URI="https://github.com/pear/Archive_Tar/tarball/4d761c5334c790e45ef3245f0864b8955c562caa -> Archive_Tar-1.4.14-4d761c5.tar.gz"
+SRC_URI="https://github.com/pear/Archive_Tar/tarball/b439c859564f5cbb0f64ad6002d0afe84a889602 -> Archive_Tar-1.5.0-b439c85.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
