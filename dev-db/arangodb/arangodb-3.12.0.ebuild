@@ -8,11 +8,11 @@ inherit cmake-utils eutils memsaver python-any-r1 systemd user
 
 DESCRIPTION="The multi-purpose multi-model NoSQL DB"
 HOMEPAGE="http://www.arangodb.com/"
-SRC_URI="https://github.com/arangodb/arangodb/archive/v3.11.8.tar.gz -> arangodb-v3.11.8.tar.gz"
+SRC_URI="https://github.com/arangodb/arangodb/archive/v3.12.0.tar.gz -> arangodb-v3.12.0.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="next"
+KEYWORDS="-*"
 IUSE="jemalloc +memsaver +system-boost systemd"
 
 DEPEND=">=sys-libs/readline-6.2_p1
