@@ -9,7 +9,7 @@ inherit flag-o-matic python-single-r1 systemd toolchain-funcs user
 MY_P="unit-${PV}"
 DESCRIPTION="Dynamic web and application server"
 HOMEPAGE="https://unit.nginx.org"
-SRC_URI="https://github.com/nginx/unit/tarball/088117008c9e8f397a58cc8d8070ce047beff12f -> unit-1.32.0-0881170.tar.gz"
+SRC_URI="https://github.com/nginx/unit/tarball/48d79170596d9923f2612d25e5a62ca0999b4313 -> unit-1.32.1-48d7917.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
