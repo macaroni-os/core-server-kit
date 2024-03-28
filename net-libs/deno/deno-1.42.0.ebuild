@@ -110,20 +110,20 @@ data-url-0.3.0
 debugid-0.8.0
 deno_ast-0.34.2
 deno_cache_dir-0.7.1
-deno_config-0.14.1
-deno_core-0.270.0
+deno_config-0.15.0
+deno_core-0.272.0
 deno_core_icudata-0.0.73
-deno_doc-0.113.1
+deno_doc-0.119.0
 deno_emit-0.38.2
 deno_graph-0.69.9
-deno_lint-0.57.1
+deno_lint-0.58.0
 deno_lockfile-0.19.0
 deno_media_type-0.1.2
 deno_native_certs-0.2.0
 deno_npm-0.17.0
-deno_ops-0.146.0
+deno_ops-0.148.0
 deno_semver-0.5.4
-deno_task_shell-0.14.3
+deno_task_shell-0.16.0
 deno_terminal-0.1.1
 deno_unsync-0.1.1
 deno_unsync-0.3.2
@@ -193,6 +193,7 @@ foreign-types-0.5.0
 foreign-types-macros-0.2.3
 foreign-types-shared-0.3.1
 form_urlencoded-1.2.1
+fqdn-0.3.4
 from_variant-0.1.7
 fs3-0.5.0
 fsevent-sys-4.1.0
@@ -224,6 +225,7 @@ gpu-allocator-0.23.0
 gpu-descriptor-0.2.4
 gpu-descriptor-types-0.1.2
 group-0.13.0
+gzip-header-1.0.0
 h2-0.3.24
 h2-0.4.2
 halfbrown-0.2.4
@@ -323,7 +325,7 @@ memoffset-0.9.0
 metal-0.27.0
 mime-0.3.17
 minimal-lexical-0.2.1
-miniz_oxide-0.7.1
+miniz_oxide-0.7.2
 mio-0.8.11
 monch-0.5.0
 multimap-0.8.3
@@ -437,7 +439,7 @@ ref-cast-impl-1.0.20
 regex-1.10.2
 regex-automata-0.4.3
 regex-syntax-0.8.2
-relative-path-1.9.0
+relative-path-1.9.2
 reqwest-0.11.20
 resolv-conf-0.7.0
 rfc6979-0.4.0
@@ -483,7 +485,7 @@ serde_derive-1.0.195
 serde_json-1.0.111
 serde_repr-0.1.16
 serde_urlencoded-0.7.1
-serde_v8-0.179.0
+serde_v8-0.181.0
 sha-1-0.10.0
 sha1-0.10.6
 sha2-0.10.8
@@ -492,7 +494,7 @@ signal-hook-0.3.17
 signal-hook-registry-1.4.1
 signature-2.2.0
 simd-adler32-0.3.7
-simd-json-0.13.4
+simd-json-0.13.9
 simdutf8-0.1.4
 siphasher-0.3.11
 slab-0.4.9
@@ -553,8 +555,8 @@ tendril-0.4.3
 termcolor-1.4.0
 text-size-1.1.0
 text_lines-0.6.0
-thiserror-1.0.50
-thiserror-impl-1.0.50
+thiserror-1.0.58
+thiserror-impl-1.0.58
 thread_local-1.1.8
 time-0.3.30
 time-core-0.1.2
@@ -608,8 +610,8 @@ utf-8-0.7.6
 utf8-width-0.1.7
 utf8parse-0.2.1
 uuid-1.6.1
-v8-0.85.0
-value-trait-0.8.0
+v8-0.89.0
+value-trait-0.8.1
 vcpkg-0.2.15
 version_check-0.9.4
 vsimd-0.8.0
@@ -683,7 +685,7 @@ inherit cargo
 
 DESCRIPTION="Deno is a simple, modern and secure runtime for JavaScript and TypeScript"
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.41.3 -> deno-1.41.3.tar.gz
+SRC_URI="https://api.github.com/repos/denoland/deno/tarball/v1.42.0 -> deno-1.42.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="MIT"
