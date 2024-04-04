@@ -172,14 +172,14 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/mongodb/mongo-tools/archive/be7a33bdb001ddcb2686f0f4738fe16bdd92292d.tar.gz -> mongo-tools-100.9.4-be7a33bd.tar.gz
+SRC_URI="https://github.com/mongodb/mongo-tools/tarball/ce6af0fefca324ad5d9cb689d335130f48c99699 -> mongo-tools-100.9.4-ce6af0f.tar.gz
 https://direct.funtoo.org/c5/11/2b/c5112bde7432c9ce6a2d352c7d2ef37808f62192252e4c43c669df4c89f9cf0fd58cf0f0715253ee59158fa2e9fdf4fff2a2bfbaf11583a82a494065bbac120a -> mongo-tools-100.9.4-funtoo-go-bundle-cb3d7de3b2e6d1ab467a413e54921983d524dfc9a4a2bbe69b456997ff75e2c9d632196860e5462b2a61f3f3400f93c20dcf889ed08b853d8aa4b6e987db2a36.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
 IUSE="sasl ssl"
-S="${WORKDIR}/mongo-tools-be7a33bdb001ddcb2686f0f4738fe16bdd92292d"
+S="${WORKDIR}/mongodb-mongo-tools-ce6af0f"
 
 RDEPEND="
 	net-libs/libpcap
@@ -203,7 +203,7 @@ src_compile() {
 
 		go build -mod=mod \
 			-o bin/"${bin_name}" \
-			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=be7a33bdb001ddcb2686f0f4738fe16bdd92292d" \
+			-ldflags "-X main.VersionStr=${PV} -X main.GitCommit=" \
 			-buildmode=pie \
 			--tags "${myconf[*]}" \
 			./"${bin_path}" || die "compile failed"
