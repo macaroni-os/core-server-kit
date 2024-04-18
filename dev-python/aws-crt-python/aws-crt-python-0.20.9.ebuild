@@ -9,7 +9,7 @@ DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
 	https://github.com/awslabs/aws-crt-python/tarball/c11a5542141c1508d259a08e1c1d1db6a0b4c0a0 -> aws-crt-python-0.20.9-c11a554.tar.gz
-	https://github.com/awslabs/aws-c-auth/tarball/0de6b271bdfb447853d1af0eced39faed7f746f3 -> aws-c-auth-0.7.17-0de6b27.tar.gz
+	https://github.com/awslabs/aws-c-auth/tarball/277c8fbcb3f5341adb51000624b55ace301cfe82 -> aws-c-auth-0.7.18-277c8fb.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/314fc555846ac7bf2cc68a117c99a6af26f7043e -> aws-c-cal-0.6.11-314fc55.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/ae7b067d9274d2d3faa1d3ae42d489a6986661f7 -> aws-c-common-0.9.15-ae7b067.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/ea1d421a421ad83a540309a94c38d50b6a5d836b -> aws-c-compression-0.2.18-ea1d421.tar.gz
@@ -20,7 +20,7 @@ SRC_URI="
 	https://github.com/awslabs/aws-c-s3/tarball/3334843eb4e0e56c2565e481b2ef853d1cadde78 -> aws-c-s3-0.5.7-3334843.tar.gz
 	https://github.com/awslabs/aws-c-sdkutils/tarball/638fdd6548df85c599f82db7ea70fd9e44917ef5 -> aws-c-sdkutils-0.1.15-638fdd6.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/aac442a2dbbb5e72d0a3eca8313cf65e7e1cac2f -> aws-checksums-0.1.18-aac442a.tar.gz
-	https://github.com/awslabs/aws-lc/tarball/e7572ee050b470b2d90e458ee32b8949e76193d5 -> aws-lc-1.24.1-e7572ee.tar.gz
+	https://github.com/awslabs/aws-lc/tarball/10a389e1adda37889b4ef9186901df15c48846b5 -> aws-lc-1.25.0-10a389e.tar.gz
 	https://github.com/aws/s2n-tls/tarball/9774bd7f3fa1388b0652a29ba09924284e3abf24 -> s2n-tls-1.4.12-9774bd7.tar.gz
 "
 
