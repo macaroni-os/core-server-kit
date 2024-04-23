@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Model-driven deployment, config management, and command execution framework"
 HOMEPAGE="https://ansible.com/"
-SRC_URI="https://files.pythonhosted.org/packages/08/71/f5880f6b87c05079f78238bdb222ab9e8e2189281e1310544deb40382e6d/ansible-core-2.15.10.tar.gz -> ansible-core-2.15.10.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/bc/e8/34680ed379dbe6573de3fac8941f3a03de57ad69c6bd2fe3feaa98051c4d/ansible_core-2.15.11.tar.gz -> ansible_core-2.15.11.tar.gz"
 
 DEPEND=""
 RDEPEND="
@@ -28,4 +28,4 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="*"
-S="${WORKDIR}/ansible-core-2.15.10"
+S="${WORKDIR}/ansible_core-2.15.11"
