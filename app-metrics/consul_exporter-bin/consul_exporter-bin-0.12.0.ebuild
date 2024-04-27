@@ -10,8 +10,8 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Exporter for Consul metrics"
 HOMEPAGE="https://github.com/prometheus/consul_exporter"
 SRC_URI="
-	amd64? ( https://github.com/prometheus/consul_exporter/releases/download/v0.11.0/consul_exporter-0.11.0.linux-amd64.tar.gz -> consul_exporter-0.11.0.linux-amd64.tar.gz )
-	arm64? ( https://github.com/prometheus/consul_exporter/releases/download/v0.11.0/consul_exporter-0.11.0.linux-arm64.tar.gz -> consul_exporter-0.11.0.linux-arm64.tar.gz )"
+	amd64? ( https://github.com/prometheus/consul_exporter/releases/download/v0.12.0/consul_exporter-0.12.0.linux-amd64.tar.gz -> consul_exporter-0.12.0.linux-amd64.tar.gz )
+	arm64? ( https://github.com/prometheus/consul_exporter/releases/download/v0.12.0/consul_exporter-0.12.0.linux-arm64.tar.gz -> consul_exporter-0.12.0.linux-arm64.tar.gz )"
 
 KEYWORDS="-* amd64 arm64"
 LICENSE="Apache-2.0"
