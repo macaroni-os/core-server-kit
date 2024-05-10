@@ -8,14 +8,14 @@ inherit flag-o-matic linux-info multilib pam prefix python-single-r1 user
 
 KEYWORDS="next"
 
-SLOT=14
+SLOT=13
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
-SRC_URI="https://ftp.postgresql.org/pub/source/v14.11/postgresql-14.11.tar.bz2 -> postgresql-14.11.tar.bz2"
+SRC_URI="https://ftp.postgresql.org/pub/source/v13.15/postgresql-13.15.tar.bz2 -> postgresql-13.15.tar.bz2"
 
-IUSE="debug doc icu kerberos ldap llvm lz4 nls pam
+IUSE="debug doc icu kerberos ldap llvm nls pam
 	perl python +readline selinux +server ssl static-libs tcl
 	threads uuid xml zlib"
 
@@ -32,7 +32,6 @@ llvm? (
 	sys-devel/llvm:=
 	sys-devel/clang:=
 )
-lz4? ( app-arch/lz4 )
 pam? ( sys-libs/pam )
 perl? ( >=dev-lang/perl-5.8:= )
 python? ( ${PYTHON_DEPS} )
@@ -74,6 +73,9 @@ xml? ( virtual/pkgconfig )
 RDEPEND="${CDEPEND}
 selinux? ( sec-policy/selinux-postgresql )
 "
+PATCHES=(
+	"${FILESDIR}"/postgresql-13.3-riscv-spinlocks.patch
+)
 pkg_setup() {
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/sh /var/lib/postgresql postgres
@@ -91,7 +93,7 @@ src_prepare() {
 	# hardened and non-hardened environments. (Bug #528786)
 	sed -e 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
 
-	use server || eapply "${FILESDIR}/${PN}-14-no-server.patch"
+	use server || eapply "${FILESDIR}/${PN}-13-no-server.patch"
 
 	if use pam ; then
 		sed "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -136,7 +138,7 @@ src_configure() {
 		$(use_with kerberos gssapi)
 		$(use_with ldap)
 		$(use_with llvm)
-		$(use_with lz4)
+		
 		$(use_with pam)
 		$(use_with perl)
 		$(use_with python)

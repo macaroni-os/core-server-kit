@@ -6,16 +6,16 @@ PYTHON_COMPAT=( python3+ )
 
 inherit flag-o-matic linux-info multilib pam prefix python-single-r1 user
 
-KEYWORDS="next"
+KEYWORDS="*"
 
-SLOT=15
+SLOT=12
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
-SRC_URI="https://ftp.postgresql.org/pub/source/v15.6/postgresql-15.6.tar.bz2 -> postgresql-15.6.tar.bz2"
+SRC_URI="https://ftp.postgresql.org/pub/source/v12.19/postgresql-12.19.tar.bz2 -> postgresql-12.19.tar.bz2"
 
-IUSE="debug doc icu kerberos ldap llvm lz4 nls pam
+IUSE="debug doc icu kerberos ldap llvm nls pam
 	perl python +readline selinux +server ssl static-libs tcl
 	threads uuid xml zlib"
 
@@ -32,7 +32,6 @@ llvm? (
 	sys-devel/llvm:=
 	sys-devel/clang:=
 )
-lz4? ( app-arch/lz4 )
 pam? ( sys-libs/pam )
 perl? ( >=dev-lang/perl-5.8:= )
 python? ( ${PYTHON_DEPS} )
@@ -91,7 +90,7 @@ src_prepare() {
 	# hardened and non-hardened environments. (Bug #528786)
 	sed -e 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
 
-	use server || eapply "${FILESDIR}/${PN}-15-no-server.patch"
+	use server || eapply "${FILESDIR}/${PN}-12-no-server.patch"
 
 	if use pam ; then
 		sed "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -136,7 +135,7 @@ src_configure() {
 		$(use_with kerberos gssapi)
 		$(use_with ldap)
 		$(use_with llvm)
-		$(use_with lz4)
+		
 		$(use_with pam)
 		$(use_with perl)
 		$(use_with python)
