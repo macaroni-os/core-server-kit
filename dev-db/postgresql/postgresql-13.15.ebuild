@@ -15,9 +15,7 @@ DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
 SRC_URI="https://ftp.postgresql.org/pub/source/v13.15/postgresql-13.15.tar.bz2 -> postgresql-13.15.tar.bz2"
 
-IUSE="debug doc icu kerberos ldap llvm nls pam
-	perl python +readline selinux +server ssl static-libs tcl
-	threads uuid xml zlib"
+IUSE="debug doc icu kerberos ldap llvm  nls pam perl python +readline selinux +server ssl static-libs tcl uuid xml zlib"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -133,7 +131,6 @@ src_configure() {
 		--with-system-tzdata="${PO}/usr/share/zoneinfo"
 		$(use_enable !alpha spinlocks)
 		$(use_enable debug)
-		$(use_enable threads thread-safety)
 		$(use_with icu)
 		$(use_with kerberos gssapi)
 		$(use_with ldap)
