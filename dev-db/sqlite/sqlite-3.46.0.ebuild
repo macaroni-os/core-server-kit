@@ -15,7 +15,8 @@ HOMEPAGE="https://sqlite.org/"
 # On version updates, make sure to read the forum (https://sqlite.org/forum/forum)
 # for hints regarding test failures, backports, etc.
 SRC_URI="https://sqlite.org/2024/sqlite-src-3460000.zip -> sqlite-src-3460000.zip
-https://sqlite.org/2024/sqlite-doc-3460000.zip -> sqlite-doc-3460000.zip"
+doc? ( https://sqlite.org/2024/sqlite-doc-3460000.zip -> sqlite-doc-3460000.zip )
+"
 
 LICENSE="public-domain"
 SLOT="3"

@@ -9,9 +9,13 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Exporter for MySQL server metrics"
 HOMEPAGE="https://github.com/prometheus/mysqld_exporter"
-SRC_URI="
-	amd64? ( https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.1/mysqld_exporter-0.15.1.linux-amd64.tar.gz -> mysqld_exporter-0.15.1.linux-amd64.tar.gz )
-	arm64? ( https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.1/mysqld_exporter-0.15.1.linux-arm64.tar.gz -> mysqld_exporter-0.15.1.linux-arm64.tar.gz )"
+SRC_URI="amd64? (
+  https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.1/mysqld_exporter-0.15.1.linux-amd64.tar.gz -> mysqld_exporter-0.15.1.linux-amd64.tar.gz
+)
+arm64? (
+  https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.1/mysqld_exporter-0.15.1.linux-arm64.tar.gz -> mysqld_exporter-0.15.1.linux-arm64.tar.gz
+)
+"
 
 KEYWORDS="-* amd64 arm64"
 LICENSE="Apache-2.0"

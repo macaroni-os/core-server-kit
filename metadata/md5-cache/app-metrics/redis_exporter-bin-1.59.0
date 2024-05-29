@@ -9,4 +9,4 @@ LICENSE=Apache-2.0
 SLOT=0
 SRC_URI=amd64? ( https://github.com/oliver006/redis_exporter/releases/download/v1.59.0/redis_exporter-v1.59.0.linux-amd64.tar.gz -> redis_exporter-v1.59.0.linux-amd64.tar.gz ) arm64? ( https://github.com/oliver006/redis_exporter/releases/download/v1.59.0/redis_exporter-v1.59.0.linux-arm64.tar.gz -> redis_exporter-v1.59.0.linux-arm64.tar.gz )
 _eclasses_=user	875055ddd565382c728563992ae3abf7
-_md5_=9c9e8c09158aea3e1d638f895e778972
+_md5_=6989a3441ec300fe65ad69487ebf237c
