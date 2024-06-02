@@ -80,8 +80,8 @@ EGO_SUM=(
 	"github.com/aws/smithy-go v1.20.2/go.mod"
 	"github.com/beorn7/perks v1.0.1"
 	"github.com/beorn7/perks v1.0.1/go.mod"
-	"github.com/caddyserver/certmagic v0.21.2"
-	"github.com/caddyserver/certmagic v0.21.2/go.mod"
+	"github.com/caddyserver/certmagic v0.21.3"
+	"github.com/caddyserver/certmagic v0.21.3/go.mod"
 	"github.com/caddyserver/zerossl v0.1.3"
 	"github.com/caddyserver/zerossl v0.1.3/go.mod"
 	"github.com/cenkalti/backoff/v4 v4.2.1"
@@ -655,8 +655,8 @@ go-module_set_globals
 
 DESCRIPTION="Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS"
 HOMEPAGE="https://caddyserver.com/ https://github.com/caddyserver/caddy"
-SRC_URI="https://github.com/caddyserver/caddy/tarball/4ef9ea99c66a02dd4a05bf102d9a7c0fbd626075 -> caddy-2.8.1-4ef9ea9.tar.gz
-https://direct.funtoo.org/f1/b9/50/f1b950dcc1157167438fcab5907167a2c11b4ac21eb5be462755e9e81ae64b333cd14dd73117c665f33b0b5d6538372a739e1c811263e01b8f67a620488b1b63 -> caddy-2.8.1-funtoo-go-bundle-1b54b5f6bc75302b2a7d0c0d6c6bf8d4844a09fc77da31399b67b916b2da66911e89a95d63c7fc51b0dd823207ef0c72a4398e6cddb156c9949cde804232d47c.tar.gz"
+SRC_URI="https://github.com/caddyserver/caddy/tarball/b92c89160e94c6d88b1df632ddd41903c6ce7de3 -> caddy-2.8.4-b92c891.tar.gz
+https://direct.funtoo.org/50/ed/51/50ed51c6ee5a468f409bbcd192a4ae25488a21e251ae2eb2c0fcb01e8f25900f40a2475e321f1d0e178a272e4e1c35551dc317a62179c6b57a24b89aa15a0dca -> caddy-2.8.4-funtoo-go-bundle-0a5d19217eb977a1ed26e1236d19ad559e93c7dff6c4dd3ab40197f23d82b686c2c9fbbf9526b706c085f20ff356be4bc4a646bf42fd19f9f2bfba1b151936eb.tar.gz"
 
 LICENSE="Apache-2.0 BSD ECL-2.0 MIT"
 SLOT="0"
@@ -678,7 +678,7 @@ post_src_unpack() {
 # Upstream reference to set custom compile time Caddy versions:
 # https://github.com/caddyserver/caddy/pull/5072/files
 src_compile() {
-	go build -ldflags '-X github.com/caddyserver/caddy/v2.CustomVersion=v2.8.1-4ef9ea9-funtoo' \
+	go build -ldflags '-X github.com/caddyserver/caddy/v2.CustomVersion=v2.8.4-b92c891-funtoo' \
 	-mod=mod ./cmd/caddy || die "compile failed"
 }
 
