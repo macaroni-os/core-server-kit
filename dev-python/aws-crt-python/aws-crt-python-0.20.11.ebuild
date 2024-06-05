@@ -8,10 +8,10 @@ inherit distutils-r1
 DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
-	https://github.com/awslabs/aws-crt-python/tarball/23efdd760d4e8d02618f055dfe5fb40ddde52d41 -> aws-crt-python-0.20.10-23efdd7.tar.gz
+	https://github.com/awslabs/aws-crt-python/tarball/af29c1580726bb3eb9792d145eb631dbff508f42 -> aws-crt-python-0.20.11-af29c15.tar.gz
 	https://github.com/awslabs/aws-c-auth/tarball/53a31bacf2918e848e00b052d2e25cba0be069d9 -> aws-c-auth-0.7.22-53a31ba.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/96c47e339d030d1fa4eaca201be948bc4442510d -> aws-c-cal-0.6.15-96c47e3.tar.gz
-	https://github.com/awslabs/aws-c-common/tarball/06cf4d82adad52723305dc2aeb06bb6439b5df7f -> aws-c-common-0.9.20-06cf4d8.tar.gz
+	https://github.com/awslabs/aws-c-common/tarball/4f874cea50a70bc6ebcd85c6ce1c6c0016b5aff4 -> aws-c-common-0.9.21-4f874ce.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/ea1d421a421ad83a540309a94c38d50b6a5d836b -> aws-c-compression-0.2.18-ea1d421.tar.gz
 	https://github.com/awslabs/aws-c-event-stream/tarball/1a70c50f78a6e706f1f91a4ed138478271b6d9d3 -> aws-c-event-stream-0.4.2-1a70c50.tar.gz
 	https://github.com/awslabs/aws-c-http/tarball/d83f8d70143ddce5ab4e479175fbd44ba994211b -> aws-c-http-0.8.2-d83f8d7.tar.gz
@@ -21,7 +21,7 @@ SRC_URI="
 	https://github.com/awslabs/aws-c-sdkutils/tarball/8c7af71f91ed5b9d2a043d51f120495f43723f80 -> aws-c-sdkutils-0.1.16-8c7af71.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/aac442a2dbbb5e72d0a3eca8313cf65e7e1cac2f -> aws-checksums-0.1.18-aac442a.tar.gz
 	https://github.com/awslabs/aws-lc/tarball/92bf53276029a71f01303e5adb1c5dbc379f1150 -> aws-lc-1.28.0-92bf532.tar.gz
-	https://github.com/aws/s2n-tls/tarball/6d92b46d309a8f12fa08ad289020d9a41c925a66 -> s2n-tls-1.4.15-6d92b46.tar.gz
+	https://github.com/aws/s2n-tls/tarball/114ccab0ff2cde491203ac841837d0d39b767412 -> s2n-tls-1.4.16-114ccab.tar.gz
 "
 
 LICENSE="Apache-2.0"
