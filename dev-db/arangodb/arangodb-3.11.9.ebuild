@@ -12,7 +12,7 @@ SRC_URI="https://github.com/arangodb/arangodb/archive/v3.11.9.tar.gz -> arangodb
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="next"
+KEYWORDS="*"
 IUSE="jemalloc +memsaver +system-boost systemd"
 
 DEPEND=">=sys-libs/readline-6.2_p1
