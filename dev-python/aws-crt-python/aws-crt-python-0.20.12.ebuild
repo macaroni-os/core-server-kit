@@ -17,11 +17,11 @@ SRC_URI="
 	https://github.com/awslabs/aws-c-http/tarball/d83f8d70143ddce5ab4e479175fbd44ba994211b -> aws-c-http-0.8.2-d83f8d7.tar.gz
 	https://github.com/awslabs/aws-c-io/tarball/878b4fa027bda4041493f06e0562d5e98bb3deb8 -> aws-c-io-0.14.9-878b4fa.tar.gz
 	https://github.com/awslabs/aws-c-mqtt/tarball/ed7bbd68c03d7022c915a2924740ab7992ad2311 -> aws-c-mqtt-0.10.4-ed7bbd6.tar.gz
-	https://github.com/awslabs/aws-c-s3/tarball/6588f9a714ee7a8be1bddd63ea5ea1ea224d00b4 -> aws-c-s3-0.5.10-6588f9a.tar.gz
+	https://github.com/awslabs/aws-c-s3/tarball/cb431ba06b5d3db4373cd8fb55d6c16464cbf2ea -> aws-c-s3-0.6.0-cb431ba.tar.gz
 	https://github.com/awslabs/aws-c-sdkutils/tarball/8c7af71f91ed5b9d2a043d51f120495f43723f80 -> aws-c-sdkutils-0.1.16-8c7af71.tar.gz
 	https://github.com/awslabs/aws-checksums/tarball/aac442a2dbbb5e72d0a3eca8313cf65e7e1cac2f -> aws-checksums-0.1.18-aac442a.tar.gz
 	https://github.com/awslabs/aws-lc/tarball/4368aaa6975ba41bd76d3bb12fac54c4680247fb -> aws-lc-1.30.1-4368aaa.tar.gz
-	https://github.com/aws/s2n-tls/tarball/114ccab0ff2cde491203ac841837d0d39b767412 -> s2n-tls-1.4.16-114ccab.tar.gz
+	https://github.com/aws/s2n-tls/tarball/073c7b415a17d271a7b2c8c385d0e641fc94871f -> s2n-tls-1.4.17-073c7b4.tar.gz
 "
 
 LICENSE="Apache-2.0"
