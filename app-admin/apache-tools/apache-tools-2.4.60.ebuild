@@ -5,7 +5,7 @@ inherit flag-o-matic eutils multilib toolchain-funcs
 
 DESCRIPTION="Useful Apache tools - htdigest, htpasswd, ab, htdbm"
 HOMEPAGE="https://httpd.apache.org/"
-SRC_URI="https://archive.apache.org/dist/httpd/httpd-2.4.59.tar.bz2 -> httpd-2.4.59.tar.bz2
+SRC_URI="https://archive.apache.org/dist/httpd/httpd-2.4.60.tar.bz2 -> httpd-2.4.60.tar.bz2
 "
 
 LICENSE="Apache-2.0"

@@ -11,6 +11,6 @@ PDEPEND=perl? ( >=dev-perl/DBD-mysql-2.9004 )
 RDEPEND=>=app-arch/lz4-0_p131:= app-arch/zstd:= sys-libs/ncurses:0= >=sys-libs/zlib-1.2.3:0= >=dev-libs/openssl-1.0.0:0= server? ( dev-libs/icu:= dev-libs/libevent:=[ssl,threads] >=dev-libs/protobuf-3.8:= net-libs/libtirpc:= cjk? ( app-text/mecab:= ) jemalloc? ( dev-libs/jemalloc:0= ) kernel_linux? ( dev-libs/libaio:0= sys-process/procps:0= ) numa? ( sys-process/numactl ) tcmalloc? ( dev-util/google-perftools:0= ) ) !dev-db/mariadb !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster selinux? ( sec-policy/selinux-mysql ) !prefix? ( dev-db/mysql-init-scripts )
 REQUIRED_USE=?? ( tcmalloc jemalloc ) cjk? ( server ) jemalloc? ( server ) numa? ( server ) profiling? ( server ) router? ( server ) tcmalloc? ( server )
 SLOT=8.0
-SRC_URI=https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.37.tar.gz -> mysql-boost-8.0.37.tar.gz
+SRC_URI=https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.38.tar.gz -> mysql-boost-8.0.38.tar.gz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	prefix	e51c7882b7b721e54e684f7eb143cbfe	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=3973fb09360855b76b5dcd4fbebf31b4
+_md5_=c22409fde1348db9aa318ccf47d17367
