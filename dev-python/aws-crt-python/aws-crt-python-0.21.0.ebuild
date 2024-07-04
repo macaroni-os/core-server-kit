@@ -8,9 +8,9 @@ inherit distutils-r1
 DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
-	https://github.com/awslabs/aws-crt-python/tarball/e88cce2674ab8cc39ed2104d10bdb90cb2f30b77 -> aws-crt-python-0.20.12-e88cce2.tar.gz
+	https://github.com/awslabs/aws-crt-python/tarball/1424d91777e0563597fe8bdc34e0bb3510a36585 -> aws-crt-python-0.21.0-1424d91.tar.gz
 	https://github.com/awslabs/aws-c-auth/tarball/53a31bacf2918e848e00b052d2e25cba0be069d9 -> aws-c-auth-0.7.22-53a31ba.tar.gz
-	https://github.com/awslabs/aws-c-cal/tarball/11fc68445b2b4993656ed720fc2788f3c4c7c20f -> aws-c-cal-0.7.0-11fc684.tar.gz
+	https://github.com/awslabs/aws-c-cal/tarball/71810b1ade7af4747104ae245b74240ae8e8cf77 -> aws-c-cal-0.7.1-71810b1.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/6d974f92c1d86391c1dcb1173239adf757c52b2d -> aws-c-common-0.9.23-6d974f9.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/ea1d421a421ad83a540309a94c38d50b6a5d836b -> aws-c-compression-0.2.18-ea1d421.tar.gz
 	https://github.com/awslabs/aws-c-event-stream/tarball/1a70c50f78a6e706f1f91a4ed138478271b6d9d3 -> aws-c-event-stream-0.4.2-1a70c50.tar.gz
