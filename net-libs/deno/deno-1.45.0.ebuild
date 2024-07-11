@@ -6,8 +6,8 @@ inherit cargo
 
 DESCRIPTION="A modern runtime for JavaScript and TypeScript."
 HOMEPAGE="https://github.com/denoland/deno"
-SRC_URI="https://github.com/denoland/deno/tarball/892e7c20ac6e7bc0601f4c23e64f43187c1b8479 -> deno-1.44.4-892e7c2.tar.gz
-https://direct.funtoo.org/b3/20/92/b32092b8af67298dc74b1251b3e3a5a49dd94948f2fa37a36da6c45692dbd30eee811b3e10d28fb23c322b31724b9a179ea88e6f03f7d12cb87b98e671e594ce -> deno-1.44.4-funtoo-crates-bundle-783469b0caf4d7c7ae5e690157ad80d65fc603d1889de302c5e01db0854529c3e7c3ca9a92fe1d20ccc1d7af467562581589742dabe32de3e8f664bceff90952.tar.gz"
+SRC_URI="https://github.com/denoland/deno/tarball/04ff5c731d55f2402e7b08e378eaf6e5a5a4d961 -> deno-1.45.0-04ff5c7.tar.gz
+https://direct.funtoo.org/fe/47/27/fe4727f962406e0b4a46ece95a4692d0383cab576261827a8d439a995afeaed64470c1d4da11b8a982adcd2548ab9601889748b449e64e262a5fddfe55a25d34 -> deno-1.45.0-funtoo-crates-bundle-0887cdc0004c0e5969974ae8feaab396368911535c4ef56f502f1916010c72a5198c626a36af5502b8499b8d7f60c375b6113a539de208393ecaf1d578794de8.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
