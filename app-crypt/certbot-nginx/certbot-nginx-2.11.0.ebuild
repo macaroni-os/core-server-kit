@@ -1,4 +1,3 @@
-# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Nginx plugin for certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
-
+S=${WORKDIR}/certbot_nginx-${PV}
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
