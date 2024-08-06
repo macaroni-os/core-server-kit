@@ -147,7 +147,7 @@ EGO_SUM=(
 go-module_set_globals
 
 SRC_URI="https://github.com/mongodb/mongo-tools/tarball/6d4f001be3fcf673de04d20176e90ee02ef233a9 -> mongo-tools-100.10.0-6d4f001.tar.gz
-https://distfiles.macaronios.org/42/55/12/425512eb550843f45620671cd3e7cfa89569944872204c8fd481b47f8c1f0fe898ddf9657faf8b0a3bcd0f5ee98ec2efd5348cc2d50dd27ee10bee770076f8cc -> mongo-tools-100.10.0-funtoo-go-bundle-4f9c9e500d1bad5584f3d49a96cf5667ce4baf528205b4f4b49fd841cfcb7bf0d52ff17b0873e2bc032defbc6b09a4162ae7205b31c2577bf2226aec7c3c7cd6.tar.gz"
+https://distfiles.macaronios.org/a6/f6/a7/a6f6a7b6ce3d89f4b685b2d13c0354ee8765b4d405141075cb570464617ae0949774a4f3e800523e3cecb92e0f9267d434607c2ff8381cc2651c1e58c37a05c8 -> mongo-tools-100.10.0-funtoo-go-bundle-4f9c9e500d1bad5584f3d49a96cf5667ce4baf528205b4f4b49fd841cfcb7bf0d52ff17b0873e2bc032defbc6b09a4162ae7205b31c2577bf2226aec7c3c7cd6.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
