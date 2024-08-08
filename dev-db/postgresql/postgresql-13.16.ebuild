@@ -13,7 +13,7 @@ SLOT=13
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
-SRC_URI="https://ftp.postgresql.org/pub/source/v13.15/postgresql-13.15.tar.bz2 -> postgresql-13.15.tar.bz2"
+SRC_URI="https://ftp.postgresql.org/pub/source/v13.16/postgresql-13.16.tar.bz2 -> postgresql-13.16.tar.bz2"
 
 IUSE="debug doc icu kerberos ldap llvm  nls pam perl python +readline selinux +server ssl static-libs tcl uuid xml zlib"
 
