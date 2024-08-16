@@ -1,7 +1,7 @@
 Licensing
 =========
 
-This file documents the licensing information for core-server-kit next.
+This file documents the licensing information for core-server-kit mark-testing.
 
 The contents of this kit are free software; you can redistribute and/or modify
 it under the the terms of GNU General Public License version 2 as published by
@@ -33,6 +33,7 @@ in `kit-fixups`_ as well as `metatools`_ itself.
 Copyright
 =========
 
+| Copyright 2024 Macaroni OS
 | Copyright 2008-2024 Funtoo Solutions, Inc.
 | Copyright 1999-2024 Gentoo Foundation, Gentoo Authors, and
 | many independent contributors/authors as documented in the source code commit history.
