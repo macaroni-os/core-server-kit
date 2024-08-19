@@ -12,7 +12,7 @@ SRC_URI="
 	src? ( https://github.com/rsyslog/rsyslog/tarball/49fe89c6ac3433ac38f093c07c5513d802b5b446 -> rsyslog-8.2406.0-49fe89c.tar.gz )
 
 	
-	doc? ( https://github.com/rsyslog/rsyslog-doc/tarball/3401efa7d23cd9f00a1c88a3de588609903ebcca -> rsyslog-doc-8.2406.0-3401efa.tar.gz )
+	doc? ( https://github.com/rsyslog/rsyslog-doc/tarball/86fd5a6dce19768b0a8685a3bcbf167aa6192e0c -> rsyslog-doc-8.2408.0-86fd5a6.tar.gz )
 "
 
 KEYWORDS="*"
@@ -106,7 +106,7 @@ src_unpack() {
 		cd "${S}" || die "Cannot change dir into '${S}'"
 		mkdir docs || die "Failed to create docs directory"
 		cd docs || die "Failed to change dir into '${S}/docs'"
-		unpack rsyslog-doc-8.2406.0-3401efa.tar.gz || die "Failed to unpack docs tarball"
+		unpack rsyslog-doc-8.2408.0-86fd5a6.tar.gz || die "Failed to unpack docs tarball"
 		mv rsyslog-* ${PN}-doc-${PV} || die "Failed to move unpacked docs"
 	fi
 }
