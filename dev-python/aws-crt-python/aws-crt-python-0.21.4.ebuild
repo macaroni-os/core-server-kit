@@ -8,8 +8,8 @@ inherit distutils-r1
 DESCRIPTION="Python bindings for the AWS Common Runtime"
 HOMEPAGE="https://github.com/awslabs/aws-crt-python"
 SRC_URI="
-	https://github.com/awslabs/aws-crt-python/tarball/436d58ca1db672a0c8997d5a135ee18b266d1d5e -> aws-crt-python-0.21.2-436d58c.tar.gz
-	https://github.com/awslabs/aws-c-auth/tarball/1de544597e9739f689e8ad2c055a86656856b3eb -> aws-c-auth-0.7.27-1de5445.tar.gz
+	https://github.com/awslabs/aws-crt-python/tarball/0565b6eea196f6082adda649f1b715541546d60c -> aws-crt-python-0.21.4-0565b6e.tar.gz
+	https://github.com/awslabs/aws-c-auth/tarball/3281f8692e6fd10562c4585a4dded5c16b322698 -> aws-c-auth-0.7.28-3281f86.tar.gz
 	https://github.com/awslabs/aws-c-cal/tarball/2cb1d2eac925e2dbc45025eb89af82bd790c23a0 -> aws-c-cal-0.7.4-2cb1d2e.tar.gz
 	https://github.com/awslabs/aws-c-common/tarball/672cc0032eb28d69fbdd22c9463253c89d7a6f30 -> aws-c-common-0.9.27-672cc00.tar.gz
 	https://github.com/awslabs/aws-c-compression/tarball/f36d01672d61e49d96a777870d456f66fa391cd4 -> aws-c-compression-0.2.19-f36d016.tar.gz
