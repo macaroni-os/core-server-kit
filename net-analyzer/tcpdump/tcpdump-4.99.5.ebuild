@@ -6,8 +6,8 @@ inherit autotools user toolchain-funcs flag-o-matic
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="
-        http://www.tcpdump.org/
-        https://github.com/the-tcpdump-group/tcpdump
+	http://www.tcpdump.org/
+	https://github.com/the-tcpdump-group/tcpdump
 "
 
 SRC_URI="https://github.com/the-tcpdump-group/tcpdump/tarball/4a789712f187e3ac7b2c0044c3a3f8c71b83646e -> tcpdump-4.99.5-4a78971.tar.gz"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/the-tcpdump-group/tcpdump/tarball/4a789712f187e3ac7b
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="*"
-IUSE="+drop-root libressl smi ssl samba suid test"
+IUSE="+drop-root libressl smi ssl samba suid test chroot"
 
 RDEPEND="
 	drop-root? ( sys-libs/libcap-ng )
@@ -36,9 +36,9 @@ DEPEND="
 "
 
 post_src_unpack() {
-        if [ ! -d "${S}" ]; then
-                mv the-tcpdump-group-tcpdump* "${S}" || die
-        fi
+	if [ ! -d "${S}" ]; then
+		mv the-tcpdump-group-tcpdump* "${S}" || die
+	fi
 }
 
 
@@ -56,6 +56,8 @@ src_prepare() {
 
 	# bug 630394
 	sed -i -e '/^nbns-valgrind/d' tests/TESTLIST || die
+
+	eautoreconf
 }
 
 src_configure() {
@@ -64,9 +66,13 @@ src_configure() {
 		export LIBS=$( $(tc-getPKG_CONFIG) --libs libcap-ng )
 	fi
 
+	# For chroot keep a way for user to use this feature
+	# with a static path /var/tmp/tcpdump but with a specific
+	# chroot use flag.
 	econf \
 		$(use_enable samba smb) \
-		$(use_with drop-root chroot '') \
+		$(use_with drop-root cap-ng) \
+		$(use_with chroot chroot '/var/tmp/tcpdump') \
 		$(use_with smi) \
 		$(use_with ssl crypto "${EPREFIX}/usr") \
 		$(usex drop-root "--with-user=tcpdump" "")
@@ -103,3 +109,5 @@ pkg_preinst() {
 pkg_postinst() {
 	use suid && elog "To let normal users run tcpdump add them into tcpdump group."
 }
+
+# vim: filetype=ebuild
