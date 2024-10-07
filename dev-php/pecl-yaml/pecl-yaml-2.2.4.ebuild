@@ -16,7 +16,7 @@ LICENSE="MIT"
 SLOT="7"
 KEYWORDS="*"
 
-SRC_URI="https://github.com/php/pecl-file_formats-yaml/tarball/cb7831731b9f45863e36676dcf53acf66a29f8c8 -> pecl-file_formats-yaml-2.2.3-cb78317.tar.gz"
+SRC_URI="https://github.com/php/pecl-file_formats-yaml/tarball/0e7b9974686fd0f4dbaa188914378c799fca01b4 -> pecl-file_formats-yaml-2.2.4-0e7b997.tar.gz"
 
 DEPEND="dev-libs/libyaml"
 RDEPEND="${DEPEND}"
