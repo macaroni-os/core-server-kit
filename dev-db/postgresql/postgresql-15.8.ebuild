@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3+ )
 
 inherit flag-o-matic linux-info multilib pam prefix python-single-r1 user
 
-KEYWORDS="next"
+KEYWORDS="*"
 
 SLOT=15
 
