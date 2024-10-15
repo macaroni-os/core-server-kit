@@ -9,7 +9,7 @@ inherit cmake flag-o-matic linux-info multiprocessing prefix toolchain-funcs use
 MY_PV="${PV//_pre*}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.39.tar.gz -> mysql-boost-8.0.39.tar.gz"
+SRC_URI="https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.40.tar.gz -> mysql-boost-8.0.40.tar.gz"
 
 HOMEPAGE="https://www.mysql.com/"
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
