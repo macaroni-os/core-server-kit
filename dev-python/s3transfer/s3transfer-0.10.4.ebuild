@@ -7,11 +7,11 @@ inherit distutils-r1
 
 DESCRIPTION="An Amazon S3 Transfer Manager"
 HOMEPAGE="https://github.com/boto/s3transfer https://pypi.org/project/s3transfer/"
-SRC_URI="https://files.pythonhosted.org/packages/a0/a8/e0a98fd7bd874914f0608ef7c90ffde17e116aefad765021de0f012690a2/s3transfer-0.10.3.tar.gz -> s3transfer-0.10.3.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/c0/0a/1cdbabf9edd0ea7747efdf6c9ab4e7061b085aa7f9bfc36bb1601563b069/s3transfer-0.10.4.tar.gz -> s3transfer-0.10.4.tar.gz"
 
 DEPEND=""
 IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-S="${WORKDIR}/s3transfer-0.10.3"
+S="${WORKDIR}/s3transfer-0.10.4"
