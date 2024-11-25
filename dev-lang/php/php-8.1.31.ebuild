@@ -6,11 +6,9 @@ WANT_AUTOMAKE="none"
 
 inherit flag-o-matic autotools
 
-# MY_PV=${PV/_rc/RC}
-MY_PV=${PV/_beta/beta}
 DESCRIPTION="The PHP language runtime engine"
 HOMEPAGE="https://www.php.net/"
-SRC_URI="https://www.php.net/distributions/php-8.1.31.tar.bz2 -> php-8.1.31.tar.bz2"
+SRC_URI="https://github.com/php/php-src/tarball/38123aca18c3c1bd1f109ec77af2f175d7afcf35 -> php-src-8.1.31-38123ac.tar.gz"
 
 LICENSE="PHP-3.01
 	BSD
@@ -20,10 +18,10 @@ LICENSE="PHP-3.01
 	gd? ( gd )
 	unicode? ( BSD-2 LGPL-2.1 )"
 
-SLOT="8.1"
+SLOT="$(ver_cut 1-2)"
 KEYWORDS="*"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S="${WORKDIR}/php-php-src-38123ac"
 
 # We can build the following SAPIs in the given order
 SAPIS="embed cli cgi fpm apache2 phpdbg"
@@ -150,9 +148,7 @@ BDEPEND="virtual/pkgconfig"
 
 PHP_MV="$(ver_cut 1)"
 
-PATCHES=(
-	"${FILESDIR}/php-iodbc-header-location.patch"
-)
+PATCHES=
 
 php_install_ini() {
 	local phpsapi="${1}"
@@ -212,13 +208,11 @@ php_set_ini_dir() {
 src_prepare() {
 	
 	if use apache2; then
-    
-    eapply "${FILESDIR}/php-iodbc-header-location.patch" || die
-	
-	fi
-	
-	if use iodbc; then
         eapply "${FILESDIR}/apache.patch" || die
+	fi
+
+	if use iodbc; then
+        eapply "${FILESDIR}/php-iodbc-header-location.patch" || die
     fi
     
     eapply_user
