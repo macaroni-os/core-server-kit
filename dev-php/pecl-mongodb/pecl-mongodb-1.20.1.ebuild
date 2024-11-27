@@ -9,12 +9,12 @@ USE_PHP="php7-4 php8-0 php8-1 php8-2"
 inherit php-ext-pecl-r3
 
 DESCRIPTION="MongoDB database driver for PHP"
-SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/5f8480e020eded676a60207d80cb135e9fc7e2ec -> mongo-php-driver-1.20.0-5f8480e.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/7dc124cb54ca21cd9987bc9cd08a73dd52e60f97 -> mongo-php-driver-1.20.1-7dc124c.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="*"
 
-SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/5f8480e020eded676a60207d80cb135e9fc7e2ec -> mongo-php-driver-1.20.0-5f8480e.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo-php-driver/tarball/7dc124cb54ca21cd9987bc9cd08a73dd52e60f97 -> mongo-php-driver-1.20.1-7dc124c.tar.gz"
 
 IUSE="sasl test"
 
