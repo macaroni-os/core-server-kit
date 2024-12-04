@@ -4,7 +4,7 @@ EAPI=7
 
 inherit cargo
 
-DESCRIPTION="A fast and secure runtime for WebAssembly"
+DESCRIPTION="A lightweight WebAssembly runtime that is fast, secure, and standards-compliant"
 HOMEPAGE="https://github.com/bytecodealliance/wasmtime https://docs.wasmtime.dev"
 SRC_URI="https://github.com/bytecodealliance/wasmtime/releases/download/v27.0.0/wasmtime-v27.0.0-src.tar.gz -> wasmtime-v27.0.0-src.tar.gz
 https://distfiles.macaronios.org/fc/d4/96/fcd496af5134a7d78e928e7b7e03b77e1f0ff74ee181f29e43dc033581a9c491a110870103dc8fc84071253df4da9722b80dfe8ba6136842c92aaf158e712012 -> wasmtime-27.0.0-funtoo-crates-bundle-aa728a44a3a071809bbc739d46ad0d8dc0c61914424ede8f83635e78ca90ebd3d45afa3c10e3485199461a3eeecc8fdc028cee9f8c6da10999720fdf4652753b.tar.gz"
