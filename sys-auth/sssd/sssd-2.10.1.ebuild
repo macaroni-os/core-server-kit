@@ -13,7 +13,7 @@ inherit autotools flag-o-matic linux-info optfeature plocale \
 
 DESCRIPTION="System Security Services Daemon provides access to identity and authentication"
 HOMEPAGE="https://pagure.io/SSSD/sssd"
-SRC_URI="https://github.com/SSSD/sssd/tarball/e933b6f8c91b2faaa25e2eb4323d4a9d900ed85e -> sssd-2.10.0-e933b6f.tar.gz"
+SRC_URI="https://github.com/SSSD/sssd/tarball/150c67c539e59a33caa910b9564d71d2b2500903 -> sssd-2.10.1-150c67c.tar.gz"
 KEYWORDS="*"
 LICENSE="GPL-3"
 SLOT="0"
@@ -87,7 +87,7 @@ PATCHES=(
 	"${FILESDIR}"/"${PN}-2.9.1-conditional-python-install.patch"
 )
 
-S="${WORKDIR}/SSSD-sssd-e933b6f"
+S="${WORKDIR}/SSSD-sssd-150c67c"
 
 
 pkg_setup() {
