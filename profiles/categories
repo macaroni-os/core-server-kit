@@ -1,5 +1,6 @@
 dev-db
 net-libs
 net-misc
+sys-block
+sys-fs
 sys-libs
-sys-process
