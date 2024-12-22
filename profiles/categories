@@ -1,6 +1,11 @@
+app-admin
 dev-db
 net-libs
 net-misc
+sys-apps
 sys-block
+sys-devel
 sys-fs
 sys-libs
+sys-process
+virtual
