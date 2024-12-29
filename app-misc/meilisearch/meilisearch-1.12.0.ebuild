@@ -6,7 +6,8 @@ inherit cargo user
 
 DESCRIPTION="A lightning-fast search engine that fits effortlessly into your apps, websites, and workflow"
 HOMEPAGE="https://www.meilisearch.com/"
-SRC_URI="{{src_uri}}"
+SRC_URI="https://github.com/meilisearch/meilisearch/tarball/ba11121cfc822438659ccb4120327c0c211a2796 -> meilisearch-1.12.0-ba11121.tar.gz
+https://distfiles.macaronios.org/fa/f1/d6/faf1d62e7c89e9d61a2255056cef7dca3797c09b3d34d593beb7d08292ed263584d48ca5dae6b62339964125919ac7e38a2f9310a14b836bbe19eb63e9482e82 -> meilisearch-1.12.0-funtoo-crates-bundle-acab29c78bc66ebcece4d700f351106c1696226d88afe276303bb75a56a75735ac8bbe42c30b8de8135352df4453ee6cbd2643edf1d7b9af0fc105b474a9cedb.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,7 +20,7 @@ BDEPEND="
 	virtual/rust
 "
 
-S="${WORKDIR}/{{ github_user }}-{{ github_repo }}-{{ sha[:7] }}"
+S="${WORKDIR}/meilisearch-meilisearch-ba11121"
 
 RESTRICT="network-sandbox"
 
@@ -44,7 +45,7 @@ src_configure() {
 }
 
 src_compile() {
-	export VERGEN_GIT_SHA="{{ sha }}"
+	export VERGEN_GIT_SHA="ba11121cfc822438659ccb4120327c0c211a2796"
 	export VERGEN_GIT_SEMVER_LIGHTWEIGHT="${PV}"
 
 	cargo build --release -p meilisearch \
