@@ -11,6 +11,6 @@ RDEPEND=>=app-eselect/eselect-php-0.9.1[apache2?,fpm?] >=dev-libs/libpcre2-10.30
 REQUIRED_USE=|| ( cli cgi fpm apache2 embed phpdbg ) cli? ( ^^ ( readline libedit ) ) !cli? ( ?? ( readline libedit ) ) truetype? ( gd zlib ) webp? ( gd zlib ) cjk? ( gd zlib ) exif? ( gd zlib ) xpm? ( gd zlib ) gd? ( zlib ) simplexml? ( xml ) soap? ( xml ) xmlreader? ( xml ) xmlwriter? ( xml ) xslt? ( xml ) ldap-sasl? ( ldap ) qdbm? ( !gdbm ) session-mm? ( session !threads ) mysql? ( || ( mysqli pdo ) ) firebird? ( pdo ) mssql? ( pdo )
 RESTRICT=!test? ( test )
 SLOT=8.3
-SRC_URI=https://github.com/php/php-src/tarball/b611b97cff65415729c1cb8f04d911d5e81db9aa -> php-src-8.3.15-b611b97.tar.gz
+SRC_URI=https://github.com/php/php-src/tarball/bce6a51a5d4880575ee68cccdd0c3612e908e81b -> php-src-8.3.16-bce6a51.tar.gz
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=60ff6479eb27d83b9cfc9ab9268615a6
+_md5_=6448d05d0febc447008bd759397821be
