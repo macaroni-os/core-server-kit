@@ -2,11 +2,11 @@
 
 EAPI="7"
 
-inherit autotools flag-o-matic multilib-minimal toolchain-funcs
+inherit autotools flag-o-matic toolchain-funcs
 
 # This works, but autogen makes it unnecessary to work out
 # MY_PV="$(printf "%u%02u%02u%02u" $(ver_rs 1- " "))"
-MY_PV=3480000
+MY_PV=
 
 S="${WORKDIR}/${PN}-src-${MY_PV}"
 DESCRIPTION="SQL database engine"
@@ -14,9 +14,7 @@ HOMEPAGE="https://sqlite.org/"
 
 # On version updates, make sure to read the forum (https://sqlite.org/forum/forum)
 # for hints regarding test failures, backports, etc.
-SRC_URI="https://sqlite.org/2025/sqlite-src-3480000.zip -> sqlite-src-3480000.zip
-doc? ( https://sqlite.org/2025/sqlite-doc-3480000.zip -> sqlite-doc-3480000.zip )
-"
+SRC_URI="https://github.com/sqlite/sqlite/tarball/262de1bebb0647eb6fa6a2b0434111c7d831a14d -> sqlite-3.47.2-262de1b.tar.gz"
 
 LICENSE="public-domain"
 SLOT="3"
@@ -26,22 +24,22 @@ RESTRICT="!test? ( test )"
 
 BDEPEND="app-arch/unzip
 	>=dev-lang/tcl-8.6:0"
-RDEPEND="sys-libs/zlib:0=[${MULTILIB_USEDEP}]
-	icu? ( dev-libs/icu:0=[${MULTILIB_USEDEP}] )
-	readline? ( sys-libs/readline:0=[${MULTILIB_USEDEP}] )
-	tcl? ( dev-lang/tcl:0=[${MULTILIB_USEDEP}] )
+RDEPEND="sys-libs/zlib:0=
+	icu? ( dev-libs/icu:0= )
+	readline? ( sys-libs/readline:0= )
+	tcl? ( dev-lang/tcl:0= )
 	tools? ( dev-lang/tcl:0= )"
 DEPEND="${RDEPEND}
-	test? ( >=dev-lang/tcl-8.6:0[${MULTILIB_USEDEP}] )"
+	test? ( >=dev-lang/tcl-8.6:0 )"
 
+S="${WORKDIR}/sqlite-sqlite-262de1b"
 
 src_prepare() {
 	eapply_user
 	eautoreconf
-	multilib_copy_sources
 }
 
-multilib_src_configure() {
+src_configure() {
 	local -x CPPFLAGS="${CPPFLAGS}" CFLAGS="${CFLAGS}"
 	local options=()
 
@@ -202,7 +200,7 @@ multilib_src_configure() {
 	options+=($(use_enable static-libs static))
 
 	# tcl, test, tools USE flags.
-	if use tcl || use test || { use tools && multilib_is_native_abi; }; then
+	if use tcl || use test || use tools; then
 		options+=(
 			--enable-tcl
 			--with-tcl="${ESYSROOT}/usr/$(get_libdir)"
@@ -222,15 +220,15 @@ multilib_src_configure() {
 	econf "${options[@]}"
 }
 
-multilib_src_compile() {
+src_compile() {
 	emake HAVE_TCL="$(usex tcl 1 "")" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}"
 
-	if use tools && multilib_is_native_abi; then
+	if use tools; then
 		emake changeset dbdump dbhash dbtotxt index_usage rbu scrub showdb showjournal showshm showstat4 showwal sqldiff sqlite3_analyzer sqlite3_checker sqlite3_expert sqltclsh
 	fi
 }
 
-multilib_src_test() {
+src_test() {
 	if [[ "${EUID}" -eq 0 ]]; then
 		ewarn "Skipping tests due to root permissions"
 		return
@@ -241,10 +239,10 @@ multilib_src_test() {
 	emake HAVE_TCL="$(usex tcl 1 "")" $(use debug && echo fulltest || echo test)
 }
 
-multilib_src_install() {
+src_install() {
 	emake DESTDIR="${D}" HAVE_TCL="$(usex tcl 1 "")" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" install
 
-	if use tools && multilib_is_native_abi; then
+	if use tools; then
 		install_tool() {
 			if [[ -f ".libs/${1}" ]]; then
 				newbin ".libs/${1}" "${2}"
@@ -273,9 +271,7 @@ multilib_src_install() {
 
 		unset -f install_tool
 	fi
-}
 
-multilib_src_install_all() {
 	find "${ED}" -name "*.la" -delete || die
 
 	doman sqlite3.1
