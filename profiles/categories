@@ -3,10 +3,12 @@ app-metrics
 app-misc
 dev-db
 dev-libs
+net-dialup
 net-libs
 net-misc
 sys-apps
 sys-block
+sys-cluster
 sys-devel
 sys-fs
 sys-libs
