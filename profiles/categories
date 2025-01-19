@@ -1,4 +1,6 @@
 app-admin
+app-backup
+app-emulation
 app-metrics
 app-misc
 dev-db
