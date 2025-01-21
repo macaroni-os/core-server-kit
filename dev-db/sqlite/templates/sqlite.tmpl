@@ -4,11 +4,6 @@ EAPI="7"
 
 inherit autotools flag-o-matic toolchain-funcs
 
-# This works, but autogen makes it unnecessary to work out
-# MY_PV="$(printf "%u%02u%02u%02u" $(ver_rs 1- " "))"
-MY_PV={{ full_version }}
-
-S="${WORKDIR}/${PN}-src-${MY_PV}"
 DESCRIPTION="SQL database engine"
 HOMEPAGE="https://sqlite.org/"
 
