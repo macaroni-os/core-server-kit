@@ -1,6 +1,7 @@
 app-admin
 app-backup
 app-emulation
+app-metrics
 app-misc
 dev-db
 dev-libs
@@ -15,4 +16,5 @@ sys-fs
 sys-libs
 sys-process
 virtual
+www-apps
 www-servers
