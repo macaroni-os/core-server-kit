@@ -4,9 +4,9 @@ EAPI=6
 
 DESCRIPTION="A filesystem backup utility based on rsync"
 HOMEPAGE="http://www.rsnapshot.org"
-SRC_URI="https://github.com/rsnapshot/rsnapshot/tarball/1b943dbc7695d62fac5c0f9549ec696a538be19c -> rsnapshot-1.4.5-1b943db.tar.gz"
+SRC_URI="https://github.com/rsnapshot/rsnapshot/tarball/367a49cda9d428c27a50641d99734c7b790f2cc1 -> rsnapshot-1.5.1-367a49c.tar.gz"
 
-S="${WORKDIR}/rsnapshot-rsnapshot-1b943db"
+S="${WORKDIR}/rsnapshot-rsnapshot-367a49c"
 
 SLOT="0"
 LICENSE="GPL-2"
