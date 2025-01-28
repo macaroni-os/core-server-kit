@@ -8,7 +8,7 @@ inherit autotools elisp-common python-single-r1 user tmpfiles bash-completion-r1
 
 DESCRIPTION="GlusterFS is a powerful network/cluster filesystem"
 HOMEPAGE="https://www.gluster.org/ https://github.com/gluster/glusterfs/"
-SRC_URI="https://github.com/gluster/glusterfs/tarball/17872ca35668e7385b2af64b89ec94188fd85ca3 -> glusterfs-11.1-17872ca.tar.gz"
+SRC_URI="https://api.github.com/repos/gluster/glusterfs/tarball/refs/tags/v11.1 -> glusterfs-11.1.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-3+ )"
 SLOT="0/${PV%%.*}"
@@ -28,7 +28,7 @@ PATCHES=(
 # sys-apps/util-linux is required for libuuid
 RDEPEND="
 	dev-libs/libaio
-	dev-libs/openssl:=[-bindist(-)]
+	dev-libs/openssl
 	net-libs/libtirpc:=
 	net-libs/rpcsvc-proto
 	dev-libs/userspace-rcu:=
