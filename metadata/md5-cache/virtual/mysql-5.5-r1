@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for MySQL client or database
+EAPI=5
+IUSE=embedded minimal static static-libs
+KEYWORDS=*
+RDEPEND=|| ( =dev-db/mariadb-5.5*[embedded=,minimal=,static=,static-libs=] =dev-db/mysql-5.5*[embedded=,minimal=,static=,static-libs=] =dev-db/mysql-cluster-7.2*[embedded=,minimal=,static=,static-libs=] )
+SLOT=0
+_md5_=3f920e5f2dec3312efdb58c47ef0c220
