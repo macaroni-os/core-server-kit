@@ -1,0 +1,29 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit cargo
+
+DESCRIPTION="A lightweight WebAssembly runtime that is fast, secure, and standards-compliant"
+HOMEPAGE="https://github.com/bytecodealliance/wasmtime https://docs.wasmtime.dev"
+SRC_URI="https://github.com/bytecodealliance/wasmtime/releases/download/v29.0.1/wasmtime-v29.0.1-src.tar.gz -> wasmtime-v29.0.1-src.tar.gz
+https://distfiles.macaronios.org/1e/36/d8/1e36d845beed4eb6e5ff2d87e8ec9cc7cdb3fbf75662a811beb40ee71c08e7c86b191a1cc219803bd3d087939ac3a938fb6f2d668a8443650a58e1f4297da56b -> wasmtime-29.0.1-funtoo-crates-bundle-4e0ef0347bc27613bf7babbd0221e253edebfcacfbf0c06c153b49ddf78b033cb3a8fd7126c35925c118558b8a2aa289a18156fbc0728cefeeb1fb8709c13019.tar.gz"
+
+LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
+SLOT="0"
+KEYWORDS="*"
+
+DOCS=( ADOPTERS.md README.md RELEASES.md )
+
+QA_FLAGS_IGNORED="/usr/bin/wasmtime"
+
+src_unpack() {
+	cargo_src_unpack
+	rm -rf ${S}
+	mv ${WORKDIR}/wasmtime-* ${S} || die
+}
+
+src_install() {
+	cargo_src_install
+	einstalldocs
+}
