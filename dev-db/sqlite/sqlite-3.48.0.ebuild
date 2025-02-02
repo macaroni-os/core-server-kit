@@ -9,7 +9,7 @@ HOMEPAGE="https://sqlite.org/"
 
 # On version updates, make sure to read the forum (https://sqlite.org/forum/forum)
 # for hints regarding test failures, backports, etc.
-SRC_URI="https://github.com/sqlite/sqlite/tarball/262de1bebb0647eb6fa6a2b0434111c7d831a14d -> sqlite-3.47.2-262de1b.tar.gz"
+SRC_URI="https://github.com/sqlite/sqlite/tarball/942c9587698715734715242737dba07ef296b0ef -> sqlite-3.48.0-942c958.tar.gz"
 
 LICENSE="public-domain"
 SLOT="3"
@@ -27,12 +27,7 @@ RDEPEND="sys-libs/zlib:0=
 DEPEND="${RDEPEND}
 	test? ( >=dev-lang/tcl-8.6:0 )"
 
-S="${WORKDIR}/sqlite-sqlite-262de1b"
-
-src_prepare() {
-	eapply_user
-	eautoreconf
-}
+S="${WORKDIR}/sqlite-sqlite-942c958"
 
 src_configure() {
 	local -x CPPFLAGS="${CPPFLAGS}" CFLAGS="${CFLAGS}"
@@ -171,7 +166,15 @@ src_configure() {
 		# Support ICU extension.
 		# https://sqlite.org/compile.html#enable_icu
 		append-cppflags -DSQLITE_ENABLE_ICU
-		sed -e "s/^TLIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
+
+		# sqlite needs a little help properly linking to ICU. Its automatic configure code
+		# doesn't seem to work, so we will use pkg-config directly to extract all libraries
+		# to link against: (See ext/icu/README.txt and auto.def for more details)
+
+		for lib in i18n io uc; do
+			pkg-config icu-$lib --libs >> $T/icu_ld.txt || die
+		done
+		options+=( --with-icu-ldflags="$(cat $T/icu_ld.txt | tr '\n' ' ' )" )
 	fi
 
 	# readline USE flag.
