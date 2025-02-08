@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Find duplicate files based on their content"
 HOMEPAGE="https://github.com/pauldreik/rdfind"
-SRC_URI="https://github.com/pauldreik/rdfind/tarball/594553e9c074d8ffa136ef95d6617a3199cea918 -> rdfind-1.7.0-594553e.tar.gz"
+SRC_URI="https://github.com/pauldreik/rdfind/tarball/4c0b37733434376b86d407a9c1582ec14bfa47bb -> rdfind-1.7.0-4c0b377.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
