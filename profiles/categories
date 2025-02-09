@@ -21,5 +21,6 @@ sys-fs
 sys-libs
 sys-process
 virtual
+www-apache
 www-apps
 www-servers
