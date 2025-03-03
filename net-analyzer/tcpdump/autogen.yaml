@@ -1,0 +1,9 @@
+tcpdump:
+  generator: github-1
+  packages:
+    - tcpdump:
+        github:
+          user: the-tcpdump-group
+          repo: tcpdump
+          query: tags
+          match: '^tcpdump-([0-9].+)$' 
