@@ -1,0 +1,8 @@
+meilisearch_rule:
+  generator: github-1
+  packages:
+    - meilisearch:
+        github:
+          query: releases
+        extensions:
+          - rust
