@@ -1,0 +1,4 @@
+my_rule:
+  generator: zerotier
+  packages:
+    - zerotier
