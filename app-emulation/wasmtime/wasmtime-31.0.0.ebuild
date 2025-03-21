@@ -6,8 +6,8 @@ inherit cargo
 
 DESCRIPTION="A lightweight WebAssembly runtime that is fast, secure, and standards-compliant"
 HOMEPAGE="https://github.com/bytecodealliance/wasmtime https://docs.wasmtime.dev"
-SRC_URI="https://github.com/bytecodealliance/wasmtime/releases/download/v30.0.2/wasmtime-v30.0.2-src.tar.gz -> wasmtime-v30.0.2-src.tar.gz
-https://distfiles.macaronios.org/87/84/f2/8784f2d9ccff7c3ec38c3c964543e619c53342beb0c5475024c87a8f3af9ef5d3559ea98f93fb1a1b5fccc475ce8b804fbae5be3bfef796588dc066d38a3e8c2 -> wasmtime-30.0.2-funtoo-crates-bundle-a3f22d73dab515dbfdd941bdb7ca1ededc68b57e157118b42b48b564322c902e3728e8a037daa4042ece8a8b0ef140bf8c46739590025b711b0ec8dc88aee1e8.tar.gz"
+SRC_URI="https://github.com/bytecodealliance/wasmtime/releases/download/v31.0.0/wasmtime-v31.0.0-src.tar.gz -> wasmtime-v31.0.0-src.tar.gz
+https://distfiles.macaronios.org/11/5b/35/115b35505bc276c11a61745c2842631e7794e9bb61298d638fb669fb5f027e3089bd2c5a0d04d934c95ce00aeca61239d6a86028227adf65dfe698e1dcd1711a -> wasmtime-31.0.0-funtoo-crates-bundle-0e41b0129fca2aa4b1a2ea31d77bbb1a81b17667ec58b7a00e775b41f4b03632f88bb51ec968d253e0fdea2744ea85240fb275581e1a36c8c67d257ddc04d040.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
