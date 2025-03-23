@@ -14,6 +14,7 @@ sys-cluster
 sys-devel
 sys-fs
 sys-libs
+sys-power
 sys-process
 virtual
 www-apps
