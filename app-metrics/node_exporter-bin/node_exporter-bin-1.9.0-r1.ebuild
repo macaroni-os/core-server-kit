@@ -7,7 +7,7 @@ EXPORTER_USER="${MY_PN}"
 EXPORTER_HOME="/var/lib/${MY_PN}"
 inherit user
 
-DESCRIPTION=""
+DESCRIPTION="Exporter for machine metrics"
 HOMEPAGE="https://github.com/prometheus/node_exporter"
 SRC_URI="
 amd64? ( https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-amd64.tar.gz -> node_exporter-bin-1.9.0.linux-amd64.tar.gz )
