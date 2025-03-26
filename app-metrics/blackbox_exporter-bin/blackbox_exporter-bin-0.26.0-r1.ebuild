@@ -7,7 +7,7 @@ EXPORTER_USER="${MY_PN}"
 EXPORTER_HOME="/var/lib/${MY_PN}"
 inherit user
 
-DESCRIPTION=""
+DESCRIPTION="Blackbox prober exporter"
 HOMEPAGE="https://github.com/prometheus/blackbox_exporter"
 SRC_URI="
 amd64? ( https://github.com/prometheus/blackbox_exporter/releases/download/v0.26.0/blackbox_exporter-0.26.0.linux-amd64.tar.gz -> blackbox_exporter-bin-0.26.0.linux-amd64.tar.gz )
