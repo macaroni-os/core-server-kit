@@ -7,7 +7,7 @@ EXPORTER_USER="${MY_PN}"
 EXPORTER_HOME="/var/lib/${MY_PN}"
 inherit user
 
-DESCRIPTION=""
+DESCRIPTION="Exporter for MySQL server metrics"
 HOMEPAGE="https://github.com/prometheus/mysqld_exporter"
 SRC_URI="
 amd64? ( https://github.com/prometheus/mysqld_exporter/releases/download/v0.17.2/mysqld_exporter-0.17.2.linux-amd64.tar.gz -> mysqld_exporter-bin-0.17.2.linux-amd64.tar.gz )
