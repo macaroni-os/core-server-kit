@@ -7,7 +7,7 @@ EXPORTER_USER="${MY_PN}"
 EXPORTER_HOME="/var/lib/${MY_PN}"
 inherit user
 
-DESCRIPTION=""
+DESCRIPTION="Prometheus Exporter for ValKey & Redis Metrics."
 HOMEPAGE="https://github.com/prometheus/redis_exporter"
 SRC_URI="
 amd64? ( https://github.com/oliver006/redis_exporter/releases/download/v1.69.0/redis_exporter-v1.69.0.linux-amd64.tar.gz -> redis_exporter-bin-1.69.0.linux-amd64.tar.gz )
