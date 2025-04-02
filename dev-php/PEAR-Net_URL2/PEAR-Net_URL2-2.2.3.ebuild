@@ -5,7 +5,7 @@ EAPI=6
 inherit php-pear-r2
 
 DESCRIPTION="Easy parsing of URLs (PHP5 port of PEAR-Net_URL package)"
-SRC_URI="https://github.com/pear/Net_URL2/tarball/07fd055820dbf466ee3990abe96d0e40a8791f9d -> Net_URL2-2.2.2-07fd055.tar.gz"
+SRC_URI="https://github.com/pear/Net_URL2/tarball/c1f2b316ed9b05e881cdb494f7550ddf817c76c8 -> Net_URL2-2.2.3-c1f2b31.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

@@ -10,10 +10,10 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Exporter for machine metrics"
 HOMEPAGE="https://github.com/prometheus/node_exporter"
 SRC_URI="amd64? (
-  https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-amd64.tar.gz -> node_exporter-1.9.0.linux-amd64.tar.gz
+  https://github.com/prometheus/node_exporter/releases/download/v1.9.1/node_exporter-1.9.1.linux-amd64.tar.gz -> node_exporter-1.9.1.linux-amd64.tar.gz
 )
 arm64? (
-  https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-arm64.tar.gz -> node_exporter-1.9.0.linux-arm64.tar.gz
+  https://github.com/prometheus/node_exporter/releases/download/v1.9.1/node_exporter-1.9.1.linux-arm64.tar.gz -> node_exporter-1.9.1.linux-arm64.tar.gz
 )
 "
 
