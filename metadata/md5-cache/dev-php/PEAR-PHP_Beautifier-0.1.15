@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Code Beautifier for PHP
+EAPI=6
+HOMEPAGE=http://pear.php.net/package/PHP_Beautifier
+IUSE=cli examples
+KEYWORDS=*
+LICENSE=PHP-3.01
+RDEPEND=dev-lang/php:*[bzip2,cli?,tokenizer] dev-php/PEAR-Archive_Tar dev-php/PEAR-Log dev-php/PEAR-PEAR cli? ( dev-php/PEAR-Console_Getopt )
+SLOT=0
+SRC_URI=https://github.com/pear/PHP_Beautifier/tarball/43553bb3eb16f3895a336ff17992a75b8e1467ef -> PHP_Beautifier-0.1.15-43553bb.tar.gz
+_md5_=3a5c25975e110075e057484f90fe4f26
