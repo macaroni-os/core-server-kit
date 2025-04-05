@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm test
+DEPEND=test? ( dev-lang/php:*[gd,truetype] dev-php/phpunit )
+DESCRIPTION=Advanced text manipulations in images
+EAPI=6
+HOMEPAGE=https://pear.php.net/package/Image_Text
+IUSE=test
+KEYWORDS=*
+LICENSE=PHP-3
+RDEPEND=dev-lang/php:*[gd,truetype] >=dev-php/pear-1.8.1
+SLOT=0
+SRC_URI=https://github.com/pear/Image_Text/tarball/74d95e4cffa0f14b3f56dd573554b4a40820ef53 -> Image_Text-0.7.0-74d95e4.tar.gz
+_eclasses_=php-pear-r2	479e8a084e98f4d730da647bba3e589e
+_md5_=8b26c35d70515edd056d414ad15f9f86
