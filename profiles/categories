@@ -3,6 +3,7 @@ app-backup
 app-emulation
 app-misc
 dev-db
+dev-libs
 net-dialup
 net-libs
 net-misc
