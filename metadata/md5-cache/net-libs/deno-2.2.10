@@ -1,0 +1,13 @@
+BDEPEND=sys-devel/llvm:* sys-devel/clang:* sys-devel/lld:* dev-util/gn virtual/rust >=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=Deno is a simple, modern and secure runtime for JavaScript and TypeScript
+EAPI=7
+HOMEPAGE=https://github.com/denoland/deno
+IUSE=debug
+KEYWORDS=*
+LICENSE=MIT
+RESTRICT=network-sandbox
+SLOT=0
+SRC_URI=https://github.com/denoland/deno/tarball/adc34a6b3b8f6ff593810c0655d0d1a4b7ea3729 -> deno-2.2.10-adc34a6.tar.gz https://distfiles.macaronios.org/c8/fb/14/c8fb1405421b15e878533c90d7499bd28e5ce7fd147a2826d7d33f78d27dd0cc94c768206ebc6780c5e9b45261fe647883df736c64c54121b5093b7d51dc23f4 -> deno-2.2.10-funtoo-crates-bundle-7595e21489528bc2a1da0c797397223eff384ac451f52d4ee612e4e69fd489e51153a601d58ff5b95dc7b91039e5df303b062dd32da74479e5195213aca1a5c8.tar.gz
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=86997976e21465133b05d8e60f610eb7
