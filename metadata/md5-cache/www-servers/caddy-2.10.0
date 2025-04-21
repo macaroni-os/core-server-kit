@@ -1,0 +1,14 @@
+BDEPEND=>=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare setup unpack
+DEPEND=filecaps? ( sys-libs/libcap ) sys-apps/shadow
+DESCRIPTION=Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
+EAPI=7
+HOMEPAGE=https://caddyserver.com/ https://github.com/caddyserver/caddy
+IUSE=+filecaps
+KEYWORDS=*
+LICENSE=Apache-2.0 BSD ECL-2.0 MIT
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/caddyserver/caddy/tarball/3f19f937f813d030c44166734492280edba445f6 -> caddy-2.10.0-3f19f93.tar.gz https://distfiles.macaronios.org/ee/6e/36/ee6e363ffe6e7e43f6d4975f8e9d295dd19dbd786f62bede198b66470d704ea66d986f1500b284830e23186e951b1262df01c601c6b0e4c54aa30b4423a3d93f -> caddy-2.10.0-funtoo-go-bundle-87e2d488de5d6431f7b0c5ec0be79847e09333d7f1455ee080fdc605624605c010bd835b42ed6bad51fdcc38537fe93f02b006bd990b3f79e71889678350c031.tar.gz
+_eclasses_=fcaps	9445d60c1eb084a91c38ef4c070b2f16	go-module	cb10a443c46556a15ed035d7a99128e8	user	875055ddd565382c728563992ae3abf7	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=51460a5064a49b7fb3cda63b6d2ec504
