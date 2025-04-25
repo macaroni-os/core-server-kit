@@ -1,0 +1,12 @@
+backrest:
+  generator: github-1
+  defaults:
+        cat: app-backup
+  packages:
+    - backrest:
+        extensions:
+          - golang
+        github:
+          user: garethgeorge
+          repo: backrest
+          query: releases
