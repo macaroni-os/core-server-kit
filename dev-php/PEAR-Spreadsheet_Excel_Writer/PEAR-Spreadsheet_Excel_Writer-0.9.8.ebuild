@@ -5,7 +5,7 @@ EAPI=6
 inherit php-pear-r2
 
 DESCRIPTION="Package for generating Excel spreadsheets"
-SRC_URI="https://github.com/pear/Spreadsheet_Excel_Writer/tarball/f6e1821bf20cbcd8202b21dc5104b0e5688386c5 -> Spreadsheet_Excel_Writer-0.9.7-f6e1821.tar.gz"
+SRC_URI="https://github.com/pear/Spreadsheet_Excel_Writer/tarball/1da9e779cd54136c3407428686ac365366f781a3 -> Spreadsheet_Excel_Writer-0.9.8-1da9e77.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="*"
