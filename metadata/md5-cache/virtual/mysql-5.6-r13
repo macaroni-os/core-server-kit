@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for MySQL database server
+EAPI=6
+IUSE=embedded +server static
+KEYWORDS=*
+RDEPEND=|| ( >=dev-db/mariadb-10.0[embedded(-)?,server?,static?] >=dev-db/mysql-5.6[embedded(-)?,server?,static?] dev-db/mysql-community >=dev-db/percona-server-5.6[embedded(-)?,server?,static?] dev-db/mariadb-galera[embedded(-)?,server?,static?] >=dev-db/mysql-cluster-7.3[embedded(-)?,server?,static?] )
+SLOT=0/18
+_md5_=b87e11f45f4fbc179e3ebf767b22acd3
