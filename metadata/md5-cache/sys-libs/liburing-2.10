@@ -8,6 +8,6 @@ KEYWORDS=*
 LICENSE=MIT
 RDEPEND=>=sys-kernel/linux-headers-5.1
 SLOT=0
-SRC_URI=https://github.com/axboe/liburing/tarball/31a41935866867cdfedb4ef5a57ce0d15b50e5b9 -> liburing-2.9-31a4193.tar.gz
+SRC_URI=https://github.com/axboe/liburing/tarball/d7e3ae8603b398ad750c6e2c59f03df96d961339 -> liburing-2.10-d7e3ae8.tar.gz
 _eclasses_=multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=c930b7add9112253bde5f41152e5bc55
+_md5_=03d5b68cdfa6a0851a81ec76455c15ff

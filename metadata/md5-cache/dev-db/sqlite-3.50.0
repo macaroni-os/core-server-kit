@@ -10,6 +10,6 @@ LICENSE=public-domain
 RDEPEND=sys-libs/zlib:0= icu? ( dev-libs/icu:0= ) readline? ( sys-libs/readline:0= ) tcl? ( dev-lang/tcl:0= ) tools? ( dev-lang/tcl:0= )
 RESTRICT=!test? ( test )
 SLOT=3
-SRC_URI=https://github.com/sqlite/sqlite/tarball/1b571af11a0348773889f45b66d319577026b775 -> sqlite-3.49.2-1b571af.tar.gz
+SRC_URI=https://github.com/sqlite/sqlite/tarball/3f523613528194d3487853ed6e5367c6f215ec4f -> sqlite-3.50.0-3f52361.tar.gz
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=0b5d9eb21889943974416fa105525eb7
+_md5_=5c8cb7a63a3368f11cb3988b82a2461d

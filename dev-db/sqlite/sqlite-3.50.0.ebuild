@@ -9,7 +9,7 @@ HOMEPAGE="https://sqlite.org/"
 
 # On version updates, make sure to read the forum (https://sqlite.org/forum/forum)
 # for hints regarding test failures, backports, etc.
-SRC_URI="https://github.com/sqlite/sqlite/tarball/1b571af11a0348773889f45b66d319577026b775 -> sqlite-3.49.2-1b571af.tar.gz"
+SRC_URI="https://github.com/sqlite/sqlite/tarball/3f523613528194d3487853ed6e5367c6f215ec4f -> sqlite-3.50.0-3f52361.tar.gz"
 
 LICENSE="public-domain"
 SLOT="3"
@@ -27,7 +27,7 @@ RDEPEND="sys-libs/zlib:0=
 DEPEND="${RDEPEND}
 	test? ( >=dev-lang/tcl-8.6:0 )"
 
-S="${WORKDIR}/sqlite-sqlite-1b571af"
+S="${WORKDIR}/sqlite-sqlite-3f52361"
 
 src_configure() {
 	local -x CPPFLAGS="${CPPFLAGS}" CFLAGS="${CFLAGS}"
@@ -219,7 +219,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake HAVE_TCL="$(usex tcl 1 "")" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}"
+	if use tcl || use test || use tools; then
+		emake HAVE_TCL="1" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}"
+	else
+		emake
+	fi
 
 	if use tools; then
 		emake changeset dbdump dbhash dbtotxt index_usage rbu scrub showdb showjournal showshm showstat4 showwal sqldiff sqlite3_analyzer sqlite3_checker sqlite3_expert sqltclsh
@@ -234,11 +238,19 @@ src_test() {
 
 	local -x SQLITE_HISTORY="${T}/sqlite_history_${ABI}"
 
-	emake HAVE_TCL="$(usex tcl 1 "")" $(use debug && echo fulltest || echo test)
+	if use tcl || use test || use tools; then
+		emake HAVE_TCL="1" $(use debug && echo fulltest || echo test)
+	else
+		emake $(use debug && echo fulltest || echo test)
+	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" HAVE_TCL="$(usex tcl 1 "")" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" install
+	if use tcl || use test || use tools; then
+		emake DESTDIR="${D}" HAVE_TCL="1" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" install
+	else
+		emake DESTDIR="${D}" install
+	fi
 
 	if use tools; then
 		install_tool() {
