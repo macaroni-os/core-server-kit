@@ -1,6 +1,9 @@
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=5
+
+WANT_AUTOMAKE=1.13
 
 inherit autotools eutils multilib
 RESTRICT="test" # https://bugs.gentoo.org/show_bug.cgi?id=498250 https://bugs.launchpad.net/gentoo/+bug/1278023
@@ -11,7 +14,7 @@ SRC_URI="https://launchpad.net/${PN}/1.0/${PV}/+download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ppc ppc64 s390 ~sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug hsieh +libevent sasl static-libs"
 
 DEPEND="net-misc/memcached
@@ -19,18 +22,11 @@ DEPEND="net-misc/memcached
 	libevent? ( dev-libs/libevent )"
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/debug-disable-enable-1.0.18.patch"
-	"${FILESDIR}"/${P}-gcc7.patch
-	"${FILESDIR}"/libmemcached-1.0.18-autotools.patch
-)
-
 src_prepare() {
-	default
-	eapply -p0 "${FILESDIR}/continuum-1.0.18.patch"
+	epatch "${FILESDIR}/debug-disable-enable-1.0.18.patch"
+	epatch "${FILESDIR}/continuum-1.0.18.patch"
+	epatch "${FILESDIR}"/${P}-gcc7.patch
 	sed -i '6i CFLAGS = @CFLAGS@' Makefile.am
-	# Disable sphinx (seems broken)
-	sed -i '/include docs\/include.am/d' Makefile.am
 	sed -e "/_APPEND_COMPILE_FLAGS_ERROR(\[-fmudflapth\?\])/d" -i m4/ax_harden_compiler_flags.m4
 	eautoreconf
 }
