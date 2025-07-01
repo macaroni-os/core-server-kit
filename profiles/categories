@@ -6,6 +6,7 @@ app-misc
 app-shells
 dev-db
 dev-libs
+dev-util
 net-dialup
 net-fs
 net-libs
