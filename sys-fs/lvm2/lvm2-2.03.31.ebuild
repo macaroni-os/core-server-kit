@@ -42,7 +42,7 @@ RDEPEND="
 "
 PDEPEND="
 	lvm? (
-		thin? ( >=sys-block/thin-provisioning-tools-1.0.6 )
+		thin? ( sys-block/thin-provisioning-tools )
 	)
 "
 # note: thin-0.3.0 is required to avoid --disable-thin_check_needs_check
