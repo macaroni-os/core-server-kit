@@ -1,5 +1,7 @@
 app-admin
 dev-db
+dev-libs
+net-libs
 sys-block
 sys-fs
 sys-libs
