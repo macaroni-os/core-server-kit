@@ -1,8 +1,13 @@
 app-admin
 dev-db
 dev-libs
+net-dialup
 net-libs
+net-misc
 sys-block
+sys-cluster
 sys-fs
 sys-libs
 virtual
+www-apache
+www-servers
