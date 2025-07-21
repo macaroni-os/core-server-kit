@@ -1,4 +1,5 @@
 app-admin
+app-metrics
 app-shells
 dev-db
 dev-libs
@@ -11,4 +12,5 @@ sys-fs
 sys-libs
 virtual
 www-apache
+www-apps
 www-servers
