@@ -1,0 +1,19 @@
+[Unit]
+Description=FreeRADIUS Server
+After=network.target
+
+[Service]
+User=radius
+Group=radius
+EnvironmentFile=-/etc/conf.d/radiusd
+# ExecStartPre=/etc/raddb/certs/bootstrap
+ExecStartPre=/usr/sbin/radiusd -C $RADIUSD_OPTS
+ExecStart=/usr/sbin/radiusd -f -d /etc/raddb $RADIUSD_OPTS
+ExecReload=/usr/sbin/radiusd -C $RADIUSD_OPTS
+ExecReload=/bin/kill -HUP $MAINPID
+RuntimeDirectory=radiusd
+ReadOnlyDirectories=/etc/raddb/
+ReadWriteDirectories=/var/log/radius/
+
+[Install]
+WantedBy=multi-user.target
