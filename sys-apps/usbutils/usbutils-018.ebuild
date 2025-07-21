@@ -1,0 +1,53 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+PYTHON_COMPAT=( python3+ )
+
+inherit meson python-single-r1
+
+DESCRIPTION="USB enumeration utilities"
+HOMEPAGE="https://www.kernel.org/pub/linux/utils/usb/usbutils/
+	https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils.git/"
+SRC_URI="https://github.com/gregkh/usbutils/tarball/cda6883cade6ec67671d0c7de61e70eb992509a9 -> usbutils-018-cda6883.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="*"
+IUSE="python"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
+DEPEND="virtual/libusb:1=
+	virtual/libudev:="
+BDEPEND="
+	app-arch/xz-utils
+	virtual/pkgconfig
+	python? ( ${PYTHON_DEPS} )"
+RDEPEND="${DEPEND}
+	sys-apps/hwids
+	python? ( ${PYTHON_DEPS} )"
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
+
+src_prepare() {
+    default
+	use python && python_fix_shebang lsusb.py
+}
+
+post_src_unpack() {
+	mv ${WORKDIR}/gregkh-usbutils-* ${S} || die
+}
+
+src_configure() {
+    meson_src_configure
+}
+
+src_install() {
+    meson_src_install
+	newdoc usbhid-dump/NEWS NEWS.usbhid-dump
+
+	if ! use python ; then
+		rm -f "${ED}"/usr/bin/lsusb.py || die
+	fi
+}
