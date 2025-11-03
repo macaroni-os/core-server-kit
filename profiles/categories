@@ -5,6 +5,7 @@ app-metrics
 app-misc
 dev-db
 dev-libs
+dev-util
 net-dialup
 net-libs
 net-misc
