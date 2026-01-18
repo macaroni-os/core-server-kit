@@ -958,5 +958,55 @@ pkg_postrm() {
 	xdg_icon_cache_update
 }
 
+# Generate binfmt support files.
+#   - /etc/init.d/qemu-binfmt script which registers the user handlers (openrc)
+#   - /usr/share/qemu/binfmt.d/qemu.conf (for use with systemd-binfmt)
+generate_initd() {
+  local out="${T}/qemu-binfmt"
+  local out_systemd="${T}/qemu.conf"
+  local d="${T}/binfmt.d"
+
+  einfo "Generating qemu binfmt scripts and configuration files"
+
+  # Generate the debian fragments first.
+  mkdir -p "${d}"
+  "${S}"/scripts/qemu-binfmt-conf.sh \
+    --debian \
+    --exportdir "${d}" \
+    --qemu-path "${EPREFIX}/usr/bin" \
+    || die
+  # Then turn the fragments into a shell script we can source.
+  sed -E -i \
+    -e 's:^([^ ]+) (.*)$:\1="\2":' \
+    "${d}"/* || die
+
+  # Generate the init.d script by assembling the fragments from above.
+  local f qcpu package interpreter magic mask
+  cat "${FILESDIR}"/qemu-binfmt.initd.head >"${out}" || die
+  for f in "${d}"/qemu-* ; do
+    source "${f}"
+
+    # Normalize the cpu logic like we do in the init.d for the native cpu.
+    qcpu=${package#qemu-}
+    case ${qcpu} in
+    arm*)   qcpu="arm";;
+    mips*)  qcpu="mips";;
+    ppc*)   qcpu="ppc";;
+    s390*)  qcpu="s390";;
+    sh*)    qcpu="sh";;
+    sparc*) qcpu="sparc";;
+    esac
+    # we use 'printf' here to be portable across 'sh'
+    # implementations: #679168
+cat <<EOF >>"${out}"
+if [ "\${cpu}" != "${qcpu}" -a -x "${interpreter}" ] ; then
+  printf '%s\n' ':${package}:M::${magic}:${mask}:${interpreter}:'"\${QEMU_BINFMT_FLAGS}" >/proc/sys/fs/binfmt_misc/register
+fi
+EOF
+    echo ":${package}:M::${magic}:${mask}:${interpreter}:OC" >>"${out_systemd}"
+  done
+  cat "${FILESDIR}"/qemu-binfmt.initd.tail >>"${out}" || die
+}
+
 
 # vim: filetype=ebuild
