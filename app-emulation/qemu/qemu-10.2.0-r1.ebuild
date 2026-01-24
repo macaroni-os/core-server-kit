@@ -532,6 +532,7 @@ DEPEND="${CDEPEND}
 "
 src_prepare() {
 	default
+	sed -e '/^pycotap =/d' pythondeps.toml -i
 	# Use correct toolchain to fix cross-compiling
 	tc-export AR AS LD NM OBJCOPY PKG_CONFIG RANLIB STRINGS
 	export WINDRES=${CHOST}-windres
