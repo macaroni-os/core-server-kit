@@ -62,7 +62,6 @@ DEPEND="${RDEPEND}
 "
 
 BDEPEND="
-	dev-util/glib-utils
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 "
