@@ -3,7 +3,7 @@
 
 EAPI=7
 PYTHON_COMPAT=( python3+ )
-inherit meson python-any-r1 systemd tmpfiles
+inherit meson python-any-r1 systemd tmpfiles user
 
 DESCRIPTION=""
 SRC_URI="https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz -> dbus-1.16.2.tar.xz"
