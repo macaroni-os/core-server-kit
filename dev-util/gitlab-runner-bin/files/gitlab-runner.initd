@@ -1,5 +1,4 @@
 #!/sbin/openrc-run
-# Copyright 1999-202020entoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 extra_started_commands="reload"
