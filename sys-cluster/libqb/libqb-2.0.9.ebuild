@@ -16,7 +16,7 @@ DOCS=(
 IUSE="debug doc examples systemd"
 BDEPEND="app-arch/xz-utils
 	doc? (
-	  app-text/doxygen[dot]
+	  app-doc/doxygen[dot]
 	)
 	
 "
