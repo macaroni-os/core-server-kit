@@ -20,7 +20,7 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 BDEPEND="sys-libs/libcap
 	virtual/pkgconfig
 	${PYTHON_DEPS}
-	doc? ( app-text/doxygen )
+	doc? ( app-doc/doxygen )
 	man? (
 	  app-text/docbook-xml-dtd:4.5
 	  dev-libs/libxslt
