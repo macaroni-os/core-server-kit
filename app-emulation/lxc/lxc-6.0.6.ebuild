@@ -7,7 +7,7 @@ inherit bash-completion-r1 meson systemd
 DESCRIPTION="A userspace interface for the Linux kernel containment features"
 HOMEPAGE="https://linuxcontainers.org/lxc"
 SRC_URI="https://api.github.com/repos/lxc/lxc/tarball/v6.0.6 -> lxc-6.0.6-2597434.tar.gz"
-LICENSE="NOASSERTION"
+LICENSE="GPL-2 LGPL-2.1 LGPL-3"
 SLOT="0"
 KEYWORDS="*"
 DOCS=(
