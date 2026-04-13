@@ -40,14 +40,13 @@ src_configure() {
 	  -DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
 	  -DCMAKE_INSTALL_LIBDIR="${EPREFIX}/lib"
 	  -DBUILD_SHARED_LIBS=True
-	  -DINSTALL_DOCS=OFF
-	  -DWITH_GETTEXT="$(usex nls)"
+	  -DWITH_DOCS=OFF
+	  -DWITH_MESSAGE_LOCALIZATION="$(usex nls)"
 	)
 	cmake_src_configure
 }
 src_compile() {
 	local -x PREFIX="${EPREFIX}/usr"
-	local -x DOCDIR="${EPREFIX}/usr/share/doc/${PF}"
 	local -x CMAKE_WITH_GETTEXT="$(usex nls 1 0)"
 	local -x SYSCONFDIR="${EPREFIX}/etc"
 	local -x FISH_BUILD_DOCS
@@ -57,7 +56,7 @@ src_compile() {
 src_install() {
 	cmake_src_install
 	keepdir /usr/share/fish/vendor_{completions,conf,functions}.d
-	insinto /usr/share/doc/fish
+	insinto /usr/share/doc/fish-4.6.0
 	doins "${FILESDIR}"/README.mark
 }
 pkg_postinst() {
