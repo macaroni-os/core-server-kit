@@ -32,6 +32,10 @@ if [ -n "${INCUSD_LXC_TEMPLATE_CONFIG}" ] ; then
 	start_stop_daemon_args="${start_stop_daemon_args} \
 	--env INCUS_LXC_TEMPLATE_CONFIG=${INCUSD_LXC_TEMPLATE_CONFIG}"
 fi
+if [ -n "${INCUSD_UI}" ] ; then
+	start_stop_daemon_args="${start_stop_daemon_args} \
+	--env INCUS_UI=${INCUSD_UI}"
+fi
 
 INCUSD_USE_INCUSLXCFS=${INCUSD_USE_INCUSLXCFS:-0}
 
@@ -52,6 +56,7 @@ start() {
 	# fix permissions on /var/lib/incus and make sure it exists
 	install -d /var/lib/incus --group incus-admin --owner root --mode 0775
 	start-stop-daemon --start \
+		${start_stop_daemon_args} \
 		--pidfile ${PIDFILE} \
 		--exec ${DAEMON} \
 		--background \
