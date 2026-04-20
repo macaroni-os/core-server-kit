@@ -16,7 +16,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 "
 BDEPEND="${PYTHON_DEPS}
 	virtual/pkgconfig
-	
+	dev-util/cmocka
 "
 RDEPEND="dev-libs/libbsd
 	sys-libs/talloc
