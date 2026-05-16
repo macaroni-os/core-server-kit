@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit libtool linux-info udev toolchain-funcs
+inherit autotools udev toolchain-funcs
 
 DESCRIPTION="An interface for filesystems implemented in userspace"
 HOMEPAGE="https://github.com/libfuse/libfuse"
@@ -17,19 +17,10 @@ PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
 DEPEND="virtual/pkgconfig"
 RDEPEND=">=sys-fs/fuse-common-3.3.0-r1"
 
-pkg_setup() {
-	if use kernel_linux ; then
-		if kernel_is lt 2 6 9 ; then
-			die "Your kernel is too old."
-		fi
-		CONFIG_CHECK="~FUSE_FS"
-		WARNING_FUSE_FS="You need to have FUSE module built to use user-mode utils"
-		linux-info_pkg_setup
-	fi
-}
-
 src_prepare() {
 	local PATCHES=( "${FILESDIR}"/${PN}-2.9.3-kernel-types.patch )
+	sed -i -e '/^AM_ICONV/d' configure.ac || die
+	eautoreconf
 	# sandbox violation with mtab writability wrt #438250
 	# don't sed configure.in without eautoreconf because of maintainer mode
 	sed -i 's:umount --fake:true --fake:' configure || die
