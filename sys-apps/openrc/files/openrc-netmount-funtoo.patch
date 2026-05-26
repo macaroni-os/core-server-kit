@@ -6,10 +6,10 @@ index 96f5d3e0..ff52e696 100644
  	use afc-client amd openvpn
  	use dns
  	use root
--	keyword -docker -jail -lxc -prefix -systemd-nspawn -vserver
+-	keyword -docker -podman -jail -lxc -prefix -systemd-nspawn -vserver -wsl
 +	keyword -jail -prefix -systemd-nspawn
  }
- 
+
  start()
 @@ -70,7 +70,7 @@ stop()
  		fs="$fs${fs:+,}$x"
@@ -18,5 +18,5 @@ index 96f5d3e0..ff52e696 100644
 -		umount -at $fs || eerror "Failed to simply unmount filesystems"
 +		umount -lat $fs || eerror "Failed to simply unmount filesystems"
  	fi
- 
+
  	eindent
