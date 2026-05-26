@@ -39,16 +39,12 @@ index 00000000..fd84b5dc
 +	fi
 +	eend 0
 +}
-diff --git a/runlevels/Makefile b/runlevels/Makefile
-index dbfb59ca..5d2982a4 100644
---- a/tools/meson_runlevels.sh
-+++ b/tools/meson_runlevels.sh
-@@ -24,7 +24,7 @@
- 		;;
- esac
- 
--boot="bootmisc fsck hostname localmount loopback root swap sysctl urandom"
-+boot="bootmisc filesystem fsck hostname localmount loopback root swap sysctl urandom"
- if [ "${net}" = yes ]; then
- 	boot="${boot} network staticroute"
- fi
+diff --git a/runlevels/meson.build b/runlevels/meson.build
+--- a/runlevels/meson.build
++++ b/runlevels/meson.build
+@@ -9,6 +9,7 @@ boot = [
+   'bootmisc',
++  'filesystem',
+   'fsck',
+   'hostname',
+   'localmount',
