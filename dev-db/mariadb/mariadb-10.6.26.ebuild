@@ -518,7 +518,7 @@ pkg_postinst() {
 	fi
 }
 pkg_config() {
-	whip h mysql.config || die "Error on configure ${P}"
+	whip h mariadb.config || die "Error on configure ${P}"
 }
 
 
