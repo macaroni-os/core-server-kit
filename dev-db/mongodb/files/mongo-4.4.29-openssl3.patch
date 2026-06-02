@@ -1,0 +1,38 @@
+--- a/SConstruct	2025-07-08 16:11:43.121834471 +0200
++++ b/SConstruct	2025-07-08 16:47:12.680436467 +0200
+@@ -3487,7 +3487,7 @@
+                 cryptoLibName,
+                 ["openssl/crypto.h"],
+                 "C",
+-                "SSLeay_version(0);",
++                call="SSLeay_version(0);",
+                 autoadd=True):
+             maybeIssueDarwinSSLAdvice(conf.env)
+             conf.env.ConfError("Couldn't find OpenSSL crypto.h header and library")
+@@ -3644,7 +3644,7 @@
+         if conf.CheckLibWithHeader(
+             "curl",
+             ["curl/curl.h"], "C",
+-            "curl_global_init(0);",
++            call="curl_global_init(0);",
+             autoadd=False):
+             return True
+ 
+@@ -3764,7 +3764,7 @@
+             "sasl2",
+             ["stddef.h","sasl/sasl.h"],
+             "C",
+-            "sasl_version_info(0, 0, 0, 0, 0, 0);",
++            call="sasl_version_info(0, 0, 0, 0, 0, 0);",
+             autoadd=False ):
+         myenv.ConfError("Couldn't find SASL header/libraries")
+ 
+@@ -3929,7 +3929,7 @@
+                 ["mongoc-1.0"],
+                 ["mongoc/mongoc.h"],
+                 "C",
+-                "mongoc_get_major_version();",
++                call="mongoc_get_major_version();",
+                 autoadd=False ):
+             conf.env['MONGO_HAVE_LIBMONGOC'] = "library"
+         if not conf.env['MONGO_HAVE_LIBMONGOC'] and env.TargetOSIs('darwin') and conf.CheckMongoCFramework():
