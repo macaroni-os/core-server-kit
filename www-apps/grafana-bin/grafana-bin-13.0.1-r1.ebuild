@@ -31,9 +31,7 @@ src_install() {
 	 # Frontend assets
 	insinto /usr/share/grafana
 	doins -r public conf
-	 dobin bin/grafana
-	dobin bin/grafana-cli
-	dobin bin/grafana-server
+	dobin bin/grafana
 	 newconfd "${FILESDIR}"/grafana.confd grafana
 	newinitd "${FILESDIR}"/grafana.initd.3 grafana
 	 keepdir /var/{lib,log}/grafana
@@ -50,11 +48,6 @@ postinst() {
 	elog "You may add your own custom configuration for app-admin/logrotate if you"
 	elog "wish to use external rotation of logs. In this case, you also need to make"
 	elog "sure the built-in rotation is turned off."
-	elog
-	elog "As of version 7.0.0, grafana uses a separate plugin to render panels and dashboards to PNGs"
-	elog
-	elog "If you want this functionality simply run:"
-	elog "grafana-cli plugins install grafana-image-renderer"
 }
 
 
