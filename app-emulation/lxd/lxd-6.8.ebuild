@@ -61,7 +61,7 @@ pkg_setup() {
 }
 src_prepare() {
 	export GOPATH="${S}/_dist"
-	default
+	go-module_src_prepare
 	sed -i \
 	  -e "s:\./configure:./configure --prefix=/usr --libdir=${EPREFIX}/usr/lib/lxd:g" \
 	  -e "s:make:make ${MAKEOPTS}:g" \
