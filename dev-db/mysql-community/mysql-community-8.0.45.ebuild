@@ -251,6 +251,7 @@ src_install() {
 	find "${D}" -name 'libmysqlclient_r.*' -type l -delete || die
 	local clientlibs_files=(
 	  ${ED}/usr/bin/perror
+	  ${ED}/usr/bin/comp_err
 	  ${ED}/usr/bin/zlib_decompress
 	  ${ED}/usr/bin/my_print_defaults
 	  ${ED}/usr/bin/mysql_config
