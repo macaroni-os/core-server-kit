@@ -55,6 +55,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.1-boost.patch"
 	"${FILESDIR}/${PN}-4.4.6-riscv.patch"
 	"${FILESDIR}/${PN}-4.4.6-fix-includes.patch"
+	"${FILESDIR}/mongo-4.4.29-openssl3.patch"
 )
 
 src_unpack() {
