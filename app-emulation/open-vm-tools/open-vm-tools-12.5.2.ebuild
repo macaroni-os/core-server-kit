@@ -113,6 +113,10 @@ src_configure() {
 	# Avoid a bug in configure.ac
 	use ssl || myeconfargs+=( --without-ssl )
 
+	if use icu ; then
+		append-ldflags "-L/$(get_libdir) -licuuc -licudata"
+	fi
+
 	econf "${myeconfargs[@]}"
 }
 
