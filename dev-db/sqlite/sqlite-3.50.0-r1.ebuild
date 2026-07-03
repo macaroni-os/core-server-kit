@@ -36,6 +36,7 @@ src_configure() {
 	options+=(
 		--enable-load-extension
 		--enable-threadsafe
+		--soname=legacy
 	)
 
 	# Support detection of misuse of SQLite API.
