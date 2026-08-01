@@ -12,6 +12,7 @@ net-fs
 net-libs
 net-misc
 sys-apps
+sys-auth
 sys-block
 sys-cluster
 sys-devel
