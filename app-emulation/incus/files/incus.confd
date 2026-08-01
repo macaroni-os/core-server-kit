@@ -26,3 +26,7 @@ INCUSD_OPTIONS+="--group incus-admin"
 
 # Enable syslog logging
 #INCUSD_OPTIONS+=" --syslog"
+
+# Set the Incus UI static files path.
+# Requires www-apps/incus-ui
+#INCUSD_UI="/usr/share/incus-ui/"
