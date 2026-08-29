@@ -38,7 +38,7 @@ BDEPEND="dev-lang/go
 RDEPEND="${CDEPEND}
 	net-firewall/ebtables
 	net-firewall/iptables[ipv6?]
-	net-firewall/nftables
+	net-firewall/nftables[json]
 	sys-apps/iproute2[ipv6?]
 	sys-fs/fuse:*
 	sys-fs/lxcfs
