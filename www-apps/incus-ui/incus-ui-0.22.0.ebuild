@@ -18,6 +18,11 @@ post_src_unpack() {
 }
 
 
+src_prepare() {
+	npmv1_src_prepare
+	# Replace the function running git command for retrieve sha
+	sed -i -e 's|.*rev-parse.*|  const result \= "118b369445dedbd4f9721830dee49e6a2fc5c999"\;|g' vite.config.ts
+}
 src_compile() {
 	npmv1_src_compile
 	npm run build
