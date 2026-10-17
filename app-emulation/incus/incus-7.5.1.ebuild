@@ -48,7 +48,7 @@ RDEPEND="${CDEPEND}
 "
 DEPEND="${CDEPEND}
 "
-S="${WORKDIR}/incus-7.5"
+S="${WORKDIR}/incus-7.5.1"
 VDIR="${S}"/vendor
 pkg_setup() {
 	ebegin "Ensuring incus and incus-admin groups exist"
