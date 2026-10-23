@@ -18,7 +18,10 @@ DEPEND="virtual/pkgconfig"
 RDEPEND=">=sys-fs/fuse-common-3.3.0-r1"
 
 src_prepare() {
-	local PATCHES=( "${FILESDIR}"/${PN}-2.9.3-kernel-types.patch )
+	local PATCHES=(
+		"${FILESDIR}"/${PN}-2.9.3-kernel-types.patch
+		"${FILESDIR}"/conditionally-define-closefrom.patch
+	)
 	sed -i -e '/^AM_ICONV/d' configure.ac || die
 	eautoreconf
 	# sandbox violation with mtab writability wrt #438250
