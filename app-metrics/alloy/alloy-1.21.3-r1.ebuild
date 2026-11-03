@@ -2,7 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
-inherit user systemd
+inherit user systemd go-module
 
 DESCRIPTION="Vendor-agnostic OpenTelemetry Collector distribution with programmable pipelines"
 HOMEPAGE="https://grafana.com/oss/alloy/ https://github.com/grafana/alloy"
@@ -26,6 +26,22 @@ pkg_setup() {
 
 post_src_unpack() {
 	mv grafana-alloy-* "${S}"
+}
+
+post_src_prepare() {
+	# go-module toolchain override only sees the root go.mod at ${S}; alloy
+	# builds from collector/, which replaces sibling local modules (../syntax
+	# and others), each carrying its own go directive - mirror the override
+	# across every module in the tree (macaroni-os/mark-issues#848).
+	local gotoolchain_local=$(go env GOVERSION | sed -e 's|go||g')
+	local gomod gotoolchain_pkg
+	for gomod in $(find "${S}" -name go.mod -not -path '*/vendor/*'); do
+		gotoolchain_pkg=$(grep '^go ' "${gomod}" | sed -e 's|go ||g')
+		if [ -n "${gotoolchain_pkg}" ] && [ "${gotoolchain_pkg}" != "${gotoolchain_local}" ] ; then
+			ewarn "Module ${gomod#${S}/} needs go ${gotoolchain_pkg}. Forcing local version ${gotoolchain_local}."
+			sed -i -e "s|^go .*|go ${gotoolchain_local}|g" "${gomod}"
+		fi
+	done
 }
 
 src_compile() {
