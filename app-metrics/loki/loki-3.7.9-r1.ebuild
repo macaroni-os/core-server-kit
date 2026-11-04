@@ -2,7 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
-inherit user systemd
+inherit user systemd go-module
 
 DESCRIPTION="Loki: like Prometheus, but for logs"
 HOMEPAGE="https://grafana.com/oss/loki/ https://github.com/grafana/loki"
