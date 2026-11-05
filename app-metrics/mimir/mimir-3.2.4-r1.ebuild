@@ -2,7 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
-inherit user systemd
+inherit user systemd go-module
 
 DESCRIPTION="Grafana Mimir horizontally-scalable, highly-available, multi-tenant compatible Prometheus as a Service"
 HOMEPAGE="https://grafana.com/oss/mimir/ https://github.com/grafana/mimir"
