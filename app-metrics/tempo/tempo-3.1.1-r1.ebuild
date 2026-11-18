@@ -2,7 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
-inherit user systemd
+inherit user systemd go-module
 
 DESCRIPTION="Grafana Tempo distributed tracing backend"
 HOMEPAGE="https://grafana.com/oss/tempo/ https://github.com/grafana/tempo"
